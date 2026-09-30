@@ -218,16 +218,6 @@
       }
     }
   </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F2G4LV0CVW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-F2G4LV0CVW');
-</script>
-
 </head>
 <body>
   <div class="topbar">
@@ -292,6 +282,7 @@
     let score = 0;
     let lives = 3;
     let animationId = null;
+    let lastFrameTime = null;
 
     // Paddle
     const paddle = {
@@ -299,8 +290,13 @@
       h: 12,
       x: W / 2 - 40,
       y: H - 40,
-      speed: 7
+      speed: 4.5
     };
+
+    // Gradual difficulty: start gently and speed up after each brick.
+    const BALL_START_SPEED = 3.2;
+    const BALL_SPEED_STEP = 0.08;
+    const BALL_MAX_SPEED = 6;
 
     // Ball
     const ball = {
@@ -309,7 +305,7 @@
       y: H - 56,
       dx: 0,
       dy: 0,
-      speed: 5,
+      speed: BALL_START_SPEED,
       launched: false
     };
 
@@ -365,6 +361,7 @@
     function resetGame() {
       score = 0;
       lives = 3;
+      ball.speed = BALL_START_SPEED;
       scoreEl.textContent = score;
       paddle.x = W / 2 - paddle.w / 2;
       initBricks();
@@ -373,6 +370,7 @@
       startScreen.classList.add('hidden');
       gameOverScreen.classList.add('hidden');
       if (animationId) cancelAnimationFrame(animationId);
+      lastFrameTime = null;
       loop();
     }
 
@@ -406,10 +404,14 @@
           if (!ball.launched) launchBall();
           else {
             state = 'paused';
+            if (animationId !== null) cancelAnimationFrame(animationId);
+            animationId = null;
+            draw();
           }
         } else if (state === 'paused') {
           state = 'playing';
-          loop();
+          lastFrameTime = null;
+      loop();
         }
       }
     });
@@ -464,12 +466,12 @@
       return dx * dx + dy * dy < br * br;
     }
 
-    function update() {
+    function update(frameScale) {
       if (state !== 'playing') return;
 
       // Paddle move
-      if (keys.left) paddle.x -= paddle.speed;
-      if (keys.right) paddle.x += paddle.speed;
+      if (keys.left) paddle.x -= paddle.speed * frameScale;
+      if (keys.right) paddle.x += paddle.speed * frameScale;
       paddle.x = Math.max(0, Math.min(W - paddle.w, paddle.x));
 
       // Ball follows paddle before launch
@@ -479,8 +481,8 @@
         return;
       }
 
-      ball.x += ball.dx;
-      ball.y += ball.dy;
+      ball.x += ball.dx * frameScale;
+      ball.y += ball.dy * frameScale;
 
       // Walls
       if (ball.x - ball.r <= 0) {
@@ -539,6 +541,13 @@
             ball.dx = -ball.dx;
           } else {
             ball.dy = -ball.dy;
+          }
+          // Preserve bounce direction while gradually increasing speed.
+          const currentSpeed = Math.hypot(ball.dx, ball.dy);
+          ball.speed = Math.min(BALL_MAX_SPEED, ball.speed + BALL_SPEED_STEP);
+          if (currentSpeed > 0) {
+            ball.dx *= ball.speed / currentSpeed;
+            ball.dy *= ball.speed / currentSpeed;
           }
           remaining--;
           break; // one brick per frame
@@ -615,10 +624,14 @@
       }
     }
 
-    function loop() {
-      update();
+    function loop(timestamp) {
+      animationId = null;
+      const frameScale = lastFrameTime === null || timestamp === undefined
+        ? 0 : Math.min((timestamp - lastFrameTime) / (1000 / 60), 2);
+      if (timestamp !== undefined) lastFrameTime = timestamp;
+      update(frameScale);
       draw();
-      if (state === 'playing' || state === 'paused') {
+      if (state === 'playing') {
         animationId = requestAnimationFrame(loop);
       }
     }
