@@ -217,6 +217,17 @@
         font-size: 0.95rem;
       }
     }
+  
+    #gameOverScreen { justify-content: flex-start; overflow-y: auto; padding: 20px; }
+    .score-form { width: 100%; max-width: 320px; display: grid; gap: 10px; margin-bottom: 12px; }
+    .score-form input { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #8892b0; font: inherit; user-select: text; }
+    .btn:disabled { opacity: .5; cursor: default; }
+    #cloudStatus { font-size: .82rem; min-height: 20px; }
+    .ranking { width: 100%; max-width: 340px; margin: 18px 0; }
+    .ranking h3 { margin-bottom: 8px; }
+    .ranking table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+    .ranking th, .ranking td { padding: 6px; text-align: left; border-bottom: 1px solid #2a2a4a; overflow-wrap: anywhere; }
+    .ranking td:last-child { text-align: right; }
   </style>
 </head>
 <body>
@@ -244,6 +255,16 @@
     <div class="overlay hidden" id="gameOverScreen">
       <h2 id="endTitle">遊戲結束</h2>
       <p class="final-score">分數：<span id="finalScore">0</span></p>
+      <form class="score-form" id="scoreForm">
+        <label for="nickname">玩家暱稱（最多 20 字）</label>
+        <input id="nickname" maxlength="20" autocomplete="nickname" required placeholder="輸入暱稱">
+        <button class="btn" id="submitScore" type="submit">儲存成績</button>
+      </form>
+      <p id="cloudStatus" role="status" aria-live="polite"></p>
+      <div class="ranking"><h3>雲端排行榜 · 前 10 名</h3>
+        <table><thead><tr><th>名次</th><th>暱稱</th><th>分數</th></tr></thead><tbody id="rankRows"></tbody></table>
+        <button id="refreshRanking" type="button" class="btn" style="margin-top:10px;padding:8px 16px">重新整理</button>
+      </div>
       <button class="btn" id="restartBtn">重新開始</button>
     </div>
   </div>
@@ -268,6 +289,98 @@
     const endTitle = document.getElementById('endTitle');
     const finalScoreEl = document.getElementById('finalScore');
     const controls = document.getElementById('controls');
+
+    const API_URL = 'https://script.google.com/macros/s/AKfycby7AUrfHCmmNPBeggg_bQvXU-yobSbvknZtQC84GO8ocO1-fXhmCdrzS0uCsQdDaafY/exec';
+    const cloudStatus = document.getElementById('cloudStatus');
+    const submitScore = document.getElementById('submitScore');
+    const nicknameInput = document.getElementById('nickname');
+    const restartBtn = document.getElementById('restartBtn');
+    let savedScore = null;
+    let requestId = null;
+    let submissionBusy = false;
+    let submissionDone = false;
+    let rankingVersion = 0;
+
+    // Read-only JSONP avoids cross-origin response restrictions on GitHub Pages.
+    function apiRead(params) {
+      return new Promise((resolve, reject) => {
+        const callback = 'ranking_' + crypto.randomUUID().replaceAll('-', '');
+        const script = document.createElement('script');
+        const timer = setTimeout(() => finish(new Error('連線逾時')), 15000);
+        function finish(error, data) {
+          clearTimeout(timer); script.remove(); delete window[callback];
+          error ? reject(error) : resolve(data);
+        }
+        window[callback] = data => finish(null, data);
+        script.onerror = () => finish(new Error('無法連線至排行榜'));
+        script.src = API_URL + '?' + new URLSearchParams({...params, callback});
+        document.head.appendChild(script);
+      });
+    }
+
+    async function loadRanking() {
+      const version = ++rankingVersion;
+      const body = document.getElementById('rankRows');
+      body.textContent = '';
+      const loading = body.insertRow(); loading.insertCell().textContent = '載入中…';
+      try {
+        const data = await apiRead({action: 'top'});
+        if (!data.ok || !Array.isArray(data.leaderboard)) throw new Error(data.error || '排行榜格式不正確');
+        if (version !== rankingVersion) return;
+        body.textContent = '';
+        for (const entry of data.leaderboard.slice(0, 10)) {
+          const row = body.insertRow();
+          [entry.rank, entry.nickname, entry.score].forEach(value => row.insertCell().textContent = String(value));
+        }
+        if (!data.leaderboard.length) body.insertRow().insertCell().textContent = '尚無成績，成為第一位玩家！';
+      } catch (error) {
+        if (version !== rankingVersion) return;
+        body.textContent = ''; body.insertRow().insertCell().textContent = '讀取失敗：' + error.message;
+      }
+    }
+
+    document.getElementById('refreshRanking').addEventListener('click', loadRanking);
+    document.getElementById('scoreForm').addEventListener('submit', async event => {
+      event.preventDefault();
+      if (submissionBusy || submissionDone || savedScore === null) return;
+      const nickname = nicknameInput.value.normalize('NFKC').trim();
+      if (!nickname || Array.from(nickname).length > 20 || /[\u0000-\u001f\u007f]/.test(nickname)) {
+        cloudStatus.textContent = '請輸入 1～20 字的暱稱。'; return;
+      }
+      submissionBusy = true;
+      submitScore.disabled = restartBtn.disabled = nicknameInput.disabled = true;
+      cloudStatus.textContent = '正在儲存成績…';
+      try {
+        // Opaque POST responses cannot confirm saving; verify with a separate receipt.
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), 20000);
+        try {
+          await fetch(API_URL, {method: 'POST', mode: 'no-cors', signal: controller.signal,
+            headers: {'Content-Type': 'text/plain;charset=utf-8'},
+            body: JSON.stringify({action: 'submit', nickname, score: savedScore, requestId})});
+        } catch (_) {
+          // The server may have accepted a request even if the browser timed out.
+        } finally { clearTimeout(timer); }
+        let confirmed = false;
+        for (let attempt = 0; attempt < 5; attempt++) {
+          try {
+            const receipt = await apiRead({action: 'status', requestId});
+            if (!receipt.ok) throw new Error(receipt.error || '確認失敗');
+            if (receipt.saved) { confirmed = true; break; }
+          } catch (error) { if (attempt === 4) throw error; }
+          await new Promise(resolve => setTimeout(resolve, 1200));
+        }
+        if (!confirmed) throw new Error('尚未確認儲存，請確認後端已更新部署後重試');
+        submissionDone = true;
+        cloudStatus.textContent = '成績已儲存！同暱稱以最佳成績排名。';
+        await loadRanking();
+      } catch (error) {
+        cloudStatus.textContent = error.message + '。可重試，同一筆提交不會重複寫入。';
+      } finally {
+        submissionBusy = false; restartBtn.disabled = false;
+        submitScore.disabled = nicknameInput.disabled = submissionDone;
+      }
+    });
 
     // Detect touch device
     const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -359,6 +472,8 @@
     }
 
     function resetGame() {
+      savedScore = null;
+      keys.left = keys.right = false;
       score = 0;
       lives = 3;
       ball.speed = BALL_START_SPEED;
@@ -383,6 +498,12 @@
       }
       endTitle.textContent = won ? '全部清除！' : '遊戲結束';
       finalScoreEl.textContent = score;
+      savedScore = score;
+      requestId = crypto.randomUUID();
+      submissionDone = false;
+      submitScore.disabled = nicknameInput.disabled = false;
+      cloudStatus.textContent = '輸入暱稱，將本次成績加入雲端排行榜。';
+      loadRanking();
       gameOverScreen.classList.remove('hidden');
       if (animationId) {
         cancelAnimationFrame(animationId);
@@ -392,6 +513,7 @@
 
     // Keyboard
     window.addEventListener('keydown', (e) => {
+      if (e.target instanceof HTMLInputElement) return;
       if (e.key === 'ArrowLeft' || e.key === 'Left') {
         keys.left = true;
         e.preventDefault();
@@ -521,10 +643,8 @@
       }
 
       // Bricks
-      let remaining = 0;
       for (const b of bricks) {
         if (!b.alive) continue;
-        remaining++;
         if (rectCircle(ball.x, ball.y, ball.r, b.x, b.y, b.w, b.h)) {
           b.alive = false;
           score += 10;
@@ -549,12 +669,12 @@
             ball.dx *= ball.speed / currentSpeed;
             ball.dy *= ball.speed / currentSpeed;
           }
-          remaining--;
           break; // one brick per frame
         }
       }
 
-      if (remaining === 0) {
+      // Count the entire brick array after a collision; the loop may stop early.
+      if (bricks.every(b => !b.alive)) {
         endGame(true);
       }
     }
