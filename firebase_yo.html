@@ -82,8 +82,37 @@ function ready(){if(!db||!uid){toast('尚未完成 Firebase 匿名登入，請�
 function randCode(){return String(Math.floor(1000+Math.random()*9000))}
 function newRoom(capacity,owner,name){return {host:owner,capacity,round:1,phase:'playing',players:{[owner]:{name,score:0,joinedAt:Date.now()}},moves:{},createdAt:Date.now()}}
 $('create').onclick=async()=>{const n=nickname();if(!n||!ready()||processing)return;processing=true;try{let code,ok=false;for(let i=0;i<15;i++){code=randCode();const result=await runTransaction(ref(db,'rooms/'+code),v=>v===null?newRoom(Number($('capacity').value),uid,n):undefined,{applyLocally:false});if(result.committed){ok=true;break}}if(!ok)throw Error('房號暫時不足，請重試');await enter(code);}catch(e){toast('建立失敗：'+e.message)}finally{processing=false}};
-$('join').onclick=async()=>{const n=nickname(),code=$('code').value.trim();if(!n||!ready()||processing)return;if(!/^\d{4}$/.test(code)){toast('請輸入正確的 4 位數房號');return}processing=true;try{const result=await runTransaction(ref(db,'rooms/'+code),v=>{if(!v||!v.players)return;const count=Object.keys(v.players).length;if(!v.players[uid]&&count>=v.capacity)return; if(!v.players[uid]){v.players[uid]={name:n,score:0,joinedAt:Date.now()};v.moves={};v.phase='playing';v.round=(v.round||1)+1;}return v},{applyLocally:false});if(!result.committed)throw Error('房間不存在或人數已滿');await enter(code);}catch(e){toast('加入失敗：'+e.message)}finally{processing=false}};
-async function enter(code){if(unsub)unsub();room=code;$('roomNumber').textContent=code;$('lobby').classList.add('hide');$('game').classList.remove('hide');const myPresence=ref(db,`rooms/${code}/players/${uid}`);disconnectOp=onDisconnect(myPresence);await disconnectOp.remove();unsub=onValue(ref(db,'rooms/'+code),s=>{const data=s.val();if(!data||!data.players||!data.players[uid]){exitLocal();toast('房間已關閉或你已離開');return}roomData=data;render();},e=>toast('同步失敗：'+e.message));}
+$('join').onclick=async()=>{
+ const n=nickname(),code=$('code').value.trim();
+ if(!n||!ready()||processing)return;
+ if(!/^\d{4}$/.test(code)){toast('請輸入正確的 4 位數房號');return}
+ processing=true;
+ try{
+  const roomRef=ref(db,'rooms/'+code);
+  // Transactions first see an empty local cache. Fetch the actual room before attempting to join.
+  const initial=await get(roomRef);
+  if(!initial.exists())throw Error('找不到這個房間，請確認房號及房主是否仍在線上');
+  const current=initial.val();
+  if(!current.players||!current.capacity)throw Error('房間資料不完整');
+  if(!current.players[uid]&&Object.keys(current.players).length>=current.capacity)throw Error('房間人數已滿');
+  const result=await runTransaction(roomRef,v=>{
+   if(!v||!v.players||!v.capacity)return;
+   const count=Object.keys(v.players).length;
+   if(!v.players[uid]&&count>=v.capacity)return;
+   if(!v.players[uid]){
+    v.players[uid]={name:n,score:0,joinedAt:Date.now()};
+    v.moves={};v.phase='playing';v.round=(v.round||1)+1;
+   }
+   return v;
+  },{applyLocally:false});
+  if(!result.committed)throw Error('加入時房間已關閉或人數已滿，請重試');
+  await enter(code);
+ }catch(e){
+  const message=e.code==='PERMISSION_DENIED'||e.code==='permission-denied'?'資料庫拒絕存取，請確認 Realtime Database 規則允許讀取及加入房間':e.message;
+  toast('加入失敗：'+message);
+ }finally{processing=false}
+};
+async function enter(code){if(unsub)unsub();room=code;$('roomNumber').textContent=code;$('lobby').classList.add('hide');$('game').classList.remove('hide');const myPresence=ref(db,`rooms/${code}/players/${uid}`);disconnectOp=onDisconnect(myPresence);try{await disconnectOp.remove()}catch(e){console.warn('斷線清理未啟用：',e);toast('提醒：斷線自動清理未啟用，請檢查資料庫規則')}unsub=onValue(ref(db,'rooms/'+code),s=>{const data=s.val();if(!data||!data.players||!data.players[uid]){exitLocal();toast('房間已關閉或你已離開');return}roomData=data;render();},e=>toast('同步失敗：'+e.message));}
 function exitLocal(){if(unsub){unsub();unsub=null}room='';roomData=null;$('game').classList.add('hide');$('lobby').classList.remove('hide')}
 $('leave').onclick=async()=>{if(!room||!uid)return;const code=room;try{if(disconnectOp)await disconnectOp.cancel();await runTransaction(ref(db,'rooms/'+code),v=>{if(!v||!v.players)return v;delete v.players[uid];if(v.moves)delete v.moves[uid];const ids=Object.keys(v.players);if(!ids.length)return null;if(v.host===uid)v.host=ids[0];v.moves={};v.phase='playing';v.round=(v.round||1)+1;return v},{applyLocally:false});}catch(e){toast('離開失敗：'+e.message)}exitLocal()};
 $('copy').onclick=async()=>{try{await navigator.clipboard.writeText(room);toast('房號已複製')}catch{toast('房號：'+room)}};
