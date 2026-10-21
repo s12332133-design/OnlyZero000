@@ -6,6 +6,8 @@
 <style>
 :root{--bg:#f4f3ff;--ink:#272541;--muted:#79778d;--purple:#6859df;--pink:#ff729e;--green:#2dbb91;--line:#e5e2f4;--white:#fff}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;background:var(--bg);color:var(--ink)}.wrap{max-width:540px;margin:auto;padding:24px 16px 48px}.brand{text-align:center;margin:14px 0 25px}.logo{font-size:50px}.brand h1{font-size:30px;margin:5px 0}.brand p{color:var(--muted);margin:0}.panel{background:#fff;border:2px solid var(--line);border-radius:24px;padding:22px;margin-bottom:16px;box-shadow:0 8px 0 #e9e6f8}h2{font-size:20px;margin:0 0 17px}label{display:block;font-size:13px;font-weight:700;margin:15px 0 7px}input,select{width:100%;font:inherit;border:2px solid var(--line);background:#fafaff;border-radius:13px;padding:14px;color:var(--ink);outline:none}input:focus,select:focus{border-color:var(--purple)}button{font:inherit;font-weight:800;border:0;border-radius:14px;padding:15px 16px;min-height:52px;cursor:pointer;touch-action:manipulation}button:disabled{opacity:.5;cursor:not-allowed}.primary{background:var(--purple);color:white}.secondary{background:#eeecff;color:var(--purple)}.danger{background:#fff0f3;color:#c5446b}.full{width:100%;margin-top:12px}.row{display:flex;gap:10px}.row>*{flex:1;min-width:0}.hide{display:none!important}.notice{padding:12px 14px;border-radius:13px;background:#fff4dd;color:#77521a;font-size:14px;margin:0 0 16px;line-height:1.5}.pill{display:inline-block;padding:7px 12px;border-radius:30px;background:#e8e5ff;color:#5143bc;font-weight:800;font-size:13px}.roomhead{display:flex;justify-content:space-between;align-items:center;gap:8px}.roomnum{font-size:34px;font-weight:900;letter-spacing:5px}.players{display:grid;gap:9px;margin:18px 0}.player{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border-radius:13px;background:#f6f5ff}.player small{color:var(--muted)}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.choice{background:#f4f2ff;border:3px solid transparent;min-height:112px;padding:12px 3px;color:var(--ink)}.choice span{display:block;font-size:38px;margin-bottom:5px}.choice.selected{border-color:var(--purple);background:#e8e5ff}.status{text-align:center;color:var(--muted);line-height:1.6}.result{text-align:center;padding:18px;background:#f4f2ff;border-radius:17px;margin:16px 0}.result strong{font-size:23px;color:var(--purple)}.results-list{text-align:left;font-size:14px;line-height:1.8;margin-top:12px}.score{font-weight:900;color:var(--purple)}.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:20px}.tiny{font-size:13px;color:var(--muted);line-height:1.5}#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#272541;color:#fff;border-radius:12px;padding:12px 18px;max-width:90vw;z-index:9} @media(max-width:360px){.panel{padding:16px}.choice span{font-size:32px}.choice{min-height:100px}.roomnum{font-size:29px}}
 
+.home-link{align-self:flex-start;flex:none;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:var(--purple);background:#eeecff;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:800;margin-bottom:4px;min-height:30px}
+.home-link:hover{background:#e0dcff}
 /* 固定一頁顯示：不讓整個頁面捲動 */
 html,body{width:100%;height:100%;height:100dvh;overflow:hidden;overscroll-behavior:none}
 body{display:flex;flex-direction:column}
@@ -43,7 +45,7 @@ button{min-height:clamp(38px,6dvh,49px);padding:8px 12px}
 
 </style>
 </head>
-<body><main class="wrap"><header class="brand"><div class="logo">✊ ✌️ ✋</div><h1>猜拳俱樂部</h1><p>開房、邀朋友、一起出拳！</p></header>
+<body><main class="wrap"><a class="home-link" href="index.html" aria-label="回首頁">← 回首頁</a><header class="brand"><div class="logo">✊ ✌️ ✋</div><h1>猜拳俱樂部</h1><p>開房、邀朋友、一起出拳！</p></header>
 <div id="authNotice" class="notice">正在連線 Firebase 並進行匿名登入…</div>
 <div id="configNotice" class="notice hide">尚未設定 Firebase。請在 HTML 底部找到 <b>firebaseConfig</b>，貼上 Firebase 專案設定。</div>
 <section id="lobby" class="panel"><h2>🎮 開始遊戲</h2><label for="name">你的暱稱</label><input id="name" maxlength="16" placeholder="例如：小明" autocomplete="nickname"><label for="capacity">房間人數</label><select id="capacity"><option value="2">2 人對戰</option><option value="3">3 人對戰</option></select><button id="create" class="primary full">＋ 建立 4 位數房間</button><div style="height:15px"></div><label for="code">已有房號？</label><input id="code" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="輸入 4 位數房號"><button id="join" class="secondary full">加入房間 →</button></section>
@@ -87,30 +89,29 @@ $('join').onclick=async()=>{
  if(!n||!ready()||processing)return;
  if(!/^\d{4}$/.test(code)){toast('請輸入正確的 4 位數房號');return}
  processing=true;
+ $('join').disabled=true;
  try{
   const roomRef=ref(db,'rooms/'+code);
-  // Transactions first see an empty local cache. Fetch the actual room before attempting to join.
-  const initial=await get(roomRef);
-  if(!initial.exists())throw Error('找不到這個房間，請確認房號及房主是否仍在線上');
-  const current=initial.val();
-  if(!current.players||!current.capacity)throw Error('房間資料不完整');
-  if(!current.players[uid]&&Object.keys(current.players).length>=current.capacity)throw Error('房間人數已滿');
-  const result=await runTransaction(roomRef,v=>{
-   if(!v||!v.players||!v.capacity)return;
-   const count=Object.keys(v.players).length;
-   if(!v.players[uid]&&count>=v.capacity)return;
-   if(!v.players[uid]){
-    v.players[uid]={name:n,score:0,joinedAt:Date.now()};
-    v.moves={};v.phase='playing';v.round=(v.round||1)+1;
-   }
-   return v;
-  },{applyLocally:false});
-  if(!result.committed)throw Error('加入時房間已關閉或人數已滿，請重試');
+  const snapshot=await get(roomRef);
+  if(!snapshot.exists())throw Error('找不到房號 '+code+'，請確認房主已建立房間，且兩人使用相同網站與 Firebase 專案');
+  const current=snapshot.val();
+  if(!current.players||!current.capacity)throw Error('房間資料不完整，請房主重新建立');
+  const ids=Object.keys(current.players);
+  if(!current.players[uid] && ids.length>=Number(current.capacity))throw Error('房間人數已滿（'+ids.length+'/'+current.capacity+'）');
+  if(!current.players[uid]){
+   // Write only the joining player's record; do not overwrite the entire room.
+   // This avoids the first-call null value that can abort a room-wide transaction.
+   await update(roomRef,{['players/'+uid]:{name:n,score:0,joinedAt:Date.now()}});
+  }
+  const verify=await get(roomRef);
+  if(!verify.exists()||!verify.val().players?.[uid])throw Error('加入資料未成功寫入，請確認資料庫安全規則');
   await enter(code);
  }catch(e){
-  const message=e.code==='PERMISSION_DENIED'||e.code==='permission-denied'?'資料庫拒絕存取，請確認 Realtime Database 規則允許讀取及加入房間':e.message;
+  console.error('加入房間失敗',e);
+  const codeText=String(e.code||'').toLowerCase();
+  const message=codeText.includes('permission')?'資料庫權限不足（permission_denied）。請檢查 Firebase Realtime Database 規則，允許已登入玩家加入 rooms/{房號}/players/{uid}':(e.message||String(e));
   toast('加入失敗：'+message);
- }finally{processing=false}
+ }finally{processing=false;$('join').disabled=!uid}
 };
 async function enter(code){if(unsub)unsub();room=code;$('roomNumber').textContent=code;$('lobby').classList.add('hide');$('game').classList.remove('hide');const myPresence=ref(db,`rooms/${code}/players/${uid}`);disconnectOp=onDisconnect(myPresence);try{await disconnectOp.remove()}catch(e){console.warn('斷線清理未啟用：',e);toast('提醒：斷線自動清理未啟用，請檢查資料庫規則')}unsub=onValue(ref(db,'rooms/'+code),s=>{const data=s.val();if(!data||!data.players||!data.players[uid]){exitLocal();toast('房間已關閉或你已離開');return}roomData=data;render();},e=>toast('同步失敗：'+e.message));}
 function exitLocal(){if(unsub){unsub();unsub=null}room='';roomData=null;$('game').classList.add('hide');$('lobby').classList.remove('hide')}
