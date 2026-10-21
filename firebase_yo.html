@@ -48,8 +48,8 @@ button{min-height:clamp(38px,6dvh,49px);padding:8px 12px}
 <body><main class="wrap"><a class="home-link" href="index.html" aria-label="回首頁">← 回首頁</a><header class="brand"><div class="logo">✊ ✌️ ✋</div><h1>猜拳俱樂部</h1><p>開房、邀朋友、一起出拳！</p></header>
 <div id="authNotice" class="notice">正在連線 Firebase 並進行匿名登入…</div>
 <div id="configNotice" class="notice hide">尚未設定 Firebase。請在 HTML 底部找到 <b>firebaseConfig</b>，貼上 Firebase 專案設定。</div>
-<section id="lobby" class="panel"><h2>🎮 開始遊戲</h2><label for="name">你的暱稱</label><input id="name" maxlength="16" placeholder="例如：小明" autocomplete="nickname"><label for="capacity">房間人數</label><select id="capacity"><option value="2">2 人對戰</option><option value="3">3 人對戰</option></select><button id="create" class="primary full">＋ 建立 4 位數房間</button><div style="height:15px"></div><label for="code">已有房號？</label><input id="code" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="輸入 4 位數房號"><button id="join" class="secondary full">加入房間 →</button></section>
-<section id="game" class="hide"><div class="panel"><div class="roomhead"><div><div class="tiny">房間號碼</div><div class="roomnum" id="roomNumber">----</div></div><button id="copy" class="secondary">複製房號</button></div><div style="margin-top:10px"><span class="pill" id="roomState">等待玩家</span></div><div id="players" class="players"></div><p class="tiny">所有玩家加入後即可出拳。每回合所有人出拳完成，才會公開結果。</p><button id="leave" class="danger full">離開房間</button></div><div class="panel"><h2>選擇你的出拳</h2><div class="choices"><button class="choice" data-move="rock"><span>✊</span>石頭</button><button class="choice" data-move="paper"><span>✋</span>布</button><button class="choice" data-move="scissors"><span>✌️</span>剪刀</button></div><p id="moveStatus" class="status">等待玩家加入…</p><div id="result" class="result hide"></div><button id="next" class="primary full hide">下一回合 →</button></div></section><p class="footer">Firebase Realtime Database · 即時多人猜拳</p></main><div id="toast" class="hide" role="status"></div>
+<section id="lobby" class="panel"><h2>🎮 開始遊戲</h2><label for="name">你的暱稱</label><input id="name" maxlength="16" placeholder="例如：小明" autocomplete="nickname"><label for="capacity">房間人數</label><select id="capacity"><option value="2">2 人對戰</option><option value="3">3 人對戰</option></select><button id="create" class="primary full">＋ 建立 4 位數房間</button><div style="height:15px"></div><label for="code">已有房號？</label><input id="code" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="輸入 4 位數房號"><button id="join" class="secondary full">加入房間 →</button><p id="joinError" class="notice hide" role="alert"></p></section>
+<section id="game" class="hide"><div class="panel"><div class="roomhead"><div><div class="tiny">房間號碼</div><div class="roomnum" id="roomNumber">----</div></div><button id="copy" class="secondary">複製房號</button></div><div style="margin-top:10px"><span class="pill" id="roomState">等待玩家</span></div><div id="players" class="players"></div><p class="tiny">所有玩家加入後即可出拳。每回合所有人出拳完成，才會公開結果。</p><button id="leave" class="danger full">離開房間</button></div><div class="panel"><h2>選擇你的出拳</h2><div class="choices"><button class="choice" data-move="rock"><span>✊</span>石頭</button><button class="choice" data-move="paper"><span>✋</span>布</button><button class="choice" data-move="scissors"><span>✌️</span>剪刀</button></div><p id="moveStatus" class="status">等待玩家加入…</p><div id="result" class="result hide"></div><button id="next" class="primary full hide">下一回合 →</button></div></section><p class="footer">Firebase Realtime Database · 即時多人猜拳 · v20261021-2</p></main><div id="toast" class="hide" role="status"></div>
 <script type="module">
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
 import { getDatabase, ref, get, set, update, remove, onValue, runTransaction, onDisconnect, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js';
@@ -88,29 +88,43 @@ $('join').onclick=async()=>{
  const n=nickname(),code=$('code').value.trim();
  if(!n||!ready()||processing)return;
  if(!/^\d{4}$/.test(code)){toast('請輸入正確的 4 位數房號');return}
- processing=true;
- $('join').disabled=true;
+ processing=true;$('join').disabled=true;$('joinError').classList.add('hide');
  try{
   const roomRef=ref(db,'rooms/'+code);
-  const snapshot=await get(roomRef);
-  if(!snapshot.exists())throw Error('找不到房號 '+code+'，請確認房主已建立房間，且兩人使用相同網站與 Firebase 專案');
-  const current=snapshot.val();
-  if(!current.players||!current.capacity)throw Error('房間資料不完整，請房主重新建立');
-  const ids=Object.keys(current.players);
-  if(!current.players[uid] && ids.length>=Number(current.capacity))throw Error('房間人數已滿（'+ids.length+'/'+current.capacity+'）');
-  if(!current.players[uid]){
-   // Write only the joining player's record; do not overwrite the entire room.
-   // This avoids the first-call null value that can abort a room-wide transaction.
-   await update(roomRef,{['players/'+uid]:{name:n,score:0,joinedAt:Date.now()}});
+  // Fetch the server state first: a transaction callback can initially receive null.
+  const initial=await get(roomRef);
+  if(!initial.exists())throw Error('找不到房號 '+code+'。請房主確認仍在房間內，並核對房號。');
+  const first=initial.val();
+  if(!first.players||!first.capacity)throw Error('房間資料不完整，請房主重新建立房間');
+  if(!first.players[uid]&&Object.keys(first.players).length>=Number(first.capacity))throw Error('房間人數已滿（'+Object.keys(first.players).length+'/'+first.capacity+'）');
+  // Join atomically, so two players cannot take the last seat at the same time.
+  // The first transaction callback can receive null; do not abort on that value.
+  let sawRoom=false,wasFull=false;
+  const result=await runTransaction(roomRef,v=>{
+   if(v===null)return v; // Firebase will retry after loading the server value.
+   if(!v.players||!v.capacity)return;
+   sawRoom=true;
+   if(v.players[uid])return v;
+   if(Object.keys(v.players).length>=Number(v.capacity)){wasFull=true;return}
+   v.players[uid]={name:n,score:0,joinedAt:Date.now()};
+   v.moves={};v.phase='playing';v.round=(v.round||1)+1;
+   return v;
+  },{applyLocally:false});
+  if(!result.committed){
+   if(wasFull)throw Error('房間人數已滿');
+   if(!sawRoom)throw Error('房間狀態無法同步，請重新建立房間或檢查資料庫規則');
+   throw Error('加入交易未完成，請重試');
   }
-  const verify=await get(roomRef);
-  if(!verify.exists()||!verify.val().players?.[uid])throw Error('加入資料未成功寫入，請確認資料庫安全規則');
+  if(!result.snapshot.val()?.players?.[uid])throw Error('加入後無法確認玩家資料');
   await enter(code);
  }catch(e){
-  console.error('加入房間失敗',e);
-  const codeText=String(e.code||'').toLowerCase();
-  const message=codeText.includes('permission')?'資料庫權限不足（permission_denied）。請檢查 Firebase Realtime Database 規則，允許已登入玩家加入 rooms/{房號}/players/{uid}':(e.message||String(e));
+  console.error('[Yo! v20261021-2] 加入房間失敗',e);
+  const errorCode=String(e.code||'').toLowerCase();
+  let message=e.message||String(e);
+  if(errorCode.includes('permission'))message='Firebase 資料庫拒絕存取（permission_denied）。請檢查 Realtime Database 規則。';
   toast('加入失敗：'+message);
+  $('joinError').textContent='加入失敗：'+message+'（版本 20261021-2）';
+  $('joinError').classList.remove('hide');
  }finally{processing=false;$('join').disabled=!uid}
 };
 async function enter(code){if(unsub)unsub();room=code;$('roomNumber').textContent=code;$('lobby').classList.add('hide');$('game').classList.remove('hide');const myPresence=ref(db,`rooms/${code}/players/${uid}`);disconnectOp=onDisconnect(myPresence);try{await disconnectOp.remove()}catch(e){console.warn('斷線清理未啟用：',e);toast('提醒：斷線自動清理未啟用，請檢查資料庫規則')}unsub=onValue(ref(db,'rooms/'+code),s=>{const data=s.val();if(!data||!data.players||!data.players[uid]){exitLocal();toast('房間已關閉或你已離開');return}roomData=data;render();},e=>toast('同步失敗：'+e.message));}
