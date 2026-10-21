@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>猜拳俱樂部｜即時連線</title>
+<style>
+:root{--bg:#f4f3ff;--ink:#272541;--muted:#79778d;--purple:#6859df;--pink:#ff729e;--green:#2dbb91;--line:#e5e2f4;--white:#fff}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;background:var(--bg);color:var(--ink)}.wrap{max-width:540px;margin:auto;padding:24px 16px 48px}.brand{text-align:center;margin:14px 0 25px}.logo{font-size:50px}.brand h1{font-size:30px;margin:5px 0}.brand p{color:var(--muted);margin:0}.panel{background:#fff;border:2px solid var(--line);border-radius:24px;padding:22px;margin-bottom:16px;box-shadow:0 8px 0 #e9e6f8}h2{font-size:20px;margin:0 0 17px}label{display:block;font-size:13px;font-weight:700;margin:15px 0 7px}input,select{width:100%;font:inherit;border:2px solid var(--line);background:#fafaff;border-radius:13px;padding:14px;color:var(--ink);outline:none}input:focus,select:focus{border-color:var(--purple)}button{font:inherit;font-weight:800;border:0;border-radius:14px;padding:15px 16px;min-height:52px;cursor:pointer;touch-action:manipulation}button:disabled{opacity:.5;cursor:not-allowed}.primary{background:var(--purple);color:white}.secondary{background:#eeecff;color:var(--purple)}.danger{background:#fff0f3;color:#c5446b}.full{width:100%;margin-top:12px}.row{display:flex;gap:10px}.row>*{flex:1;min-width:0}.hide{display:none!important}.notice{padding:12px 14px;border-radius:13px;background:#fff4dd;color:#77521a;font-size:14px;margin:0 0 16px;line-height:1.5}.pill{display:inline-block;padding:7px 12px;border-radius:30px;background:#e8e5ff;color:#5143bc;font-weight:800;font-size:13px}.roomhead{display:flex;justify-content:space-between;align-items:center;gap:8px}.roomnum{font-size:34px;font-weight:900;letter-spacing:5px}.players{display:grid;gap:9px;margin:18px 0}.player{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border-radius:13px;background:#f6f5ff}.player small{color:var(--muted)}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.choice{background:#f4f2ff;border:3px solid transparent;min-height:112px;padding:12px 3px;color:var(--ink)}.choice span{display:block;font-size:38px;margin-bottom:5px}.choice.selected{border-color:var(--purple);background:#e8e5ff}.status{text-align:center;color:var(--muted);line-height:1.6}.result{text-align:center;padding:18px;background:#f4f2ff;border-radius:17px;margin:16px 0}.result strong{font-size:23px;color:var(--purple)}.results-list{text-align:left;font-size:14px;line-height:1.8;margin-top:12px}.score{font-weight:900;color:var(--purple)}.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:20px}.tiny{font-size:13px;color:var(--muted);line-height:1.5}#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#272541;color:#fff;border-radius:12px;padding:12px 18px;max-width:90vw;z-index:9} @media(max-width:360px){.panel{padding:16px}.choice span{font-size:32px}.choice{min-height:100px}.roomnum{font-size:29px}}
+
+/* 固定一頁顯示：不讓整個頁面捲動 */
+html,body{width:100%;height:100%;height:100dvh;overflow:hidden;overscroll-behavior:none}
+body{display:flex;flex-direction:column}
+.wrap{height:100%;height:100dvh;width:100%;max-width:540px;padding:clamp(8px,1.5dvh,16px) 14px;display:flex;flex-direction:column;overflow:hidden}
+.brand{flex:none;margin:0 0 clamp(6px,1.4dvh,14px)}
+.logo{font-size:clamp(24px,4.2dvh,40px);line-height:1.1}
+.brand h1{font-size:clamp(19px,3.1dvh,27px);margin:2px 0}
+.brand p{font-size:clamp(11px,1.7dvh,14px)}
+.panel{padding:clamp(10px,1.8dvh,18px);border-radius:18px;margin-bottom:clamp(7px,1.2dvh,12px);box-shadow:0 4px 0 #e9e6f8}
+h2{font-size:clamp(16px,2.5dvh,20px);margin-bottom:clamp(6px,1.1dvh,12px)}
+label{margin:clamp(5px,1dvh,11px) 0 4px;font-size:12px}
+input,select{padding:clamp(8px,1.4dvh,12px);font-size:16px}
+button{min-height:clamp(38px,6dvh,49px);padding:8px 12px}
+.full{margin-top:clamp(6px,1.1dvh,10px)}
+#lobby{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center}
+#lobby>div[style]{height:clamp(5px,1dvh,12px)!important}
+#game{flex:1;min-height:0;display:flex;flex-direction:column;gap:clamp(5px,1dvh,10px)}
+#game .panel{margin:0;min-height:0}
+#game .panel:first-child{flex:0 1 auto}
+#game .panel:nth-child(2){flex:1;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.roomnum{font-size:clamp(23px,3.6dvh,32px)}
+.players{gap:clamp(4px,.8dvh,8px);margin:clamp(6px,1.2dvh,13px) 0}
+.player{padding:clamp(5px,.9dvh,10px) 10px;font-size:clamp(12px,1.8dvh,15px)}
+.tiny{font-size:clamp(10px,1.5dvh,12px);line-height:1.3}
+.choices{gap:7px}
+.choice{min-height:clamp(60px,10dvh,95px);padding:5px 2px;font-size:clamp(12px,1.8dvh,15px)}
+.choice span{font-size:clamp(24px,4.5dvh,36px);margin-bottom:2px}
+.status{font-size:clamp(11px,1.7dvh,14px);margin:5px 0;line-height:1.3}
+.result{padding:clamp(6px,1dvh,12px);margin:5px 0}
+.result strong{font-size:clamp(15px,2.3dvh,21px)}
+.results-list{font-size:clamp(10px,1.6dvh,13px);line-height:1.4;margin-top:5px}
+.footer{flex:none;margin-top:auto;padding-top:clamp(2px,.7dvh,7px);font-size:10px}
+@media(max-height:650px){.brand p,.footer{display:none}.brand{margin-bottom:5px}.panel{padding:9px}.players{margin:5px 0}.choice{min-height:55px}.choice span{font-size:23px}}
+@media(max-height:500px){.brand{display:none}.wrap{padding:5px 10px}#game .panel:first-child .tiny{display:none}.roomnum{font-size:22px}.player{padding:3px 8px}.panel{padding:6px}.choices .choice{min-height:42px}.choice span{display:inline;font-size:19px}.status{margin:2px 0}}
+
+</style>
+</head>
+<body><main class="wrap"><header class="brand"><div class="logo">✊ ✌️ ✋</div><h1>猜拳俱樂部</h1><p>開房、邀朋友、一起出拳！</p></header>
+<div id="authNotice" class="notice">正在連線 Firebase 並進行匿名登入…</div>
+<div id="configNotice" class="notice hide">尚未設定 Firebase。請在 HTML 底部找到 <b>firebaseConfig</b>，貼上 Firebase 專案設定。</div>
+<section id="lobby" class="panel"><h2>🎮 開始遊戲</h2><label for="name">你的暱稱</label><input id="name" maxlength="16" placeholder="例如：小明" autocomplete="nickname"><label for="capacity">房間人數</label><select id="capacity"><option value="2">2 人對戰</option><option value="3">3 人對戰</option></select><button id="create" class="primary full">＋ 建立 4 位數房間</button><div style="height:15px"></div><label for="code">已有房號？</label><input id="code" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="輸入 4 位數房號"><button id="join" class="secondary full">加入房間 →</button></section>
+<section id="game" class="hide"><div class="panel"><div class="roomhead"><div><div class="tiny">房間號碼</div><div class="roomnum" id="roomNumber">----</div></div><button id="copy" class="secondary">複製房號</button></div><div style="margin-top:10px"><span class="pill" id="roomState">等待玩家</span></div><div id="players" class="players"></div><p class="tiny">所有玩家加入後即可出拳。每回合所有人出拳完成，才會公開結果。</p><button id="leave" class="danger full">離開房間</button></div><div class="panel"><h2>選擇你的出拳</h2><div class="choices"><button class="choice" data-move="rock"><span>✊</span>石頭</button><button class="choice" data-move="paper"><span>✋</span>布</button><button class="choice" data-move="scissors"><span>✌️</span>剪刀</button></div><p id="moveStatus" class="status">等待玩家加入…</p><div id="result" class="result hide"></div><button id="next" class="primary full hide">下一回合 →</button></div></section><p class="footer">Firebase Realtime Database · 即時多人猜拳</p></main><div id="toast" class="hide" role="status"></div>
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
+import { getDatabase, ref, get, set, update, remove, onValue, runTransaction, onDisconnect, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js';
+import { getAuth, signInAnonymously, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js';
+
+// ================= FIREBASE 設定：請貼在這裡 =================
+// Firebase Console → 專案設定 → 你的應用程式 → 網頁 App → SDK 設定
+const firebaseConfig = {
+  apiKey: "AIzaSyD-_9fNUuIU25waOcQkvbVKN7jqZ-i0Zak",
+  authDomain: "yooo-1d815.firebaseapp.com",
+  databaseURL: "https://yooo-1d815-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "yooo-1d815",
+  storageBucket: "yooo-1d815.firebasestorage.app",
+  messagingSenderId: "1030568543233",
+  appId: "1:1030568543233:web:955398ccdd04d1e5406c00",
+  measurementId: "G-RJH6EDW7NV"
+};
+// ===========================================================
+
+const $=id=>document.getElementById(id);const choices=[...document.querySelectorAll('.choice')];const names={rock:'石頭',paper:'布',scissors:'剪刀'};const icons={rock:'✊',paper:'✋',scissors:'✌️'};
+let db,auth,uid='',room='',roomData=null,unsub=null,disconnectOp=null,processing=false;
+$('create').disabled=true;$('join').disabled=true;
+function authMessage(error){const code=error?.code||'';if(code==='auth/configuration-not-found'||code==='auth/operation-not-allowed')return 'Firebase 尚未啟用匿名登入。請到 Firebase Console → Authentication → 登入方式，啟用「匿名」並儲存，然後重新整理網頁。';if(code==='auth/unauthorized-domain')return '目前網站網域未獲 Firebase Authentication 授權，請在 Authentication → 設定 → 已授權網域新增目前網域。';if(code==='auth/network-request-failed')return '無法連線到 Firebase，請檢查網路或瀏覽器是否封鎖 Firebase。';return 'Firebase 登入失敗（'+code+'）：'+(error?.message||'未知錯誤')}
+function setAuthStatus(message,ok=false){$('authNotice').textContent=message;$('authNotice').classList.toggle('hide',ok);$('create').disabled=!ok;$('join').disabled=!ok;}
+const configured=!!(firebaseConfig.apiKey&&firebaseConfig.databaseURL&&firebaseConfig.projectId&&firebaseConfig.appId);
+if(!configured){$('configNotice').classList.remove('hide');$('create').disabled=true;$('join').disabled=true;}else{
+ try{const app=initializeApp(firebaseConfig);db=getDatabase(app);auth=getAuth(app);onAuthStateChanged(auth,u=>{uid=u?.uid||'';if(uid){setAuthStatus('',true)}else{setAuthStatus('尚未登入 Firebase，正在嘗試匿名登入…');signInAnonymously(auth).catch(e=>{setAuthStatus(authMessage(e));toast('匿名登入失敗，請依畫面提示設定 Firebase');});}},e=>setAuthStatus(authMessage(e)));}catch(e){setAuthStatus('Firebase 初始化失敗：'+e.message);}
+}
+function toast(msg){const t=$('toast');t.textContent=msg;t.classList.remove('hide');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.add('hide'),4000)}
+function nickname(){const n=$('name').value.trim();if(!n){toast('請先輸入暱稱');$('name').focus();return null}return n.slice(0,16)}
+function ready(){if(!db||!uid){toast('尚未完成 Firebase 匿名登入，請查看頁面上方的設定提示');return false}return true}
+function randCode(){return String(Math.floor(1000+Math.random()*9000))}
+function newRoom(capacity,owner,name){return {host:owner,capacity,round:1,phase:'playing',players:{[owner]:{name,score:0,joinedAt:Date.now()}},moves:{},createdAt:Date.now()}}
+$('create').onclick=async()=>{const n=nickname();if(!n||!ready()||processing)return;processing=true;try{let code,ok=false;for(let i=0;i<15;i++){code=randCode();const result=await runTransaction(ref(db,'rooms/'+code),v=>v===null?newRoom(Number($('capacity').value),uid,n):undefined,{applyLocally:false});if(result.committed){ok=true;break}}if(!ok)throw Error('房號暫時不足，請重試');await enter(code);}catch(e){toast('建立失敗：'+e.message)}finally{processing=false}};
+$('join').onclick=async()=>{const n=nickname(),code=$('code').value.trim();if(!n||!ready()||processing)return;if(!/^\d{4}$/.test(code)){toast('請輸入正確的 4 位數房號');return}processing=true;try{const result=await runTransaction(ref(db,'rooms/'+code),v=>{if(!v||!v.players)return;const count=Object.keys(v.players).length;if(!v.players[uid]&&count>=v.capacity)return; if(!v.players[uid]){v.players[uid]={name:n,score:0,joinedAt:Date.now()};v.moves={};v.phase='playing';v.round=(v.round||1)+1;}return v},{applyLocally:false});if(!result.committed)throw Error('房間不存在或人數已滿');await enter(code);}catch(e){toast('加入失敗：'+e.message)}finally{processing=false}};
+async function enter(code){if(unsub)unsub();room=code;$('roomNumber').textContent=code;$('lobby').classList.add('hide');$('game').classList.remove('hide');const myPresence=ref(db,`rooms/${code}/players/${uid}`);disconnectOp=onDisconnect(myPresence);await disconnectOp.remove();unsub=onValue(ref(db,'rooms/'+code),s=>{const data=s.val();if(!data||!data.players||!data.players[uid]){exitLocal();toast('房間已關閉或你已離開');return}roomData=data;render();},e=>toast('同步失敗：'+e.message));}
+function exitLocal(){if(unsub){unsub();unsub=null}room='';roomData=null;$('game').classList.add('hide');$('lobby').classList.remove('hide')}
+$('leave').onclick=async()=>{if(!room||!uid)return;const code=room;try{if(disconnectOp)await disconnectOp.cancel();await runTransaction(ref(db,'rooms/'+code),v=>{if(!v||!v.players)return v;delete v.players[uid];if(v.moves)delete v.moves[uid];const ids=Object.keys(v.players);if(!ids.length)return null;if(v.host===uid)v.host=ids[0];v.moves={};v.phase='playing';v.round=(v.round||1)+1;return v},{applyLocally:false});}catch(e){toast('離開失敗：'+e.message)}exitLocal()};
+$('copy').onclick=async()=>{try{await navigator.clipboard.writeText(room);toast('房號已複製')}catch{toast('房號：'+room)}};
+choices.forEach(b=>b.onclick=async()=>{if(!roomData||!room||!uid)return;const ids=Object.keys(roomData.players||{});if(ids.length!==roomData.capacity||roomData.phase!=='playing'||roomData.moves?.[uid])return;const move=b.dataset.move,code=room,round=roomData.round;try{await runTransaction(ref(db,'rooms/'+code),v=>{if(!v||v.round!==round||v.phase!=='playing'||Object.keys(v.players||{}).length!==v.capacity||!v.players[uid]||v.moves?.[uid])return;v.moves=v.moves||{};v.moves[uid]=move;if(Object.keys(v.moves).length===v.capacity)v.phase='result';return v},{applyLocally:false});}catch(e){toast('出拳失敗：'+e.message)}});
+function winnerIds(moves){const entries=Object.entries(moves),distinct=[...new Set(entries.map(x=>x[1]))];if(distinct.length!==2)return [];const win={rock:'scissors',scissors:'paper',paper:'rock'};const winning=distinct.find(x=>win[x]===distinct.find(y=>y!==x));return entries.filter(([,m])=>m===winning).map(([id])=>id)}
+function render(){const d=roomData,ids=Object.keys(d.players||{}),full=ids.length===d.capacity,submitted=!!d.moves?.[uid];$('roomState').textContent=`第 ${d.round||1} 回合 · ${ids.length}/${d.capacity} 人`;$('players').innerHTML='';ids.forEach(id=>{const p=d.players[id],el=document.createElement('div');el.className='player';const left=document.createElement('span');left.textContent=(id===uid?'👤 ':'🎮 ')+p.name+(id===d.host?' 👑':'');const right=document.createElement('small');right.textContent=`${p.score||0} 分 · ${d.phase==='result'?(icons[d.moves?.[id]]||'—'):(d.moves?.[id]?'已出拳 ✓':'準備中')}`;el.append(left,right);$('players').append(el)});choices.forEach(b=>{b.disabled=!full||d.phase!=='playing'||submitted;b.classList.toggle('selected',submitted&&d.moves[uid]===b.dataset.move)});$('result').classList.toggle('hide',d.phase!=='result');$('next').classList.toggle('hide',d.phase!=='result');$('next').disabled=uid!==d.host;if(!full)$('moveStatus').textContent=`等待其他玩家加入（還差 ${d.capacity-ids.length} 人）`;else if(d.phase==='result')$('moveStatus').textContent='本回合已結束';else $('moveStatus').textContent=submitted?`你出了 ${names[d.moves[uid]]}，等待其他玩家…`:'大家都到齊了！選一個出拳吧';if(d.phase==='result'){const winners=winnerIds(d.moves||{});const box=$('result');box.replaceChildren();const strong=document.createElement('strong');strong.textContent=winners.length?`🏆 ${winners.map(id=>d.players[id]?.name||'玩家').join('、')} 獲勝！`:'🤝 平手！';box.append(strong);const detail=document.createElement('div');detail.className='results-list';detail.textContent=ids.map(id=>`${d.players[id].name}：${icons[d.moves[id]]||''} ${names[d.moves[id]]||'—'}`).join('　｜　');box.append(detail);$('next').textContent=uid===d.host?'下一回合 →':'等待房主開始下一回合';}}
+$('next').onclick=async()=>{if(!room||!roomData||uid!==roomData.host)return;const code=room,round=roomData.round;try{await runTransaction(ref(db,'rooms/'+code),v=>{if(!v||v.host!==uid||v.phase!=='result'||v.round!==round)return;const winners=winnerIds(v.moves||{});winners.forEach(id=>{if(v.players[id])v.players[id].score=(v.players[id].score||0)+1});v.round=(v.round||1)+1;v.moves={};v.phase='playing';return v},{applyLocally:false});}catch(e){toast('無法開始下一回合：'+e.message)}};
+</script></body></html>
