@@ -135,6 +135,19 @@
       margin-left: 0.15rem;
     }
 
+    /* Two game links in the top navigation */
+    .games-nav { display:flex; align-items:center; gap:0.45rem; }
+    .games-label { color:var(--text-secondary); font-size:0.92rem; padding:0.4rem 0.25rem; }
+    .games-buttons { display:flex; gap:0.35rem; }
+    .games-buttons a { background:rgba(255,255,255,.32); border:1px solid rgba(255,255,255,.45); font-weight:600; white-space:nowrap; }
+    .games-buttons a:hover { background:var(--accent); color:white; }
+    @media(max-width:768px) {
+      .games-nav { flex-direction:column; align-items:stretch; gap:0.25rem; }
+      .games-label { padding:0.5rem 1rem 0; font-weight:700; }
+      .games-buttons { display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; }
+      .games-buttons a { text-align:center; }
+    }
+
     /* Mobile menu toggle */
     .menu-toggle {
       display: none;
@@ -336,7 +349,7 @@
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#news">News <span class="soon">Coming soon</span></a></li>
         <li><a href="#tools">Tools <span class="soon">Coming soon</span></a></li>
-        <li><a href="game.html">Games</a></li>
+        <li class="games-nav"><span class="games-label">Games</span><div class="games-buttons"><a href="game.html">Break Down</a><a href="firebase_yo.html">Yo!</a></div></li>
       </ul>
     </div>
   </nav>
