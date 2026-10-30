@@ -1,55 +1,454 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>猜拳俱樂部｜即時連線</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yo! 猜拳俱樂部｜ONLY ZERO</title>
 <style>
-:root{--bg:#f4f3ff;--ink:#272541;--muted:#79778d;--purple:#6859df;--pink:#ff729e;--green:#2dbb91;--line:#e5e2f4;--white:#fff}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;background:var(--bg);color:var(--ink)}.wrap{max-width:540px;margin:auto;padding:24px 16px 48px}.brand{text-align:center;margin:14px 0 25px}.logo{font-size:50px}.brand h1{font-size:30px;margin:5px 0}.brand p{color:var(--muted);margin:0}.panel{background:#fff;border:2px solid var(--line);border-radius:24px;padding:22px;margin-bottom:16px;box-shadow:0 8px 0 #e9e6f8}h2{font-size:20px;margin:0 0 17px}label{display:block;font-size:13px;font-weight:700;margin:15px 0 7px}input,select{width:100%;font:inherit;border:2px solid var(--line);background:#fafaff;border-radius:13px;padding:14px;color:var(--ink);outline:none}input:focus,select:focus{border-color:var(--purple)}button{font:inherit;font-weight:800;border:0;border-radius:14px;padding:15px 16px;min-height:52px;cursor:pointer;touch-action:manipulation}button:disabled{opacity:.5;cursor:not-allowed}.primary{background:var(--purple);color:white}.secondary{background:#eeecff;color:var(--purple)}.danger{background:#fff0f3;color:#c5446b}.full{width:100%;margin-top:12px}.row{display:flex;gap:10px}.row>*{flex:1;min-width:0}.hide{display:none!important}.notice{padding:12px 14px;border-radius:13px;background:#fff4dd;color:#77521a;font-size:14px;margin:0 0 16px;line-height:1.5}.pill{display:inline-block;padding:7px 12px;border-radius:30px;background:#e8e5ff;color:#5143bc;font-weight:800;font-size:13px}.roomhead{display:flex;justify-content:space-between;align-items:center;gap:8px}.roomnum{font-size:34px;font-weight:900;letter-spacing:5px}.players{display:grid;gap:9px;margin:18px 0}.player{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border-radius:13px;background:#f6f5ff}.player small{color:var(--muted)}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.choice{background:#f4f2ff;border:3px solid transparent;min-height:112px;padding:12px 3px;color:var(--ink)}.choice span{display:block;font-size:38px;margin-bottom:5px}.choice.selected{border-color:var(--purple);background:#e8e5ff}.status{text-align:center;color:var(--muted);line-height:1.6}.result{text-align:center;padding:18px;background:#f4f2ff;border-radius:17px;margin:16px 0}.result strong{font-size:23px;color:var(--purple)}.results-list{text-align:left;font-size:14px;line-height:1.8;margin-top:12px}.score{font-weight:900;color:var(--purple)}.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:20px}.tiny{font-size:13px;color:var(--muted);line-height:1.5}#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#272541;color:#fff;border-radius:12px;padding:12px 18px;max-width:90vw;z-index:9} @media(max-width:360px){.panel{padding:16px}.choice span{font-size:32px}.choice{min-height:100px}.roomnum{font-size:29px}}
+:root {
+  --blue: #1A3F97;
+  --cyan: #61B9DD;
+  --yellow: #F4D21F;
+  --white: #FFFFFF;
+  --bg: #F7F9FC;
+  --text: #1A3F97;
+  --text-muted: #5A6B8A;
+  --card: #FFFFFF;
+  --line: rgba(26, 63, 151, 0.12);
+  --shadow: 0 8px 28px rgba(26, 63, 151, 0.08);
+  --radius: 20px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  overscroll-behavior: none;
+  font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", "Microsoft YaHei UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--blue) rgba(26, 63, 151, 0.08);
+}
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: rgba(26, 63, 151, 0.06); border-radius: 999px; }
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 999px;
+  border: 2px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover { background: #15357d; }
 
-.home-link{align-self:flex-start;flex:none;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:var(--purple);background:#eeecff;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:800;margin-bottom:4px;min-height:30px}
-.home-link:hover{background:#e0dcff}
-/* 固定一頁顯示：不讓整個頁面捲動 */
-html,body{width:100%;height:100%;height:100dvh;overflow:hidden;overscroll-behavior:none}
-body{display:flex;flex-direction:column}
-.wrap{height:100%;height:100dvh;width:100%;max-width:540px;padding:clamp(8px,1.5dvh,16px) 14px;display:flex;flex-direction:column;overflow:hidden}
-.brand{flex:none;margin:0 0 clamp(6px,1.4dvh,14px)}
-.logo{font-size:clamp(24px,4.2dvh,40px);line-height:1.1}
-.brand h1{font-size:clamp(19px,3.1dvh,27px);margin:2px 0}
-.brand p{font-size:clamp(11px,1.7dvh,14px)}
-.panel{padding:clamp(10px,1.8dvh,18px);border-radius:18px;margin-bottom:clamp(7px,1.2dvh,12px);box-shadow:0 4px 0 #e9e6f8}
-h2{font-size:clamp(16px,2.5dvh,20px);margin-bottom:clamp(6px,1.1dvh,12px)}
-label{margin:clamp(5px,1dvh,11px) 0 4px;font-size:12px}
-input,select{padding:clamp(8px,1.4dvh,12px);font-size:16px}
-button{min-height:clamp(38px,6dvh,49px);padding:8px 12px}
-.full{margin-top:clamp(6px,1.1dvh,10px)}
-#lobby{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center}
-#lobby>div[style]{height:clamp(5px,1dvh,12px)!important}
-#game{flex:1;min-height:0;display:flex;flex-direction:column;gap:clamp(5px,1dvh,10px)}
-#game .panel{margin:0;min-height:0}
-#game .panel:first-child{flex:0 1 auto}
-#game .panel:nth-child(2){flex:1;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
-.roomnum{font-size:clamp(23px,3.6dvh,32px)}
-.players{gap:clamp(4px,.8dvh,8px);margin:clamp(6px,1.2dvh,13px) 0}
-.player{padding:clamp(5px,.9dvh,10px) 10px;font-size:clamp(12px,1.8dvh,15px)}
-.tiny{font-size:clamp(10px,1.5dvh,12px);line-height:1.3}
-.choices{gap:7px}
-.choice{min-height:clamp(60px,10dvh,95px);padding:5px 2px;font-size:clamp(12px,1.8dvh,15px)}
-.choice span{font-size:clamp(24px,4.5dvh,36px);margin-bottom:2px}
-.status{font-size:clamp(11px,1.7dvh,14px);margin:5px 0;line-height:1.3}
-.result{padding:clamp(6px,1dvh,12px);margin:5px 0}
-.result strong{font-size:clamp(15px,2.3dvh,21px)}
-.results-list{font-size:clamp(10px,1.6dvh,13px);line-height:1.4;margin-top:5px}
-.footer{flex:none;margin-top:auto;padding-top:clamp(2px,.7dvh,7px);font-size:10px}
-@media(max-height:650px){.brand p,.footer{display:none}.brand{margin-bottom:5px}.panel{padding:9px}.players{margin:5px 0}.choice{min-height:55px}.choice span{font-size:23px}}
-@media(max-height:500px){.brand{display:none}.wrap{padding:5px 10px}#game .panel:first-child .tiny{display:none}.roomnum{font-size:22px}.player{padding:3px 8px}.panel{padding:6px}.choices .choice{min-height:42px}.choice span{display:inline;font-size:19px}.status{margin:2px 0}}
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+body::before {
+  width: 200px; height: 200px;
+  border: 32px solid transparent;
+  border-top-color: var(--blue);
+  border-right-color: var(--blue);
+  top: -60px; left: -80px;
+  opacity: 0.85;
+  transform: rotate(-35deg);
+}
+body::after {
+  width: 140px; height: 140px;
+  border: 24px solid transparent;
+  border-top-color: var(--cyan);
+  border-left-color: var(--cyan);
+  bottom: 6%; right: -45px;
+  opacity: 0.8;
+  transform: rotate(150deg);
+}
 
+.wrap {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  height: 100dvh;
+  width: 100%;
+  max-width: 540px;
+  margin: auto;
+  padding: clamp(8px, 1.5dvh, 16px) 14px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.home-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--blue);
+  background: var(--white);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  min-height: 30px;
+  box-shadow: var(--shadow);
+  transition: background 0.2s, border-color 0.2s;
+}
+.home-link:hover {
+  border-color: rgba(26, 63, 151, 0.28);
+  background: #eef3fb;
+}
+
+.brand {
+  flex: none;
+  text-align: center;
+  margin: 0 0 clamp(6px, 1.4dvh, 14px);
+}
+.logo {
+  font-size: clamp(24px, 4.2dvh, 40px);
+  line-height: 1.1;
+}
+.brand h1 {
+  font-size: clamp(19px, 3.1dvh, 27px);
+  margin: 4px 0;
+  color: var(--blue);
+  letter-spacing: 0.04em;
+}
+.brand p {
+  color: var(--text-muted);
+  font-size: clamp(11px, 1.7dvh, 14px);
+}
+
+.panel {
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: 18px;
+  padding: clamp(10px, 1.8dvh, 18px);
+  margin-bottom: clamp(7px, 1.2dvh, 12px);
+  box-shadow: var(--shadow);
+}
+h2 {
+  font-size: clamp(16px, 2.5dvh, 20px);
+  margin: 0 0 clamp(6px, 1.1dvh, 12px);
+  color: var(--blue);
+}
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin: clamp(5px, 1dvh, 11px) 0 4px;
+  color: var(--text-muted);
+}
+input, select {
+  width: 100%;
+  font: inherit;
+  font-size: 16px;
+  border: 1.5px solid var(--line);
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: clamp(8px, 1.4dvh, 12px) 14px;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+input:focus, select:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(97, 185, 221, 0.22);
+}
+button {
+  font: inherit;
+  font-weight: 700;
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 16px;
+  min-height: clamp(38px, 6dvh, 49px);
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background 0.2s, transform 0.15s, opacity 0.2s, box-shadow 0.2s;
+}
+button:disabled { opacity: .5; cursor: not-allowed; box-shadow: none; }
+button:active:not(:disabled) { transform: scale(0.98); }
+
+.primary {
+  background: var(--blue);
+  color: white;
+  box-shadow: 0 4px 14px rgba(26, 63, 151, 0.25);
+}
+.primary:hover:not(:disabled) { background: #15357d; }
+.secondary {
+  background: rgba(26, 63, 151, 0.08);
+  color: var(--blue);
+  border: 1.5px solid transparent;
+}
+.secondary:hover:not(:disabled) {
+  background: rgba(26, 63, 151, 0.14);
+}
+.danger {
+  background: rgba(220, 60, 90, 0.08);
+  color: #b03050;
+}
+.danger:hover:not(:disabled) {
+  background: rgba(220, 60, 90, 0.14);
+}
+.full { width: 100%; margin-top: clamp(6px, 1.1dvh, 10px); }
+.row { display: flex; gap: 10px; }
+.row > * { flex: 1; min-width: 0; }
+.hide { display: none !important; }
+
+.notice {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(244, 210, 31, 0.18);
+  border: 1.5px solid rgba(244, 210, 31, 0.4);
+  color: #7a6210;
+  font-size: 14px;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+.pill {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(97, 185, 221, 0.18);
+  color: var(--blue);
+  font-weight: 800;
+  font-size: 13px;
+  border: 1.5px solid rgba(97, 185, 221, 0.35);
+}
+.roomhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.roomnum {
+  font-size: clamp(23px, 3.6dvh, 32px);
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: var(--blue);
+}
+.players {
+  display: grid;
+  gap: clamp(4px, .8dvh, 8px);
+  margin: clamp(6px, 1.2dvh, 13px) 0;
+}
+.player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: clamp(5px, .9dvh, 10px) 12px;
+  border-radius: 12px;
+  background: rgba(26, 63, 151, 0.05);
+  border: 1px solid var(--line);
+  font-size: clamp(12px, 1.8dvh, 15px);
+}
+.player small { color: var(--text-muted); }
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+}
+.choice {
+  background: rgba(26, 63, 151, 0.04);
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  min-height: clamp(60px, 10dvh, 95px);
+  padding: 5px 2px;
+  color: var(--text);
+  font-size: clamp(12px, 1.8dvh, 15px);
+  font-weight: 700;
+}
+.choice span {
+  display: block;
+  font-size: clamp(24px, 4.5dvh, 36px);
+  margin-bottom: 2px;
+}
+.choice:hover:not(:disabled) {
+  border-color: var(--cyan);
+  background: rgba(97, 185, 221, 0.12);
+}
+.choice.selected {
+  border-color: var(--blue);
+  background: rgba(26, 63, 151, 0.1);
+  box-shadow: 0 0 0 3px rgba(26, 63, 151, 0.12);
+}
+
+.status {
+  text-align: center;
+  color: var(--text-muted);
+  line-height: 1.3;
+  font-size: clamp(11px, 1.7dvh, 14px);
+  margin: 5px 0;
+}
+.result {
+  text-align: center;
+  padding: clamp(6px, 1dvh, 12px);
+  background: rgba(97, 185, 221, 0.12);
+  border: 1.5px solid rgba(97, 185, 221, 0.3);
+  border-radius: 14px;
+  margin: 5px 0;
+}
+.result strong {
+  font-size: clamp(15px, 2.3dvh, 21px);
+  color: var(--blue);
+}
+.results-list {
+  text-align: left;
+  font-size: clamp(10px, 1.6dvh, 13px);
+  line-height: 1.4;
+  margin-top: 5px;
+  color: var(--text-muted);
+}
+.score { font-weight: 900; color: var(--blue); }
+.footer {
+  flex: none;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 10px;
+  margin-top: auto;
+  padding-top: clamp(2px, .7dvh, 7px);
+}
+.tiny {
+  font-size: clamp(10px, 1.5dvh, 12px);
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+#toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--blue);
+  color: #fff;
+  border-radius: 12px;
+  padding: 12px 18px;
+  max-width: 90vw;
+  z-index: 9;
+  box-shadow: 0 8px 24px rgba(26, 63, 151, 0.3);
+  font-size: 14px;
+}
+
+#lobby {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#lobby > div[style] { height: clamp(5px, 1dvh, 12px) !important; }
+#game {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(5px, 1dvh, 10px);
+}
+#game .panel { margin: 0; min-height: 0; }
+#game .panel:first-child { flex: 0 1 auto; }
+#game .panel:nth-child(2) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+@media (max-width: 360px) {
+  .panel { padding: 12px; }
+  .choice span { font-size: 28px; }
+  .choice { min-height: 90px; }
+  .roomnum { font-size: 26px; }
+}
+@media (max-height: 650px) {
+  .brand p, .footer { display: none; }
+  .brand { margin-bottom: 5px; }
+  .panel { padding: 9px; }
+  .players { margin: 5px 0; }
+  .choice { min-height: 55px; }
+  .choice span { font-size: 23px; }
+}
+@media (max-height: 500px) {
+  .brand { display: none; }
+  .wrap { padding: 5px 10px; }
+  #game .panel:first-child .tiny { display: none; }
+  .roomnum { font-size: 22px; }
+  .player { padding: 3px 8px; }
+  .panel { padding: 6px; }
+  .choices .choice { min-height: 42px; }
+  .choice span { display: inline; font-size: 19px; }
+  .status { margin: 2px 0; }
+}
 </style>
 </head>
-<body><main class="wrap"><a class="home-link" href="index.html" aria-label="回首頁">← 回首頁</a><header class="brand"><div class="logo">✊ ✌️ ✋</div><h1>猜拳俱樂部</h1><p>開房、邀朋友、一起出拳！</p></header>
-<div id="authNotice" class="notice">正在連線 Firebase 並進行匿名登入…</div>
-<div id="configNotice" class="notice hide">尚未設定 Firebase。請在 HTML 底部找到 <b>firebaseConfig</b>，貼上 Firebase 專案設定。</div>
-<section id="lobby" class="panel"><h2>🎮 開始遊戲</h2><label for="name">你的暱稱</label><input id="name" maxlength="16" placeholder="例如：小明" autocomplete="nickname"><label for="capacity">房間人數</label><select id="capacity"><option value="2">2 人對戰</option><option value="3">3 人對戰</option></select><button id="create" class="primary full">＋ 建立 4 位數房間</button><div style="height:15px"></div><label for="code">已有房號？</label><input id="code" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="輸入 4 位數房號"><button id="join" class="secondary full">加入房間 →</button><p id="joinError" class="notice hide" role="alert"></p></section>
-<section id="game" class="hide"><div class="panel"><div class="roomhead"><div><div class="tiny">房間號碼</div><div class="roomnum" id="roomNumber">----</div></div><button id="copy" class="secondary">複製房號</button></div><div style="margin-top:10px"><span class="pill" id="roomState">等待玩家</span></div><div id="players" class="players"></div><p class="tiny">所有玩家加入後即可出拳。每回合所有人出拳完成，才會公開結果。</p><button id="leave" class="danger full">離開房間</button></div><div class="panel"><h2>選擇你的出拳</h2><div class="choices"><button class="choice" data-move="rock"><span>✊</span>石頭</button><button class="choice" data-move="paper"><span>✋</span>布</button><button class="choice" data-move="scissors"><span>✌️</span>剪刀</button></div><p id="moveStatus" class="status">等待玩家加入…</p><div id="result" class="result hide"></div><button id="next" class="primary full hide">下一回合 →</button></div></section><p class="footer">Firebase Realtime Database · 即時多人猜拳 · v20261021-2</p></main><div id="toast" class="hide" role="status"></div>
+<body>
+<main class="wrap">
+  <a class="home-link" href="index.html" aria-label="回首頁">← 回首頁</a>
+  <header class="brand">
+    <div class="logo">✊ ✌️ ✋</div>
+    <h1>猜拳俱樂部</h1>
+    <p>開房、邀朋友、一起出拳！</p>
+  </header>
+  <div id="authNotice" class="notice">正在連線 Firebase 並進行匿名登入…</div>
+  <div id="configNotice" class="notice hide">尚未設定 Firebase。請在 HTML 底部找到 <b>firebaseConfig</b>，貼上 Firebase 專案設定。</div>
+  <section id="lobby" class="panel">
+    <h2>開始遊戲</h2>
+    <label for="name">你的暱稱</label>
+    <input id="name" maxlength="16" placeholder="例如：小明" autocomplete="nickname">
+    <label for="capacity">房間人數</label>
+    <select id="capacity">
+      <option value="2">2 人對戰</option>
+      <option value="3">3 人對戰</option>
+    </select>
+    <button id="create" class="primary full">＋ 建立 4 位數房間</button>
+    <div style="height:15px"></div>
+    <label for="code">已有房號？</label>
+    <input id="code" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="輸入 4 位數房號">
+    <button id="join" class="secondary full">加入房間 →</button>
+    <p id="joinError" class="notice hide" role="alert"></p>
+  </section>
+  <section id="game" class="hide">
+    <div class="panel">
+      <div class="roomhead">
+        <div>
+          <div class="tiny">房間號碼</div>
+          <div class="roomnum" id="roomNumber">----</div>
+        </div>
+        <button id="copy" class="secondary">複製房號</button>
+      </div>
+      <div style="margin-top:10px"><span class="pill" id="roomState">等待玩家</span></div>
+      <div id="players" class="players"></div>
+      <p class="tiny">所有玩家加入後即可出拳。每回合所有人出拳完成，才會公開結果。</p>
+      <button id="leave" class="danger full">離開房間</button>
+    </div>
+    <div class="panel">
+      <h2>選擇你的出拳</h2>
+      <div class="choices">
+        <button class="choice" data-move="rock"><span>✊</span>石頭</button>
+        <button class="choice" data-move="paper"><span>✋</span>布</button>
+        <button class="choice" data-move="scissors"><span>✌️</span>剪刀</button>
+      </div>
+      <p id="moveStatus" class="status">等待玩家加入…</p>
+      <div id="result" class="result hide"></div>
+      <button id="next" class="primary full hide">下一回合 →</button>
+    </div>
+  </section>
+  <p class="footer">Firebase Realtime Database · 即時多人猜拳 · ONLY ZERO</p>
+</main>
+<div id="toast" class="hide" role="status"></div>
 <script type="module">
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
 import { getDatabase, ref, get, set, update, remove, onValue, runTransaction, onDisconnect, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js';
