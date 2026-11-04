@@ -1,6 +1,152 @@
 {
-  "updated": "2026-11-04T02:45:56Z",
+  "updated": "2026-11-04T03:03:25Z",
   "source": "Google Alerts",
-  "count": 0,
-  "items": []
+  "sources": [
+    {
+      "id": "virtual-character",
+      "name": "虛擬角色",
+      "count": 0,
+      "items": []
+    },
+    {
+      "id": "83tian",
+      "name": "八三夭",
+      "count": 1,
+      "items": [
+        {
+          "title": "竹縣優秀藝術家薪傳展歲月流金童武義創作個展開幕 - 17news民生好報",
+          "link": "https://17news.net/archives/344308",
+          "published": "2026-11-02T21:17:59Z",
+          "summary": "童武義老師畢業於國立臺灣師範大學美術系研究所，創作歷程相當豐富，其作品屢獲各地美展肯定，曾獲第58屆全省美展水彩類第三 ... 八三夭壓軸開唱點亮竹縣秋夜."
+        }
+      ]
+    },
+    {
+      "id": "toys",
+      "name": "玩具",
+      "count": 20,
+      "items": [
+        {
+          "title": "神奇與拉拉熊之間的合作正在11月1日開始舉行！ | San-x網",
+          "link": "https://www.san-x.co.jp/zh-TW/blog/2026-10-post-0809540",
+          "published": "2026-11-04T01:10:52Z",
+          "summary": "此外，還將出現男士和女性的emo 眼部部分，突出顯示拉拉熊剪影，日常易於使用的服裝，以及庫洛彩色的教室背景，隨處都有角色物品。 在貓架上移動的庫洛毛絨玩具 ..."
+        },
+        {
+          "title": "「帶孩子搭飛機」該準備什麼？空服員：不用昂貴玩具也能一路安撫| 世界新聞網",
+          "link": "https://www.worldjournal.com/wj/amp/story/121617/9855823",
+          "published": "2026-11-04T00:44:29Z",
+          "summary": "帶孩子搭飛機，如何避免哭鬧、讓旅程更順利？空服員分享親子搭機經驗，家長不需要準備昂貴玩具，而是帶上孩子熟悉的零食、最愛的玩偶及居家用品，讓他們在 ..."
+        },
+        {
+          "title": "「帶孩子搭飛機」該準備什麼？空服員：不用昂貴玩具也能一路安撫| 世界新聞網",
+          "link": "https://www.worldjournal.com/wj/story/121617/9855823",
+          "published": "2026-11-04T00:44:28Z",
+          "summary": "帶孩子搭飛機，如何避免哭鬧、讓旅程更順利？空服員分享親子搭機經驗，家長不需要準備昂貴玩具，而是帶上孩子熟悉的零食、最愛的玩偶及居家用品， ..."
+        },
+        {
+          "title": "大型平價超市FreshCo進軍溫哥華首店下周開幕",
+          "link": "https://www.singtao.ca/googleamp/amp.php?region=toronto_hk&cat=2379017&post_id=7674130",
+          "published": "2026-11-03T23:02:36Z",
+          "summary": "公司旗下各品牌在加拿大西部合共設有415間店鋪；在東部市場則另有IGA及Foodland等連鎖品牌，但卑詩省的IGA並非由Sobeys經營。 image. 玩具反斗城舊址保留溫哥華 ..."
+        },
+        {
+          "title": "台中模型迷快衝！TAMASHII快閃展五大人氣IP集結舊車站！ - 旅遊新聞 - PCHOME NEWS",
+          "link": "https://news.m.pchome.com.tw/travel/sharelife/20261103/index-79366400025290216015.html",
+          "published": "2026-11-03T20:51:46Z",
+          "summary": "... 玩具。從角色的招牌姿勢、服裝造型，到機體結構與細緻塗裝，都能近距離感受模型作品的魅力。無論是熱愛少年漫畫的動漫迷，或喜歡機器人與特攝英雄的收藏玩家 ..."
+        },
+        {
+          "title": "萬代轉蛋『七龍珠S.H.Figuarts Miniature Collection 3』可動人偶微縮再現！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=116018",
+          "published": "2026-11-03T19:18:11Z",
+          "summary": "日本萬代玩具公司旗下轉蛋玩具品牌GASHAPON的最新「S.H.FiguartsMiniatureCollection」轉蛋系列，將以人氣作品《七龍珠》為主題， ..."
+        },
+        {
+          "title": "BANPRESTO景品《哥吉拉-0.0》「怪獸咆哮擊哥吉拉(2026) 」再度降臨的大怪獸！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=116067",
+          "published": "2026-11-03T18:39:27Z",
+          "summary": "由日本BANDAISPIRITS公司旗下景品品牌BANPRESTO所推出的大怪獸模型景品系列「怪獸咆哮擊」，發表了出自最新系列電影《哥吉拉-0.0》的最新商品「哥吉 ..."
+        },
+        {
+          "title": "玩具總動員：棒球5青年新星帶者友誼與幸運吉祥物征戰2026達喀爾",
+          "link": "https://www.wbsc.org/zh/news/toy-story-baseball5s-young-stars-bring-friendship-and-lucky-mascots-to-dakar-2026",
+          "published": "2026-11-03T18:35:09Z",
+          "summary": "一隻毛茸茸的玩偶豬、一條珍視的鯊魚，以及來自家人與隊友的禮物，展現了中華台北在青年奧林匹克運動會追求棒球5榮耀背後的友誼與共同經歷。 每個玩具都有 ..."
+        },
+        {
+          "title": "團團學收玩具 - YouTube",
+          "link": "https://youtu.be/F-djWco3D4s?feature=shared",
+          "published": "2026-11-03T15:32:00Z",
+          "summary": "Subscribe. Choices for families. Explore simpler, safer experiences for kids and families. Learn more. Comments are turned off. Learn more."
+        },
+        {
+          "title": "LEGO Ideas 21375「哥吉拉」怪獸之王霸氣登場張嘴噴射放射熱線重現經典破壞場面！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=116073",
+          "published": "2026-11-03T15:05:00Z",
+          "summary": "丹麥積木品牌LEGO旗下LEGOIdeas系列正式公開21375「哥吉拉」商品資訊，以傳奇影業「怪獸宇宙」版本的哥吉拉為主題，運用5363片積木重現怪獸之王的巨大身軀、 ..."
+        },
+        {
+          "title": "Megahouse『PETITRAMA DX 哥吉拉-1.0 新塗裝Ver.』上色樣品展出追加更完整 - 玩具人",
+          "link": "https://www.toy-people.com/?p=116065",
+          "published": "2026-11-03T15:05:00Z",
+          "summary": "由日本模型商MEGAHOUSE 發行的小型場景模型『PETITRAMA』系列，於今日舉行的官方年度盛事『Godzilla Fes 2026』會場中，展出了出自電影《哥吉拉-1.0》的最新 ..."
+        },
+        {
+          "title": "娛樂演化：打造未來共玩體驗 - 新一代設計展",
+          "link": "https://www.yodex.com.tw/yodex/zh-TW/enterprise_topic_detail/54",
+          "published": "2026-11-03T14:39:26Z",
+          "summary": "遊戲逐漸從單一玩具或個人娛樂，發展為 ... 設計方向包括但不限於：兒童遊具、親子共玩產品、互動教具、公共遊戲設施、展覽互動裝置、兒童家具、模組化玩具 ..."
+        },
+        {
+          "title": "東寶30 公分系列「《哥吉拉-0.0》哥吉拉（2026）」毀天滅地之姿霸氣登場！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=116036",
+          "published": "2026-11-03T11:49:41Z",
+          "summary": "由日本PLEX公司製作、X-PLUS公司發行，旗下推出東寶特攝怪獸精緻模型的「東寶30公分」系列公開了今（03）日在日本正式上映的電影《哥吉拉-0.0》主題 ..."
+        },
+        {
+          "title": "高級版小汽車《TOMICA Premium》讓大人得以實現兒時的夢想",
+          "link": "https://news.gamme.com.tw/1775170",
+          "published": "2026-11-03T11:32:33Z",
+          "summary": "圖片來自：電視截圖. TOMICA小汽車是由日本玩具大廠TAKARA TOMY發售的長紅商品，至今已經問世超過半個世紀，並且在全球數十個家都有販售，可說是最具代表性 ..."
+        },
+        {
+          "title": "VIVEE沒有傳統喚醒詞，這種設計對AI玩具體驗有何影響? - 股市爆料同學會",
+          "link": "https://www.cmoney.tw/forum/readmo/bca89ca4-b076-431f-be45-96cb8922e939",
+          "published": "2026-11-03T11:24:58Z",
+          "summary": "FAQ：AI玩具的重點是功能還是情感？ 趨勢上兩者都重要，但情感體驗正變得更關鍵。 本文章由AI 生成，可能會發生錯誤。"
+        },
+        {
+          "title": "LEGO 40888「《哥吉拉II 怪獸之王》 哥吉拉腳印」哥吉拉贈盒組贈品提前曝光！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=116062",
+          "published": "2026-11-03T08:55:18Z",
+          "summary": "繼前幾日提前遭到提前公開的「LEGO21375哥吉拉」之後，SNS上再次流出了知名積木品牌樂高（LEGO）作為哥吉拉贈品一同推出的「LEGO40888哥吉拉 ..."
+        },
+        {
+          "title": "大型犬也好逛日本寵物店KOJIMA浦和店改裝開幕、走道加寬 - 報新聞",
+          "link": "https://www.contentplatform.info/articles/560949/%E5%A4%A7%E5%9E%8B%E7%8A%AC%E4%B9%9F%E5%A5%BD%E9%80%9B%E3%80%80%E6%97%A5%E6%9C%AC%E5%AF%B5%E7%89%A9%E5%BA%97kojima%E6%B5%A6%E5%92%8C%E5%BA%97%E6%94%B9%E8%A3%9D%E9%96%8B%E5%B9%95%E3%80%81%E8%B5%B0/",
+          "published": "2026-11-03T08:20:56Z",
+          "summary": "KOJIMA浦和店10月24日改裝開幕，走道加寬附寵物美容與寵物旅館，步行10分鐘有動物醫院特賣至12月1日，肉泥與狗玩具9折日本寵物連鎖「ペットの専門店コジマ」 ..."
+        },
+        {
+          "title": "雞蛋、白米通通有得夾? 日本娃娃機店改夾日用品｜#公視新聞網#Shorts - YouTube",
+          "link": "https://www.youtube.com/shorts/dwy5PTMiDnA",
+          "published": "2026-11-03T08:07:19Z",
+          "summary": "... 玩具等商品，考慮到物價上漲的影響，他們會傾向於選擇那些看起來更划算的選項。 」 ✍️ 編輯・剪輯／陳廷威・核稿／林阡郡#日本#娃娃機#日用品#Japan ..."
+        },
+        {
+          "title": "天后風範！泰勒絲打破《玩具總動員》31年傳統創作片尾曲「不想搶別人的飯碗」曝點頭答應關鍵",
+          "link": "https://tw.news.yahoo.com/%E5%A4%A9%E5%90%8E%E9%A2%A8%E7%AF%84-%E6%B3%B0%E5%8B%92%E7%B5%B2%E6%89%93%E7%A0%B4-%E7%8E%A9%E5%85%B7%E7%B8%BD%E5%8B%95%E5%93%A1-31%E5%B9%B4%E5%82%B3%E7%B5%B1%E5%89%B5%E4%BD%9C%E7%89%87%E5%B0%BE%E6%9B%B2-%E4%B8%8D%E6%83%B3%E5%88%A5%E4%BA%BA%E7%9A%84%E9%A3%AF%E7%A2%97-015400565.html",
+          "published": "2026-11-03T08:03:42Z",
+          "summary": "[FTNN新聞網]記者吳雨婕／綜合報導西洋天后泰勒絲近來為卡通電影《玩具總動員5》創作片尾曲，而從《玩具總動員》系列卡通電影推出以來，片中的原創歌曲一直 ..."
+        },
+        {
+          "title": "天后風範！泰勒絲打破《玩具總動員》31年傳統創作片尾曲「不想搶別人的飯碗」曝點頭答應關鍵",
+          "link": "https://www.ftnn.com.tw/news/592386",
+          "published": "2026-11-03T07:56:13Z",
+          "summary": "記者吳雨婕／綜合報導西洋天后泰勒絲近來為卡通電影《玩具總動員5》創作片尾曲，而從《玩具總動員》系列卡通電影推出以來，片中的原創歌曲一直由蘭迪 ..."
+        }
+      ]
+    }
+  ]
 }
