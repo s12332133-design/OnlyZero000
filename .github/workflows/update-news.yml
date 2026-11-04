@@ -1,0 +1,114 @@
+name: Update News from Google Alerts
+
+on:
+  schedule:
+    # 每天台灣時間早上 8:00（UTC 00:00）
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # 允許手動執行
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch RSS and generate news.json
+        run: |
+          python3 << 'EOF'
+          import json
+          import urllib.request
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timezone
+          from html import unescape
+          import re
+          import urllib.parse
+
+          RSS_URL = "https://www.google.com/alerts/feeds/16052735769271006015/177671375465141712"
+          NS = {"atom": "http://www.w3.org/2005/Atom"}
+
+          def clean_text(text):
+              if not text:
+                  return ""
+              text = unescape(text)
+              # 移除 HTML 標籤
+              text = re.sub(r"<[^>]+>", "", text)
+              return text.strip()
+
+          def parse_feed(url):
+              req = urllib.request.Request(
+                  url,
+                  headers={"User-Agent": "Mozilla/5.0 (compatible; GitHubActions/1.0)"}
+              )
+              with urllib.request.urlopen(req, timeout=30) as resp:
+                  data = resp.read()
+
+              root = ET.fromstring(data)
+              items = []
+
+              for entry in root.findall("atom:entry", NS):
+                  title_el = entry.find("atom:title", NS)
+                  link_el = entry.find("atom:link", NS)
+                  published_el = entry.find("atom:published", NS)
+                  # Google Alerts 常用 content 或 summary
+                  content_el = entry.find("atom:content", NS)
+                  if content_el is None:
+                      content_el = entry.find("atom:summary", NS)
+
+                  title = clean_text(title_el.text if title_el is not None else "")
+                  link = link_el.get("href") if link_el is not None else ""
+                  published = published_el.text if published_el is not None else ""
+                  summary = clean_text(content_el.text if content_el is not None else "")
+
+                  # Google Alerts 的 link 常是 google.com/url?url= 真實網址
+                  if "url=" in link:
+                      qs = urllib.parse.parse_qs(urllib.parse.urlparse(link).query)
+                      if "url" in qs:
+                          link = qs["url"][0]
+
+                  if title and link:
+                      items.append({
+                          "title": title,
+                          "link": link,
+                          "published": published,
+                          "summary": summary[:300] + ("…" if len(summary) > 300 else "")
+                      })
+
+              return items
+
+          items = parse_feed(RSS_URL)
+          # 依時間新到舊排序（若有 published）
+          items.sort(key=lambda x: x.get("published") or "", reverse=True)
+
+          output = {
+              "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+              "source": "Google Alerts",
+              "count": len(items),
+              "items": items
+          }
+
+          with open("news.json", "w", encoding="utf-8") as f:
+              json.dump(output, f, ensure_ascii=False, indent=2)
+
+          print(f"Generated news.json with {len(items)} items")
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add news.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update news.json from Google Alerts [skip ci]"
+            git push
+          fi
