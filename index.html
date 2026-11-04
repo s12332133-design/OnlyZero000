@@ -515,6 +515,33 @@
       border-color: rgba(26, 63, 151, 0.2);
     }
     /* ── 最新消息 ── */
+    .news-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.1rem;
+    }
+    .news-tab {
+      background: rgba(26, 63, 151, 0.06);
+      border: 1.5px solid rgba(26, 63, 151, 0.12);
+      color: var(--blue);
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.4rem 0.95rem;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.2s;
+    }
+    .news-tab:hover {
+      background: rgba(26, 63, 151, 0.1);
+      transform: translateY(-1px);
+    }
+    .news-tab.active {
+      background: var(--blue);
+      color: var(--white);
+      border-color: var(--blue);
+    }
     .news-list {
       list-style: none;
       display: flex;
@@ -663,6 +690,7 @@
       .hero-text h1 { font-size: 1.6rem; }
       .logo img { height: 22px; }
       .skill-tag { font-size: 0.82rem; padding: 0.4rem 0.85rem; }
+      .news-tab { font-size: 0.82rem; padding: 0.35rem 0.8rem; }
     }
   </style>
 </head>
@@ -786,57 +814,12 @@
       });
     });
 
-    // ── 最新消息 ──
+    // ── 最新消息（分頁籤）──
     (function loadNews() {
       const container = document.getElementById('newsContainer');
       if (!container) return;
 
-      fetch('news.json')
-        .then(res => {
-          if (!res.ok) throw new Error('news.json not found');
-          return res.json();
-        })
-        .then(data => {
-          const items = data.items || [];
-          if (items.length === 0) {
-            container.innerHTML = '<p class="news-empty">目前沒有最新消息，稍後再來看看吧。</p>';
-            return;
-          }
-
-          const maxItems = 8; // 最多顯示幾則
-          const list = items.slice(0, maxItems).map(item => {
-            const dateStr = item.published
-              ? new Date(item.published).toLocaleDateString('zh-TW', {
-                  year: 'numeric', month: 'short', day: 'numeric'
-                })
-              : '';
-            const summary = item.summary
-              ? `<p class="news-summary">${escapeHtml(item.summary)}</p>`
-              : '';
-            return `
-              <li class="news-item">
-                <a href="${escapeAttr(item.link)}" target="_blank" rel="noopener noreferrer">
-                  ${escapeHtml(item.title)}
-                </a>
-                ${dateStr ? `<div class="news-meta">${dateStr}</div>` : ''}
-                ${summary}
-              </li>`;
-          }).join('');
-
-          let updatedNote = '';
-          if (data.updated) {
-            const u = new Date(data.updated).toLocaleString('zh-TW', {
-              year: 'numeric', month: 'short', day: 'numeric',
-              hour: '2-digit', minute: '2-digit'
-            });
-            updatedNote = `<p class="news-updated">最後更新：${u}</p>`;
-          }
-
-          container.innerHTML = `<ul class="news-list">${list}</ul>${updatedNote}`;
-        })
-        .catch(() => {
-          container.innerHTML = '<p class="news-error">暫時無法載入最新消息，請稍後再試。</p>';
-        });
+      const MAX_ITEMS = 8;
 
       function escapeHtml(str) {
         return String(str)
@@ -848,6 +831,92 @@
       function escapeAttr(str) {
         return escapeHtml(str).replace(/'/g, '&#39;');
       }
+
+      function renderItems(items) {
+        if (!items || items.length === 0) {
+          return '<p class="news-empty">目前沒有最新消息，稍後再來看看吧。</p>';
+        }
+        const list = items.slice(0, MAX_ITEMS).map(item => {
+          const dateStr = item.published
+            ? new Date(item.published).toLocaleDateString('zh-TW', {
+                year: 'numeric', month: 'short', day: 'numeric'
+              })
+            : '';
+          const summary = item.summary
+            ? `<p class="news-summary">${escapeHtml(item.summary)}</p>`
+            : '';
+          return `
+            <li class="news-item">
+              <a href="${escapeAttr(item.link)}" target="_blank" rel="noopener noreferrer">
+                ${escapeHtml(item.title)}
+              </a>
+              ${dateStr ? `<div class="news-meta">${dateStr}</div>` : ''}
+              ${summary}
+            </li>`;
+        }).join('');
+        return `<ul class="news-list">${list}</ul>`;
+      }
+
+      fetch('news.json')
+        .then(res => {
+          if (!res.ok) throw new Error('news.json not found');
+          return res.json();
+        })
+        .then(data => {
+          const sources = data.sources || [];
+          if (sources.length === 0) {
+            container.innerHTML = '<p class="news-empty">目前沒有最新消息，稍後再來看看吧。</p>';
+            return;
+          }
+
+          // 合併全部（依時間排序）
+          const allItems = sources
+            .flatMap(s => (s.items || []).map(item => ({ ...item, _source: s.name })))
+            .sort((a, b) => (b.published || '').localeCompare(a.published || ''));
+
+          const tabs = [
+            { id: 'all', name: '全部', items: allItems },
+            ...sources.map(s => ({ id: s.id, name: s.name, items: s.items || [] }))
+          ];
+
+          let activeId = 'all';
+
+          function render() {
+            const tabsHtml = tabs.map(t =>
+              `<button type="button" class="news-tab${t.id === activeId ? ' active' : ''}" data-id="${t.id}">${escapeHtml(t.name)}</button>`
+            ).join('');
+
+            const current = tabs.find(t => t.id === activeId) || tabs[0];
+            const listHtml = renderItems(current.items);
+
+            let updatedNote = '';
+            if (data.updated) {
+              const u = new Date(data.updated).toLocaleString('zh-TW', {
+                year: 'numeric', month: 'short', day: 'numeric',
+                hour: '2-digit', minute: '2-digit'
+              });
+              updatedNote = `<p class="news-updated">最後更新：${u}</p>`;
+            }
+
+            container.innerHTML = `
+              <div class="news-tabs">${tabsHtml}</div>
+              <div class="news-panel">${listHtml}</div>
+              ${updatedNote}
+            `;
+
+            container.querySelectorAll('.news-tab').forEach(btn => {
+              btn.addEventListener('click', () => {
+                activeId = btn.dataset.id;
+                render();
+              });
+            });
+          }
+
+          render();
+        })
+        .catch(() => {
+          container.innerHTML = '<p class="news-error">暫時無法載入最新消息，請稍後再試。</p>';
+        });
     })();
   </script>
 </body>
