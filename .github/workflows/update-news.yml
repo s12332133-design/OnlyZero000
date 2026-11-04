@@ -32,14 +32,30 @@ jobs:
           import re
           import urllib.parse
 
-          RSS_URL = "https://www.google.com/alerts/feeds/16052735769271006015/177671375465141712"
+          FEEDS = [
+              {
+                  "id": "virtual-character",
+                  "name": "虛擬角色",
+                  "url": "https://www.google.com/alerts/feeds/16052735769271006015/177671375465141712"
+              },
+              {
+                  "id": "83tian",
+                  "name": "八三夭",
+                  "url": "https://www.google.com/alerts/feeds/16052735769271006015/177671375465141345"
+              },
+              {
+                  "id": "toys",
+                  "name": "玩具",
+                  "url": "https://www.google.com/alerts/feeds/16052735769271006015/5311831855012285918"
+              },
+          ]
+
           NS = {"atom": "http://www.w3.org/2005/Atom"}
 
           def clean_text(text):
               if not text:
                   return ""
               text = unescape(text)
-              # 移除 HTML 標籤
               text = re.sub(r"<[^>]+>", "", text)
               return text.strip()
 
@@ -58,7 +74,6 @@ jobs:
                   title_el = entry.find("atom:title", NS)
                   link_el = entry.find("atom:link", NS)
                   published_el = entry.find("atom:published", NS)
-                  # Google Alerts 常用 content 或 summary
                   content_el = entry.find("atom:content", NS)
                   if content_el is None:
                       content_el = entry.find("atom:summary", NS)
@@ -82,23 +97,36 @@ jobs:
                           "summary": summary[:300] + ("…" if len(summary) > 300 else "")
                       })
 
+              items.sort(key=lambda x: x.get("published") or "", reverse=True)
               return items
 
-          items = parse_feed(RSS_URL)
-          # 依時間新到舊排序（若有 published）
-          items.sort(key=lambda x: x.get("published") or "", reverse=True)
+          sources = []
+          for feed in FEEDS:
+              try:
+                  items = parse_feed(feed["url"])
+                  print(f"Fetched {feed['name']}: {len(items)} items")
+              except Exception as e:
+                  print(f"Error fetching {feed['name']}: {e}")
+                  items = []
+
+              sources.append({
+                  "id": feed["id"],
+                  "name": feed["name"],
+                  "count": len(items),
+                  "items": items
+              })
 
           output = {
               "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
               "source": "Google Alerts",
-              "count": len(items),
-              "items": items
+              "sources": sources
           }
 
           with open("news.json", "w", encoding="utf-8") as f:
               json.dump(output, f, ensure_ascii=False, indent=2)
 
-          print(f"Generated news.json with {len(items)} items")
+          total = sum(s["count"] for s in sources)
+          print(f"Generated news.json with {total} items across {len(sources)} sources")
           EOF
 
       - name: Commit and push if changed
