@@ -1,95 +1,78 @@
 {
-  "updated": "2026-11-07T05:08:42Z",
+  "updated": "2026-11-08T05:02:43Z",
   "source": "Google Alerts",
   "sources": [
     {
       "id": "virtual-character",
       "name": "虛擬角色",
-      "count": 0,
-      "items": []
+      "count": 3,
+      "items": [
+        {
+          "title": "Huge gaffe sees cycling game published with man taking a POO by the side of the road",
+          "link": "https://www.thesun.co.uk/sport/40938147/cycling-game-gaffe-roadside-poo/",
+          "published": "2026-11-07T02:12:46Z",
+          "summary": "INDOOR cycling game Zwift has made headlines after a character in the virtual world was seen going to the toilet on the roadside. Zwift allows..."
+        },
+        {
+          "title": "Man Quits Customer Service Job To Create AI Woman Who Time-Travels, Now Millions Watch Her",
+          "link": "https://www.techtimes.co.uk/jonathan-laramy-ai-time-travel-influencer-1809737",
+          "published": "2026-11-06T02:07:52Z",
+          "summary": "Fans can engage with a virtual version of a creator they already know, rather than an entirely fictional character."
+        },
+        {
+          "title": "Meta brings video chats to Muse artificial intelligence, users can communicate with virtual avatars",
+          "link": "https://www.gazetaexpress.com/en/Meta-brings-video-chat-to-artificial-intelligence-so-users-can-communicate-with-virtual-avatars/",
+          "published": "2026-11-05T23:12:09Z",
+          "summary": "Instead of just exchanging messages with an artificial intelligence system, users can chat with a virtual character that speaks, moves and reacts in ..."
+        }
+      ]
     },
     {
       "id": "83tian",
       "name": "八三夭",
-      "count": 13,
+      "count": 7,
       "items": [
+        {
+          "title": "2027台南好young首波卡司曝光！八三夭、許富凱、日星KEIKO接力開唱 - ENN台灣電報",
+          "link": "https://enn.tw/804384/",
+          "published": "2026-11-07T19:22:11Z",
+          "summary": "2027台南好young耶誕跨年系列活動」將於12月登場，台南市政府今（4）日公布首波演出陣容，邀來搖滾天團八三夭、金曲歌王許富凱、怕胖團、日本人氣歌手KEIKO及 ..."
+        },
+        {
+          "title": "沈伯洋點燃南港、內湖蕭美琴贈「航海王草帽」：繼續保持魯夫的勇氣 - Life 生活網",
+          "link": "https://life.tw/article/%E6%B2%88%E4%BC%AF%E6%B4%8B%E9%BB%9E%E7%87%83%E5%8D%97%E6%B8%AF-%E5%85%A7%E6%B9%96-%E8%95%AD%E7%BE%8E%E7%90%B4%E8%B4%88-%E8%88%AA%E6%B5%B7%E7%8E%8B%E8%8D%89%E5%B8%BD-%E7%B9%BC%E7%BA%8C%E4%BF%9D%E6%8C%81%E9%AD%AF%E5%A4%AB%E7%9A%84%E5%8B%87-3209014",
+          "published": "2026-11-07T14:44:17Z",
+          "summary": "八三夭、許富凱、. 記者爆料網. 2027台南好young首波卡司曝光！八三夭、許富凱、日星KEIKO接力開唱. 3天前. 熱門文章. 1. 台灣之光！永靖高工鐵道模型征服 ..."
+        },
+        {
+          "title": "卓不副署《老福法》 盧秀燕：換黨執政趙少康：花大錢買武器、沒錢補助長者 - Life 生活網",
+          "link": "https://life.tw/article/%E5%8D%93%E4%B8%8D%E5%89%AF%E7%BD%B2-%E8%80%81%E7%A6%8F%E6%B3%95-%E7%9B%A7%E7%A7%80%E7%87%95-%E6%8F%9B%E9%BB%A8%E5%9F%B7%E6%94%BF-%E8%B6%99%E5%B0%91%E5%BA%B7-%E8%8A%B1%E5%A4%A7%E9%8C%A2%E8%B2%B7%E6%AD%A6%E5%99%A8-%E6%B2%92-3208507",
+          "published": "2026-11-07T14:24:58Z",
+          "summary": "台中市長盧秀燕批評行政院理由荒謬，強調台中市已連續八年實施老人健保補助，並非無法負擔。 ○ 前中廣董事長趙少康質疑政府有錢編列國防預算，卻無意補助長者 ..."
+        },
+        {
+          "title": "新北展現藍白合氣勢李四川、侯友宜、黃國昌同台為白小雞助選 - Life 生活網",
+          "link": "https://life.tw/article/%E6%96%B0%E5%8C%97%E5%B1%95%E7%8F%BE%E8%97%8D%E7%99%BD%E5%90%88%E6%B0%A3%E5%8B%A2-%E6%9D%8E%E5%9B%9B%E5%B7%9D-%E4%BE%AF%E5%8F%8B%E5%AE%9C-%E9%BB%83%E5%9C%8B%E6%98%8C%E5%90%8C%E5%8F%B0%E7%82%BA%E7%99%BD%E5%B0%8F%E9%9B%9E%E5%8A%A9%E9%81%B8-3208509",
+          "published": "2026-11-07T14:20:02Z",
+          "summary": "八三夭、許富凱、. 記者爆料網. 2027台南好young首波卡司曝光！八三夭、許富凱、日星KEIKO接力開唱. 2天前. 熱門文章. 1. 台灣之光！永靖高工鐵道模型征服 ..."
+        },
+        {
+          "title": "基隆東岸郵輪廣場串接工程收尾飛鳶廣場臨海側、市民廣場富狗橋側即日開放 - 蕃新聞",
+          "link": "https://n.yam.com/Article/20261107182262",
+          "published": "2026-11-07T14:16:50Z",
+          "summary": "2026秋遊星夜季移師竹縣府廣場八三夭壓軸嗨翻全場. 勁報. 6 天前 · 從日系生活選 ... 新竹縣秋遊星夜季縣府前廣場登場八三夭壓軸吸引6.4萬人次. 報新聞. 6 天 ..."
+        },
+        {
+          "title": "永慶房產集團加盟四品牌超派演唱會引爆高雄1萬2500人齊聚巨蛋3巨星接力炸場 - 匯流新聞網",
+          "link": "https://cnews.com.tw/204261106a06/",
+          "published": "2026-11-07T07:30:54Z",
+          "summary": "現場湧入1萬2500名觀眾，寫下高雄巨蛋史上，首場由房仲業包場舉辦萬人演唱會的全新紀錄。 演唱會現場星光熠熠，破天荒匯聚金曲歌王蕭敬騰、搖滾天團八三夭、鐵肺 ..."
+        },
         {
           "title": "雙金歌王歌后返鄉開唱高雄跨年首波卡司曝光 - 蕃新聞",
           "link": "https://n.yam.com/Article/20261107903449",
           "published": "2026-11-07T02:41:25Z",
           "summary": "... 八三夭、許富凱登台. 報新聞. 1 天前. 2027台南好young跨年首波卡司揭曉八三夭、許富凱等星光齊聚. 大成報. 2 天前. 2027大港開唱首波卡司解禁！「三金歌手 ..."
-        },
-        {
-          "title": "「2027跨年雄嗨趴」首波重磅卡司金曲收視女王孫淑媚開場、台語歌王許富凱獻唱 - 蕃新聞",
-          "link": "https://n.yam.com/Article/20261107162543",
-          "published": "2026-11-07T00:21:52Z",
-          "summary": "... 八三夭、許富凱等星光齊聚. 大成報. 2 天前 · 台南好young耶誕跨年首波卡司公布八三夭、許富凱登台. 報新聞. 1 天前 · 金曲卡司齊聚！ 韋禮安、蔡健雅、彭佳慧 ..."
-        },
-        {
-          "title": "站在高处俯瞰车流，只想说句谢谢，你们无可替代|八三夭|没有翅膀的人_新浪新闻",
-          "link": "https://www.sina.cn/news/detail/5362353654988876.html",
-          "published": "2026-11-06T18:28:49Z",
-          "summary": "八三夭乐团发布2026 年“没有翅膀的人”世界巡回演唱会预告，公布厦门与澳门场次信息，并配文感谢粉丝十几年来的陪伴。视频画面中一名戴黑色棒球帽和墨镜的 ..."
-        },
-        {
-          "title": "《少女  歌劇》、《Love Live！虹咲學園》聲優小泉萌香來了2027台北見面會1/17甜蜜灑糖",
-          "link": "https://life.tw/article/%E5%B0%91%E5%A5%B3%E6%AD%8C%E5%8A%87-love-live-%E8%99%B9%E5%92%B2%E5%AD%B8%E5%9C%92-%E8%81%B2%E5%84%AA%E5%B0%8F%E6%B3%89%E8%90%8C%E9%A6%99%E4%BE%86%E4%BA%86-2-3208065",
-          "published": "2026-11-06T17:00:23Z",
-          "summary": "... 八三夭、許富凱等星光齊聚. 向下繼續閱讀. 2027台南好young跨年首波卡司 ... 今年除了八三夭、金曲歌王許富凱及來自日本、馬來西亞的藝人，也安排在地 ..."
-        },
-        {
-          "title": "永慶房產集團加盟四品牌超派演唱會引爆高雄1萬2500人齊聚巨蛋3巨星接力炸場",
-          "link": "https://news.pchome.com.tw/living/cnews/20261106/index-79396993099458227009.html",
-          "published": "2026-11-06T13:45:58Z",
-          "summary": "演唱會現場星光熠熠，破天荒匯聚金曲歌王蕭敬騰、搖滾天團八三夭、鐵肺天后戴愛玲，以超越跨年等級的頂級陣容閃耀港都。同時，高雄市地政局長陳冠福、高雄市 ..."
-        },
-        {
-          "title": "告五人隔3年斥資破億攻蛋！犬青短褲辣秀蠻腰美腿台下萬人辣暈 - NOWnews今日新聞",
-          "link": "https://www.nownews.com/news/6890091",
-          "published": "2026-11-06T13:19:17Z",
-          "summary": "... 三場小巨蛋完售的新紀錄。 ... 在演藝圈有著好人緣的他們，今晚開唱許多星友也送上花籃祝福，包括任賢齊、動力火車、王心凌、韓國女團MAMAMOO的隊長頌樂、八三夭、 ..."
-        },
-        {
-          "title": "尖叫聲掀翻巨蛋！三大巨星齊聚「永慶之夜超派演唱會」炸裂高雄 - 中時新聞網",
-          "link": "https://www.chinatimes.com/realtimenews/20261106003842-260410",
-          "published": "2026-11-06T10:57:35Z",
-          "summary": "搖滾神曲連發引爆港都！搖滾天團八三夭以強烈節奏炸翻巨蛋舞台，透過萬人跳動大合唱的音樂狂潮，徹底掀起極具張力的搖滾巨浪。(圖/永慶房產集團提供)."
-        },
-        {
-          "title": "八三夭2026 世界巡回演唱会官宣 - 新浪",
-          "link": "https://www.sina.cn/news/detail/5362225306403994.html",
-          "published": "2026-11-06T10:29:02Z",
-          "summary": "八三夭乐团发布微博感谢粉丝支持，并宣布开启2026 年“没有翅膀的人”世界巡回演唱会，公布厦门与澳门站演出时间及场馆。配图展示了乐队成员在大型体育场内的 ..."
-        },
-        {
-          "title": "永慶加盟四品牌「超派演唱會」引爆高雄12500人齊聚巨蛋 - 蕃新聞",
-          "link": "https://n.yam.com/Article/20261106670099",
-          "published": "2026-11-06T09:45:04Z",
-          "summary": "這是高雄巨蛋首場由房仲業者包場舉辦的萬人演唱會，為房仲業寫下新紀錄。 演唱會卡司堅強，金曲歌王蕭敬騰、搖滾天團八三夭與鐵肺天后戴愛玲接力演出，帶來 ..."
-        },
-        {
-          "title": "永慶加盟四品牌「超派演唱會」引爆高雄12500人齊聚巨蛋 - 中央社",
-          "link": "https://www.cna.com.tw/business/chinese/449246",
-          "published": "2026-11-06T09:40:42Z",
-          "summary": "演唱會卡司堅強，金曲歌王蕭敬騰、搖滾天團八三夭與鐵肺天后戴愛玲接力演出，帶來一連串精彩舞台，炒熱現場氣氛。高雄市地政局長陳冠福、高雄市教育局長吳立森、 ..."
-        },
-        {
-          "title": "永慶加盟四品牌「超派演唱會」引爆高雄共同見證房仲實力 - 安傳媒",
-          "link": "https://annewsmedia.com/2026/11/06/housing-market-information/23365/",
-          "published": "2026-11-06T08:41:14Z",
-          "summary": "現場湧入12,500名觀眾，寫下高雄巨蛋史上首場由房仲業包場舉辦萬人演唱會的全新紀錄。 演唱會現場星光熠熠，破天荒匯聚金曲歌王蕭敬騰、搖滾天團八三夭、鐵肺 ..."
-        },
-        {
-          "title": "一個人也能吃辦桌！臺南巷仔口辦桌演唱會關廟開席| 楊艾喬| 地方新聞- 風傳媒",
-          "link": "https://www.storm.mg/article/11179040",
-          "published": "2026-11-06T06:07:41Z",
-          "summary": "八三夭、KEIKO、黃瑋昕12月接力開唱 · 南部1縣市美食被低估！遊客讚「價格便宜、美味不輸台南」，在地人曝低調原因 · 台南小吃為什麼那麼甜？不是真的愛吃糖 ..."
-        },
-        {
-          "title": "高雄跨年首波卡司揭曉！孫淑媚開場、許富凱邀歌迷夢時代大合唱 - 蕃新聞",
-          "link": "https://n.yam.com/Article/20261106283457",
-          "published": "2026-11-06T05:47:57Z",
-          "summary": "... 八三夭、許富凱等星光齊聚. 大成報. 1 天前. 台南好young耶誕跨年首波卡司公布八三夭、許富凱登台. 報新聞. 17 小時前. 2027台南好young首波卡司亮相. 聚傳媒. 1 ..."
         }
       ]
     },
@@ -99,124 +82,124 @@
       "count": 20,
       "items": [
         {
-          "title": "油麻地商場偷卡賊仔逃走露出內褲店主：驚到褲都甩埋？ - 點新聞",
-          "link": "https://www.dotdotnews.com/a/202611/07/AP6aee983ae4b091a65a2ef9c8.html",
-          "published": "2026-11-07T03:22:31Z",
-          "summary": "【點新聞報道】油麻地玩具購物商場「現時點」近日發生一宗店舖盜竊案，一名男賊在店外偷走一盒價值約1650元的玩具卡後準備離開時，所穿的短褲褲頭突然滑落並 ..."
+          "title": "1歲兒吞玩具球終身殘！高中小媽媽心碎提告保母判賠千萬法官嘆「艱難」 - Yahoo新聞",
+          "link": "https://tw.news.yahoo.com/1%E6%AD%B2%E5%85%92%E5%90%9E%E7%8E%A9%E5%85%B7%E7%90%83%E7%B5%82%E8%BA%AB%E6%AE%98-%E9%AB%98%E4%B8%AD%E5%B0%8F%E5%AA%BD%E5%AA%BD%E5%BF%83%E7%A2%8E%E6%8F%90%E5%91%8A-%E4%BF%9D%E6%AF%8D%E5%88%A4%E8%B3%A0%E5%8D%83%E8%90%AC%E6%B3%95%E5%AE%98%E5%98%86-%E8%89%B1%E9%9B%A3-003900004.html",
+          "published": "2026-11-08T01:04:06Z",
+          "summary": "... 玩具球，被發現時已經被玩具球卡氣管窒息，救回後仍終身殘疾。（圖／翻攝畫面）. 台中市一名仍在就讀高中的年輕母親，產下一名男嬰後委託王姓保母24 小時 ..."
         },
         {
-          "title": "POSE+香港「玩具收藏家販售展秋之祭2026」多款展品登場滿滿蓋特以及充滿氣勢的大紅蓮展出中！",
-          "link": "https://www.toy-people.com/?p=116244",
-          "published": "2026-11-07T02:05:33Z",
-          "summary": "香港玩具品牌POSE+於11月6日至8日於香港灣仔合和商場3樓中庭所舉辦的「玩具收藏家販售展秋之祭2026」免費入場活動中展出了多款旗下所推出的合金成品模型， ..."
+          "title": "【因材施教】學研（Gakken）三麗鷗美樂蒂與酷洛米積木即將網購開賣 - WEBOOK MEDIA",
+          "link": "https://www.webook.com.tw/acg-news/2026-11-08-webook-news-13/",
+          "published": "2026-11-08T00:04:13Z",
+          "summary": "... 玩具中。 圖／日本出版販売株式会社提供. 本商品特別結合了三麗鷗旗下性格 ... Gakken 益智積木是日本知名教育出版大廠學研集團旗下，長年深受大眾喜愛且最具指標 ..."
         },
         {
-          "title": "《塔麻可吉》聯名Netflix《怪奇物語》2027 年2 月27 日發售螢幕翻轉呈現裏世界",
-          "link": "https://www.ludens.com.tw/tamagotchi-stranger-things-2027/",
-          "published": "2026-11-07T01:33:51Z",
-          "summary": "不過官方也特別註明，本作並未收錄《怪奇物語》劇中角色的培育內容。 「Original 塔麻可吉怪奇物語」預計自2027 年2 月27 日起於各大玩具賣場及相關通路陸續上架 ..."
+          "title": "電子貓玩具市場展望2035：寵物擬人化與都市需求推動成長- 新聞與統計 - IndexBox",
+          "link": "https://www.indexbox.io/zh-hant/blog/electronic-cat-toys-market-forecast-to-2035-humanization-of-pets-and-urban-demand-drive-growth/",
+          "published": "2026-11-07T22:22:28Z",
+          "summary": "代表性業者： PetSafe、SmartyKat、Frisco、Petlinks與Trixie Pet Products。 互動機器玩具（估計占比：25%）. 互動機器玩具是該品類的高階成長引擎，具備自主 ..."
         },
         {
-          "title": "油麻地商場男子疑偷玩具卡短褲滑落露出內褲店主籲商戶提高警覺 - 星島日報",
-          "link": "https://www.singtaousa.com/2026/11/06/news/china/mall-shoplifting-shorts-slipped/",
-          "published": "2026-11-07T01:31:42Z",
-          "summary": "事件發生於油麻地玩具購物商場「現時點」，社交平台Threads 流傳一段長約31秒的影片。 涉事男子疑趁人不察，將一盒貨品放入袋內，再偷走門口另一盒價值約1,650元 ..."
+          "title": "PUMA 「塔麻可吉」30週年聯名鞋款&服飾系列結合雙方品牌標誌獨特設計！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=116252",
+          "published": "2026-11-07T21:25:01Z",
+          "summary": "萬代（BANDAI）的掌上型電子寵物遊戲機「塔麻可吉」可說是是個相當具有年代味道的代表。也將於今年邁入發行30週年，至今仍有不小的人氣，持續都有新機種以及 ..."
+        },
+        {
+          "title": "啟德Merry Balloon 2026｜近20大人氣IP巨型氣球巡遊、十日限定露天市集、早鳥門票攻略",
+          "link": "https://hk.news.yahoo.com/%E5%95%9F%E5%BE%B7merry-balloon-2026-%E8%BF%9120%E5%A4%A7%E4%BA%BA%E6%B0%A3ip%E5%B7%A8%E5%9E%8B%E6%B0%A3%E7%90%83%E5%B7%A1%E9%81%8A-%E5%8D%81%E6%97%A5%E9%99%90%E5%AE%9A%E9%9C%B2%E5%A4%A9%E5%B8%82%E9%9B%86-075059475.html",
+          "published": "2026-11-07T19:55:07Z",
+          "summary": "對於熱衷收藏玩具或角色周邊的愛好者來說，今次推出的限定單品同樣頗具吸引力。官方特別設計多款只可透過攤位遊戲贏取或預購套裝入手的聯乘產物，包括80厘米超大 ..."
+        },
+        {
+          "title": "彩星玩具(00869)11月6日斥資約19.44萬港元回購40.4萬股 - Moomoo",
+          "link": "https://www.moomoo.com/hant/news/post/1003800320",
+          "published": "2026-11-07T17:57:50Z",
+          "summary": "彩星玩具(00869)發佈公告，於2026年11月6日該公司斥資約19.44萬港元回購40.4萬股，回購價格爲每股0.48至0.485港元。智通財經APP訊，彩星玩具(00869)發佈公告 ..."
+        },
+        {
+          "title": "油麻地現時點男賊偷卡得手逃走露內褲卡店：驚到甩褲？｜有片 - Hk01",
+          "link": "https://www.hk01.com/%E7%AA%81%E7%99%BC/60408083/%E6%B2%B9%E9%BA%BB%E5%9C%B0%E7%8F%BE%E6%99%82%E9%BB%9E%E7%94%B7%E8%B3%8A%E5%81%B7%E5%8D%A1-%E5%BE%97%E6%89%8B%E9%80%83%E8%B5%B0%E9%9C%B2%E5%85%A7%E8%A4%B2-%E5%8D%A1%E5%BA%97-%E9%A9%9A%E5%88%B0%E7%94%A9%E8%A4%B2-%E6%9C%89%E7%89%87",
+          "published": "2026-11-07T16:51:29Z",
+          "summary": "油麻地玩具購物商場「現時點」一間卡店，昨日（6日）在Threads上載一段長約31秒的影片，片中可見，一名身穿黑色上衣的男子站在店舖門口，將一盒貨."
+        },
+        {
+          "title": "貓玩具補充配件市場展望2035：訂閱制補充與高階益智需求推動成長- 新聞與統計 - IndexBox",
+          "link": "https://www.indexbox.io/zh-hant/blog/cat-toys-refill-market-forecast-to-2035-growth-driven-by-subscription-replenishment-and-premium-enrichment-demand/",
+          "published": "2026-11-07T15:09:08Z",
+          "summary": "代表性業者：PetSafe、Catit、Trixie Pet Products、Petmate與Outward Hound。 絨毛與布料玩具補充配件（估計占比：25%）. 絨毛與布料玩具補充配件占市場相當 ..."
+        },
+        {
+          "title": "美國空運包裹報稱玩具海關檢獲5隻瀕危活龜 - 星島日報",
+          "link": "https://www.singtaousa.com/2026/11/07/news/china/us-parcel-hides-endangered-turtles/",
+          "published": "2026-11-07T14:37:51Z",
+          "summary": "香港海關在美國空運寄港包裹中檢獲5隻懷疑受管制瀕危活龜，包裹報稱載玩具模型禮盒，估計市值約5萬元；案件轉交漁農自然護理署跟進。"
+        },
+        {
+          "title": "製作小型炮彈玩具 - YouTube",
+          "link": "https://www.youtube.com/shorts/-bxGyhyIMN4",
+          "published": "2026-11-07T14:13:24Z",
+          "summary": "@zepeili-k9k. Subscribe. 製作小型炮彈玩具. 1. Share. Please sign in. This helps protect our community. Sign in. Skip video."
         },
         {
           "title": "《戰鬥陀螺X》聯手日本JAXA！太空工程師打造最強陀螺11/7亮相| 遊戲 - NOWnews今日新聞",
-          "link": "https://www.nownews.com/amp/news/6890029",
-          "published": "2026-11-07T01:18:09Z",
-          "summary": "《戰鬥陀螺X》（BEYBLADE X）即將與太空科技扯上關係！日本玩具大廠TAKARA TOMY 宣布，將於11月7日參加日本宇宙航空研究開發機構（JAXA..."
+          "link": "https://www.nownews.com/news/6890029",
+          "published": "2026-11-07T13:55:41Z",
+          "summary": "《戰鬥陀螺X》（BEYBLADE X）即將與太空科技扯上關係！日本玩具大廠TAKARA TOMY 宣布，將於11月7日參加日本宇宙航空研究開發機構（JAXA）舉辦的「相模原園區 ..."
         },
         {
-          "title": "【通說環球】會外語的機器狗能AI復盤的魔方中國玩具這麼先進啦？ - 香港新聞網",
-          "link": "https://www.hkcna.hk/hk/content/s6aedf5e9e4b0eed2aee64162.html",
-          "published": "2026-11-07T00:47:12Z",
-          "summary": "而這場澄海的玩博會，或許會刷新你對“中國玩具”的認知。 【智能AI玩具的快剪（包括一些小朋友與玩具之間互動的畫面）】."
+          "title": "A Nostalgic Retro Toy - YouTube",
+          "link": "https://www.youtube.com/watch?v=f9WFooiqUo4",
+          "published": "2026-11-07T13:49:43Z",
+          "summary": "Sign in. Video unavailable. This content isn't available. #funny #outrageous #funny. A Nostalgic Retro Toy. @如何科學養豬 70 likes 3.9K views 1h ago."
         },
         {
-          "title": "從腦科學理解ADHD孩子的分心：黃沛霖博士談環境設計如何幫助專注 - shemom.com",
-          "link": "https://www.shemom.com/motherhood/%E5%BE%9E%E8%85%A6%E7%A7%91%E5%AD%B8%E7%90%86%E8%A7%A3adhd%E5%AD%A9%E5%AD%90%E7%9A%84%E5%88%86%E5%BF%83%E9%BB%83%E6%B2%9B%E9%9C%96%E5%8D%9A%E5%A3%AB%E8%AB%87%E7%92%B0%E5%A2%83%E8%A8%AD%E8%A8%88%E5%A6%82%E4%BD%95%E5%B9%AB%E5%8A%A9%E5%B0%88%E6%B3%A8",
-          "published": "2026-11-06T22:39:39Z",
-          "summary": "黃博士指出，ADHD的小朋友很容易被見到的東西分心：如果書枱面向窗口，外面有車、有雀仔飛過；或者對住門口有人行過；又或者側邊有玩具，集中力就會即刻被這些 ..."
+          "title": "TOYSEASY《鋼鐵戰魂》原創變形玩具「泰恩」預計2027 年1 月發售售價約1,887 元- Gachapolitan",
+          "link": "https://gachapolitan.com/toyseasy-iron-soul-taion-yw2411c-transforming-robot-release/",
+          "published": "2026-11-07T13:40:57Z",
+          "summary": "玩具品牌TOYSEASY 旗下原創機器人系列「鋼鐵戰魂」近期揭曉了最新開發計畫，型號為YW2411C 的變形可動玩具「泰恩」預計將於2027 年1 月正式發售。"
         },
         {
-          "title": "油麻地商場男子疑偷玩具 走位遮擋順手牽羊露出內褲被網民嘲笑",
-          "link": "https://www.singtao.ca/7677248/2026-11-06/news-%E6%B2%B9%E9%BA%BB%E5%9C%B0%E5%95%86%E5%A0%B4%E7%94%B7%E5%AD%90%E7%96%91%E5%81%B7%E7%8E%A9%E5%85%B7%C2%A0%E8%B5%B0%E4%BD%8D%E9%81%AE%E6%93%8B%E9%A0%86%E6%89%8B%E7%89%BD%E7%BE%8A+%E9%9C%B2%E5%87%BA%E5%85%A7%E8%A4%B2%E8%A2%AB%E7%B6%B2%E6%B0%91%E5%98%B2%E7%AC%91/",
-          "published": "2026-11-06T21:05:26Z",
-          "summary": "社交平台Threads 昨日（6日）流傳一段長約31秒的影片，揭發油麻地知名玩具購物商場「現時點」發生一宗怪異盜竊案。一名男賊人在店舖門口行劫時， ..."
+          "title": "檢查美國進口玩具模型包裹海關揭藏5隻受管制瀕危活龜 - 文匯報",
+          "link": "https://www.wenweipo.com/a/202611/07/AP6aef1b24e4b028ec0193035c.html",
+          "published": "2026-11-07T12:55:39Z",
+          "summary": "透過風險評估，海關人員今日檢查一個由美國進口至香港，報稱載有玩具模型禮盒的包裹。經檢查後，海關人員於包裹中發現該批懷疑受管制屬瀕危物種的活龜。 案件已 ..."
         },
         {
-          "title": "【廣告】MATHISHOME節日禮品專區盛大開幕 - 新唐人電視台",
-          "link": "https://www.ntdtv.com/gb/2026/11/06/a104148597.html/amp",
-          "published": "2026-11-06T20:40:59Z",
-          "summary": "您逛過MATHISHOME的節日禮品專區嗎？這裡有上百款玩具與精選禮品，超值登場。"
+          "title": "台中1歲男嬰拿球塞嘴窒息...慘終身失能保母疏失判賠1007萬| 法律前線 - 聯合新聞網",
+          "link": "https://udn.com/news/story/7321/9864182",
+          "published": "2026-11-07T12:54:04Z",
+          "summary": "王姓保母受台中市社會局家扶中心托育，24小時照顧1名1歲2個月大的男童，她卻未注意男童拿玩具球塞嘴釀窒息，送醫搶救因腦病變永久損傷語言能力， ..."
         },
         {
-          "title": "AI助力生產經驗「數據化」 - 中國- 今日大公",
-          "link": "https://epaper.tkww.hk/a/202611/07/AP6aee34f0e4b0bcb39b1844a2.html",
-          "published": "2026-11-06T20:16:53Z",
-          "summary": "企業品牌經理鄧翠瓊說，「面對全球AI玩具動輒上千元人民幣的高昂售價，我們依託大灣區成熟的硬件配套與自主原創研發能力，成功將成本與售價控制在極具市場優勢的 ..."
+          "title": "海關機場搜美國進口「玩具模型」包裹檢5瀕危活龜值$5萬 - Hk01",
+          "link": "https://www.hk01.com/%E7%AA%81%E7%99%BC/60408268/%E6%B5%B7%E9%97%9C%E6%A9%9F%E5%A0%B4%E6%90%9C%E7%BE%8E%E5%9C%8B%E9%80%B2%E5%8F%A3-%E7%8E%A9%E5%85%B7%E6%A8%A1%E5%9E%8B-%E5%8C%85%E8%A3%B9-%E6%AA%A25%E7%80%95%E5%8D%B1%E6%B4%BB%E9%BE%9C%E5%80%BC-5%E8%90%AC",
+          "published": "2026-11-07T12:45:11Z",
+          "summary": "香港海關今日（7日）在香港國際機場，檢查一個由美國進口至香港、報稱載有玩具模型禮盒的包裹，搜出5隻懷疑受管制屬瀕危物種的活龜，估計市值共約5."
         },
         {
-          "title": "「《ぼのぼの》展」將於11月7日在銀座博品館TOY PARK開展，推出金銀絨毛玩偶及簽名活動",
-          "link": "https://www.haveagood-holiday.com/zh-TW/articles/bono-bono-showcase-hakuhinkan-toy-park-ginza-2026",
-          "published": "2026-11-06T19:20:05Z",
-          "summary": "為紀念漫畫連載40週年與動畫開播10週年，《ぼのぼの》特展將於2026年11月7日至12月3日在銀座博品館TOY PARK總店舉行。現場將販售金銀版絨毛玩偶、生肖「羊」 ..."
+          "title": "Manhattan Portage 《寶可夢》聯名包款系列五種寶可夢刺繡點綴上市！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=116247",
+          "published": "2026-11-07T11:29:07Z",
+          "summary": "這次是雙方聯名系列「Pokémon Collection」的第3 彈。除了過去系列中也曾登場的皮卡丘之外，這次還新增了噴火龍、百變怪、路卡利歐，以及謎擬Q 共4 隻寶可夢。"
         },
         {
-          "title": "超像可動『JOJO的奇妙冒險喬納森·喬斯達3rd 三次色』WF 2027 [冬]限定登場！ - 玩具人",
-          "link": "https://www.toy-people.com/?p=116240",
-          "published": "2026-11-06T17:19:03Z",
-          "summary": "日本MEDICOS玩具公司旗下相當受歡迎的「超像可動系列」，發表了將於2027年2月13～１４日舉辦的WonderFestival2027[冬]限定販售商品，本篇介紹的是出自《JOJO ..."
+          "title": "美國空運寄港包裹聲稱載玩具海關揭藏5瀕危活龜 - 星島頭條",
+          "link": "https://www.stheadline.com/breaking-news/3634611/%E7%BE%8E%E5%9C%8B%E7%A9%BA%E9%81%8B%E5%AF%84%E6%B8%AF%E5%8C%85%E8%A3%B9%E8%81%B2%E7%A8%B1%E8%BC%89%E7%8E%A9%E5%85%B7-%E6%B5%B7%E9%97%9C%E6%8F%AD%E8%97%8F5%E7%80%95%E5%8D%B1%E6%B4%BB%E9%BE%9C",
+          "published": "2026-11-07T11:19:09Z",
+          "summary": "香港海關人員今日（11月7日）透過風險評估，在香港國際機場內，檢查一件由美國進口、報稱載玩具模型禮盒的包裹。經檢查後，關員發現裏面有5隻懷疑受管制屬 ..."
         },
         {
-          "title": "孩之寶盈利大超預期趁調整買 - 投資",
-          "link": "https://invest.hket.com/article/4221402/",
-          "published": "2026-11-06T17:05:14Z",
-          "summary": "... 玩具之外，桌遊及卡牌遊戲已成主力，業務具前景，股價回調可趁機收集。 孩之寶（Hasbro；HAS）是較少香港投資者會關注的美股，常被歸類為傳統玩具周期股."
+          "title": "TOMICA FACTORY本月14日開幕自配車身顏色及零件打造專屬玩具車- 香港文匯報",
+          "link": "https://www.wenweipo.com/a/202611/07/AP6aedbd0ce4b028ec0192e011.html",
+          "published": "2026-11-07T10:34:18Z",
+          "summary": "香港首個TOMICA FACTORY將在11月14日假尖沙咀海運大廈玩具「反」斗城內的TOMICA BRAND STORE開幕。新體驗讓車迷與親子客人自行挑選零件組合，再由店員即場裝 ..."
         },
         {
-          "title": "凱擘攜手Disney+ 推影音上網組合1G 寬頻前6 個月月付600 元- 消費新聞 - PCHOME NEWS",
-          "link": "https://news.pchome.com.tw/expense/leho/20261107/index-79400021271605356013.html",
-          "published": "2026-11-06T17:02:58Z",
-          "summary": "電影方面則有《穿著Prada的惡魔2》及皮克斯動畫《狸想世界》等作品，提供不同年齡層及觀影族群選擇。 Disney+也持續推出迪士尼與皮克斯熱門作品，包括《玩具 ..."
-        },
-        {
-          "title": "鬍子茶推5款麵包狗狗玩具！漢堡狗、法棍小狗太萌，麝香葡萄「狗汁」11/11開賣",
-          "link": "https://woman.tvbs.com.tw/lifestyle/68344",
-          "published": "2026-11-06T16:58:37Z",
-          "summary": "5款讓人口水直流的甜點玩具，主人 圖片來源：品牌提供. 為了讓等主人買飲料的毛小孩也能和主人一起享受下午茶的儀式感， ..."
-        },
-        {
-          "title": "華夏文化科技(01566.HK)：正與日本數據中心運營商磋商容量租賃 - TradingView",
-          "link": "https://tw.tradingview.com/news/gelonghui:2aefbfa64acdf:0/",
-          "published": "2026-11-06T16:50:59Z",
-          "summary": "... 玩具、互動角色知識產權及多媒體增強現實(AR)╱虛擬現實(VR)業務提供助力。部署實時交互式AI模型及高保真AR/VR串流須具備可靠的高密度算力、低延遲網絡路由 ..."
-        },
-        {
-          "title": "華夏文化科技洽租日本資料中心算力，輕資產模式助推AI玩具商業化 - BigGo 財經",
-          "link": "https://finance.biggo.com.tw/news/17b99c45-c754-4e43-b370-ab20f4403b0d",
-          "published": "2026-11-06T15:31:33Z",
-          "summary": "華夏文化科技（01566.HK）11月6日公告，正與日本多家資料中心營運商洽談租賃及分配基礎設施容量，以取得專用高效能資訊科技設施與邊緣算力，支撐AI驅動玩具、互…"
-        },
-        {
-          "title": "【分享】 小家庭掃地機器人心得：eufy C28 - Mobile01",
-          "link": "https://www.mobile01.com/topicdetail.php?f=372&t=7313843",
-          "published": "2026-11-06T15:30:26Z",
-          "summary": "有了掃地機器人之後，我們家也多了一個小規矩：機器開工前，地上的玩具要先回家一開始孩子還會問：「不是有機器人幫忙了嗎？」 我們還是有告訴他，玩具要自己收 ..."
-        },
-        {
-          "title": "https://inews.hket.com/article/4206437/?wts=net* 海綿寶寶× 海賊王夢幻聯乘！麥當勞開心樂園餐 ...",
-          "link": "https://www.youtube.com/post/UgkxJcQGAY3T7GgSYArikHuFz6nv5jWwzz4_",
-          "published": "2026-11-06T14:12:33Z",
-          "summary": "麥當勞開心樂園餐推出10款限定玩具- YouTube. Home ... 麥當勞開心樂園餐推出10款限定玩具. 1."
-        },
-        {
-          "title": "S.H.Figuarts「《我的英雄學院》綠谷出久-變速-」可動人偶，絢麗新色會場先行展出決定！",
-          "link": "https://www.toy-people.com/?p=116202",
-          "published": "2026-11-06T13:21:29Z",
-          "summary": "日本BANDAI SPIRITS 公司收藏玩具事業部TAMASHII NATIONS 發行的可動人偶品牌S.H.Figuarts 在官方X 帳號公開了人氣動畫《我的英雄學院》的主題新品——「綠谷 ..."
+          "title": "美國進口玩具模型包裹藏5隻受管制瀕危活龜市值共約5萬 - 新城電台",
+          "link": "https://www.metroradio.com.hk/news/details.aspx?CategoryName=local&NewsID=20261107181400",
+          "published": "2026-11-07T10:26:04Z",
+          "summary": "一個由美國進口至香港，報稱載有玩具模型禮盒的包裹，藏有5隻懷疑受管制屬瀕危物種的活龜，估計市值共約5萬元。海關今日在機場檢獲該個包裹，檢查後發現該批 ..."
         }
       ]
     }
