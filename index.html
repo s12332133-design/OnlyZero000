@@ -4,7 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>林芷菱 | ONLY ZERO</title>
-  <meta name="description" content="林芷菱目前就讀大同大學數位媒體設計研究所，預計於2027年7月畢業。">
+  <meta name="description" content="熱愛創意與探索的數位媒體設計研究生，透過互動設計與虛擬角色展現創意。">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.jpg" type="image/jpeg" sizes="any">
+  <link rel="shortcut icon" href="favicon.jpg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="favicon.jpg">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ONLY ZERO">
+  <meta property="og:url" content="https://s12332133-design.github.io/OnlyZero000/">
+  <meta property="og:title" content="林芷菱 | ONLY ZERO">
+  <meta property="og:description" content="熱愛創意與探索的數位媒體設計研究生，透過互動設計與虛擬角色展現創意。">
+  <meta property="og:image" content="https://s12332133-design.github.io/OnlyZero000/OG.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:locale" content="zh_TW">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="林芷菱 | ONLY ZERO">
+  <meta name="twitter:description" content="熱愛創意與探索的數位媒體設計研究生，透過互動設計與虛擬角色展現創意。">
+  <meta name="twitter:image" content="https://s12332133-design.github.io/OnlyZero000/OG.jpg">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2G4LV0CVW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -445,13 +463,16 @@
       font-size: 1.02rem; color: var(--text-muted); margin-bottom: 1.5rem;
       opacity: 0; animation: fadeUp 0.55s ease-out calc(0.5s + var(--anim-stagger) * 2) forwards;
     }
+    .hero-actions {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem;
+      opacity: 0; animation: fadeUp 0.55s ease-out calc(0.55s + var(--anim-stagger) * 3) forwards;
+    }
     .cta-btn {
       display: inline-block; background: var(--blue); color: var(--white);
       text-decoration: none; padding: 0.75rem 1.9rem; border-radius: 999px;
       font-weight: 600; font-size: 0.95rem;
       transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
       box-shadow: 0 4px 16px rgba(26, 63, 151, 0.28);
-      opacity: 0; animation: fadeUp 0.55s ease-out calc(0.55s + var(--anim-stagger) * 3) forwards;
       position: relative; overflow: hidden;
     }
     .cta-btn::after {
@@ -466,6 +487,54 @@
     }
     .cta-btn:hover::after { animation: shine 0.65s ease; }
     @keyframes shine { from { left: -80%; } to { left: 130%; } }
+    .share-btns {
+      display: flex; align-items: center; gap: 0.45rem;
+    }
+    .share-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 2.55rem; height: 2.55rem;
+      border-radius: 999px;
+      border: 1.5px solid rgba(26, 63, 151, 0.18);
+      background: rgba(26, 63, 151, 0.06);
+      color: var(--blue);
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+      padding: 0;
+      font-family: inherit;
+      text-decoration: none;
+    }
+    .share-btn:hover {
+      background: var(--blue);
+      color: var(--white);
+      border-color: var(--blue);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(26, 63, 151, 0.22);
+    }
+    .share-btn svg {
+      width: 1.15rem; height: 1.15rem;
+      display: block;
+    }
+    .share-toast {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(12px);
+      background: var(--blue);
+      color: var(--white);
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.55rem 1.2rem;
+      border-radius: 999px;
+      box-shadow: 0 8px 24px rgba(26, 63, 151, 0.25);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s, transform 0.25s;
+      z-index: 200;
+    }
+    .share-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
     section { margin-bottom: 1.8rem; }
     .section-title {
       font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;
@@ -619,7 +688,7 @@
         transition-duration: 0.01ms !important;
       }
       .decor span, .hero, .card, nav, .hero-photo-wrap,
-      .hero-text h1, .hero-text .brand-tag, .hero-text .identity, .cta-btn {
+      .hero-text h1, .hero-text .brand-tag, .hero-text .identity, .hero-actions {
         opacity: 1 !important; transform: none !important;
       }
       .photo-arcs circle { stroke-dashoffset: 0 !important; opacity: 1 !important; }
@@ -680,6 +749,7 @@
       .hero-photo-wrap { width: 200px; height: 200px; justify-self: center; }
       .hero-text h1 { font-size: 1.85rem; }
       .hero-text .brand-tag { justify-content: center; }
+      .hero-actions { justify-content: center; }
       .card { padding: 1.3rem 1.4rem; }
       .decor .arc-1 { width: 180px; height: 180px; border-width: 30px; }
       .decor .arc-2 { width: 150px; height: 150px; border-width: 24px; }
@@ -742,8 +812,21 @@
       <div class="hero-text">
         <div class="brand-tag">ONLY ZERO</div>
         <h1>林芷菱</h1>
-        <p class="identity">大同大學數位媒體設計研究所學生</p>
-        <a href="mailto:onlyzero000111@gmail.com" class="cta-btn">聯絡我</a>
+        <p class="identity">熱愛創意與探索的數位媒體設計研究生，透過互動設計與虛擬角色展現創意。</p>
+        <div class="hero-actions">
+          <a href="mailto:onlyzero000111@gmail.com" class="cta-btn">聯絡我</a>
+          <div class="share-btns" aria-label="分享此網站">
+            <a class="share-btn" id="shareLine" href="#" target="_blank" rel="noopener noreferrer" title="分享到 LINE" aria-label="分享到 LINE">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.286.629-.631.629-.345 0-.63-.285-.63-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.121.3.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            </a>
+            <a class="share-btn" id="shareFb" href="#" target="_blank" rel="noopener noreferrer" title="分享到 Facebook" aria-label="分享到 Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <button type="button" class="share-btn" id="shareNative" title="分享" aria-label="分享">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
     <section id="about">
@@ -917,6 +1000,74 @@
         .catch(() => {
           container.innerHTML = '<p class="news-error">暫時無法載入最新消息，請稍後再試。</p>';
         });
+    })();
+
+    // ── 分享按鈕 ──
+    (function setupShare() {
+      const pageUrl = 'https://s12332133-design.github.io/OnlyZero000/';
+      const pageTitle = '林芷菱 | ONLY ZERO';
+      const pageDesc = '熱愛創意與探索的數位媒體設計研究生，透過互動設計與虛擬角色展現創意。';
+
+      const lineBtn = document.getElementById('shareLine');
+      const fbBtn = document.getElementById('shareFb');
+      const nativeBtn = document.getElementById('shareNative');
+
+      if (lineBtn) {
+        lineBtn.href = 'https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(pageUrl);
+      }
+      if (fbBtn) {
+        fbBtn.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl);
+      }
+
+      function showToast(msg) {
+        let toast = document.querySelector('.share-toast');
+        if (!toast) {
+          toast = document.createElement('div');
+          toast.className = 'share-toast';
+          document.body.appendChild(toast);
+        }
+        toast.textContent = msg;
+        toast.classList.add('show');
+        clearTimeout(toast._timer);
+        toast._timer = setTimeout(function () { toast.classList.remove('show'); }, 2000);
+      }
+
+      async function copyUrl() {
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(pageUrl);
+          } else {
+            var ta = document.createElement('textarea');
+            ta.value = pageUrl;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'absolute';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+          }
+          showToast('網址已複製');
+        } catch (e) {
+          showToast('請手動複製網址');
+        }
+      }
+
+      if (nativeBtn) {
+        nativeBtn.addEventListener('click', async function () {
+          if (navigator.share) {
+            try {
+              await navigator.share({ title: pageTitle, text: pageDesc, url: pageUrl });
+            } catch (err) {
+              if (err && err.name !== 'AbortError') {
+                copyUrl();
+              }
+            }
+          } else {
+            copyUrl();
+          }
+        });
+      }
     })();
   </script>
 </body>
