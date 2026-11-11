@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T06:28:31Z",
+  "updated": "2026-11-11T05:14:12Z",
   "source": "Google Alerts",
   "sources": [
     {
@@ -11,91 +11,13 @@
     {
       "id": "83tian",
       "name": "八三夭",
-      "count": 14,
+      "count": 1,
       "items": [
         {
-          "title": "桃園鍾肇政文學獎創紀錄！2431件作品角逐《焗腦人》奪長篇小說首獎",
-          "link": "https://life.tw/article/%E6%A1%83%E5%9C%92%E9%8D%BE%E8%82%87%E6%94%BF%E6%96%87%E5%AD%B8%E7%8D%8E%E5%89%B5%E7%B4%80%E9%8C%84-2431%E4%BB%B6%E4%BD%9C%E5%93%81%E8%A7%92%E9%80%90-%E7%84%97%E8%85%A6%E4%BA%BA-%E5%A5%AA%E9%95%B7%E7%AF%87%E5%B0%8F-3209692",
-          "published": "2026-11-09T07:09:56Z",
-          "summary": "推薦文章 · 月薪3萬嫌太少！ · 孩童雙腿爆紅點！ · 蕭敬騰、八三夭、戴愛玲炸翻港都！ · 黃仁勳捲間諜婚外情恐衝擊北士科？ · 冷！ · 為竹北做事責無旁貸吳旭智：整合 ..."
-        },
-        {
-          "title": "在地的尚親！歌謠音樂會再次登場！ - 蕃新聞",
-          "link": "https://n.yam.com/Article/20261109292076",
-          "published": "2026-11-09T07:01:50Z",
-          "summary": "蕭敬騰、八三夭、戴愛玲炸翻港都！永慶加盟四品牌萬人演唱會寫下房仲新紀錄 ... 第八屆台灣國際巴金森研討會登場：科技結合全人照護. 優活健康資訊網. 11 ..."
-        },
-        {
-          "title": "選舉攻防波及鄉親！李四川樹林造勢影片遭嘲諷表演者家屬抱不平：選舉有必要這樣嗎？",
-          "link": "https://life.tw/article/%E9%81%B8%E8%88%89%E6%94%BB%E9%98%B2%E6%B3%A2%E5%8F%8A%E9%84%89%E8%A6%AA-%E6%9D%8E%E5%9B%9B%E5%B7%9D%E6%A8%B9%E6%9E%97%E9%80%A0%E5%8B%A2%E5%BD%B1%E7%89%87%E9%81%AD%E5%98%B2%E8%AB%B7-%E8%A1%A8%E6%BC%94%E8%80%85%E5%AE%B6%E5%B1%AC%E6%8A%B1%E4%B8%8D%E5%B9%B3-3210306",
-          "published": "2026-11-09T07:01:11Z",
-          "summary": "孩童雙腿爆紅點！過敏藥全沒效醫警告恐是致命紫斑症. 1小時前. 蕭敬騰、八三夭、戴愛玲炸翻港都！永慶加盟四. 上報Up Media. 蕭敬騰、八三夭、戴愛玲炸翻港都！"
-        },
-        {
-          "title": "月薪3萬嫌太少！25歲上班族開早餐店想年賺190萬遭打臉 - Life 生活網",
-          "link": "https://life.tw/article/%E6%9C%88%E8%96%AA3%E8%90%AC%E5%AB%8C%E5%A4%AA%E5%B0%91-25%E6%AD%B2%E4%B8%8A%E7%8F%AD%E6%97%8F%E9%96%8B%E6%97%A9%E9%A4%90%E5%BA%97-%E6%83%B3%E5%B9%B4%E8%B3%BA190%E8%90%AC%E9%81%AD%E6%89%93%E8%87%89-3210332",
-          "published": "2026-11-09T07:01:11Z",
-          "summary": "蕭敬騰、八三夭、戴愛玲炸翻港都！永慶加盟四. 上報Up Media. 蕭敬騰、八三夭、戴愛玲炸翻港都！永慶加盟四品牌萬人演唱會寫下房仲新紀錄. 1小時前. 黃仁勳捲 ..."
-        },
-        {
-          "title": "冷！北台灣急凍探15度！東北季風夾擊濕冷來襲| LIFE生活網",
-          "link": "https://life.tw/article/%E5%86%B7-%E5%8C%97%E5%8F%B0%E7%81%A3%E6%80%A5%E5%87%8D%E6%8E%A215%E5%BA%A6-%E6%9D%B1%E5%8C%97%E5%AD%A3%E9%A2%A8%E5%A4%BE%E6%93%8A%E6%BF%95%E5%86%B7%E4%BE%86%E8%A5%B2-3210322",
-          "published": "2026-11-09T07:01:11Z",
-          "summary": "推薦文章 · 月薪3萬嫌太少！ · 孩童雙腿爆紅點！ · 蕭敬騰、八三夭、戴愛玲炸翻港都！ · 黃仁勳捲間諜婚外情恐衝擊北士科？ · 為竹北做事責無旁貸吳旭智：整合力量打 ..."
-        },
-        {
-          "title": "為竹北做事責無旁貸吳旭智：整合力量打贏選戰，為市民爭取更好未來 - Life 生活網",
-          "link": "https://life.tw/article/%E7%82%BA%E7%AB%B9%E5%8C%97%E5%81%9A%E4%BA%8B%E8%B2%AC%E7%84%A1%E6%97%81%E8%B2%B8-%E5%90%B3%E6%97%AD%E6%99%BA-%E6%95%B4%E5%90%88%E5%8A%9B%E9%87%8F%E6%89%93%E8%B4%8F%E9%81%B8%E6%88%B0-%E7%82%BA%E5%B8%82%E6%B0%91%E7%88%AD%E5%8F%96%E6%9B%B4%E5%A5%BD-3210318",
-          "published": "2026-11-09T07:01:07Z",
-          "summary": "孩童雙腿爆紅點！過敏藥全沒效醫警告恐是致命紫斑症. 1小時前 · 蕭敬騰、八三夭、戴愛玲炸翻港都！永慶加盟四. 上報Up Media. 蕭敬騰、八三夭、戴愛玲炸翻港都！"
-        },
-        {
-          "title": "沈伯洋上《命運好好玩》占台北市長選情抽到「死神牌」反應曝光 - Life 生活網",
-          "link": "https://life.tw/article/%E6%B2%88%E4%BC%AF%E6%B4%8B%E4%B8%8A-%E5%91%BD%E9%81%8B%E5%A5%BD%E5%A5%BD%E7%8E%A9-%E5%8D%A0%E5%8F%B0%E5%8C%97%E5%B8%82%E9%95%B7%E9%81%B8%E6%83%85-%E6%8A%BD%E5%88%B0-%E6%AD%BB%E7%A5%9E%E7%89%8C-%E5%8F%8D%E6%87%89%E6%9B%9D%E5%85%89-3210316",
-          "published": "2026-11-09T07:01:06Z",
-          "summary": "蕭敬騰、八三夭、戴愛玲炸翻港都！永慶加盟四. 上報Up Media. 蕭敬騰、八三夭、戴愛玲炸翻港都！永慶加盟四品牌萬人演唱會寫下房仲新紀錄. 1小時前 · 黃仁勳捲 ..."
-        },
-        {
-          "title": "三十多位藝人組成「法髓劇團」攜手志工演繹慈濟一甲子 - Life 生活網",
-          "link": "https://life.tw/article/%E4%B8%89%E5%8D%81%E5%A4%9A%E4%BD%8D%E8%97%9D%E4%BA%BA%E7%B5%84%E6%88%90-%E6%B3%95%E9%AB%93%E5%8A%87%E5%9C%98-%E6%94%9C%E6%89%8B%E5%BF%97%E5%B7%A5%E6%BC%94%E7%B9%B9%E6%85%88%E6%BF%9F%E4%B8%80%E7%94%B2%E5%AD%90-3210248",
-          "published": "2026-11-09T07:01:05Z",
-          "summary": "在這場萬人圖騰與時空對話中，包含李璇、林乃華、何璦芸、王豪、王雨瑄、曾浩綸、朱九等，由三十多位藝人組成的「法髓劇團」，年齡層跨越三十歲以下至八十歲以上 ..."
-        },
-        {
-          "title": "蕭敬騰、八三夭、戴愛玲炸翻港都！永慶加盟四品牌萬人演唱會寫下房仲新紀錄 - Yahoo新聞",
-          "link": "https://tw.news.yahoo.com/%E8%95%AD%E6%95%AC%E9%A8%B0-%E5%85%AB%E4%B8%89%E5%A4%AD-%E6%88%B4%E6%84%9B%E7%8E%B2%E7%82%B8%E7%BF%BB%E6%B8%AF%E9%83%BD-%E6%B0%B8%E6%85%B6%E5%8A%A0%E7%9B%9F%E5%9B%9B%E5%93%81%E7%89%8C%E8%90%AC%E4%BA%BA%E6%BC%94%E5%94%B1%E6%9C%83%E5%AF%AB%E4%B8%8B%E6%88%BF%E4%BB%B2%E6%96%B0%E7%B4%80%E9%8C%84-054500580.html",
-          "published": "2026-11-09T06:59:34Z",
-          "summary": "搖滾天團八三夭熱血重低音頻率全開，主唱阿璞在台上全力飆唱，引爆現場萬名歌迷高舉螢光棒瘋狂尖叫。 金曲歌王蕭敬騰雖然身體抱 ..."
-        },
-        {
-          "title": "Changmin昌珉演唱會2027澳門｜門票攻略＋購票連結＋座位表 - Hk01",
-          "link": "https://www.hk01.com/%E7%9C%BE%E6%A8%82%E8%BF%B7/60408061/changmin%E6%98%8C%E7%8F%89%E6%BC%94%E5%94%B1%E6%9C%832027%E6%BE%B3%E9%96%80-%E9%96%80%E7%A5%A8%E6%94%BB%E7%95%A5-%E8%B3%BC%E7%A5%A8%E9%80%A3%E7%B5%90-%E5%BA%A7%E4%BD%8D%E8%A1%A8",
-          "published": "2026-11-09T06:44:09Z",
-          "summary": "演唱會座位表（金光票務）. 八三夭演唱會2026｜澳門開1場門票$588起！附購票連結＋座位表Novel Fergus演唱會2026廣州｜門票攻略＋購票連結＋座位表張家輝開 ..."
-        },
-        {
-          "title": "黎明演唱會2027｜澳門連開2場門票$588起＋購票攻略/連結＋座位表 - Hk01",
-          "link": "https://www.hk01.com/article/60408051",
-          "published": "2026-11-09T06:42:20Z",
-          "summary": "2.建行(亞洲) 信用卡（商務卡除外）. 適用信用卡：所有建行(亞洲) 信用卡（商務卡除外） 門票發售時間：12月8日12:00 – 12月9日20:00 ... 八三夭演唱會2026｜澳門 ..."
-        },
-        {
-          "title": "Changmin昌珉演唱會2027澳門｜門票攻略＋購票連結＋座位表 - Hk01",
-          "link": "https://www.hk01.com/article/60408061",
-          "published": "2026-11-09T06:30:16Z",
-          "summary": "演唱會座位表（金光票務）. 八三夭演唱會2026｜澳門開1場門票$588起！附購票 ... 《The Penthouse》三人幫新綜藝展反差日常安宰賢回歸即開2節目. 讚好. 6."
-        },
-        {
-          "title": "高雄巨蛋史上首次永慶房產包場引爆熱潮跨年等級1.25萬人嗨翻 - 好房網News",
-          "link": "https://news.housefun.com.tw/news/article/102135490854.html",
-          "published": "2026-11-09T02:07:16Z",
-          "summary": "永慶加盟四品牌「超派演唱會」引爆高雄. 演唱會現場星光熠熠，破天荒匯聚金曲歌王蕭敬騰、搖滾天團八三夭、鐵肺天后戴愛玲，以超越 ..."
-        },
-        {
-          "title": "高雄巨蛋史上首次永慶房產包場引爆熱潮跨年等級1.25萬人嗨翻 - 好房網News",
-          "link": "https://news.housefun.com.tw/news/article/amp/102135490854.html",
-          "published": "2026-11-09T02:04:12Z",
-          "summary": "永慶加盟四品牌「超派演唱會」引爆高雄. 演唱會現場星光熠熠，破天荒匯聚金曲歌王蕭敬騰、搖滾天團八三夭、鐵肺天后戴愛玲， ..."
+          "title": "房仲也有演唱會經濟！「永慶之夜超派演唱會」萬人齊聚巨蛋引爆高雄夜晚 - ETtoday",
+          "link": "https://www.ettoday.net/news/20261110/3269605.htm",
+          "published": "2026-11-10T07:43:14Z",
+          "summary": "△搖滾天團八三夭以強烈節奏炸翻全場，現場萬人齊唱破億神曲，將巨蛋變身全台最嗨搖滾區。（圖／永慶房產集團提供）. 這場勘比跨年等級的音樂盛宴由三大巨星 ..."
         }
       ]
     },
@@ -105,124 +27,124 @@
       "count": 20,
       "items": [
         {
-          "title": "以為運將在叭他！28歲男怒回喇叭下車爆拉扯還掏槍- 鏡週刊Mirror Media",
-          "link": "https://www.mirrormedia.mg/external/mirrordaily_96922/",
-          "published": "2026-11-10T05:58:41Z",
-          "summary": "... 士林按喇叭引發衝突，駕駛竟下車掏玩具槍恐嚇。圖／翻攝畫面 文｜鏡報. 台北市士林區昨（9日）晚間6時許發生一起行車糾紛，28歲陳姓男子開車 ..."
+          "title": "《玩具總動員》旅行袋等商品,將於11月14日起在Avail登場! – Collabo Cafe",
+          "link": "https://collabo-cafe.com/zh-hant/events/collabo/toy-story-5-travel-bag-goods-avail-2026/",
+          "published": "2026-11-11T04:39:07Z",
+          "summary": "來自迪士尼與皮克斯的《玩具總動員》系列,以《玩具總動員》及《玩具總動員5》為設計主題的周邊商品現已登陸Avail! 自2026年11月14日起,Avail部分門市將販售 ..."
         },
         {
-          "title": "以為運將在叭他！28歲男怒回喇叭下車爆拉扯還掏槍 - 鏡報",
-          "link": "https://www.mirrordaily.news/story/96922",
-          "published": "2026-11-10T05:11:49Z",
-          "summary": "過程中，陳男還掏出一把生存遊戲用的玩具槍威嚇對方，警方獲報後調閱監視器追查，確認雙方都有肢體衝突，最後依違反《社會秩序維護法》裁罰2人。 警方調查，50歲 ..."
+          "title": "塔麻可吉推出《怪奇物語》聯動款商品，Netflix新劇「異世界：怪奇物語大冒險」預計2028年上線",
+          "link": "https://news.gamme.com.tw/1775290",
+          "published": "2026-11-11T03:48:38Z",
+          "summary": "因為《BANDAI TOYS》的網頁已經出來了，相信應該是能買到的...吧？"
         },
         {
-          "title": "誠品中部雙活動10萬好物掀秋日挖寶潮 - 翻爆",
-          "link": "https://turnnewsapp.com/ct-featured/422031.html",
-          "published": "2026-11-10T04:55:34Z",
-          "summary": "誠品中部11月推出閱讀與生活雙主題活動，年度大型舊書拍賣會將於11月11日至29日在台中中友百貨登場，集結近10萬件圖書、雜誌、文具、親子玩具與生活用品， ..."
+          "title": "沈伯洋新玩具GET！下次車掃高舉到沒電| NOWNEWS今日新聞 - LINE TODAY",
+          "link": "https://today.line.me/tw/v3/article/8nMjwJz",
+          "published": "2026-11-11T01:04:31Z",
+          "summary": "[NOWNEWS今日新聞] 在星戰界中頗具知名度的光劍製作達人馬可多，今（10）日在社群貼出文，與台北市長參選人沈伯洋同框，一起製作屬於沈伯..."
         },
         {
-          "title": "柴犬、貴賓也能當警犬？日本民間委託警犬審查放寬犬種 - 報新聞",
-          "link": "https://www.contentplatform.info/articles/568721/%E6%9F%B4%E7%8A%AC%E3%80%81%E8%B2%B4%E8%B3%93%E4%B9%9F%E8%83%BD%E7%95%B6%E8%AD%A6%E7%8A%AC%EF%BC%9F%E6%97%A5%E6%9C%AC%E6%B0%91%E9%96%93%E5%A7%94%E8%A8%97%E8%AD%A6%E7%8A%AC%E5%AF%A9%E6%9F%A5%E6%94%BE/",
-          "published": "2026-11-10T04:53:13Z",
-          "summary": "京都府警11 月初舉辦民間委託警犬選考會，46 隻犬參加，柴犬等小型犬也上場部分縣警不再限定犬種；茨城縣警2026 年的32 隻委託警犬中有4 隻玩具貴賓."
+          "title": "沈伯洋新玩具GET！下次車掃高舉到沒電",
+          "link": "https://news.pchome.com.tw/politics/nownews/20261110/index-79431388760699207001.html",
+          "published": "2026-11-11T00:46:27Z",
+          "summary": "沈伯洋新玩具GET！下次車掃高舉到沒電. 沈伯洋新玩具GET！下次車掃高舉到沒電 馬可多陪著沈伯洋一起打造光之劍，沈伯洋答應將在大洋流車掃全程高舉。（圖／翻 ..."
         },
         {
-          "title": "互按喇叭釀糾紛！北市街頭爆衝突男帶玩具槍理論慘了| CTWANT - LINE TODAY",
-          "link": "https://today.line.me/tw/v3/article/zNMmNVD",
-          "published": "2026-11-10T03:39:37Z",
-          "summary": "警方獲報到場後，雙方已離去，儘管雙方事後均不願提告，但警方卻在陳男身上發現一把玩具槍，全案訊後也依《社會秩序維護法》將2人依法裁處。 廣告（請繼續 ..."
+          "title": "3D玩具熊驚藏愷他命保三總隊聯手海關偵破走私毒品案，橋頭地檢指揮溯源逮雙嫌 - 視傳媒",
+          "link": "https://www.nvns.net/news_view.php?new_sn=138483&new_csn=1467",
+          "published": "2026-11-10T23:34:02Z",
+          "summary": "經專案小組調查發現，運毒手法日新月異，跨國運毒集團竟結合新興科技，將毒品偽裝藏入「3D列印的玩具熊及數字飾品」之中，自德國以包裹藏毒，企圖「萌」騙過關， ..."
         },
         {
-          "title": "東寶官方周邊『DESKTOP MONSTER 王者基多拉(2026)』充滿威脅的魄力姿態降臨桌面！",
-          "link": "https://www.toy-people.com/?p=116277",
-          "published": "2026-11-10T03:35:17Z",
-          "summary": "最後倒數玩具人「MORE TOYS」系列商品：寬鬆落肩涼感TEE、環保袋、貼紙包、胸章，限時預購！ 哥吉拉 · 日系 · 東寶 · DESKTOP MONSTER · 哥吉拉- ..."
+          "title": "收容所待2個月等無人哈士奇見人就叼玩具「盼有人陪牠玩」 - 股市爆料同學會",
+          "link": "https://www.cmoney.tw/forum/article/188280381",
+          "published": "2026-11-10T22:10:33Z",
+          "summary": "美國加州一隻叫做斯特林(Sterling)的哈士奇，在動物收容所中已經待了2個月，始終沒有等到新主人出現。工作人員發現，珍惜玩具的斯特林，平時總是會叼著一隻 ..."
         },
         {
-          "title": "互按喇叭釀糾紛！北市街頭爆衝突男帶玩具槍理論慘了 - Yahoo新聞",
-          "link": "https://tw.news.yahoo.com/%E4%BA%92%E6%8C%89%E5%96%87%E5%8F%AD%E9%87%80%E7%B3%BE%E7%B4%9B-%E5%8C%97%E5%B8%82%E8%A1%97%E9%A0%AD%E7%88%86%E8%A1%9D%E7%AA%81-%E7%94%B7%E5%B8%B6%E7%8E%A9%E5%85%B7%E6%A7%8D%E7%90%86%E8%AB%96%E6%85%98%E4%BA%86-030237856.html",
-          "published": "2026-11-10T03:34:20Z",
-          "summary": "警方獲報到場後，雙方已離去，儘管雙方事後均不願提告，但警方卻在陳男身上發現一把玩具槍，全案訊後也依《社會秩序維護法》將2人依法裁處。 據了解，陳姓 ..."
+          "title": "雙11 與毛孩一起過！鬍子茶台中店變身「毛孩玩具烘焙概念店」 同步推出「麝香葡萄系列手搖飲」",
+          "link": "https://www.upmedia.mg/tw/lifestyle/food/273808",
+          "published": "2026-11-10T21:11:02Z",
+          "summary": "... 玩具包裝成剛出爐的烘焙點心，用高顏值與高質感的包裝，打造高級烘焙坊的外帶儀式感！首波推出5 款烘焙甜點玩具，每一款都是獎勵狗狗的最棒點心。台中門市 ..."
         },
         {
-          "title": "行車糾紛爆全武行！ 計程車運將亮玩具槍威嚇 - 鏡新聞",
-          "link": "https://www.mnews.tw/story/20261110sot0949002",
-          "published": "2026-11-10T03:31:33Z",
-          "summary": "在台北士林的街頭，昨天(9日)晚上，爆發行車糾紛，轎車駕駛和計程車司機互不相讓，不只當街拉扯、叫罵，計程車司機甚至，亮出玩具槍威脅，詳細情形， ..."
+          "title": "玩具檢驗總動員守護兒童安全",
+          "link": "https://www.bsmi.gov.tw/wSite/fp?xItem=128619&ctNode=8321&mp=111",
+          "published": "2026-11-10T20:58:18Z",
+          "summary": "為確保玩具買得安心、用得安全，經濟部標準局及智慧局今（12）日共同召開記者會，由標準局針對玩具檢驗規範與管理制度；智慧局就商標及著作權相關規定提出 ..."
         },
         {
-          "title": "營收速報- 信音(6126)10月營收3.94億元年增率高達44.17％ | 鉅亨網",
-          "link": "https://news.cnyes.com/news/id/6655368",
-          "published": "2026-11-10T03:28:17Z",
-          "summary": "塑膠玩具、電池玩具(電動玩具除外)之製造裝配及。買賣。 註：數據僅供參考，不作為投資建議。 掌握全球財經資訊點我下載APP. ‌. 文章標籤. 台股台股營收營收 ..."
+          "title": "萬代南夢宮鋼彈、扭蛋熱賣！全年獲利預測上修至2260億日圓| 溫芳瑜 - 風傳媒",
+          "link": "https://www.storm.mg/article/11180132",
+          "published": "2026-11-10T20:38:39Z",
+          "summary": "玩具嗜好事業包括模型、卡牌、扭蛋、食品與文具。上半年部門利益年增55.4%，鋼彈（ガンダム）、七龍珠（DRAGON BALL）、ONE PIECE與塔麻可吉（たまごっち ..."
         },
         {
-          "title": "鳴按喇叭引爆行車糾紛男與運將當街拉扯並掏玩具槍雙雙遭辦 - 聯合新聞網",
-          "link": "https://udn.com/news/story/7320/9868510?from=udn-ch1_breaknews-1-cate2-news",
-          "published": "2026-11-10T03:04:58Z",
-          "summary": "陳姓男子與王姓計程車司機昨晚在台北市士林區發生行車糾紛，雖於警方介入時稱已和解，但警方查出2人當街拉扯，陳另拿出玩具槍威嚇，警詢後依社會秩序維護法 ..."
+          "title": "磁力積木組市場展望2035年：STEM教育需求與高階化推動成長 - IndexBox",
+          "link": "https://www.indexbox.io/zh-hant/blog/magnetic-tiles-set-market-forecast-to-2035-stem-education-demand-and-premiumization-drive-growth/",
+          "published": "2026-11-10T20:06:25Z",
+          "summary": "全球磁力積木組市場正經歷結構性轉型，從利基型建構玩具逐步成熟為主流教育必需品。本報告以策略性品類研究角度剖析該市場，涵蓋2012至2025年，並提出展望至2035 ..."
         },
         {
-          "title": "《魔神英雄傳》龍神丸推出TOYRISE 可動玩具！復古戰部渡人偶同步收錄2027 年5 月發售",
-          "link": "https://www.upmedia.mg/tw/game/toy/273759",
-          "published": "2026-11-10T02:56:58Z",
-          "summary": "日本玩具大廠TAKARA TOMY 旗下高階玩具品牌T-SPARK，宣布推出經典動畫《魔神英雄傳》全新商品「TOYRISE 龍神丸」， ..."
+          "title": "瑕疵商品名稱： Squishy Dumpling Toys, Crazy Squib Ball Toys 紓壓玩具(2)。 - 經濟部標準檢驗局",
+          "link": "https://www.bsmi.gov.tw/wSite/ct?xItem=130050&ctNode=8269&mp=1",
+          "published": "2026-11-10T19:47:43Z",
+          "summary": "... Toys, Crazy Squib Ball Toys 紓壓玩具(2) 五、型號： 六、廠商： ABC Trading Inc., of Vernon, California 七、數量： 約37,000個八、瑕疵情形： 該款紓壓玩具 ..."
         },
         {
-          "title": "11月在這裡！「拉拉熊」獎品   | San-x網",
-          "link": "https://www.san-x.co.jp/zh-TW/blog/2026-11-post-0402200/",
-          "published": "2026-11-10T02:29:03Z",
-          "summary": "您可以在莫利幻想，PALO，莫利在線等獲得它！ 黑色毛絨玩具和帶錢包的智能手機肩包現已上市☆. 商品名稱:拉拉熊炫彩吉祥物類型：共10 種發布日期：2026年11 ..."
+          "title": "PLAMAX「《Flower Imitation.》Flower.」組裝模型由人氣繪師neco繪製充滿未來感的黑肉美少女 ...",
+          "link": "https://www.toy-people.com/?p=116314",
+          "published": "2026-11-10T18:09:54Z",
+          "summary": "最後倒數玩具人「MORE TOYS」系列商品：寬鬆落肩涼感TEE、環保袋、貼紙包、胸章，限時預購！ Max Factory · 組裝模型 · 可動人偶 · PLAMAX · neco ..."
         },
         {
-          "title": "2027.03.27~04.06 台中市-LaLaport 台中-山杉市集玩具時光機",
-          "link": "https://www.twmarket.tw/2027-03-2704-06-%E5%8F%B0%E4%B8%AD%E5%B8%82-lalaport-%E5%8F%B0%E4%B8%AD-%E5%B1%B1%E6%9D%89%E5%B8%82%E9%9B%86-%E7%8E%A9%E5%85%B7%E6%99%82%E5%85%89%E6%A9%9F/",
-          "published": "2026-11-10T02:16:02Z",
-          "summary": "聚焦當代玩具與收藏文化，邀請盲盒、公仔、潮流玩具、扭蛋、積木模型、原創IP 及設計師玩具品牌進駐。 03｜TOY & STATIONERY SWAP 玩具・文具交換所讓曾經喜歡的 ..."
+          "title": "原本是一通求救電話何以最後15歲少年卻遭警方擊斃？",
+          "link": "https://www.singtao.ca/7680585/2026-11-10/news-%E5%8E%9F%E6%9C%AC%E6%98%AF%E4%B8%80%E9%80%9A%E6%B1%82%E6%95%91%E9%9B%BB%E8%A9%B1++%E4%BD%95%E4%BB%A5%E6%9C%80%E5%BE%8C15%E6%AD%B2%E5%B0%91%E5%B9%B4%E5%8D%BB%E9%81%AD%E8%AD%A6%E6%96%B9%E6%93%8A%E6%96%83%EF%BC%9F/",
+          "published": "2026-11-10T17:00:10Z",
+          "summary": "... 玩具。他經常突然跳出來嚇母親，也曾認為鄰居家的狗需要玩具是一件緊急大事，於是拿家中的緊急備用金買玩具送給狗狗。 Chase非常喜愛動物，尤其是家中的貓 ..."
         },
         {
-          "title": "《魔神英雄傳》龍神丸推出TOYRISE 可動玩具！復古戰部渡人偶同步收錄2027 年5 月發售",
-          "link": "https://n.yam.com/Article/20261110393066",
-          "published": "2026-11-10T01:07:05Z",
-          "summary": "日本玩具大廠TAKARA TOMY 旗下高階玩具品牌T-SPARK，宣布推出經典動畫《魔神英雄傳."
+          "title": "壽屋《無職轉生III～到了異世界就拿出真本事～》「洛琪希·米格路迪亞 - 玩具人",
+          "link": "https://www.toy-people.com/?p=116312",
+          "published": "2026-11-10T16:35:44Z",
+          "summary": "壽屋《無職轉生III～到了異世界就拿出真本事～》「洛琪希·米格路迪亞·格雷拉特」1/7 比例模型正式加入家庭的藍媽媽登場！ 玩具新聞 · 皮諾可41; 7小時前."
         },
         {
-          "title": "寶可夢中心原創商品來了！新光三越高雄左營快閃10天掀收藏熱潮 - PCHOME NEWS",
-          "link": "https://news.pchome.com.tw/society/focus586/20261110/index-79426452123390289002.html",
-          "published": "2026-11-09T23:25:09Z",
-          "summary": "現場集結多款寶可夢中心限定商品，從毛絨玩具、寶可夢卡牌、生活雜貨到吉祥物，還有Pokémon Center TAIPEI開幕紀念商品，讓南部訓練家有機會一次收藏喜愛的寶可 ..."
+          "title": "《鳴潮》琳奈1/7 PVC 模型開放預購！豪華版附近40 公分機車，車燈可發光、輪胎能轉動",
+          "link": "https://news.para-daily.com/2026/11/10/wuthering-waves-lynae-figure/",
+          "published": "2026-11-10T16:18:19Z",
+          "summary": "動漫玩具 > 模型玩具 > 《鳴潮》琳奈1/7 PVC 模型開放預購！豪華版附近40 公分機車，車燈可發光、輪胎能轉動. 分享: 模型玩具. 《鳴潮》琳奈1/7 PVC 模型開放 ..."
         },
         {
-          "title": "32 位實況主「桌對廝殺」！《雀魂麻將》金古盃11 月19 開戰《葬送的芙莉蓮》聯動暖身！",
-          "link": "https://news.para-daily.com/2026/11/09/majsoul-ggc-cup-frieren-2026/",
-          "published": "2026-11-09T22:20:22Z",
-          "summary": "動漫玩具 · 偶像網紅 · KIRABASE. close. Paradaily - 遊戲｜動漫｜3C科技. Menu ... 動漫玩具 · 動漫影劇 · 模型玩具 · 動漫周邊 · 吉伊卡哇 · 廣播劇 · 偶像網紅."
+          "title": "【20240419 00:00】 歐盟2024 年第16 週通報公布，商品名稱： 玩具手鼓馬拉加手鼓。",
+          "link": "https://www.bsmi.gov.tw/wSite/fp?xItem=116626&ctNode=8240&mp=1",
+          "published": "2026-11-10T15:21:41Z",
+          "summary": "國外瑕疵商品訊息. 【20240419 00:00】 歐盟2024 年第16 週通報公布，商品名稱： 玩具手鼓馬拉加手鼓。 點閱：460."
         },
         {
-          "title": "2 萬7 千顆樂高積木拼出巨型金馬獎座！台灣樂高首度攜手金馬63",
-          "link": "https://3c.yipee.cc/358942/2-%E8%90%AC-7-%E5%8D%83%E9%A1%86%E6%A8%82%E9%AB%98%E7%A9%8D%E6%9C%A8%E6%8B%BC%E5%87%BA%E5%B7%A8%E5%9E%8B%E9%87%91%E9%A6%AC%E7%8D%8E%E5%BA%A7%EF%BC%81%E5%8F%B0%E7%81%A3%E6%A8%82%E9%AB%98%E9%A6%96/",
-          "published": "2026-11-09T22:17:17Z",
-          "summary": "台灣樂高首度攜手金馬63 · 市場動態 新消息 玩具及動漫特區 生活娛樂 · 2 萬7 千顆樂高積木拼出巨型金馬獎座！台灣樂高首度攜手金馬63 · 三嘻行動哇Yipee.cc ..."
+          "title": "警政報馬仔-行車糾紛爆肢體衝突北市士林警還查獲男子攜玩具槍",
+          "link": "https://www.pbs.npa.gov.tw/ch/app/data/view?module=wg183&id=18740&serno=078ab8a9-3074-492a-964b-7e9fcacd0b29",
+          "published": "2026-11-10T14:44:59Z",
+          "summary": "... 玩具槍，全案後續也依法移請裁處。 臺北市士林警分局日前接獲通報，稱中山北路六段210號前發生行車糾紛，警方隨即到場處理，並調閱周邊監視器釐清事發經過 ..."
         },
         {
-          "title": "【20260918 00:00】 歐盟2026 年第37 週通報公布，商品名稱： 擠壓玩具。",
-          "link": "https://www.bsmi.gov.tw/wSite/ct?xItem=130135&ctNode=8240&mp=1",
-          "published": "2026-11-09T20:19:12Z",
-          "summary": "商品類別：玩具商品名稱：擠壓玩具品牌：Funny Toys 型號/規格: 592C-9, BPI 5077 生產國: 中國大陸七、危險： 風險：化學物質過量風險情形：此玩具中鄰苯二 ..."
+          "title": "小五郎從來沒有說過不愛妃英理#shorts #名偵探柯南#毛利小五郎#動漫#愛情- YouTube",
+          "link": "https://www.youtube.com/watch?v=VoNkqiCSZSM",
+          "published": "2026-11-10T14:38:49Z",
+          "summary": "Go to channel 艾比玩具堂 · 打哥吉拉的機器，沒有一台從零開始｜機械哥吉拉｜哥吉拉. 艾比玩具堂. New. 14K views."
         },
         {
-          "title": "【這是道具】科幻近未來傳奇衝鋒槍玩具重現最新無刷馬達科技年底完美降臨 - WEBOOK MEDIA",
-          "link": "https://www.webook.com.tw/acg-news/2026-11-10-webook-news-05/",
-          "published": "2026-11-09T20:00:18Z",
-          "summary": "【這是道具】科幻近未來傳奇衝鋒槍玩具重現最新無刷馬達科技年底完美降臨 · 產品名稱：KRYTAC KRISS VECTOR G3 BRUSHLESS 電動氣槍 · 發售日期：2026年12月正式 ..."
+          "title": "金山警局Walgreens藥房啟動年度玩具捐贈行動 - 星島日報",
+          "link": "https://www.singtaousa.com/2026/11/10/news/usa/san-francisco-police-walgreens-toy-donation/",
+          "published": "2026-11-10T14:25:58Z",
+          "summary": "三藩市警察局與Walgreens合作啟動年度玩具捐贈行動，呼籲民眾捐出全新玩具，助力有需要的兒童在節日期間獲得驚喜。警方與合作團體將負責玩具的收集及分發， ..."
         },
         {
-          "title": "【快點還給我Ｒ～】玩具被壓住！小狗毛手狂撥努力「 拔蘿蔔」畫面太可愛XD - Facebook",
-          "link": "https://www.facebook.com/ETtoday/videos/%E5%BF%AB%E9%BB%9E%E9%82%84%E7%B5%A6%E6%88%91%EF%BD%92%E7%8E%A9%E5%85%B7%E8%A2%AB%E5%A3%93%E4%BD%8F%E5%B0%8F%E7%8B%97%E6%AF%9B%E6%89%8B%E7%8B%82%E6%92%A5-%E5%8A%AA%E5%8A%9B%E6%8B%94%E8%98%BF%E8%94%94%E7%95%AB%E9%9D%A2%E5%A4%AA%E5%8F%AF%E6%84%9Bxd/1994235141243493/",
-          "published": "2026-11-09T19:00:54Z",
-          "summary": "【快點還給我Ｒ～】玩具被壓住！小狗毛手狂撥努力「拔蘿蔔」畫面太可愛XD 影片授權：Threads／326.feifei."
+          "title": "面罩#奧特曼發光面具#兒童玩具分享#蜘蛛俠面具 - YouTube",
+          "link": "https://www.youtube.com/shorts/x6DV7tomi-8",
+          "published": "2026-11-10T13:49:50Z",
+          "summary": "面罩#奧特曼發光面具 #兒童玩具分享 #蜘蛛俠面具. Like. 0. Share. Please sign in. This helps protect our community."
         }
       ]
     }
