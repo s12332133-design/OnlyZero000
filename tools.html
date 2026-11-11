@@ -763,7 +763,7 @@
         <p class="tool-note">
           將 <strong>.mov</strong> 轉成 <strong>MP4</strong>。檔案只在瀏覽器處理。
           首次需下載約 30MB 引擎。請用 <strong>HTTPS</strong> 開啟。
-          <span style="opacity:0.65">（工具版本 v5）</span>
+          <span style="opacity:0.65">（工具版本 v6）</span>
         </p>
       </div>
     </section>
@@ -1018,34 +1018,53 @@ async function loadFFmpeg() {
   if (!umdResp.ok) throw new Error('無法下載 ffmpeg.js');
   let umdCode = await umdResp.text();
 
-  // publicPath：blob URL 沒有 script src，需手動指定 CDN 目錄
-  const publicPathFix = 'if(!e)e="' + baseFF + '/ffmpeg.js"';
-  if (umdCode.includes('if(!e)throw new Error("Automatic publicPath is not supported in this browser")')) {
+  // publicPath：blob 載入時沒有 script src，變數名可能是 e 或 t
+  const cdnScript = baseFF + '/ffmpeg.js';
+  umdCode = umdCode.replace(
+    /if\(!([a-z])\)throw new Error\(["']Automatic publicPath is not supported in this browser["']\)/g,
+    function (_, varName) {
+      return 'if(!' + varName + ')' + varName + '="' + cdnScript + '"';
+    }
+  );
+  if (umdCode.includes('Automatic publicPath is not supported in this browser')) {
+    // 最後手段：直接刪掉 throw
     umdCode = umdCode.replace(
-      'if(!e)throw new Error("Automatic publicPath is not supported in this browser")',
-      publicPathFix
+      /throw new Error\(["']Automatic publicPath is not supported in this browser["']\)/g,
+      'void 0'
     );
-  } else if (umdCode.includes("Automatic publicPath is not supported in this browser")) {
+    // 並強制設定 publicPath（webpack 常見 r.p 或 e.p）
+    umdCode = 'self.__ffmpegPublicPath="' + baseFF + '/";\n' + umdCode;
     umdCode = umdCode.replace(
-      /if\(!e\)throw new Error\("Automatic publicPath is not supported in this browser"\)/,
-      publicPathFix
+      /([a-z])\.p=([a-z])\.replace\(/,
+      '$1.p=(typeof self.__ffmpegPublicPath==="string"?self.__ffmpegPublicPath:$2.replace('
     );
   }
 
   // Worker：改用傳入的 workerURL（blob）
-  const needle = 'new Worker(new URL(e.p+e.u(814),e.b),{type:void 0})';
-  if (umdCode.includes(needle)) {
-    umdCode = umdCode.replace(needle, 'new Worker(r.workerURL,{type:void 0})');
-  } else {
-    const alt = /new Worker\(new URL\(e\.p\+e\.u\(814\),e\.b\),\{type:void 0\}\)/;
-    if (alt.test(umdCode)) {
-      umdCode = umdCode.replace(alt, 'new Worker(r.workerURL,{type:void 0})');
-    } else {
-      throw new Error('FFmpeg UMD 格式不符，請稍後再試。');
+  const workerPatterns = [
+    'new Worker(new URL(e.p+e.u(814),e.b),{type:void 0})',
+    'new Worker(new URL(r.p+r.u(814),r.b),{type:void 0})',
+  ];
+  let workerPatched = false;
+  for (const needle of workerPatterns) {
+    if (umdCode.includes(needle)) {
+      umdCode = umdCode.replace(needle, 'new Worker(r.workerURL,{type:void 0})');
+      workerPatched = true;
+      break;
     }
   }
+  if (!workerPatched) {
+    const alt = /new Worker\(new URL\([a-z]\.p\+[a-z]\.u\(814\),[a-z]\.b\),\{type:void 0\}\)/;
+    if (alt.test(umdCode)) {
+      umdCode = umdCode.replace(alt, 'new Worker(r.workerURL,{type:void 0})');
+      workerPatched = true;
+    }
+  }
+  if (!workerPatched) {
+    throw new Error('FFmpeg UMD Worker 格式不符，請稍後再試。');
+  }
 
-  const umdBlobURL = URL.createObjectURL(new Blob([umdCode], { type: 'text/javascript' }));
+    const umdBlobURL = URL.createObjectURL(new Blob([umdCode], { type: 'text/javascript' }));
   await import(umdBlobURL);
 
   if (!globalThis.FFmpegWASM || !globalThis.FFmpegWASM.FFmpeg) {
