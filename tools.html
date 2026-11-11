@@ -875,19 +875,14 @@
     let ffmpegLoaded = false;
     let isConverting = false;
 
-    // file:// 無法使用 Web Worker / CDN 腳本
     const isFileProtocol = location.protocol === 'file:';
     if (isFileProtocol) {
-      setTimeout(() => {
-        setStatus(
-          '請勿直接用檔案開啟此頁。請透過本機伺服器或 GitHub Pages（https://）開啟，否則轉換引擎無法載入。',
-          'error'
-        );
-      }, 100);
+      statusMsg.textContent = '請勿直接用檔案開啟。請用 GitHub Pages（HTTPS）或本機伺服器（npx serve / Live Server）開啟。';
+      statusMsg.className = 'status-msg error';
     }
 
     function formatBytes(bytes) {
-      if (bytes === 0) return '0 B';
+      if (!bytes || bytes === 0) return '0 B';
       const k = 1024;
       const sizes = ['B', 'KB', 'MB', 'GB'];
       const i = Math.floor(Math.log(bytes) / Math.log(k));
@@ -1000,53 +995,55 @@
       }, 1000);
     });
 
+    /**
+     * 官方建議：單執行緒 UMD core + toBlobURL
+     * 不需 SharedArrayBuffer / COOP / COEP，GitHub Pages 可直接用
+     */
     async function loadFFmpeg() {
       if (ffmpegLoaded && ffmpeg) return ffmpeg;
 
       if (isFileProtocol) {
-        throw new Error(
-          '目前是以本機檔案方式開啟（file://）。請改用本機伺服器（例如 VS Code Live Server）或部署到 GitHub Pages 後再開啟。'
-        );
+        throw new Error('目前是 file:// 開啟。請改用 GitHub Pages 或本機伺服器（例如：npx serve .）。');
       }
 
-      setStatus('正在載入轉換引擎（首次約需幾秒）…');
+      setStatus('正在載入轉換引擎（首次需下載約 25MB，請稍候）…');
       progressWrap.classList.add('show');
-      setProgress(0.05, '載入 FFmpeg…');
+      setProgress(0.02, '連線 CDN…');
 
       ffmpeg = new FFmpeg();
+
       ffmpeg.on('log', ({ message }) => {
-        // console.log(message);
+        // 可在開發者工具查看
+        // console.log('[ffmpeg]', message);
       });
-      ffmpeg.on('progress', ({ progress }) => {
-        if (progress >= 0 && progress <= 1) {
-          setProgress(0.15 + progress * 0.8, '轉換中…');
+
+      ffmpeg.on('progress', ({ progress, time }) => {
+        if (typeof progress === 'number' && progress >= 0 && progress <= 1) {
+          setProgress(0.2 + progress * 0.75, '轉換中…');
         }
       });
 
-      // 全部改為 blob URL，避免 CDN Worker 被 origin / CORS 擋住
-      const coreBase = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/esm';
-      const ffmpegBase = 'https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.10/dist/esm';
+      // 單執行緒 core（umd），不需要 workerURL，相容性最好
+      const baseURL = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.10/dist/umd';
 
-      const [coreURL, wasmURL, workerURL] = await Promise.all([
-        toBlobURL(`${coreBase}/ffmpeg-core.js`, 'text/javascript'),
-        toBlobURL(`${coreBase}/ffmpeg-core.wasm`, 'application/wasm'),
-        toBlobURL(`${ffmpegBase}/worker.js`, 'text/javascript'),
-      ]);
+      setProgress(0.05, '下載 ffmpeg-core.js…');
+      const coreURL = await toBlobURL(`${baseURL}/ffmpeg-core.js`, 'text/javascript');
 
-      await ffmpeg.load({
-        coreURL,
-        wasmURL,
-        workerURL,
-        classWorkerURL: workerURL,
-      });
+      setProgress(0.1, '下載 ffmpeg-core.wasm（約 25MB）…');
+      const wasmURL = await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, 'application/wasm');
+
+      setProgress(0.15, '初始化引擎…');
+      await ffmpeg.load({ coreURL, wasmURL });
 
       ffmpegLoaded = true;
-      setProgress(0.12, '引擎就緒');
+      setProgress(0.18, '引擎就緒');
+      setStatus('引擎載入完成，開始處理檔案…');
       return ffmpeg;
     }
 
     function qualityArgs(mode) {
       if (mode === 'copy') {
+        // 只改容器，不重編碼（最快）
         return ['-c', 'copy'];
       }
       const presets = {
@@ -1066,7 +1063,16 @@
     }
 
     convertBtn.addEventListener('click', async () => {
-      if (!selectedFile || isConverting) return;
+      // 立刻給使用者回饋，避免「沒反應」的感覺
+      if (!selectedFile) {
+        setStatus('請先選擇要轉換的影片檔案。', 'error');
+        return;
+      }
+      if (isConverting) {
+        setStatus('正在轉換中，請稍候…');
+        return;
+      }
+
       isConverting = true;
       convertBtn.disabled = true;
       clearBtn.disabled = true;
@@ -1075,22 +1081,23 @@
       resultBox.classList.remove('show');
       previewWrap.classList.remove('show');
       progressWrap.classList.add('show');
-      setProgress(0, '開始…');
-      setStatus('');
+      setProgress(0.01, '開始…');
+      setStatus('已開始，正在準備…');
 
-      const inputName = 'input' + (selectedFile.name.match(/\.[^.]+$/) || ['.mov'])[0];
+      const extMatch = selectedFile.name.match(/\.[^.]+$/);
+      const inputName = 'input' + (extMatch ? extMatch[0].toLowerCase() : '.mov');
       const outName = (selectedFile.name.replace(/\.[^.]+$/, '') || 'video') + '.mp4';
       outputFilename = outName;
 
       try {
         const ff = await loadFFmpeg();
-        setStatus('讀取檔案中…');
-        setProgress(0.1, '寫入記憶體…');
 
+        setStatus('讀取並寫入檔案到記憶體…');
+        setProgress(0.19, '寫入檔案…');
         await ff.writeFile(inputName, await fetchFile(selectedFile));
 
-        setStatus('開始轉換，請稍候…');
-        setProgress(0.15, '轉換中…');
+        setStatus('開始轉換，請勿關閉頁面…');
+        setProgress(0.2, '轉換中…');
 
         const mode = qualitySelect.value;
         const args = ['-i', inputName, ...qualityArgs(mode), outName];
@@ -1100,7 +1107,9 @@
         setStatus('整理輸出檔案…');
 
         const data = await ff.readFile(outName);
-        outputBlob = new Blob([data.buffer], { type: 'video/mp4' });
+        // data 可能是 Uint8Array
+        const buffer = data.buffer ? data.buffer : data;
+        outputBlob = new Blob([buffer], { type: 'video/mp4' });
 
         try { await ff.deleteFile(inputName); } catch (_) {}
         try { await ff.deleteFile(outName); } catch (_) {}
@@ -1118,18 +1127,19 @@
       } catch (err) {
         console.error(err);
         let msg = '轉換失敗。';
-        if (err && err.message) {
-          if (/file:\/\//i.test(err.message) || /本機檔案/i.test(err.message)) {
-            msg = err.message;
-          } else if (/Worker|cannot be accessed from origin/i.test(err.message)) {
-            msg = '轉換引擎無法在目前環境啟動。請用 HTTPS（例如 GitHub Pages）或本機 http://localhost 開啟，不要直接雙擊 HTML 檔。';
-          } else if (/memory|OOM|out of memory/i.test(err.message)) {
-            msg = '記憶體不足，請嘗試較小的檔案，或選擇「僅轉容器」。';
-          } else if (/SharedArrayBuffer|cross-origin|COOP|COEP/i.test(err.message)) {
-            msg = '瀏覽器安全限制導致無法載入轉換引擎。請使用最新版 Chrome / Edge，並以 HTTPS 開啟網站。';
-          } else {
-            msg = '轉換失敗：' + err.message;
-          }
+        const m = (err && err.message) ? String(err.message) : String(err);
+        if (/file:\/\//i.test(m) || /本機伺服器|file:\/\//i.test(m)) {
+          msg = m;
+        } else if (/Worker|cannot be accessed from origin|Failed to construct/i.test(m)) {
+          msg = '轉換引擎無法啟動。請用 HTTPS（GitHub Pages）或本機 http://localhost 開啟，不要直接雙擊 HTML。';
+        } else if (/memory|OOM|out of memory|Array buffer/i.test(m)) {
+          msg = '記憶體不足。請改選「僅轉容器」，或使用較小的檔案。';
+        } else if (/SharedArrayBuffer|crossOriginIsolated|COOP|COEP/i.test(m)) {
+          msg = '瀏覽器安全限制。請用最新版 Chrome / Edge，並以 HTTPS 開啟。';
+        } else if (/network|fetch|Failed to fetch|load/i.test(m)) {
+          msg = '無法下載轉換引擎，請檢查網路連線後再試。';
+        } else {
+          msg = '轉換失敗：' + m;
         }
         setStatus(msg, 'error');
         setProgress(0, '失敗');
@@ -1146,31 +1156,39 @@
     const links = document.getElementById('navLinks');
     const gamesNav = document.getElementById('gamesNav');
     const gamesToggle = document.getElementById('gamesToggle');
-    toggle.addEventListener('click', () => {
-      links.classList.toggle('open');
-      if (!links.classList.contains('open')) {
-        gamesNav.classList.remove('open');
-        gamesToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-    gamesToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const open = gamesNav.classList.toggle('open');
-      gamesToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    document.addEventListener('click', (e) => {
-      if (!gamesNav.contains(e.target)) {
-        gamesNav.classList.remove('open');
-        gamesToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        links.classList.remove('open');
-        gamesNav.classList.remove('open');
-        gamesToggle.setAttribute('aria-expanded', 'false');
+    if (toggle && links) {
+      toggle.addEventListener('click', () => {
+        links.classList.toggle('open');
+        if (!links.classList.contains('open') && gamesNav && gamesToggle) {
+          gamesNav.classList.remove('open');
+          gamesToggle.setAttribute('aria-expanded', 'false');
+        }
       });
-    });
+    }
+    if (gamesToggle && gamesNav) {
+      gamesToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const open = gamesNav.classList.toggle('open');
+        gamesToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', (e) => {
+        if (!gamesNav.contains(e.target)) {
+          gamesNav.classList.remove('open');
+          gamesToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+    if (links) {
+      links.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          links.classList.remove('open');
+          if (gamesNav && gamesToggle) {
+            gamesNav.classList.remove('open');
+            gamesToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    }
   </script>
 </body>
 </html>
