@@ -761,10 +761,9 @@
       <div class="card" id="tool-intro">
         <h2 class="section-title">MOV 轉 MP4</h2>
         <p class="tool-note">
-          將 <strong>Apple QuickTime (.mov)</strong> 轉成 <strong>MP4 (H.264)</strong>。
-          檔案只在你的瀏覽器處理，不會上傳伺服器。
-          首次使用需下載約 25MB 引擎。請用 HTTPS 開啟，並上傳 <code style="background:rgba(26,63,151,0.08);padding:0.1em 0.35em;border-radius:6px;">ffmpeg/worker.bundle.js</code>。
-          <span style="opacity:0.7">（工具版本 v3）</span>
+          將 <strong>.mov</strong> 轉成 <strong>MP4</strong>。檔案只在瀏覽器處理。
+          首次需下載約 30MB 引擎。請用 <strong>HTTPS</strong> 開啟。
+          <span style="opacity:0.65">（工具版本 v4）</span>
         </p>
       </div>
     </section>
@@ -938,16 +937,10 @@ function onFiles(files) {
     setStatus('請選擇影片檔案（建議 .mov）', 'error');
     return;
   }
-  if (file.size > 400 * 1024 * 1024) {
-    setStatus('檔案超過約 400MB，可能無法在瀏覽器中轉換。', 'error');
-  }
   updateFileUI(file);
 }
 
-dropzone.addEventListener('dragover', (e) => {
-  e.preventDefault();
-  dropzone.classList.add('dragover');
-});
+dropzone.addEventListener('dragover', (e) => { e.preventDefault(); dropzone.classList.add('dragover'); });
 dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
 dropzone.addEventListener('drop', (e) => {
   e.preventDefault();
@@ -971,12 +964,12 @@ downloadBtn.addEventListener('click', () => {
 });
 
 if (location.protocol === 'file:') {
-  setStatus('請用 GitHub Pages 的 https:// 網址開啟，不要直接雙擊 HTML。', 'error');
+  setStatus('請用 GitHub Pages 的 https:// 網址開啟。', 'error');
 }
 
 async function fetchAsBlobURL(url, mime, onProgress) {
   const res = await fetch(url);
-  if (!res.ok) throw new Error('下載失敗 ' + res.status + '：' + url);
+  if (!res.ok) throw new Error('下載失敗 ' + res.status);
   const total = Number(res.headers.get('content-length')) || 0;
   if (!res.body || !res.body.getReader) {
     const buf = await res.arrayBuffer();
@@ -996,72 +989,121 @@ async function fetchAsBlobURL(url, mime, onProgress) {
   return URL.createObjectURL(new Blob(chunks, { type: mime }));
 }
 
+/**
+ * UMD + classic Worker（社群驗證可在純靜態站運作）
+ * 參考：ffmpeg.wasm discussion #580
+ */
 async function loadFFmpeg() {
   if (ffmpegLoaded && ffmpeg) return ffmpeg;
 
-  const ffmpegMod = await import('https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.10/dist/esm/index.js');
-  const utilMod = await import('https://cdn.jsdelivr.net/npm/@ffmpeg/util@0.12.1/dist/esm/index.js');
-  const FFmpegClass = ffmpegMod.FFmpeg;
-  fetchFileFn = utilMod.fetchFile;
-
-  if (!FFmpegClass) {
-    throw new Error('無法載入 FFmpeg 模組，請重新整理頁面。');
+  if (location.protocol === 'file:') {
+    throw new Error('請用 HTTPS（GitHub Pages）開啟。');
   }
 
-  setStatus('正在載入轉換引擎（首次約 25MB）…');
+  setStatus('載入轉換引擎（首次約 30MB，請稍候）…');
   progressWrap.classList.add('show');
   setProgress(0.03, '準備中…');
 
-  ffmpeg = new FFmpegClass();
+  const utilMod = await import('https://cdn.jsdelivr.net/npm/@ffmpeg/util@0.12.1/dist/esm/index.js');
+  fetchFileFn = utilMod.fetchFile;
+
+  const baseFF = 'https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.10/dist/umd';
+  const baseCore = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/umd';
+
+  // 1) 下載並 patch UMD：改用我們提供的 classic worker URL
+  setProgress(0.05, '載入 FFmpeg UMD…');
+  const umdResp = await fetch(baseFF + '/ffmpeg.js');
+  if (!umdResp.ok) throw new Error('無法下載 ffmpeg.js');
+  let umdCode = await umdResp.text();
+
+  const needle = 'new Worker(new URL(e.p+e.u(814),e.b),{type:void 0})';
+  if (!umdCode.includes(needle)) {
+    // 相容其他壓縮結果
+    const alt = /new Worker\(new URL\(e\.p\+e\.u\(814\),e\.b\),\{type:void 0\}\)/;
+    if (!alt.test(umdCode)) {
+      throw new Error('FFmpeg UMD 格式不符，請稍後再試或回報版本問題。');
+    }
+    umdCode = umdCode.replace(alt, 'new Worker(r.workerURL,{type:void 0})');
+  } else {
+    umdCode = umdCode.replace(needle, 'new Worker(r.workerURL,{type:void 0})');
+  }
+
+  const umdBlobURL = URL.createObjectURL(new Blob([umdCode], { type: 'text/javascript' }));
+  await import(umdBlobURL);
+
+  if (!globalThis.FFmpegWASM || !globalThis.FFmpegWASM.FFmpeg) {
+    throw new Error('FFmpegWASM 載入失敗');
+  }
+
+  ffmpeg = new globalThis.FFmpegWASM.FFmpeg();
   ffmpeg.on('log', () => {});
   ffmpeg.on('progress', ({ progress }) => {
     if (typeof progress === 'number' && progress >= 0 && progress <= 1) {
-      setProgress(0.25 + progress * 0.7, '轉換中… ' + Math.round(progress * 100) + '%');
+      setProgress(0.28 + progress * 0.67, '轉換中 ' + Math.round(progress * 100) + '%');
     }
   });
 
-  const coreBase = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/esm';
+  // 2) classic worker chunk
+  setProgress(0.08, '載入 Worker…');
+  const workerURL = await fetchAsBlobURL(baseFF + '/814.ffmpeg.js', 'text/javascript');
 
-  setProgress(0.05, '下載核心 JS…');
+  // 3) core JS
+  setProgress(0.10, '下載核心…');
   const coreURL = await fetchAsBlobURL(
-    coreBase + '/ffmpeg-core.js',
+    baseCore + '/ffmpeg-core.js',
     'text/javascript',
-    (p) => setProgress(0.05 + p * 0.05, '下載核心 JS…')
+    (p) => setProgress(0.10 + p * 0.04, '下載核心…')
   );
 
-  setProgress(0.10, '下載 WASM…');
+  // 4) wasm ~30MB
+  setProgress(0.14, '下載 WASM…');
   const wasmURL = await fetchAsBlobURL(
-    coreBase + '/ffmpeg-core.wasm',
+    baseCore + '/ffmpeg-core.wasm',
     'application/wasm',
     (p) => {
-      setProgress(0.10 + p * 0.10, '下載 WASM ' + Math.round(p * 100) + '%');
-      setStatus('下載轉換引擎中 ' + Math.round(p * 100) + '%（約 25MB）…');
+      setProgress(0.14 + p * 0.10, '下載 WASM ' + Math.round(p * 100) + '%');
+      setStatus('下載引擎 ' + Math.round(p * 100) + '%（約 30MB，請稍候）…');
     }
   );
 
-  const classWorkerURL = new URL('ffmpeg/worker.bundle.js', window.location.href).href;
+  // 5) 初始化（WASM 編譯可能需 15–60 秒，顯示心跳）
+  setProgress(0.25, '初始化引擎…');
+  setStatus('正在初始化引擎（編譯 WASM，可能需要 15–60 秒，請勿關閉）…');
 
-  setProgress(0.22, '初始化…');
-  setStatus('初始化轉換引擎…');
+  let dots = 0;
+  const heartbeat = setInterval(() => {
+    dots = (dots + 1) % 4;
+    const bar = 0.25 + Math.min(0.02, dots * 0.005);
+    setProgress(bar, '初始化引擎' + '.'.repeat(dots + 1));
+    setStatus('正在初始化引擎（編譯 WASM，可能需要 15–60 秒，請勿關閉）' + '.'.repeat(dots + 1));
+  }, 1000);
 
-  const loadP = ffmpeg.load({ coreURL, wasmURL, classWorkerURL });
-  const timeoutP = new Promise((_, rej) =>
-    setTimeout(() => rej(new Error('初始化逾時（120 秒）。請重新整理後再試。')), 120000)
-  );
-  await Promise.race([loadP, timeoutP]);
+  try {
+    const loadP = ffmpeg.load({
+      coreURL,
+      wasmURL,
+      workerURL,
+    });
+    const timeoutP = new Promise((_, rej) =>
+      setTimeout(() => rej(new Error('初始化逾時。請重新整理後再試，或改選「僅轉容器」。')), 180000)
+    );
+    await Promise.race([loadP, timeoutP]);
+  } finally {
+    clearInterval(heartbeat);
+  }
 
   ffmpegLoaded = true;
-  setProgress(0.24, '引擎就緒');
-  setStatus('引擎就緒');
+  setProgress(0.28, '引擎就緒');
+  setStatus('引擎就緒，開始轉換…');
   return ffmpeg;
 }
 
 function qualityArgs(mode) {
   if (mode === 'copy') return ['-c', 'copy'];
   const map = {
-    high:   { crf: '18', preset: 'medium' },
+    high: { crf: '18', preset: 'medium' },
     medium: { crf: '23', preset: 'fast' },
-    low:    { crf: '28', preset: 'veryfast' },
+    low: { crf: '28', preset: 'veryfast' },
   };
   const p = map[mode] || map.medium;
   return [
@@ -1097,13 +1139,12 @@ convertBtn.addEventListener('click', async () => {
     const ff = await loadFFmpeg();
 
     setStatus('寫入檔案…');
-    setProgress(0.245, '寫入檔案…');
+    setProgress(0.27, '寫入檔案…');
     await ff.writeFile(inputName, await fetchFileFn(selectedFile));
 
-    setStatus('轉換中，請稍候…');
-    setProgress(0.25, '轉換中…');
-    const args = ['-i', inputName, ...qualityArgs(qualitySelect.value), outName];
-    await ff.exec(args);
+    setStatus('轉換中…');
+    setProgress(0.28, '轉換中…');
+    await ff.exec(['-i', inputName, ...qualityArgs(qualitySelect.value), outName]);
 
     setProgress(0.96, '讀取結果…');
     const data = await ff.readFile(outName);
@@ -1124,16 +1165,14 @@ convertBtn.addEventListener('click', async () => {
     console.error(err);
     const m = err && err.message ? String(err.message) : String(err);
     let msg = '轉換失敗：' + m;
-    if (/worker\.bundle|404/i.test(m)) {
-      msg = '找不到 ffmpeg/worker.bundle.js。請確認已上傳到網站的 ffmpeg 資料夾。';
-    } else if (/Worker|construct|import/i.test(m)) {
-      msg = 'Worker 啟動失敗。請用 HTTPS 開啟，並確認已上傳 ffmpeg/worker.bundle.js。';
-    } else if (/memory|OOM|Array buffer/i.test(m)) {
-      msg = '記憶體不足，請改選「僅轉容器」或換較小的檔案。';
+    if (/memory|OOM|Array buffer/i.test(m)) {
+      msg = '記憶體不足，請改選「僅轉容器」或換較小檔案。';
     } else if (/逾時|timeout/i.test(m)) {
       msg = m;
-    } else if (/Failed to fetch|network|下載失敗/i.test(m)) {
-      msg = '網路錯誤，無法下載轉換引擎。請檢查網路後重試。';
+    } else if (/Failed to fetch|下載失敗|network/i.test(m)) {
+      msg = '網路錯誤，無法下載引擎。請檢查網路後重試。';
+    } else if (/Worker|UMD|FFmpegWASM/i.test(m)) {
+      msg = '引擎啟動失敗：' + m;
     }
     setStatus(msg, 'error');
     setProgress(0, '失敗');
