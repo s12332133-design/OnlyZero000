@@ -764,6 +764,10 @@
           將 <strong>Apple QuickTime (.mov)</strong> 影片轉成相容性較佳的 <strong>MP4 (H.264)</strong>。
           轉換過程完全在你的瀏覽器中執行（使用 FFmpeg.wasm），原始檔案不會離開你的裝置。
           建議檔案大小控制在約 <strong>200MB</strong> 以內，過大可能導致記憶體不足。
+          <br><br>
+          <strong>使用方式：</strong>請透過 <strong>GitHub Pages（HTTPS）</strong> 或本機伺服器（如 VS Code Live Server、
+          <code style="background:rgba(26,63,151,0.08);padding:0.1em 0.4em;border-radius:6px;font-size:0.9em;">npx serve</code>）開啟此頁，
+          不要直接雙擊 HTML 檔（file:// 無法載入轉換引擎）。
         </p>
       </div>
     </section>
@@ -870,6 +874,17 @@
     let ffmpeg = null;
     let ffmpegLoaded = false;
     let isConverting = false;
+
+    // file:// 無法使用 Web Worker / CDN 腳本
+    const isFileProtocol = location.protocol === 'file:';
+    if (isFileProtocol) {
+      setTimeout(() => {
+        setStatus(
+          '請勿直接用檔案開啟此頁。請透過本機伺服器或 GitHub Pages（https://）開啟，否則轉換引擎無法載入。',
+          'error'
+        );
+      }, 100);
+    }
 
     function formatBytes(bytes) {
       if (bytes === 0) return '0 B';
@@ -987,6 +1002,13 @@
 
     async function loadFFmpeg() {
       if (ffmpegLoaded && ffmpeg) return ffmpeg;
+
+      if (isFileProtocol) {
+        throw new Error(
+          '目前是以本機檔案方式開啟（file://）。請改用本機伺服器（例如 VS Code Live Server）或部署到 GitHub Pages 後再開啟。'
+        );
+      }
+
       setStatus('正在載入轉換引擎（首次約需幾秒）…');
       progressWrap.classList.add('show');
       setProgress(0.05, '載入 FFmpeg…');
@@ -996,16 +1018,26 @@
         // console.log(message);
       });
       ffmpeg.on('progress', ({ progress }) => {
-        // progress is 0–1 during conversion
         if (progress >= 0 && progress <= 1) {
           setProgress(0.15 + progress * 0.8, '轉換中…');
         }
       });
 
-      const baseURL = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/esm';
+      // 全部改為 blob URL，避免 CDN Worker 被 origin / CORS 擋住
+      const coreBase = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/esm';
+      const ffmpegBase = 'https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.10/dist/esm';
+
+      const [coreURL, wasmURL, workerURL] = await Promise.all([
+        toBlobURL(`${coreBase}/ffmpeg-core.js`, 'text/javascript'),
+        toBlobURL(`${coreBase}/ffmpeg-core.wasm`, 'application/wasm'),
+        toBlobURL(`${ffmpegBase}/worker.js`, 'text/javascript'),
+      ]);
+
       await ffmpeg.load({
-        coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, 'text/javascript'),
-        wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, 'application/wasm'),
+        coreURL,
+        wasmURL,
+        workerURL,
+        classWorkerURL: workerURL,
       });
 
       ffmpegLoaded = true;
@@ -1014,11 +1046,9 @@
     }
 
     function qualityArgs(mode) {
-      // copy = remux only (fastest, no re-encode)
       if (mode === 'copy') {
         return ['-c', 'copy'];
       }
-      // Re-encode to H.264 + AAC for best compatibility
       const presets = {
         high:   { crf: '18', preset: 'medium' },
         medium: { crf: '23', preset: 'fast' },
@@ -1072,7 +1102,6 @@
         const data = await ff.readFile(outName);
         outputBlob = new Blob([data.buffer], { type: 'video/mp4' });
 
-        // cleanup virtual FS
         try { await ff.deleteFile(inputName); } catch (_) {}
         try { await ff.deleteFile(outName); } catch (_) {}
 
@@ -1090,10 +1119,14 @@
         console.error(err);
         let msg = '轉換失敗。';
         if (err && err.message) {
-          if (/memory|OOM|out of memory/i.test(err.message)) {
+          if (/file:\/\//i.test(err.message) || /本機檔案/i.test(err.message)) {
+            msg = err.message;
+          } else if (/Worker|cannot be accessed from origin/i.test(err.message)) {
+            msg = '轉換引擎無法在目前環境啟動。請用 HTTPS（例如 GitHub Pages）或本機 http://localhost 開啟，不要直接雙擊 HTML 檔。';
+          } else if (/memory|OOM|out of memory/i.test(err.message)) {
             msg = '記憶體不足，請嘗試較小的檔案，或選擇「僅轉容器」。';
           } else if (/SharedArrayBuffer|cross-origin|COOP|COEP/i.test(err.message)) {
-            msg = '瀏覽器安全限制導致無法載入轉換引擎。請使用最新版 Chrome / Edge，並確認網站以 HTTPS 開啟。';
+            msg = '瀏覽器安全限制導致無法載入轉換引擎。請使用最新版 Chrome / Edge，並以 HTTPS 開啟網站。';
           } else {
             msg = '轉換失敗：' + err.message;
           }
@@ -1108,7 +1141,7 @@
       }
     });
 
-    // ── Nav (same as index) ──
+    // ── Nav ──
     const toggle = document.getElementById('menuToggle');
     const links = document.getElementById('navLinks');
     const gamesNav = document.getElementById('gamesNav');
