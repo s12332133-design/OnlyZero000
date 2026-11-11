@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools | ONLY ZERO</title>
+  <meta name="description" content="ONLY ZERO 工具頁：MOV 轉 MP4 線上轉換工具，於瀏覽器本地處理，不需上傳伺服器。">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="any">
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ONLY ZERO">
+  <meta property="og:title" content="Tools | ONLY ZERO">
+  <meta property="og:description" content="MOV 轉 MP4 線上轉換工具，於瀏覽器本地處理。">
+  <meta property="og:locale" content="zh_TW">
+  <style>
+    :root {
+      --blue: #1A3F97;
+      --cyan: #61B9DD;
+      --yellow: #F4D21F;
+      --white: #FFFFFF;
+      --bg: #F7F9FC;
+      --text: #1A3F97;
+      --text-muted: #5A6B8A;
+      --card: #FFFFFF;
+      --shadow: 0 8px 28px rgba(26, 63, 151, 0.08);
+      --radius: 20px;
+      --anim-draw: 0.85s;
+      --anim-float: 6s;
+      --anim-pulse: 1.8s;
+      --anim-enter: 0.5s;
+      --anim-stagger: 0.08s;
+      --bg-arc-opacity: 0.9;
+      --bg-float-dist: 14px;
+      --bg-float-rot: 5deg;
+      --bg-pulse-scale: 1.32;
+      --bg-arc1-float: 7s;
+      --bg-arc2-float: 8.5s;
+      --bg-arc3-float: 7.5s;
+      --bg-dot1-pulse: 1.6s;
+      --bg-dot2-pulse: 2.1s;
+      --bg-dot4-pulse: 2.4s;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", "Microsoft YaHei UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: var(--blue) rgba(26, 63, 151, 0.08);
+    }
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track {
+      background: rgba(26, 63, 151, 0.06);
+      border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--blue);
+      border-radius: 999px;
+      border: 2px solid var(--bg);
+      min-height: 40px;
+    }
+    ::-webkit-scrollbar-thumb:hover { background: #15357d; }
+    ::-webkit-scrollbar-corner { background: transparent; }
+
+    .decor {
+      position: fixed;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+      inset: 0;
+    }
+    .decor span {
+      position: absolute;
+      border-radius: 50%;
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+    .decor .arc-1 {
+      width: 260px; height: 260px;
+      border: 40px solid transparent;
+      border-top-color: var(--blue);
+      border-right-color: var(--blue);
+      top: -40px; left: -120px;
+      opacity: 0;
+      --r: -35deg;
+      animation:
+        bgFadeIn var(--anim-draw) ease-out 0.08s forwards,
+        bgFloat var(--bg-arc1-float) ease-in-out infinite;
+    }
+    .decor .arc-2 {
+      width: 180px; height: 180px;
+      border: 32px solid transparent;
+      border-top-color: var(--cyan);
+      border-right-color: var(--cyan);
+      top: 58%; left: -60px;
+      opacity: 0;
+      --r: 45deg;
+      animation:
+        bgFadeIn var(--anim-draw) ease-out 0.28s forwards,
+        bgFloat var(--bg-arc2-float) ease-in-out infinite;
+    }
+    .decor .arc-3 {
+      width: 170px; height: 170px;
+      border: 30px solid transparent;
+      border-top-color: var(--blue);
+      border-left-color: var(--blue);
+      top: 40%; right: -8px;
+      opacity: 0;
+      --r: -35deg;
+      animation:
+        bgFadeIn var(--anim-draw) ease-out 0.45s forwards,
+        bgFloat var(--bg-arc3-float) ease-in-out infinite;
+    }
+    .decor .dot-1 {
+      width: 15px; height: 15px;
+      background: var(--yellow);
+      border: none;
+      top: 16%; left: 5%;
+      opacity: 0;
+      animation:
+        bgFadeInFull 0.5s ease-out 0.8s forwards,
+        bgPulse var(--bg-dot1-pulse) ease-in-out 1.25s infinite;
+    }
+    .decor .dot-2 {
+      width: 12px; height: 12px;
+      background: var(--yellow);
+      border: none;
+      top: 26%; right: 6%;
+      opacity: 0;
+      animation:
+        bgFadeInFull 0.5s ease-out 1s forwards,
+        bgPulse var(--bg-dot2-pulse) ease-in-out 1.45s infinite;
+    }
+    .decor .dot-4 {
+      width: 10px; height: 10px;
+      background: var(--yellow);
+      border: none;
+      bottom: 20%; left: 6%;
+      opacity: 0;
+      animation:
+        bgFadeInFull 0.5s ease-out 1.25s forwards,
+        bgPulse var(--bg-dot4-pulse) ease-in-out 1.8s infinite;
+    }
+    .decor .dot-5 {
+      width: 11px; height: 11px;
+      background: var(--yellow);
+      border: none;
+      bottom: 28%; right: 8%;
+      opacity: 0;
+      animation:
+        bgFadeInFull 0.5s ease-out 1.3s forwards,
+        bgPulse var(--bg-dot4-pulse) ease-in-out 1.9s infinite;
+    }
+    .decor .arc-4 {
+      width: 140px; height: 140px;
+      border: 24px solid transparent;
+      border-top-color: var(--cyan);
+      border-right-color: var(--cyan);
+      bottom: 4%; right: -55px;
+      opacity: 0;
+      --r: 160deg;
+      animation:
+        bgFadeIn var(--anim-draw) ease-out 0.55s forwards,
+        bgFloat calc(var(--anim-float) * 1.05) ease-in-out infinite;
+    }
+    .decor .arc-5 {
+      width: 120px; height: 120px;
+      border: 20px solid transparent;
+      border-top-color: var(--cyan);
+      border-left-color: var(--cyan);
+      top: 7%; right: -40px;
+      opacity: 0;
+      --r: 200deg;
+      animation:
+        bgFadeIn var(--anim-draw) ease-out 0.4s forwards,
+        bgFloat calc(var(--anim-float) * 0.95) ease-in-out infinite;
+    }
+    @keyframes bgFadeIn {
+      from { opacity: 0; }
+      to   { opacity: var(--bg-arc-opacity, 0.9); }
+    }
+    @keyframes bgFadeInFull {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes bgFloat {
+      0%   { transform: rotate(var(--r, 0deg)) translate3d(0, 0, 0); }
+      50%  {
+        transform: rotate(calc(var(--r, 0deg) + var(--bg-float-rot)))
+                   translate3d(0, calc(var(--bg-float-dist) * -1), 0);
+      }
+      100% { transform: rotate(var(--r, 0deg)) translate3d(0, 0, 0); }
+    }
+    @keyframes bgPulse {
+      0%, 100% { transform: scale3d(1, 1, 1); }
+      50%      { transform: scale3d(var(--bg-pulse-scale), var(--bg-pulse-scale), 1); }
+    }
+    @keyframes pulseSoft {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50%      { transform: scale(1.22); opacity: 0.72; }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 960px; margin: 0 auto; padding: 0 1.25rem;
+      position: relative; z-index: 1;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      padding: 0.9rem 0; margin-bottom: 1.5rem;
+      opacity: 0; animation: fadeDown 0.5s ease-out 0.05s forwards;
+    }
+    nav .container {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.65rem 1.3rem;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border: 1.5px solid rgba(26, 63, 151, 0.1);
+      border-radius: 999px; box-shadow: var(--shadow);
+      transition: box-shadow 0.3s ease;
+    }
+    nav .container:hover { box-shadow: 0 10px 32px rgba(26, 63, 151, 0.12); }
+    .logo {
+      text-decoration: none; display: flex; align-items: center;
+      flex-shrink: 0; transition: transform 0.3s ease, opacity 0.3s;
+    }
+    .logo:hover { transform: scale(1.03); opacity: 0.9; }
+    .logo img { height: 28px; width: auto; display: block; }
+    .nav-links {
+      display: flex; gap: 0.35rem; list-style: none; align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none; color: var(--text-muted); font-size: 0.9rem;
+      padding: 0.4rem 0.85rem; border-radius: 999px;
+      transition: background 0.25s, color 0.25s, transform 0.2s; font-weight: 500;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      background: rgba(26, 63, 151, 0.08); color: var(--blue);
+    }
+    .nav-links a:hover { transform: translateY(-1px); }
+    .games-nav {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .games-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      font-family: inherit;
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      transition: background 0.25s, color 0.25s;
+    }
+    .games-toggle:hover,
+    .games-nav.open .games-toggle {
+      background: rgba(26, 63, 151, 0.08);
+      color: var(--blue);
+    }
+    .games-toggle .chevron {
+      width: 0.55em;
+      height: 0.55em;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: rotate(45deg) translateY(-1px);
+      transition: transform 0.25s ease;
+      opacity: 0.7;
+    }
+    .games-nav.open .games-toggle .chevron {
+      transform: rotate(-135deg) translateY(-1px);
+    }
+    .games-buttons {
+      display: none;
+      position: absolute;
+      top: calc(100% + 0.35rem);
+      left: 50%;
+      transform: translateX(-50%);
+      flex-direction: column;
+      gap: 0.3rem;
+      min-width: 140px;
+      padding: 0.45rem;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1.5px solid rgba(26, 63, 151, 0.12);
+      border-radius: 14px;
+      box-shadow: 0 10px 28px rgba(26, 63, 151, 0.12);
+      z-index: 50;
+    }
+    .games-nav.open .games-buttons {
+      display: flex;
+      animation: gamesDrop 0.22s ease-out;
+    }
+    @keyframes gamesDrop {
+      from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+      to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    .games-buttons a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      background: rgba(26, 63, 151, 0.06);
+      border: 1.5px solid rgba(26, 63, 151, 0.12);
+      font-weight: 600;
+      font-size: 0.88rem;
+      white-space: nowrap;
+      color: var(--blue);
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.2s;
+    }
+    .games-buttons a:hover {
+      background: var(--blue);
+      color: var(--white);
+      border-color: var(--blue);
+      transform: translateY(-1px);
+    }
+    .menu-toggle {
+      display: none; background: none; border: none; cursor: pointer;
+      padding: 0.4rem; flex-direction: column; gap: 5px;
+    }
+    .menu-toggle span {
+      display: block; width: 22px; height: 2.5px;
+      background: var(--blue); border-radius: 2px; transition: 0.3s;
+    }
+
+    section { margin-bottom: 1.8rem; }
+    .section-title {
+      font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;
+      letter-spacing: 0.04em; color: var(--blue);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .section-title::before {
+      content: ""; width: 11px; height: 11px; background: var(--yellow);
+      border-radius: 50%; flex-shrink: 0;
+      animation: pulseSoft var(--anim-pulse) ease-in-out infinite;
+    }
+    .card {
+      padding: 1.6rem 1.8rem; background: var(--card); border-radius: var(--radius);
+      box-shadow: var(--shadow); border: 1.5px solid rgba(26, 63, 151, 0.06);
+      opacity: 0; transform: translateY(14px);
+      animation: fadeUp var(--anim-enter) ease-out forwards;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 12px 36px rgba(26, 63, 151, 0.11);
+      transform: translateY(-2px);
+    }
+    #tool-intro.card { animation-delay: 0.18s; }
+    #converter.card { animation-delay: 0.28s; }
+
+    .page-header {
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.55s ease-out 0.12s forwards;
+    }
+    .page-header h1 {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.35rem;
+    }
+    .page-header p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    /* ── Converter UI ── */
+    .tool-note {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      line-height: 1.55;
+    }
+    .tool-note strong { color: var(--blue); font-weight: 600; }
+
+    .dropzone {
+      border: 2px dashed rgba(26, 63, 151, 0.28);
+      border-radius: 16px;
+      background: rgba(26, 63, 151, 0.03);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.25s, background 0.25s, transform 0.2s;
+      position: relative;
+    }
+    .dropzone:hover,
+    .dropzone.dragover {
+      border-color: var(--blue);
+      background: rgba(26, 63, 151, 0.07);
+    }
+    .dropzone.dragover { transform: scale(1.01); }
+    .dropzone.has-file {
+      border-style: solid;
+      border-color: rgba(97, 185, 221, 0.5);
+      background: rgba(97, 185, 221, 0.08);
+    }
+    .dropzone input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+    .dropzone-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 0.85rem;
+      border-radius: 50%;
+      background: rgba(26, 63, 151, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+    }
+    .dropzone-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+    .dropzone-title {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--blue);
+      margin-bottom: 0.25rem;
+    }
+    .dropzone-hint {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .file-info {
+      display: none;
+      margin-top: 1rem;
+      padding: 0.85rem 1rem;
+      background: rgba(26, 63, 151, 0.05);
+      border: 1.5px solid rgba(26, 63, 151, 0.1);
+      border-radius: 12px;
+      text-align: left;
+    }
+    .file-info.show { display: block; }
+    .file-info-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .file-info-row strong {
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    .options-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.25rem;
+      align-items: flex-end;
+    }
+    .option-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .option-group label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .option-group select {
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: var(--blue);
+      background: rgba(26, 63, 151, 0.05);
+      border: 1.5px solid rgba(26, 63, 151, 0.15);
+      border-radius: 999px;
+      padding: 0.5rem 1rem;
+      min-width: 140px;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .option-group select:hover,
+    .option-group select:focus {
+      border-color: var(--blue);
+      background: rgba(26, 63, 151, 0.08);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 1.35rem;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.75rem 1.7rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s, opacity 0.2s;
+    }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+    .btn-primary {
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(26, 63, 151, 0.28);
+    }
+    .btn-primary:hover:not(:disabled) {
+      background: #15357d;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(26, 63, 151, 0.35);
+    }
+    .btn-secondary {
+      background: rgba(26, 63, 151, 0.06);
+      color: var(--blue);
+      border: 1.5px solid rgba(26, 63, 151, 0.18);
+    }
+    .btn-secondary:hover:not(:disabled) {
+      background: rgba(26, 63, 151, 0.12);
+      transform: translateY(-1px);
+    }
+    .btn-download {
+      background: #1a7a4c;
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(26, 122, 76, 0.28);
+    }
+    .btn-download:hover:not(:disabled) {
+      background: #15663f;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(26, 122, 76, 0.35);
+    }
+
+    .progress-wrap {
+      display: none;
+      margin-top: 1.25rem;
+    }
+    .progress-wrap.show { display: block; }
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+    .progress-bar {
+      height: 10px;
+      background: rgba(26, 63, 151, 0.1);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+      border-radius: 999px;
+      transition: width 0.2s ease;
+    }
+    .status-msg {
+      margin-top: 0.85rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      min-height: 1.4em;
+    }
+    .status-msg.error { color: #c0392b; }
+    .status-msg.success { color: #1a7a4c; font-weight: 600; }
+
+    .result-box {
+      display: none;
+      margin-top: 1.25rem;
+      padding: 1rem 1.15rem;
+      background: rgba(26, 122, 76, 0.06);
+      border: 1.5px solid rgba(26, 122, 76, 0.25);
+      border-radius: 14px;
+    }
+    .result-box.show { display: block; }
+    .result-box p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+    .result-box p strong { color: var(--blue); }
+
+    .preview-wrap {
+      display: none;
+      margin-top: 1rem;
+    }
+    .preview-wrap.show { display: block; }
+    .preview-wrap video {
+      width: 100%;
+      max-height: 320px;
+      border-radius: 12px;
+      background: #0d1b3a;
+      border: 1.5px solid rgba(26, 63, 151, 0.12);
+    }
+
+    footer { padding: 1.5rem 0 2.5rem; text-align: center; }
+    footer .card {
+      padding: 1.2rem 1.5rem;
+      display: inline-block;
+      animation-delay: 0.45s;
+    }
+    footer a {
+      color: var(--blue); text-decoration: none; font-weight: 600; transition: color 0.2s;
+    }
+    footer a:hover { text-decoration: underline; color: var(--cyan); }
+    .footer-note { margin-top: 0.4rem; font-size: 0.8rem; color: var(--text-muted); }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .decor span, .card, nav, .page-header {
+        opacity: 1 !important; transform: none !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .menu-toggle { display: flex; }
+      .nav-links {
+        display: none; position: absolute;
+        top: calc(100% + 0.4rem); left: 1.25rem; right: 1.25rem;
+        flex-direction: column; background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+        border: 1.5px solid rgba(26, 63, 151, 0.12); border-radius: 16px;
+        padding: 0.8rem; box-shadow: var(--shadow);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 0.7rem 1rem; }
+      nav { position: relative; }
+      nav .container { position: relative; border-radius: 16px; }
+      .logo img { height: 24px; }
+      .games-nav {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+      }
+      .games-toggle {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0.7rem 1rem;
+        border-radius: 10px;
+      }
+      .games-buttons {
+        position: static;
+        transform: none;
+        left: auto;
+        min-width: 0;
+        width: 100%;
+        display: none;
+        flex-direction: row;
+        padding: 0.35rem 0.5rem 0.5rem;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        backdrop-filter: none;
+      }
+      .games-nav.open .games-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        animation: none;
+        transform: none;
+      }
+      .games-buttons a { text-align: center; }
+      .card { padding: 1.3rem 1.4rem; }
+      .decor .arc-1 { width: 180px; height: 180px; border-width: 30px; }
+      .decor .arc-2 { width: 150px; height: 150px; border-width: 24px; }
+      .decor .arc-3, .decor .arc-4 { display: none; }
+      .decor .dot-4 { display: none; }
+      .page-header h1 { font-size: 1.55rem; }
+      .dropzone { padding: 1.5rem 1rem; }
+    }
+    @media (max-width: 420px) {
+      .logo img { height: 22px; }
+      .btn { padding: 0.7rem 1.3rem; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="decor" aria-hidden="true">
+    <span class="arc-1"></span>
+    <span class="arc-2"></span>
+    <span class="arc-3"></span>
+    <span class="arc-4"></span>
+    <span class="arc-5"></span>
+    <span class="dot-1"></span>
+    <span class="dot-2"></span>
+    <span class="dot-4"></span>
+    <span class="dot-5"></span>
+  </div>
+
+  <nav>
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="ONLY ZERO 首頁">
+        <img src="only-zero-logo.png" alt="ONLY ZERO" width="154" height="28">
+      </a>
+      <button class="menu-toggle" aria-label="選單" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#news">News</a></li>
+        <li><a href="tools.html" class="active">Tools</a></li>
+        <li class="games-nav" id="gamesNav">
+          <button type="button" class="games-toggle" id="gamesToggle" aria-expanded="false" aria-controls="gamesMenu">
+            Games
+          </button>
+          <div class="games-buttons" id="gamesMenu">
+            <a href="game.html">Break Down</a>
+            <a href="firebase_yo.html">Yo!</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Tools</h1>
+      <p>實用小工具集合 · 檔案皆在瀏覽器本地處理，不會上傳到伺服器</p>
+    </div>
+
+    <section>
+      <div class="card" id="tool-intro">
+        <h2 class="section-title">MOV 轉 MP4</h2>
+        <p class="tool-note">
+          將 <strong>Apple QuickTime (.mov)</strong> 影片轉成相容性較佳的 <strong>MP4 (H.264)</strong>。
+          轉換過程完全在你的瀏覽器中執行（使用 FFmpeg.wasm），原始檔案不會離開你的裝置。
+          建議檔案大小控制在約 <strong>200MB</strong> 以內，過大可能導致記憶體不足。
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="card" id="converter">
+        <div class="dropzone" id="dropzone">
+          <input type="file" id="fileInput" accept=".mov,video/quicktime,video/mp4,video/*" aria-label="選擇影片檔案">
+          <div class="dropzone-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+          </div>
+          <div class="dropzone-title">點擊或拖曳檔案到此處</div>
+          <div class="dropzone-hint">支援 .mov（也可用於其他常見影片格式）</div>
+        </div>
+
+        <div class="file-info" id="fileInfo">
+          <div class="file-info-row">
+            <span>檔名：<strong id="fileName">—</strong></span>
+            <span>大小：<strong id="fileSize">—</strong></span>
+          </div>
+        </div>
+
+        <div class="options-row">
+          <div class="option-group">
+            <label for="qualitySelect">畫質 / 壓縮</label>
+            <select id="qualitySelect">
+              <option value="medium" selected>平衡（建議）</option>
+              <option value="high">高畫質（檔案較大）</option>
+              <option value="low">較小檔案（畫質較低）</option>
+              <option value="copy">僅轉容器（最快，畫質不變）</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn btn-primary" id="convertBtn" disabled>開始轉換</button>
+          <button type="button" class="btn btn-secondary" id="clearBtn" disabled>清除</button>
+          <button type="button" class="btn btn-download" id="downloadBtn" style="display:none;">下載 MP4</button>
+        </div>
+
+        <div class="progress-wrap" id="progressWrap">
+          <div class="progress-label">
+            <span id="progressText">準備中…</span>
+            <span id="progressPercent">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <p class="status-msg" id="statusMsg"></p>
+
+        <div class="result-box" id="resultBox">
+          <p>轉換完成！輸出檔案：<strong id="outputName">—</strong>（約 <strong id="outputSize">—</strong>）</p>
+        </div>
+
+        <div class="preview-wrap" id="previewWrap">
+          <video id="previewVideo" controls playsinline></video>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="card">
+        <p>聯絡信箱：<a href="mailto:onlyzero000111@gmail.com">onlyzero000111@gmail.com</a></p>
+        <p class="footer-note">© 2026 林芷菱 · ONLY ZERO</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { FFmpeg } from 'https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.10/dist/esm/index.js';
+    import { fetchFile, toBlobURL } from 'https://cdn.jsdelivr.net/npm/@ffmpeg/util@0.12.1/dist/esm/index.js';
+
+    const dropzone = document.getElementById('dropzone');
+    const fileInput = document.getElementById('fileInput');
+    const fileInfo = document.getElementById('fileInfo');
+    const fileNameEl = document.getElementById('fileName');
+    const fileSizeEl = document.getElementById('fileSize');
+    const qualitySelect = document.getElementById('qualitySelect');
+    const convertBtn = document.getElementById('convertBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const progressWrap = document.getElementById('progressWrap');
+    const progressFill = document.getElementById('progressFill');
+    const progressText = document.getElementById('progressText');
+    const progressPercent = document.getElementById('progressPercent');
+    const statusMsg = document.getElementById('statusMsg');
+    const resultBox = document.getElementById('resultBox');
+    const outputNameEl = document.getElementById('outputName');
+    const outputSizeEl = document.getElementById('outputSize');
+    const previewWrap = document.getElementById('previewWrap');
+    const previewVideo = document.getElementById('previewVideo');
+
+    let selectedFile = null;
+    let outputBlob = null;
+    let outputFilename = '';
+    let ffmpeg = null;
+    let ffmpegLoaded = false;
+    let isConverting = false;
+
+    function formatBytes(bytes) {
+      if (bytes === 0) return '0 B';
+      const k = 1024;
+      const sizes = ['B', 'KB', 'MB', 'GB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return (bytes / Math.pow(k, i)).toFixed(i === 0 ? 0 : 1) + ' ' + sizes[i];
+    }
+
+    function setStatus(msg, type) {
+      statusMsg.textContent = msg || '';
+      statusMsg.className = 'status-msg' + (type ? ' ' + type : '');
+    }
+
+    function setProgress(ratio, text) {
+      const pct = Math.min(100, Math.max(0, Math.round(ratio * 100)));
+      progressFill.style.width = pct + '%';
+      progressPercent.textContent = pct + '%';
+      if (text) progressText.textContent = text;
+    }
+
+    function resetOutput() {
+      outputBlob = null;
+      outputFilename = '';
+      downloadBtn.style.display = 'none';
+      resultBox.classList.remove('show');
+      previewWrap.classList.remove('show');
+      if (previewVideo.src) {
+        URL.revokeObjectURL(previewVideo.src);
+        previewVideo.removeAttribute('src');
+        previewVideo.load();
+      }
+      progressWrap.classList.remove('show');
+      setProgress(0, '準備中…');
+      setStatus('');
+    }
+
+    function updateFileUI(file) {
+      selectedFile = file;
+      resetOutput();
+      if (!file) {
+        dropzone.classList.remove('has-file');
+        fileInfo.classList.remove('show');
+        convertBtn.disabled = true;
+        clearBtn.disabled = true;
+        return;
+      }
+      dropzone.classList.add('has-file');
+      fileInfo.classList.add('show');
+      fileNameEl.textContent = file.name;
+      fileSizeEl.textContent = formatBytes(file.size);
+      convertBtn.disabled = false;
+      clearBtn.disabled = false;
+    }
+
+    function onFiles(files) {
+      if (!files || !files.length) return;
+      const file = files[0];
+      const name = (file.name || '').toLowerCase();
+      const type = (file.type || '').toLowerCase();
+      const ok =
+        name.endsWith('.mov') ||
+        name.endsWith('.mp4') ||
+        name.endsWith('.m4v') ||
+        name.endsWith('.avi') ||
+        name.endsWith('.mkv') ||
+        name.endsWith('.webm') ||
+        type.startsWith('video/');
+      if (!ok) {
+        setStatus('請選擇影片檔案（建議 .mov）', 'error');
+        return;
+      }
+      if (file.size > 400 * 1024 * 1024) {
+        setStatus('檔案過大（超過約 400MB），可能無法在瀏覽器中順利轉換。', 'error');
+      } else {
+        setStatus('');
+      }
+      updateFileUI(file);
+    }
+
+    dropzone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropzone.classList.add('dragover');
+    });
+    dropzone.addEventListener('dragleave', () => {
+      dropzone.classList.remove('dragover');
+    });
+    dropzone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropzone.classList.remove('dragover');
+      onFiles(e.dataTransfer.files);
+    });
+    fileInput.addEventListener('change', () => {
+      onFiles(fileInput.files);
+    });
+
+    clearBtn.addEventListener('click', () => {
+      if (isConverting) return;
+      fileInput.value = '';
+      updateFileUI(null);
+    });
+
+    downloadBtn.addEventListener('click', () => {
+      if (!outputBlob) return;
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(outputBlob);
+      a.download = outputFilename || 'converted.mp4';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => {
+        URL.revokeObjectURL(a.href);
+        a.remove();
+      }, 1000);
+    });
+
+    async function loadFFmpeg() {
+      if (ffmpegLoaded && ffmpeg) return ffmpeg;
+      setStatus('正在載入轉換引擎（首次約需幾秒）…');
+      progressWrap.classList.add('show');
+      setProgress(0.05, '載入 FFmpeg…');
+
+      ffmpeg = new FFmpeg();
+      ffmpeg.on('log', ({ message }) => {
+        // console.log(message);
+      });
+      ffmpeg.on('progress', ({ progress }) => {
+        // progress is 0–1 during conversion
+        if (progress >= 0 && progress <= 1) {
+          setProgress(0.15 + progress * 0.8, '轉換中…');
+        }
+      });
+
+      const baseURL = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/esm';
+      await ffmpeg.load({
+        coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, 'text/javascript'),
+        wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, 'application/wasm'),
+      });
+
+      ffmpegLoaded = true;
+      setProgress(0.12, '引擎就緒');
+      return ffmpeg;
+    }
+
+    function qualityArgs(mode) {
+      // copy = remux only (fastest, no re-encode)
+      if (mode === 'copy') {
+        return ['-c', 'copy'];
+      }
+      // Re-encode to H.264 + AAC for best compatibility
+      const presets = {
+        high:   { crf: '18', preset: 'medium' },
+        medium: { crf: '23', preset: 'fast' },
+        low:    { crf: '28', preset: 'veryfast' },
+      };
+      const p = presets[mode] || presets.medium;
+      return [
+        '-c:v', 'libx264',
+        '-preset', p.preset,
+        '-crf', p.crf,
+        '-c:a', 'aac',
+        '-b:a', '128k',
+        '-movflags', '+faststart',
+      ];
+    }
+
+    convertBtn.addEventListener('click', async () => {
+      if (!selectedFile || isConverting) return;
+      isConverting = true;
+      convertBtn.disabled = true;
+      clearBtn.disabled = true;
+      qualitySelect.disabled = true;
+      downloadBtn.style.display = 'none';
+      resultBox.classList.remove('show');
+      previewWrap.classList.remove('show');
+      progressWrap.classList.add('show');
+      setProgress(0, '開始…');
+      setStatus('');
+
+      const inputName = 'input' + (selectedFile.name.match(/\.[^.]+$/) || ['.mov'])[0];
+      const outName = (selectedFile.name.replace(/\.[^.]+$/, '') || 'video') + '.mp4';
+      outputFilename = outName;
+
+      try {
+        const ff = await loadFFmpeg();
+        setStatus('讀取檔案中…');
+        setProgress(0.1, '寫入記憶體…');
+
+        await ff.writeFile(inputName, await fetchFile(selectedFile));
+
+        setStatus('開始轉換，請稍候…');
+        setProgress(0.15, '轉換中…');
+
+        const mode = qualitySelect.value;
+        const args = ['-i', inputName, ...qualityArgs(mode), outName];
+        await ff.exec(args);
+
+        setProgress(0.96, '讀取結果…');
+        setStatus('整理輸出檔案…');
+
+        const data = await ff.readFile(outName);
+        outputBlob = new Blob([data.buffer], { type: 'video/mp4' });
+
+        // cleanup virtual FS
+        try { await ff.deleteFile(inputName); } catch (_) {}
+        try { await ff.deleteFile(outName); } catch (_) {}
+
+        setProgress(1, '完成');
+        setStatus('轉換成功！', 'success');
+        outputNameEl.textContent = outName;
+        outputSizeEl.textContent = formatBytes(outputBlob.size);
+        resultBox.classList.add('show');
+        downloadBtn.style.display = 'inline-flex';
+
+        const url = URL.createObjectURL(outputBlob);
+        previewVideo.src = url;
+        previewWrap.classList.add('show');
+      } catch (err) {
+        console.error(err);
+        let msg = '轉換失敗。';
+        if (err && err.message) {
+          if (/memory|OOM|out of memory/i.test(err.message)) {
+            msg = '記憶體不足，請嘗試較小的檔案，或選擇「僅轉容器」。';
+          } else if (/SharedArrayBuffer|cross-origin|COOP|COEP/i.test(err.message)) {
+            msg = '瀏覽器安全限制導致無法載入轉換引擎。請使用最新版 Chrome / Edge，並確認網站以 HTTPS 開啟。';
+          } else {
+            msg = '轉換失敗：' + err.message;
+          }
+        }
+        setStatus(msg, 'error');
+        setProgress(0, '失敗');
+      } finally {
+        isConverting = false;
+        convertBtn.disabled = !selectedFile;
+        clearBtn.disabled = !selectedFile;
+        qualitySelect.disabled = false;
+      }
+    });
+
+    // ── Nav (same as index) ──
+    const toggle = document.getElementById('menuToggle');
+    const links = document.getElementById('navLinks');
+    const gamesNav = document.getElementById('gamesNav');
+    const gamesToggle = document.getElementById('gamesToggle');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      if (!links.classList.contains('open')) {
+        gamesNav.classList.remove('open');
+        gamesToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    gamesToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = gamesNav.classList.toggle('open');
+      gamesToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', (e) => {
+      if (!gamesNav.contains(e.target)) {
+        gamesNav.classList.remove('open');
+        gamesToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        gamesNav.classList.remove('open');
+        gamesToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
