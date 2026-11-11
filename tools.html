@@ -763,7 +763,7 @@
         <p class="tool-note">
           將 <strong>.mov</strong> 轉成 <strong>MP4</strong>。檔案只在瀏覽器處理。
           首次需下載約 30MB 引擎。請用 <strong>HTTPS</strong> 開啟。
-          <span style="opacity:0.65">（工具版本 v4）</span>
+          <span style="opacity:0.65">（工具版本 v5）</span>
         </p>
       </div>
     </section>
@@ -1010,22 +1010,39 @@ async function loadFFmpeg() {
   const baseFF = 'https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.10/dist/umd';
   const baseCore = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/umd';
 
-  // 1) 下載並 patch UMD：改用我們提供的 classic worker URL
+  // 1) 下載並 patch UMD
+  //    - 修正 blob 載入時 Automatic publicPath 錯誤
+  //    - Worker 改用我們提供的 classic worker blob
   setProgress(0.05, '載入 FFmpeg UMD…');
   const umdResp = await fetch(baseFF + '/ffmpeg.js');
   if (!umdResp.ok) throw new Error('無法下載 ffmpeg.js');
   let umdCode = await umdResp.text();
 
+  // publicPath：blob URL 沒有 script src，需手動指定 CDN 目錄
+  const publicPathFix = 'if(!e)e="' + baseFF + '/ffmpeg.js"';
+  if (umdCode.includes('if(!e)throw new Error("Automatic publicPath is not supported in this browser")')) {
+    umdCode = umdCode.replace(
+      'if(!e)throw new Error("Automatic publicPath is not supported in this browser")',
+      publicPathFix
+    );
+  } else if (umdCode.includes("Automatic publicPath is not supported in this browser")) {
+    umdCode = umdCode.replace(
+      /if\(!e\)throw new Error\("Automatic publicPath is not supported in this browser"\)/,
+      publicPathFix
+    );
+  }
+
+  // Worker：改用傳入的 workerURL（blob）
   const needle = 'new Worker(new URL(e.p+e.u(814),e.b),{type:void 0})';
-  if (!umdCode.includes(needle)) {
-    // 相容其他壓縮結果
-    const alt = /new Worker\(new URL\(e\.p\+e\.u\(814\),e\.b\),\{type:void 0\}\)/;
-    if (!alt.test(umdCode)) {
-      throw new Error('FFmpeg UMD 格式不符，請稍後再試或回報版本問題。');
-    }
-    umdCode = umdCode.replace(alt, 'new Worker(r.workerURL,{type:void 0})');
-  } else {
+  if (umdCode.includes(needle)) {
     umdCode = umdCode.replace(needle, 'new Worker(r.workerURL,{type:void 0})');
+  } else {
+    const alt = /new Worker\(new URL\(e\.p\+e\.u\(814\),e\.b\),\{type:void 0\}\)/;
+    if (alt.test(umdCode)) {
+      umdCode = umdCode.replace(alt, 'new Worker(r.workerURL,{type:void 0})');
+    } else {
+      throw new Error('FFmpeg UMD 格式不符，請稍後再試。');
+    }
   }
 
   const umdBlobURL = URL.createObjectURL(new Blob([umdCode], { type: 'text/javascript' }));
