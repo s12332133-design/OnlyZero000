@@ -1,66 +1,108 @@
 {
-  "updated": "2026-11-12T06:19:03Z",
+  "updated": "2026-11-13T05:39:13Z",
   "source": "Google Alerts",
   "sources": [
     {
       "id": "virtual-character",
       "name": "虛擬角色",
-      "count": 5,
+      "count": 9,
       "items": [
         {
-          "title": "Meet the Creator Behind Leo Mas Renard and His AI Gay Love Story | SoaplandTV",
-          "link": "https://soaplandtv.co.uk/article/meet-the-creator-behind-leo-mas-renard-and-his-ai-gay-love-story",
-          "published": "2026-11-11T18:09:50Z",
-          "summary": "What began as an experiment in AI-generated photography has developed into an online storytelling project, with a fictional gay character ..."
+          "title": "Who Is 'Kasane Teto' And Why Are People Mad About Her 'Fortnite' Debut? The Virtual ...",
+          "link": "https://sg.news.yahoo.com/kasane-teto-why-people-mad-233113382.html",
+          "published": "2026-11-12T23:47:01Z",
+          "summary": "... online over the last nearly two decades. First introduced in 2008 as a fake Vocaloid character, Teto eventually became a virtual singer in her own ..."
         },
         {
-          "title": "Apple Imposes Blanket 18+ Restriction on Romance AI Chat Apps; South Korea's Zeta ...",
-          "link": "https://finance.biggo.com/news/7dde5a32-9853-4407-b751-879db590305e",
-          "published": "2026-11-11T14:59:48Z",
-          "summary": "... virtual character romance and sexual chat apps? Wrtn Technologies' Crack, Character Chat, and OOC are still available while Zeta was pulled—what ..."
+          "title": "Leo Mas Renard Creator Reveals Why His AI Character Will Always Be Gay | SoaplandTV",
+          "link": "https://soaplandtv.co.uk/article/leo-mas-renard-creator-reveals-why-his-ai-character-will-always-be-gay",
+          "published": "2026-11-12T18:08:38Z",
+          "summary": "As artificial intelligence creates new opportunities for LGBTQ+ storytelling, the creator behind virtual character Leo Mas Renard has revealed why one ..."
         },
         {
-          "title": "McNay Art Museum presents Toni Dove: \"Sunjammer 6 - A Tale Blown by a Solar Breeze\"",
-          "link": "https://sanantonio.culturemap.com/eventdetail/mcnay-art-museum-presents-toni-dove-sunjammer-6-a-tale-blown-by-a-solar-breeze/",
-          "published": "2026-11-11T12:57:00Z",
-          "summary": "Cameras track movement, allowing a virtual character to react to their presence. In the dreamlike installation, visitors meet Hypatia and Kepler ..."
+          "title": "ElectroPad Makes Virtual Worlds Feel More Real - Hackster.io",
+          "link": "https://www.hackster.io/news/electropad-makes-virtual-worlds-feel-more-real-4062c6769221",
+          "published": "2026-11-12T18:06:58Z",
+          "summary": "The idea is to let players feel the surface of a virtual object as their character interacts with it, rather than simply experiencing a generic ..."
         },
         {
-          "title": "Virtual artist 'Ari' debuts in the music industry on the 11th, with EXI's E.sha participating as a ...",
-          "link": "https://www.starnewskorea.com/en/music/2026/11/11/2026111116442667852",
-          "published": "2026-11-11T08:08:56Z",
-          "summary": "Royal Universe plans to actively expand its virtual IP business by combining character-specific worldviews, music, and diverse content, starting with ..."
+          "title": "Character.AI Faces Imminent Bankruptcy: How the AI Companionship Industry Is Quietly ...",
+          "link": "https://eu.36kr.com/en/p/4066662158799748",
+          "published": "2026-11-12T15:13:37Z",
+          "summary": "Powered by large language models, virtual characters can not only have free conversations with users, but also continuously adjust their interaction ..."
         },
         {
-          "title": "Tamagotchi Reveals New 30th Anniversary 7-Eleven Collab With Exclusive Virtual Pet and ...",
-          "link": "https://essential-japan.com/news/tamagotchi-reveals-new-30th-anniversary-7-eleven-collab-with-exclusive-virtual-pet-and-themed-food/",
-          "published": "2026-11-11T04:48:49Z",
-          "summary": "The new “Tamagotchi Fair” will introduce six character-themed food products, a special-edition Tamagotchi device and four gift campaigns, alongside ..."
+          "title": "AI Influencers Are Taking Over Social Media – Here's How to Make One",
+          "link": "https://techbuzzireland.com/2026/11/12/ai-influencers-are-taking-over-social-media-heres-how-to-make-one/",
+          "published": "2026-11-12T15:02:51Z",
+          "summary": "It works well for gaming personalities, virtual fashion creators, fictional storytellers, and other character-led accounts. For creators with a ..."
+        },
+        {
+          "title": "Tencent Launches Eciyuan AI Gaming Companion - Outlook Respawn",
+          "link": "https://respawn.outlookindia.com/amp/story/gaming/gaming-news/tencents-eciyuan-ai-can-watch-and-discuss-your-gameplay",
+          "published": "2026-11-12T12:31:47Z",
+          "summary": "Tencent's Eciyuan AI gaming companion website features a virtual character holding a game controller while seated. Tencent's Eciyuan AI Can Watch ..."
+        },
+        {
+          "title": "Chinese actress Zhao Liying sues ByteDance's Hongguo Short Dramas for ... - BigGo Finance",
+          "link": "https://finance.biggo.com/news/c9a46d46-292d-42bd-a072-71e702f42885",
+          "published": "2026-11-12T11:39:30Z",
+          "summary": "Compared with building a virtual character from scratch, borrowing existing fame is clearly faster and cheaper. ... person. Once such content is ..."
+        },
+        {
+          "title": "Simcraft Guide: How to Sim Your WoW Character in Midnight - TechStory",
+          "link": "https://techstory.in/simcraft-guide-wow-simulation/",
+          "published": "2026-11-12T11:21:13Z",
+          "summary": "Simcraft is a free, open-source combat simulator for World of Warcraft. It runs your character through many virtual fights and shows which gear, ..."
+        },
+        {
+          "title": "MK Pick | Virtual Creator Mington to Hold First Solo Concert, 'Frameless' - 매일경제",
+          "link": "https://www.mk.co.kr/en/pick/12205677",
+          "published": "2026-11-12T02:20:02Z",
+          "summary": "Virtual creator Mington will hold a first-ever solo offline concert since debut, meeting fans in person on a real-world stage. Mington's solo concert, ..."
         }
       ]
     },
     {
       "id": "83tian",
       "name": "八三夭",
-      "count": 3,
+      "count": 6,
       "items": [
         {
-          "title": "双11 都在清空购物车，他却只想在舞台上弹吉他|八三夭|刘逼_新浪新闻",
-          "link": "https://www.sina.cn/news/detail/5364165784110263.html",
-          "published": "2026-11-11T19:14:07Z",
-          "summary": "八三夭乐团官方账号发布微博庆祝成员刘逼生日，结合双11 购物节背景，邀请粉丝在评论区留言建议礼物，让刘逼自行购买。配图展示了刘逼在舞台上弹奏电吉他的 ..."
+          "title": "《哥吉拉-0.0》橫掃臺日美勇奪票房冠軍| 青年日報 - LINE TODAY",
+          "link": "https://today.line.me/tw/v3/article/l2pxykW",
+          "published": "2026-11-12T14:14:27Z",
+          "summary": "獲得樂團八三夭、創作者阿傑與馬可多、影評人超粒方、爆米花看電影及膝關節等影評人一致好評，6日全臺上映後，同樣以強勁氣勢拿下首週末全臺票房冠軍。 面對 ..."
         },
         {
-          "title": "CRAVITY澳門演唱會2026｜11.13搶飛攻略！門票票價/連結+座位表 - Hk01",
-          "link": "https://www.hk01.com/%E7%9C%BE%E6%A8%82%E8%BF%B7/60409123/cravity%E6%BE%B3%E9%96%80%E6%BC%94%E5%94%B1%E6%9C%832026-11-13%E6%90%B6%E9%A3%9B%E6%94%BB%E7%95%A5-%E9%96%80%E7%A5%A8%E7%A5%A8%E5%83%B9-%E9%80%A3%E7%B5%90-%E5%BA%A7%E4%BD%8D%E8%A1%A8",
-          "published": "2026-11-11T14:59:45Z",
-          "summary": "... 八三夭演唱會2026｜澳門開1場門票$588起！附購票連結＋座位表張家輝開演唱會?《大娛樂騷》2027紅館開3場$580起!附連結+座位表 · 韓國藝人動向 · K-Pop · 演唱會."
+          "title": "黃國倫大師之路逆境· 信仰· 出頭天 - 《超越新聞網》",
+          "link": "https://beyondnews852.com/20261112/256411/",
+          "published": "2026-11-12T14:06:54Z",
+          "summary": "八三夭《顛倒世界》 搖滾創作愈拼愈勇 · 2022-03-30 三點水 樂聚此地/ 三點水, 音樂. 收到八三夭最新專輯《顛倒世界》，才驚覺他們上張推出的專輯《生存指南》 ..."
         },
         {
-          "title": "2026秋遊星夜季將登場八三夭.劉艾立接力開唱【最新快訊】 - 台視",
-          "link": "https://www.ttv.com.tw/videocity/video_play.asp?id=952661&sid=5&from=707",
-          "published": "2026-11-11T12:10:13Z",
-          "summary": "台視影音：提供台視最新的綜藝、專題、節目預告及新聞影音，並有數個完整影音節目，供網友選擇收看。"
+          "title": "《哥吉拉-0.0》全球票房殺瘋了！日美台三地奪冠首週狂賣24億| 日韓 - NOWnews今日新聞",
+          "link": "https://www.nownews.com/news/6891823",
+          "published": "2026-11-12T10:19:51Z",
+          "summary": "台灣方面，《哥吉拉-0.0》11月6日上映後，也奪下全台首週末票房冠軍，上映前舉辦的貴賓首映會獲得八三夭、創作者阿傑與馬可多，以及影評人超粒方、爆米花看 ..."
+        },
+        {
+          "title": "38歲蔡黃汝戴眼鏡太幼齒！粉絲：根本無名正妹時期2.7萬人朝聖 - NOWnews今日新聞",
+          "link": "https://www.nownews.com/amp/news/6891746",
+          "published": "2026-11-12T07:32:46Z",
+          "summary": "... 八三夭的主唱阿璞穩定交往多年。 資料來源：蔡黃汝臉書 · 蔡黃汝鬆口阿璞婚事 ... 八三夭. 我是廣告請繼續往下閱讀. 我是廣告請繼續往下閱讀. facebook ..."
+        },
+        {
+          "title": "38歲蔡黃汝戴眼鏡太幼齒！粉絲：根本無名正妹時期2.7萬人朝聖 - NOWnews今日新聞",
+          "link": "https://www.nownews.com/news/6891746",
+          "published": "2026-11-12T07:32:44Z",
+          "summary": "... 八三夭的主唱阿璞穩定交往多年。 資料來源：蔡黃汝臉書 · 豆花妹 · 蔡黃汝 · 飢餓遊戲 · 無名小站 · 八三夭. 相關新聞. 蔡黃汝鬆口阿璞婚事！認兩人已有共識： ..."
+        },
+        {
+          "title": "「哥吉拉-0.0」全球票房炸裂！北美首周末破10億日本狂收1.89億 - 噓！星聞",
+          "link": "https://stars.udn.com/star/story/10090/9874562",
+          "published": "2026-11-12T07:28:37Z",
+          "summary": "台灣方面，電影11月4日舉行首映會，5日搶先於全台影城上映，八三夭、創作者阿傑與馬可多，以及影評人超粒方、爆米花看電影、膝關節等人都給予好評。膝關節更 ..."
         }
       ]
     },
@@ -70,124 +112,124 @@
       "count": 20,
       "items": [
         {
-          "title": "消基會發布兒童玩具及用品檢測發現網購及跨境交易風險高 - Yahoo新聞",
-          "link": "https://tw.news.yahoo.com/%E6%B6%88%E5%9F%BA%E6%9C%83%E7%99%BC%E5%B8%83%E5%85%92%E7%AB%A5%E7%8E%A9%E5%85%B7%E5%8F%8A%E7%94%A8%E5%93%81%E6%AA%A2%E6%B8%AC-%E7%99%BC%E7%8F%BE%E7%B6%B2%E8%B3%BC%E5%8F%8A%E8%B7%A8%E5%A2%83%E4%BA%A4%E6%98%93%E9%A2%A8%E9%9A%AA%E9%AB%98-034413135.html",
-          "published": "2026-11-12T04:09:16Z",
-          "summary": "中華民國消費者文教基金會今天(12日)公布「兒童玩具及用品調查測試」結果，發現網購及跨境電商販售的商品不僅標示不合格比例高、重金屬含量超標情況也高， ..."
+          "title": "【2026育兒趨勢】不用花大錢買玩具！ 在家也能打造蒙特梭利式學習環境？ 2026超紅抒壓捏捏 ...",
+          "link": "https://www.mombaby.com.tw/articles/9938393",
+          "published": "2026-11-13T02:55:01Z",
+          "summary": "不用花大錢購買昂貴玩具，也能在家打造充滿樂趣的學習環境！善用紙盒、紙杯、瓶蓋等生活素材，家長就能動手製作各式創意教具，讓孩子在遊戲中探索、學習， ..."
         },
         {
-          "title": "玩具市場的成長動力轉移至哪些新客群？ - 遠見雜誌",
-          "link": "https://www.gvm.com.tw/aigc/%E7%8E%A9%E5%85%B7%E5%B8%82%E5%A0%B4%E7%9A%84%E6%88%90-58300069",
-          "published": "2026-11-12T04:02:25Z",
-          "summary": "年輕世代的收藏與社交需求驅動玩具市場青少年與成年人對玩具的需求已不再局限於傳統的玩樂用途，而是轉變為一種「嗜好、粉絲生態系與社交體驗」。"
+          "title": "兒童玩具調查三件鉛鎘鉻超標 - 國語日報",
+          "link": "https://www.mdnkids.com/content.asp?Link_String_=24BD00000KIUFRU",
+          "published": "2026-11-12T21:02:05Z",
+          "summary": "消費者基金會昨天公布「二○二六兒童玩具及用品調查測試」，兒童玩具與用品是促進孩童智力發展與肢體協調的重要媒介，然而重金屬超標的化學性危害卻是潛在 ..."
         },
         {
-          "title": "消基會發布兒童玩具及用品檢測發現網購及跨境交易風險高-新聞",
-          "link": "https://www.rti.org.tw/news?uid=3&pid=1051055",
-          "published": "2026-11-12T03:52:26Z",
-          "summary": "[Rti央廣新聞] 中華民國消費者文教基金會今天(12日)公布「兒童玩具及用品調查測試」結果，發現網購及跨境電商販售的商..."
+          "title": "佰悅集團（8545.HK）公布截至2026年9月30日止六個月未經審核中期業績 - SL886 財經網",
+          "link": "https://www.sl886.com/newstrading/4570830",
+          "published": "2026-11-12T20:26:29Z",
+          "summary": "盈利轉差唔只因為收入跌，仲因為高毛利嘅工程項目代理服務今期完全冇收益貢獻，令集團更依賴毛利率較低嘅玩具 ... 玩具分銷收益跌45.4%至約2,192萬港元 ..."
         },
         {
-          "title": "兒童玩具抽查3件重金屬超標、7成標示不合格 - 聯合新聞網",
-          "link": "https://udn.com/news/story/7266/9873773",
-          "published": "2026-11-12T03:36:27Z",
-          "summary": "兒童器官發育尚未成熟，常有啃咬玩具或未洗手就進食的習慣，玩具有重金屬殘留恐損害神經系統與智力發展。」消基會12日公布2026年兒童玩具及用品調查， ..."
+          "title": "討論牆| 超逼真！玩具娃娃孕肚拆開能取出嬰兒一票媽媽喊不舒服| LINE TODAY",
+          "link": "https://today.line.me/tw/v3/posts/list/article/LXznlLl",
+          "published": "2026-11-12T18:24:28Z",
+          "summary": "0則貼文| 快來參與LINE TODAY討論牆上的討論| 超逼真！玩具娃娃孕肚拆開能取出嬰兒一票媽媽喊不舒服."
         },
         {
-          "title": "北加州佛光山各道場攜手募玩具助弱勢 - 人間福報",
-          "link": "https://www.merit-times.com.tw/NewsPage.aspx?unid=946251",
-          "published": "2026-11-12T03:34:51Z",
-          "summary": "【人間社記者陽光舊金山報導】佛光山北加州各道場與國際佛光會舊金山協會，攜手推動第六屆「捐贈玩具──關懷低收入家庭孩童」公益活動，今年首度加入聖公會 ..."
+          "title": "KellyChu - 麥當勞開心樂園餐×BT21登場8款BTS成員設計角色等你集齊| Executive日記",
+          "link": "https://www.stheadline.com/opinion/3636540/KellyChu-%E9%BA%A5%E7%95%B6%E5%8B%9E%E9%96%8B%E5%BF%83%E6%A8%82%E5%9C%92%E9%A4%90BT21%E7%99%BB%E5%A0%B4-8%E6%AC%BEBTS%E6%88%90%E5%93%A1%E8%A8%AD%E8%A8%88%E8%A7%92%E8%89%B2%E7%AD%89%E4%BD%A0%E9%9B%86%E9%BD%8A-Executive%E6%97%A5%E8%A8%98",
+          "published": "2026-11-12T18:04:14Z",
+          "summary": "... 玩具及驚喜禮品。 今次呢套聯乘玩具唔單止造型精緻，仲附連實用掛環設計，讓粉絲可以將整組宇宙明星一次過掛滿手袋，行到邊帶到邊！美國麥當勞早前率先推出 ..."
         },
         {
-          "title": "兒童玩具抽查3件重金屬超標、7成標示不合格 - 台灣醒報",
-          "link": "https://www.anntw.com/articles/20261112-7ykO",
-          "published": "2026-11-12T03:20:33Z",
-          "summary": "【台灣醒報記者呂翔禾台北報導】「兒童器官發育尚未成熟，常有啃咬玩具或未洗手就進食的習慣，玩具有重金屬殘留恐損害神經系統與智力發展。"
+          "title": "消基會發布兒童玩具及用品檢測發現網購及跨境交易風險高| 中央廣播電臺 - LINE TODAY",
+          "link": "https://today.line.me/tw/v3/article/Yapx2VP",
+          "published": "2026-11-12T16:34:34Z",
+          "summary": "中華民國消費者文教基金會今天(12日)公布「兒童玩具及用品調查測試」結果，發現網購及跨境電商販售的商品不僅標示不合格比例高、重金屬含量超標情..."
         },
         {
-          "title": "消基會抽查30件兒童用品！3款重金屬超標戒指、汪汪隊手錶中鏢",
-          "link": "https://www.nownews.com/amp/news/6891606",
-          "published": "2026-11-12T02:33:48Z",
-          "summary": "消基會今（12）日公布「2026兒童玩具及用品調查測試」結果，針對蝦皮、酷澎、SHEIN及實體店面販售的30件商品進行檢驗，發現3件兒童用品的重金屬遷移量超過."
+          "title": "兒童玩具抽檢不合格率逾7成| 消基會| 重金屬| 抽驗 - 台灣大紀元",
+          "link": "https://www.epochtimes.com.tw/n518134/%E5%85%92%E7%AB%A5%E7%8E%A9%E5%85%B7%E6%8A%BD%E6%AA%A2-%E4%B8%8D%E5%90%88%E6%A0%BC%E7%8E%87%E9%80%BE7%E6%88%90.html",
+          "published": "2026-11-12T16:17:15Z",
+          "summary": "中華民國消費者文教基金會12日公布市售兒童玩具及用品調查結果，抽驗30件樣品，發現3件重金屬遷移量超過國家標準，其中兒童."
         },
         {
-          "title": "METAL BUILD《機動戰士鋼彈00》「主天使鋼彈」商品化決定！重現MS模式與飛行模式自由切換 ...",
-          "link": "https://www.toy-people.com/?p=116402",
-          "published": "2026-11-12T00:46:45Z",
-          "summary": "最後倒數玩具人「MORE TOYS」系列商品：寬鬆落肩涼感TEE、環保袋、貼紙包、胸章，限時預購！ 日系 · TAMASHII · METAL BUILD · 鋼彈系列 · BANDAI SPIRITS ..."
+          "title": "交易出現異常樂高線上交易平台暫時關閉| 樂高玩具| BrickLink | 網路攻擊 - 新唐人電視台",
+          "link": "https://www.ntdtv.com/b5/2026/11/12/a104150131.html",
+          "published": "2026-11-12T14:51:21Z",
+          "summary": "樂高（LEGO）玩具的線上交易平台BrickLink於11 月5 日關閉，截至11 月12 日，該平台仍處於關閉狀態，其主頁告示顯示「暫時無法使用」，但沒有說明何時恢復 ..."
         },
         {
-          "title": "4個月的寶寶每次玩這個繞珠，都能安安靜靜玩好久 - YouTube",
-          "link": "https://www.youtube.com/shorts/5EJ-3_dFzAY",
-          "published": "2026-11-11T23:43:40Z",
-          "summary": "... 玩具就是好玩具！ #培養寶寶專注力 #嬰兒玩具 #益智玩具 #小月齡寶寶 #早教玩具. Like."
+          "title": "兒童玩具抽查3件重金屬超標.7成標示不合格 - YouTube",
+          "link": "https://www.youtube.com/watch?v=vxBf_2ELOdg",
+          "published": "2026-11-12T14:40:53Z",
+          "summary": "消基會今天(12)公布「兒童玩具及用品」抽測結果，發現網購與跨境電商販售的商品，不僅標示不合格比例高，更有3件重金屬含量超標，包含{}兒童戒指，{}鳳梨 ..."
         },
         {
-          "title": "第39屆萬錦聖誕市集盛大回歸 - 大紀元",
-          "link": "https://www.epochtimes.com/b5/26/11/11/n14887344.htm",
-          "published": "2026-11-11T23:20:51Z",
-          "summary": "大會鼓勵參觀民眾攜帶未拆封的玩具，支持CTV與救世軍（The Salvation Army）合辦的「Toy Mountain」玩具捐贈活動。 活動日期：. 11 月20 日（星期五）： 上午 ..."
+          "title": "S.H.Figuarts『假面騎士ZEZTZ 秩序型態』試作品展出！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=116453",
+          "published": "2026-11-12T14:09:32Z",
+          "summary": "由日本BANDAI SPIRITS 公司收藏玩具事業部TAMASHII NATIONS 發行的人氣可動模型『S.H.Figuarts』系列，於今年舉行的品牌年度發表會『TAMASHII NATION 2026』 ..."
         },
         {
-          "title": "2026.12.01~12.31 桃園市-大湳森林公園-兒童玩具圖書館12月假日市集",
-          "link": "https://www.twmarket.tw/2026-12-0112-31-%E6%A1%83%E5%9C%92%E5%B8%82-%E5%A4%A7%E6%B9%B3%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9C%92-%E5%85%92%E7%AB%A5%E7%8E%A9%E5%85%B7%E5%9C%96%E6%9B%B8%E9%A4%A812%E6%9C%88%E5%81%87%E6%97%A5/",
-          "published": "2026-11-11T22:51:50Z",
-          "summary": "【兒童玩具圖書館12月市集攤商招募】  . ｜市集簡介｜. 兒童玩具圖書館為免費親子遊樂空間，每個週末都吸引不少家庭前來遊玩與散步，家長與孩子停留時間長 ..."
+          "title": "方力申愛女Isla變身小DJ自選音樂手舞足蹈音樂感驚人 - 星島日報",
+          "link": "https://www.singtaousa.com/2026/11/12/entertainment/alex-fong-daughter-dj-video/",
+          "published": "2026-11-12T13:36:27Z",
+          "summary": "方力申榮升爸爸後樂於分享家庭樂，近日上載女兒Isla的影片，見她懂得自己按玩具電單車播歌，並隨音樂興奮起舞，節奏感強勁。網民大讚Isla有音樂天分， ..."
         },
         {
-          "title": "拆舊吸塵機及玩具零件廣東10歲男童巧手製掃地機械人成功清掃紙碎驚呆母親 - 巴士的報",
-          "link": "https://www.bastillepost.com/hongkong/article/17148028-%E6%8B%86%E8%88%8A%E5%90%B8%E5%A1%B5%E6%A9%9F%E5%8F%8A%E7%8E%A9%E5%85%B7%E9%9B%B6%E4%BB%B6-%E5%BB%A3%E6%9D%B110%E6%AD%B2%E7%94%B7%E7%AB%A5%E5%B7%A7%E6%89%8B%E8%A3%BD%E6%8E%83%E5%9C%B0%E6%A9%9F",
-          "published": "2026-11-11T22:08:24Z",
-          "summary": "這名10歲男童利用家中準備棄置的舊吸塵機及玩具零件，自行設計並組裝出一部掃地機械人，成功清掃地上的紙碎，令母親大感驚訝。男童自5歲起便對積木及機械 ..."
+          "title": "A \"Fuzzy AI Toy\" That Chats With You? AI Robot \"Fozai\" Wins Fans with Five-Element Personalities,...",
+          "link": "https://www.youtube.com/watch?v=S597ZeRr0RM",
+          "published": "2026-11-12T13:20:03Z",
+          "summary": "【邀請您加入中天新聞會員】  感謝有您，一起追求真相、監督權力！ 珞博智能推出的AI毛球「芙崽」上市一度賣到缺貨！每隻都有自己的個性，水屬性怕熱會鬧 ..."
         },
         {
-          "title": "「雙11」消費熱見證兩岸生活方式相通- 中國- 今日大公",
-          "link": "https://epaper.tkww.hk/a/202611/12/AP6af4ce0be4b0bcb39b18c5fa.html",
-          "published": "2026-11-11T20:25:20Z",
-          "summary": "圖為江蘇省揚州市一家毛絨玩具企業直播銷售玩具。/新華社. 【大公報訊】據中新社報道：國務院台辦例行新聞發布會11日在北京舉行。時值「雙十一」電商購物節 ..."
+          "title": "52TOYS推出《AVP2》獨狼終極戰士熱感應版變形玩具全球限量1000體- Gachapolitan",
+          "link": "https://gachapolitan.com/52toys-beastbox-wolf-predator-thermo-vision-limited/",
+          "published": "2026-11-12T12:41:14Z",
+          "summary": "知名玩具品牌52TOYS 旗下最具代表性的變形系列BEASTBOX，近期驚喜揭曉了取材自科幻經典電影《AVP2：適者生存》的最新力作「獨狼終極戰士（Wolf Predator）熱 ..."
         },
         {
-          "title": "萬代『TAMASHII NATION 2026』展前特別節目明日登場將帶來多款玩具新作情報！",
-          "link": "https://www.toy-people.com/?p=116199",
-          "published": "2026-11-11T20:11:59Z",
-          "summary": "由日本BANDAISPIRITS公司收藏玩具事業部TAMASHIINATIONS所舉辦的年度品牌展示會『TAMASHIINATION2026』即將於2026年11月13～15日舉行，萬代官方也在開展前夕 ..."
+          "title": "ARMY必搶｜香港麥當勞推出BT21 x 開心樂園餐11月13日驚喜登場   - HKET經濟日報",
+          "link": "https://inews.hket.com/article/4224048/ARMY%E5%BF%85%E6%90%B6%EF%BD%9C%E9%A6%99%E6%B8%AF%E9%BA%A5%E7%95%B6%E5%8B%9E%E6%8E%A8%E5%87%BA%20BT21%20x%20%E9%96%8B%E5%BF%83%E6%A8%82%E5%9C%92%E9%A4%90%E3%80%8011%E6%9C%8813%E6%97%A5%E9%A9%9A%E5%96%9C%E7%99%BB%E5%A0%B4%F0%9F%92%9C",
+          "published": "2026-11-12T12:37:00Z",
+          "summary": "購買開心樂園餐，即可獲得BT21聯名系列驚喜與玩具，人氣角色KOYA、RJ、SHOOKY、MANG、CHIMMY、TATA、COOKY及VAN全員登場，ARMY必搶。 ▽點擊圖片放大."
         },
         {
-          "title": "雙十一AI工具導購熱助抖音銷2成保健品 - 星島頭條",
-          "link": "https://www.stheadline.com/daily-china/3636159/%E9%9B%99%E5%8D%81%E4%B8%80AI%E5%B7%A5%E5%85%B7%E5%B0%8E%E8%B3%BC%E7%86%B1-%E5%8A%A9%E6%8A%96%E9%9F%B3%E9%8A%B72%E6%88%90%E4%BF%9D%E5%81%A5%E5%93%81",
-          "published": "2026-11-11T19:14:09Z",
-          "summary": "阿里巴巴指出，AI玩具推出後的一年內，旗下平台相關銷售額已突破1億元人民幣。10月下半月，AI陪伴機械人的銷售額同比增長近五倍。消費者對AI算力服務的需求 ..."
+          "title": "討論牆| 消基會曝「兒童玩具」驚人真相鉛鎘鉻全超標！ - LINE TODAY",
+          "link": "https://today.line.me/tw/v3/posts/list/article/aGpx5XW",
+          "published": "2026-11-12T12:22:06Z",
+          "summary": "0則貼文| 快來參與LINE TODAY討論牆上的討論| 消基會曝「兒童玩具」驚人真相鉛鎘鉻全超標！"
         },
         {
-          "title": "《公司盈警》佰悅集團(08545)中期業績由盈轉虧",
-          "link": "https://www.quamnet.com/post/VGIwciKVZ2Pw2TQDjryLG",
-          "published": "2026-11-11T18:18:05Z",
-          "summary": "... 玩具及相關產品方面的收益由去年同期約4010萬元，減少約45.4%至約2190萬元。分銷進口玩具及相關產品的收益減少主要是由於品牌授權商暫時缺乏大型特許經營 ..."
+          "title": "網購兒童用品13件有11件標示不符！消基會抽驗3件重金屬超標 - Newtalk新聞",
+          "link": "https://newtalk.tw/news/view/2026-11-12/1070841",
+          "published": "2026-11-12T11:52:40Z",
+          "summary": "兒童玩具及用品若含有超標重金屬，恐影響孩童健康。消基會今年6月抽驗台北市、新北市實體店鋪及網路平台販售的30件兒童玩具與用品，發現網購的13件樣品中， ..."
         },
         {
-          "title": "沈伯洋合體台灣光劍匠人「喜提新玩具」！變身尤達「反差萌爆表」DIY畫面曝光 - 民視新聞",
-          "link": "https://www.ftvnews.com.tw/news/detail/2026B11W0599",
-          "published": "2026-11-11T16:14:46Z",
-          "summary": "照片還捕捉到沈伯洋低下頭、極度專注地手 ..."
+          "title": "司法公告查詢-法人登記公告-財團法人台灣玩具暨生活用品研發檢測中心 - 司法院",
+          "link": "https://www.judicial.gov.tw/tw/cp-144-1648303-e088d-1.html",
+          "published": "2026-11-12T11:28:20Z",
+          "summary": "臺灣臺北地方法院公告. 發文日期：中華民國115年11月11日發文字號：115北院信登字第1150025977號. 主旨：公告李鳳翺等聲請辦理財團法人台灣玩具暨生活用品 ..."
         },
         {
-          "title": "促銷太頻繁陸電商平台雙11式微| 兩岸要聞 - 聯合新聞網",
-          "link": "https://udn.com/news/story/7331/9872902",
-          "published": "2026-11-11T16:08:37Z",
-          "summary": "... 玩具企業直播銷售玩具。新華社. 昨日是多家大陸電商平台的「雙十一購物節」檔期，然而大陸電商、社群平台卻異常冷清。港媒分析，天貓於二○二二年首次沒有 ..."
+          "title": "e+Solutions發現三類別商品最暢銷 - 信報",
+          "link": "https://m.hkej.com/landing/mobarticle2/id/4564182/e+Solutions%E7%99%BC%E7%8F%BE%E4%B8%89%E9%A1%9E%E5%88%A5%E5%95%86%E5%93%81%E6%9C%80%E6%9A%A2%E9%8A%B7",
+          "published": "2026-11-12T11:18:21Z",
+          "summary": "... 玩具」、「雜貨」和「個人護理及健康」類別的商品最為暢銷，而銷量升幅最顯著的商品類別是「母嬰用品與玩具」及「食品」，分別大幅上升超過四倍和一倍 ..."
         },
         {
-          "title": "前夜祭的前夜祭？「假面騎士空我55th Anniversary Ver.」四款商品展前大揭密！ - 玩具人",
-          "link": "https://www.toy-people.com/?p=116390",
-          "published": "2026-11-11T15:47:39Z",
-          "summary": "先前介紹過將於「TAMASHIINATION2026」開放抽選販售的《假面騎士》系列55週年紀念產品之一「S.H.Figuarts（真骨彫製法）假面騎士空我55週年紀念版」四種形態 ..."
+          "title": "留學時曾被瞧不起！他如何靠「賣公仔」年收破13億、還打入美國沃爾瑪？ - 天下雜誌",
+          "link": "https://www.cw.com.tw/article/5143573",
+          "published": "2026-11-12T11:17:47Z",
+          "summary": "2022年底正式打入美國沃爾瑪供應鏈，是台灣少數躋身國際大型零售通路的自製玩具品牌。2024年營收為13.4億元，其中海外營收年增58％，達4.9億元，創下歷史新高。"
         },
         {
-          "title": "超人力霸王帝納『ROAR RAGE 超合成獸人吉爾加諾德』大幅強化異形般的生物質感 - 玩具人",
-          "link": "https://www.toy-people.com/?p=116363",
-          "published": "2026-11-11T15:25:28Z",
-          "summary": "香港模型商Ember Toys 正式發表了全新可動完成品模型『ROAR RAGE』系列，首彈商品將推出特攝《超人力霸王帝納》的經典怪獸「超合成獸人吉爾加諾德」，預計 ..."
+          "title": "買玩具怕被蒙嘉慧罵？鄭伊健神回「或者我有好多個家」 | 世界新聞網",
+          "link": "https://www.worldjournal.com/wj/story/121233/9874340",
+          "published": "2026-11-12T11:05:52Z",
+          "summary": "鄭伊健日前現身九龍塘出席《寵物小精靈》主題活動啟動禮，不僅大爆好友黎諾懿託他買玩具，更力挺太太蒙嘉慧復出與張家輝、鍾雪瑩合拍新片《我阿爹想旅行》， ..."
         }
       ]
     }
