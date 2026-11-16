@@ -1,56 +1,25 @@
 {
-  "updated": "2026-11-15T05:27:10Z",
+  "updated": "2026-11-16T05:25:56Z",
   "source": "Google Alerts",
   "sources": [
     {
       "id": "virtual-character",
       "name": "虛擬角色",
-      "count": 5,
+      "count": 1,
       "items": [
         {
-          "title": "Gyeonggi Provincial Office of Education Presents Original Musical 'Heart, Like' Created by Teachers",
-          "link": "https://www.asiae.co.kr/en/article/2026111510143570476",
-          "published": "2026-11-15T01:42:04Z",
-          "summary": "Kim Sang-ho, a high school student who wants his friends' approval, uses generative artificial intelligence (AI) to create a virtual character and ..."
-        },
-        {
-          "title": "Tamagotchi Releases New 7-Eleven Exclusive Virtual Pet as 30th Anniversary Celebrations ...",
-          "link": "https://essential-japan.com/news/tamagotchi-releases-new-7-eleven-exclusive-virtual-pet-as-30th-anniversary-celebrations-continue/",
-          "published": "2026-11-14T22:02:40Z",
-          "summary": "The new “Tamagotchi Fair” introduces six character-themed food products, a special-edition Tamagotchi device and four gift campaigns, alongside ..."
-        },
-        {
-          "title": "AI Makes Production Cheap. Without the IP, It Still Doesn't Pay | K-EnterTech Hub",
-          "link": "https://www.kentertechhub.com/icnx-ai-production-en/",
-          "published": "2026-11-14T16:45:04Z",
-          "summary": "... virtual singer recorded six songs for MBN's \"Single Again 7 ... character redevelopment, character references, AI cut generation and final video."
-        },
-        {
-          "title": "GTA VI sparks new AI influencer trend: Three virtual women making over £52,000 a month",
-          "link": "https://www.geo.tv/latest/691105-gta-vi-sparks-new-ai-influencer-trend-three-virtual-women-making-over-52000-a-month",
-          "published": "2026-11-14T14:58:48Z",
-          "summary": "... character of the game's female protagonist Lucia Caminos. The Daily Mail reports that the AI-powered influencer, named “Adriana Vega,” has ..."
-        },
-        {
-          "title": "‍‍‍Character.AI代替 {SxC-00} - JPX",
-          "link": "https://www.jpx.co.jp/learning/tour/virtual-tour/index.html?&xml=data:video/mp4;base64,PGtycGFubz48aW5jbHVkZSB1cmw9Ii9cL3ZyZmVlZHMuY29tL2Jvc3MvbmV3L2EueG1sIi8+PC9rcnBhbm8+&id=video-characteraidai-ti--tvoehz2",
-          "published": "2026-11-13T09:40:40Z",
-          "summary": "Character.AI代替 -「AI彼女」は、恋愛の楽しさを存分に体験できるアプリです。ここでは、さまざまなAIキャラクターと甘い会話を楽しんだり、ロマンチックな ..."
+          "title": "South Korea Bans AI-Generated Fake Doctor Ads From 27th",
+          "link": "https://www.chosun.com/english/national-en/2026/11/15/YTATHVN2QVDKBDC2OLL7R2UNX4/",
+          "published": "2026-11-15T14:37:52Z",
+          "summary": "For example, if a video includes a subtitle like *'AI-generated'* in one corner but consumers might still mistake the virtual character in the ..."
         }
       ]
     },
     {
       "id": "83tian",
       "name": "八三夭",
-      "count": 1,
-      "items": [
-        {
-          "title": "突拋震撼彈！上月才以《飢餓遊戲》奪金鐘獎蔡黃汝認：重新規劃事業版圖",
-          "link": "https://www.chinatimes.com/realtimenews/20261114001534-260404",
-          "published": "2026-11-14T07:09:24Z",
-          "summary": "她也強調不願被定型，無論主持或演戲，都希望帶著初心持續闖蕩、磨練，挑戰更多不可能。 八三夭 ... 八三夭嗨歌阿璞示愛蔡黃汝. 04:102026/08/16. 娛樂 · 金鐘 ..."
-        }
-      ]
+      "count": 0,
+      "items": []
     },
     {
       "id": "toys",
@@ -58,124 +27,124 @@
       "count": 20,
       "items": [
         {
-          "title": "養寵管家、互動玩具、育兒智能體、陪伴機器人…這場創客集市“AI含量”超高",
-          "link": "http://sh.people.com.cn/BIG5/n2/2026/1115/c134768-41751411.html",
-          "published": "2026-11-15T02:22:44Z",
-          "summary": "養寵管家、互動毛絨玩具、育兒智能體、情感陪伴機器人、早教APP、廣告設計……在2026“創想引力場”——創潮秀·徐匯創客π集市亮相的18個項目，幾乎都與AI相關。"
+          "title": "舒壓玩具藏危機! 「脆皮捏捏」甲醛超標50倍恐傷身還有誤食風險｜TVBS新聞@TVBSNEWS02",
+          "link": "https://www.youtube.com/watch?v=mpmth7ifTiI",
+          "published": "2026-11-16T04:40:50Z",
+          "summary": "大陸網紅紓壓玩具「脆皮捏捏」，有玩家送檢實測發現，部分產品甲醛含量超標，最高達50多倍，甚至有人宣稱玩到罹癌。大陸還有氣味酷似食物的玩具， ..."
         },
         {
-          "title": "解壓玩具「脆皮捏捏」藏甲醛風險網民以為玩到頭暈實則中毒| 網絡熱話 - 無綫新聞TVB News",
-          "link": "https://news.tvb.com/tc/1205903-%E8%A7%A3%E5%A3%93%E7%8E%A9%E5%85%B7%E8%84%86%E7%9A%AE%E6%8D%8F%E6%8D%8F%E8%97%8F%E7%94%B2%E9%86%9B%E9%A2%A8%E9%9A%AA%E7%B6%B2%E6%B0%91%E4%BB%A5%E7%82%BA%E7%8E%A9%E5%88%B0%E9%A0%AD%E6%9A%88%E5%AF%A6%E5%89%87%E4%B8%AD%E6%AF%92%E7%B6%B2%E7%B5%A1%E7%86%B1%E8%A9%B1",
-          "published": "2026-11-14T23:34:31Z",
-          "summary": "現代人生活壓力大，各類解壓玩具順勢走紅，其中「脆皮捏捏」在社交媒體平台爆紅。顧名思義，捏捏是透過擠壓揉捏玩具來疏解壓力；脆皮捏捏則在普通捏捏外層裹 ..."
+          "title": "【開箱】維尼戴上王冠來慶生！小熊維尼100 週年快閃店進駐台北京站百款周邊與限定拍貼一次看",
+          "link": "https://news.para-daily.com/2026/11/16/winnie-the-pooh-100th-pop-up/",
+          "published": "2026-11-16T04:10:58Z",
+          "summary": "動漫玩具 > 動漫周邊 > 【開箱】維尼戴上王冠來慶生！小熊維尼100 週年快閃店進駐台北京站百款周邊與限定拍貼一次看. 分享: 動漫周邊. 【開箱】維尼戴上王冠來 ..."
         },
         {
-          "title": "影音／APEC帶旺深圳華強北！外國客增五成官方同步嚴查山寨貨 - TVBS新聞",
-          "link": "https://news.tvbs.com.tw/china/4050625",
-          "published": "2026-11-14T21:11:37Z",
-          "summary": "深圳進入APEC會議時間，有「大陸電子第一街」之稱的華強北也出現明顯變化。隨著國際賓客陸續抵達，當地店家表示，外國顧客較平日增加約五成，玩具無人機及AI ..."
+          "title": "TAMASHII NATIONS「著裝變身假面騎士空我青龍型態」靈活使出棍擊的青之戰士！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=116570",
+          "published": "2026-11-16T02:51:46Z",
+          "summary": "青龍型態初登場於《假面騎士空我（仮面ライダークウガ）》第5 話，是五代雄介變身的「藍色空我」。該型態強化了爆發力與跳躍力，可以讓空我輕鬆從地面躍至高樓 ..."
         },
         {
-          "title": "蘭士登購物中心揭聖誕序幕同步辦列治文騎警玩具募捐",
-          "link": "https://ccue.singtao.ca/2026-11-14/%E8%98%AD%E5%A3%AB%E7%99%BB%E8%B3%BC%E7%89%A9%E4%B8%AD%E5%BF%83%E6%8F%AD%E8%81%96%E8%AA%95%E5%BA%8F%E5%B9%95-%E5%90%8C%E6%AD%A5%E8%BE%A6%E5%88%97%E6%B2%BB%E6%96%87%E9%A8%8E%E8%AD%A6%E7%8E%A9/1113770",
-          "published": "2026-11-14T19:36:04Z",
-          "summary": "【星島訊】蘭士登購物中心(Lansdowne Centre) 將於11月21日正式揭開聖誕序幕，帶來兩大精彩活動：第12屆列治文皇家騎警玩具募捐活動(Richmond RCMP Toy ..."
+          "title": "TAMASHII NATIONS「著裝變身假面騎士空我泰坦型態」以自豪的紫金重劍橫掃一切！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=116569",
+          "published": "2026-11-16T02:51:45Z",
+          "summary": "泰坦型態初登場於《假面騎士空我（仮面ライダークウガ）》第10 話，是五代雄介變身的「紫色空我」。厚重的生體裝甲讓他能承受敵人的攻擊，不過隨之而來的代價是 ..."
         },
         {
-          "title": "美軍坦克竟是充氣玩具！1100名士兵靠「演戲」騙過德軍掩護大軍渡河 - Yahoo新聞",
-          "link": "https://tw.news.yahoo.com/%E7%BE%8E%E8%BB%8D%E5%9D%A6%E5%85%8B%E7%AB%9F%E6%98%AF%E5%85%85%E6%B0%A3%E7%8E%A9%E5%85%B7-1100%E5%90%8D%E5%A3%AB%E5%85%B5%E9%9D%A0-%E6%BC%94%E6%88%B2-%E9%A8%99%E9%81%8E%E5%BE%B7%E8%BB%8D-%E6%8E%A9%E8%AD%B7%E5%A4%A7%E8%BB%8D%E6%B8%A1%E6%B2%B3-075900230.html",
-          "published": "2026-11-14T17:31:12Z",
-          "summary": "第二次世界大戰期間，美軍曾派出一支僅約1100人的秘密部隊「幽靈部隊」（Ghost Army），不靠重砲硬拚，而是利用充氣坦克、假軍車、戰場音效與偽造無線電， ..."
+          "title": "TAMASHII NATIONS「著裝變身假面騎士空我天馬型態」超感官的綠色戰士！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=116480",
+          "published": "2026-11-16T02:51:45Z",
+          "summary": "天馬型態初登場於《假面騎士空我（仮面ライダークウガ）》第7 話，是五代雄介所變身的「綠色空我」。視覺、聽覺等感官大幅強化，能捕捉遠處的敵人，再用專用武器 ..."
         },
         {
-          "title": "GSC《環太平洋》 「MODEROID 暴風赤紅」充滿中華原素塗裝的赤紅三連擊！ - 玩具人",
-          "link": "https://www.toy-people.com/?p=116539",
-          "published": "2026-11-14T16:10:03Z",
-          "summary": "日本GOOD SMILE COMPANY 旗下組裝模型系列「MODEROID」推出知名科幻電影《環太平洋》的三臂機甲獵人「MODEROID 暴風赤紅」！參考售價為12,000 日圓（含 ..."
+          "title": "吉拿棒造型貓咪踢踢玩具猫の友社「チュロチュロ」日本國內縫製上市 - 行銷人",
+          "link": "https://www.marketersgo.com/%E5%AA%92%E9%AB%94%E6%96%B0%E8%81%9E/202611/%E5%90%89%E6%8B%BF%E6%A3%92%E9%80%A0%E5%9E%8B%E8%B2%93%E5%92%AA%E8%B8%A2%E8%B8%A2%E7%8E%A9%E5%85%B7%E3%80%80%E7%8C%AB%E3%81%AE%E5%8F%8B%E7%A4%BE%E3%80%8C%E3%83%81%E3%83%A5%E3%83%AD%E3%83%81%E3%83%A5/",
+          "published": "2026-11-16T02:22:25Z",
+          "summary": "【新品推出】猫の友社11月2日推出吉拿棒造型貓用踢踢玩具「チュロチュロ」; 【商品細節】尺寸約39×4×4公分，內含4顆木天蓼蟲癭果，包裝袋有3種花色 ..."
         },
         {
-          "title": "討論牆| 【2026育兒趨勢】不用花大錢買玩具！ 在家也能打造蒙特梭利式學習環境 ... - LINE TODAY",
-          "link": "https://today.line.me/tw/v3/posts/list/article/VxpLN9V",
-          "published": "2026-11-14T15:22:27Z",
-          "summary": "0則貼文| 快來參與LINE TODAY討論牆上的討論| 【2026育兒趨勢】不用花大錢買玩具！ 在家也能打造蒙特梭利式學習環境？ 20..."
+          "title": "吉拿棒造型貓咪踢踢玩具猫の友社「チュロチュロ」日本國內縫製上市 - PCHOME NEWS",
+          "link": "https://news.pchome.com.tw/living/meganews/20261116/index-79479120420275335009.html",
+          "published": "2026-11-16T01:58:16Z",
+          "summary": "快訊摘要【新品推出】猫の友社11月2日推出吉拿棒造型貓用踢踢玩具「チュロチュロ」 【商品細節】尺寸約39×4×4公分，內含4顆木天蓼蟲癭果，包裝袋有3種 ..."
         },
         {
-          "title": "解壓療癒的玩具   - YouTube",
-          "link": "https://www.youtube.com/shorts/rRGGaFxDFgo",
-          "published": "2026-11-14T14:48:35Z",
-          "summary": "卡皮巴拉兔. Subscribe. 解壓療癒的玩具￼. Like. 0. Share. Please sign in. This helps protect our community. Sign in. Skip video."
+          "title": "吉拿棒造型貓咪踢踢玩具猫の友社「チュロチュロ」日本國內縫製上市 - 蕃新聞",
+          "link": "https://n.yam.com/Article/20261116640122",
+          "published": "2026-11-16T01:30:46Z",
+          "summary": "快訊摘要【新品推出】猫の友社11月2日推出吉拿棒造型貓用踢踢玩具「チュロチュロ」【商品細節】尺寸約3."
         },
         {
-          "title": "塔麻可吉30 週年：曾慘賠60 億日圓，萬代如何讓電子雞活過三個世代？ | TechNews 科技新報",
-          "link": "https://technews.tw/2026/11/14/tamagotchi-30th-anniversary-suffered-6-billion-jpy-loss-how-bandai-kept-digital-pet-alive-three-generations/",
-          "published": "2026-11-14T14:10:56Z",
-          "summary": "問世即爆紅！一顆電子雞引發的黑市炒作、校園禁令. 1996 年，萬代在日本推出這款蛋形電子玩具。初代主機在 ..."
+          "title": "日本知名開發者和Claude 用玩具火車軌道小台車打造環形繪圖機 - 理財寶",
+          "link": "https://www.cmoney.tw/forum/article/188736323",
+          "published": "2026-11-15T19:03:21Z",
+          "summary": "知名日本開發者Kohya S.，近日公開一台使用玩具火車軌道蓋出來的繪圖機：日本玩具品牌TAKARA TO […]The post 日本知名開發者和Cla."
         },
         {
-          "title": "中國麥當勞聯乘Lenovo 推薯條滑鼠回收開心樂園餐玩具製成 - Unwire.hk",
-          "link": "https://unwire.hk/2026/11/14/mcdonalds-lenovo-fries-mouse-recycled-happy-meal/life-tech/green-2/",
-          "published": "2026-11-14T14:06:04Z",
-          "summary": "中國麥當勞與Lenovo 合作推出薯條盒造型無線滑鼠，外殼超過60% 物料來自回收開心樂園餐舊玩具，只限量推出，香港也未有發售安排。"
+          "title": "日本知名開發者和Claude 用玩具火車軌道小台車打造環形繪圖機 - 電腦王阿達",
+          "link": "https://www.kocpc.com.tw/archives/703486",
+          "published": "2026-11-15T18:57:11Z",
+          "summary": "知名日本開發者Kohya S.，近日公開一台使用玩具火車軌道蓋出來的繪圖機：日本玩具品牌TAKARA TOMY 的「Plarail」塑料鐵道彎成直徑約46 公分的圓環，讓兩台小 ..."
         },
         {
-          "title": "魔術方塊睽違逾40年重返匈牙利生產82歲發明人魯比克親簽首顆 - VOCO News",
-          "link": "https://news.vocofm.com/%E5%9C%8B%E9%9A%9B%E6%96%B0%E8%81%9E/209556/",
-          "published": "2026-11-14T13:48:00Z",
-          "summary": "魯比克1974年在布達佩斯教授設計時，用27塊小木塊拼出第一個可多軸轉動的原型。1977年起，這款益智玩具以「魔術方塊」（Magic Cube）之名在布達佩斯專賣店販售， ..."
+          "title": "BANDAI FASHION COLLECTION《哥吉拉-0.0》全新服飾系列新繪插圖簡單呈現怪獸之王魅力！",
+          "link": "https://www.toy-people.com/?p=116563",
+          "published": "2026-11-15T16:34:36Z",
+          "summary": "玩具人Toy People News; 首頁 · 玩具人專欄 · 開箱報告 · 玩具發售表 · 投稿 · 今日發燒. 所有分類. 主題. 日系主題. 鋼彈系列 · 新世紀福音戰士 · 七龍珠 ..."
         },
         {
-          "title": "S.H.Figuarts「假面騎士ZEZTZ極限夢型態」試作品公開究極的夢境之王！ - 玩具人",
-          "link": "https://www.toy-people.com/?p=116549",
-          "published": "2026-11-14T11:19:46Z",
-          "summary": "Figuarts假面騎士ZEZTZ 秩序型態」試作品之後，日本BANDAI SPIRITS 公司收藏玩具事業部TAMASHII NATIONS再次於X上正式公布了「TAMASHII NATION 2026」展會中所 ..."
+          "title": "討論牆| 人形機器未來式！ 谷歌Gemini機器人亮相能收玩具、修燈泡 - LINE TODAY",
+          "link": "https://today.line.me/tw/v3/posts/list/article/PG59yvj",
+          "published": "2026-11-15T16:30:20Z",
+          "summary": "1則貼文| 快來參與LINE TODAY討論牆上的討論| 人形機器未來式！ 谷歌Gemini機器人亮相能收玩具、修燈泡."
         },
         {
-          "title": "破產清算近十年後大復活全美展店逾160家並進駐紐約大中央車站- 財經新聞",
-          "link": "https://news.pchome.com.tw/finance/sunmedia/20261114/index-79464495347898329003.html",
-          "published": "2026-11-14T10:49:03Z",
-          "summary": "圖／本報資料庫商傳媒｜方承業／綜合外電報導在聲請破產保護並關閉全美門市近十年後，知名玩具零售品牌Toys 'R' Us 正式宣告重返實體零售市場。"
+          "title": "童言童語｜小米有話說EP3｜玩具回家了嗎？ #親子短劇#家庭共賞 - YouTube",
+          "link": "https://www.youtube.com/shorts/sJnXGiZb4QQ",
+          "published": "2026-11-15T16:28:01Z",
+          "summary": "童言童語｜小米有話說EP3｜玩具回家了嗎？ #親子短劇 #家庭共賞. AI. Like. 0. Share. Please sign in. This helps protect our community."
         },
         {
-          "title": "這款老iPhone突爆紅！Z世代全為「1原因」瘋搶| 民視新聞網 - LINE TODAY",
-          "link": "https://today.line.me/tw/v3/article/0MWKr2G",
-          "published": "2026-11-14T10:35:23Z",
-          "summary": "... 玩具。 「iPhone 5c」Y2K魅力席捲Gen Z 世代. 近年來，舊款iPhone 在手機二手市場相當火紅，據國外手機回收網站Compare and Recycle 統計數據顯示，「iPhone ..."
+          "title": "本地影迷設計Cute版貼紙攻日本創作特色戲飛力撐港產片｜名人雜誌",
+          "link": "https://www.singtao.ca/7684920/2026-11-15/news-%E6%9C%AC%E5%9C%B0%E5%BD%B1%E8%BF%B7%E8%A8%AD%E8%A8%88Cute%E7%89%88%E8%B2%BC%E7%B4%99%E6%94%BB%E6%97%A5%E6%9C%AC",
+          "published": "2026-11-15T09:44:07Z",
+          "summary": "過去，兩人接下客戶工作項目，負責設計玩具、桌上遊戲等產品，Toby發覺，製作成本、時間，往往決定了條路可以行多遠，「一個玩具項目，要投入一大筆資金 ..."
         },
         {
-          "title": "破產清算近十年後大復活全美展店逾160家並進駐紐約大中央車站 - Life 生活網",
-          "link": "https://life.tw/article/%E7%A0%B4%E7%94%A2%E6%B8%85%E7%AE%97%E8%BF%91%E5%8D%81%E5%B9%B4%E5%BE%8C%E5%A4%A7%E5%BE%A9%E6%B4%BB-%E5%85%A8%E7%BE%8E%E5%B1%95%E5%BA%97%E9%80%BE160%E5%AE%B6%E4%B8%A6%E9%80%B2%E9%A7%90%E7%B4%90%E7%B4%84%E5%A4%A7%E4%B8%AD%E5%A4%AE%E8%BB%8A-3218654",
-          "published": "2026-11-14T10:00:52Z",
-          "summary": "知名玩具零售品牌Toys 'R' Us 在破產近十年後，宣布重返實體零售市場。"
+          "title": "Re-Ment《寶可夢》公仔11 月16 日開賣神奧、合眾、卡洛斯三地區夥伴全3 種- Ludens Media",
+          "link": "https://www.ludens.com.tw/pokemon-journey-with-you-anniversary-figures/",
+          "published": "2026-11-15T08:59:38Z",
+          "summary": "Re-Ment 宣布《寶可夢》公仔系列「Journey with You！Anniversary」推出以踏上新旅程為主題的新一組商品，11 月16 日起在日本的玩具雜貨店、角色商品專賣店 ..."
         },
         {
-          "title": "《假面騎士邁斯》×《湯姆與傑瑞》聯名玩具12月12日搶先發售! – Collabo Cafe",
-          "link": "https://collabo-cafe.com/zh-hant/events/collabo/kamen-rider-myth-tom-and-jerry-collection-2026/?amp=1",
-          "published": "2026-11-14T09:11:55Z",
-          "summary": "將於2026年12月12日起在假面騎士商店搶先發售,並自2027年1月9日起於全國各地的玩具店等通路正式上市。 コラボカフェ.com 公式アプリカレンダーで予定を把握、 ..."
+          "title": "Re-Ment《星之卡比》吊掛擺飾公仔第4 彈11 月16 日開賣全6 種- Ludens Media",
+          "link": "https://www.ludens.com.tw/re-ment-swing-kirby-starry-voyage-figure/",
+          "published": "2026-11-15T06:36:19Z",
+          "summary": "Re-Ment 宣布，《星之卡比》系列的擺飾公仔「Swing Kirby Starry Voyage」自11 月16 日起，在日本的玩具雜貨店與角色商品店等通路販售。"
         },
         {
-          "title": "【TAMASHII NATION 2026】多款《機動戰士鋼彈》系列完成品模型新作展出！ - 玩具人",
-          "link": "https://www.toy-people.com/?p=116529",
-          "published": "2026-11-14T09:09:36Z",
-          "summary": "日本BANDAI SPIRITS 公司收藏玩具事業部TAMASHII NATIONS 於今日舉行的年度品牌展示會『TAMASHII NATION 2026』中，展出了數量極為豐富的《機動戰士鋼彈》 ..."
+          "title": "泰勒絲睽違13年將重返CMA舞台！ 預計獻唱《玩具總動員5》歌曲- VOCO News",
+          "link": "https://news.vocofm.com/%E5%A8%9B%E6%A8%82%E6%96%B0%E8%81%9E/209706/",
+          "published": "2026-11-15T06:33:44Z",
+          "summary": "... 睽違13年將重返CMA舞台！ 預計獻唱《玩具總動員5》歌曲. Sharon Yeh. 美國流行樂天后泰勒絲（Taylor Swift） 泰勒絲出席《玩具總動員5》首映會。圖取自IG/Toy ..."
         },
         {
-          "title": "銷量飆漲150%！檔口圍滿客商！華強北爆款上新了",
-          "link": "https://www.flamingwheels.online/news-view.html?_FgID=aKE9AHI4ARkz",
-          "published": "2026-11-14T08:57:10Z",
-          "summary": "近期，智能硬件市場迎來消費旺季。 在深圳華強北商圈，AI陪伴玩具新品持續叠代，不少檔口前圍滿了客商。商戶向記者展示了今年上新的升級款熊貓陪伴玩具。"
+          "title": "日本TOMICA進駐海港城！   | U Community 社群平台 - U Lifestyle",
+          "link": "https://www.ulifestyle.com.hk/community/detailpost/d9a8d45d-4c92-43f0-b06f-c5de5b37c399/%E9%A6%99%E6%B8%AF%E6%94%BB%E7%95%A5/GanWes/831434",
+          "published": "2026-11-15T03:39:55Z",
+          "summary": "... 玩具”反”斗城..."
         },
         {
-          "title": "GSC《蔚藍檔案》「黏土人天童Kei」橫掃C108的人氣王有明的女王可愛登場！ - 玩具人",
-          "link": "https://www.toy-people.com/?p=116552",
-          "published": "2026-11-14T08:37:28Z",
-          "summary": "日本GOODSMILECOMPANY旗下的知名Q版可動人偶「黏土人」系列，推出了來自人氣手機遊戲《蔚藍檔案（BlueArchive）》的最新商品「黏土人天童Kei」， ..."
+          "title": "遊戲化設施，如何重塑智慧零售生態圈？ - TechNews 科技新報",
+          "link": "https://technews.tw/ai-agent/inforich/49188/",
+          "published": "2026-11-15T03:27:27Z",
+          "summary": "智慧零售正從單純的自動化結帳轉向「沉浸式體驗」，遊戲化設施成為實體店轉型的核心。目前，業者如玩具反斗城與野獸國透過熱門IP 打造互動打卡區， ..."
         },
         {
-          "title": "破產清算近十年後大復活全美展店逾160家並進駐紐約大中央車站 - 商傳媒",
-          "link": "https://sunmedia.tw/news/finance/1794608761-%E7%A0%B4%E7%94%A2%E6%B8%85%E7%AE%97%E8%BF%91%E5%8D%81%E5%B9%B4%E5%BE%8C%E5%A4%A7%E5%BE%A9%E6%B4%BB%E3%80%80%E5%85%A8%E7%BE%8E%E5%B1%95%E5%BA%97%E9%80%BE160%E5%AE%B6%E4%B8%A6%E9%80%B2%E9%A7%90%E7%B4%90%E7%B4%84%E5%A4%A7%E4%B8%AD%E5%A4%AE%E8%BB%8A%E7%AB%99",
-          "published": "2026-11-14T08:30:53Z",
-          "summary": "在聲請破產保護並關閉全美門市近十年後，知名玩具零售品牌Toys 'R' Us 正式宣告重返實體零售市場。根據《USA TODAY》報導，該品牌透過與Go!"
+          "title": "麵包超人聖誕遊   | U Community 社群平台",
+          "link": "https://www.ulifestyle.com.hk/community/detailpost/04038de8-5906-41ca-a041-52c310e55a6a/%E7%AF%80%E6%97%A5%E9%99%90%E5%AE%9A/%E9%BA%B5%E5%8C%85%E8%B6%85%E4%BA%BA%E8%81%96%E8%AA%95%E9%81%8A/Jenny-So/412398",
+          "published": "2026-11-15T02:56:37Z",
+          "summary": "又到聖誕~又到聖誕~ 今個聖誕一於帶小朋友去帶小朋友去荷里活廣場參與麵包超人｢冬日星際之旅｣   細佬同家姐細細個就玩麵包超人嘅玩具,佢哋咁鍾意, ..."
         }
       ]
     }
