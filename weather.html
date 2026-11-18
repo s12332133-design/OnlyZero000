@@ -19,56 +19,52 @@
   <style>
     :root {
       --blue: #1A3F97;
+      --blue-dark: #133075;
       --cyan: #61B9DD;
       --yellow: #F4D21F;
       --white: #FFFFFF;
-      --bg: #F7F9FC;
+      --bg: #F4F7FC;
       --text: #1A3F97;
       --text-muted: #5A6B8A;
       --card: #FFFFFF;
-      --shadow: 0 8px 28px rgba(26, 63, 151, 0.08);
-      --radius: 20px;
-      --anim-enter: 0.5s;
-      --anim-pulse: 1.8s;
+      --border: rgba(26, 63, 151, 0.08);
+      --shadow: 0 10px 30px rgba(26, 63, 151, 0.06);
+      --shadow-hover: 0 14px 36px rgba(26, 63, 151, 0.11);
+      --radius: 22px;
+      --anim-pulse: 2s;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: var(--blue) rgba(26, 63, 151, 0.08);
+    }
 
     body {
-      font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", "Microsoft YaHei UI", sans-serif;
+      font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
       background: var(--bg);
+      background-image: radial-gradient(circle at 10% 0%, rgba(97, 185, 221, 0.14) 0%, transparent 45%),
+                        radial-gradient(circle at 90% 10%, rgba(244, 210, 31, 0.08) 0%, transparent 40%);
       color: var(--text);
-      line-height: 1.7;
+      line-height: 1.65;
       min-height: 100vh;
       overflow-x: hidden;
     }
 
-    /* Scrollbar */
-    html {
-      scrollbar-width: thin;
-      scrollbar-color: var(--blue) rgba(26, 63, 151, 0.08);
-    }
-    ::-webkit-scrollbar { width: 10px; height: 10px; }
-    ::-webkit-scrollbar-track {
-      background: rgba(26, 63, 151, 0.06);
-      border-radius: 999px;
-    }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: rgba(26, 63, 151, 0.05); }
     ::-webkit-scrollbar-thumb {
       background: var(--blue);
       border-radius: 999px;
       border: 2px solid var(--bg);
-      min-height: 40px;
     }
-    ::-webkit-scrollbar-thumb:hover { background: #15357d; }
 
     .container {
-      max-width: 960px;
+      max-width: 1060px;
       margin: 0 auto;
-      padding: 0 1.25rem 3rem;
-      position: relative;
-      z-index: 1;
+      padding: 0 1.5rem 3.5rem;
     }
 
     /* Top bar */
@@ -77,38 +73,39 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 0.85rem;
-      padding: 1.1rem 0 1.4rem;
+      gap: 1rem;
+      padding: 1.4rem 0 1.6rem;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.65rem;
+      gap: 0.75rem;
       text-decoration: none;
       color: var(--blue);
     }
 
     .brand-logo {
-      width: 28px;
-      height: 28px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--cyan), var(--blue));
-      box-shadow: 0 0 0 3px rgba(97, 185, 221, 0.25);
+      box-shadow: 0 0 0 4px rgba(97, 185, 221, 0.22);
       flex-shrink: 0;
     }
 
     .brand h1 {
-      font-size: 1.25rem;
-      font-weight: 700;
+      font-size: 1.3rem;
+      font-weight: 800;
       letter-spacing: 0.02em;
       line-height: 1.2;
     }
 
     .brand-sub {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: var(--text-muted);
-      font-weight: 500;
+      font-weight: 600;
+      letter-spacing: 0.08em;
     }
 
     .location-actions {
@@ -118,76 +115,103 @@
       gap: 0.6rem;
     }
 
-    #location-name {
-      font-size: 0.95rem;
-      font-weight: 600;
+    .location-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.92rem;
+      font-weight: 700;
       color: var(--blue);
-      background: rgba(26, 63, 151, 0.06);
-      padding: 0.35rem 0.85rem;
+      background: var(--white);
+      padding: 0.45rem 1rem;
       border-radius: 999px;
-      border: 1.5px solid rgba(26, 63, 151, 0.1);
+      border: 1.5px solid var(--border);
+      box-shadow: 0 2px 10px rgba(26, 63, 151, 0.04);
+    }
+
+    .location-badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
     }
 
     button {
       appearance: none;
-      border: 1.5px solid rgba(26, 63, 151, 0.18);
-      background: rgba(26, 63, 151, 0.06);
+      border: 1.5px solid rgba(26, 63, 151, 0.16);
+      background: var(--white);
       color: var(--blue);
-      padding: 0.5rem 1.05rem;
+      padding: 0.48rem 1.05rem;
       border-radius: 999px;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       font-weight: 600;
       font-family: inherit;
       cursor: pointer;
-      transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+      transition: all 0.22s ease;
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.4rem;
+    }
+
+    button svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
     }
 
     button:hover {
-      background: var(--blue);
-      color: var(--white);
+      background: rgba(26, 63, 151, 0.06);
       border-color: var(--blue);
       transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(26, 63, 151, 0.2);
     }
 
     button:disabled {
       opacity: 0.55;
       cursor: not-allowed;
       transform: none;
-      box-shadow: none;
     }
 
     button.primary {
       background: var(--blue);
       color: var(--white);
       border-color: var(--blue);
-      box-shadow: 0 4px 14px rgba(26, 63, 151, 0.22);
+      box-shadow: 0 4px 14px rgba(26, 63, 151, 0.2);
     }
 
     button.primary:hover {
-      background: #15357d;
-      border-color: #15357d;
+      background: var(--blue-dark);
+      border-color: var(--blue-dark);
+      box-shadow: 0 6px 18px rgba(26, 63, 151, 0.26);
     }
 
     .status {
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       color: var(--text-muted);
       min-height: 1.2em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
+      text-align: right;
     }
 
     .error {
       color: #dc2626;
-      background: rgba(220, 38, 38, 0.08);
-      border: 1.5px solid rgba(220, 38, 38, 0.18);
-      padding: 0.75rem 1rem;
+      background: #fef2f2;
+      border: 1.5px solid #fecaca;
+      padding: 0.8rem 1.1rem;
       border-radius: 14px;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
       font-size: 0.9rem;
       display: none;
+    }
+
+    /* Main Grid Layout (Hero + Advice) */
+    .dashboard-top {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 1.4rem;
+      align-items: stretch;
+      margin-bottom: 1.4rem;
     }
 
     /* Cards */
@@ -195,25 +219,30 @@
       background: var(--card);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      border: 1.5px solid rgba(26, 63, 151, 0.06);
-      padding: 1.5rem 1.6rem;
-      margin-bottom: 1.4rem;
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      border: 1.5px solid var(--border);
+      padding: 1.6rem 1.75rem;
+      transition: box-shadow 0.3s ease;
     }
 
     .card:hover {
-      box-shadow: 0 12px 36px rgba(26, 63, 151, 0.11);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.15rem;
     }
 
     .section-title {
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       font-weight: 700;
-      margin-bottom: 0.95rem;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
       color: var(--blue);
       display: flex;
       align-items: center;
-      gap: 0.45rem;
+      gap: 0.5rem;
     }
 
     .section-title::before {
@@ -226,182 +255,318 @@
       animation: pulseSoft var(--anim-pulse) ease-in-out infinite;
     }
 
+    .section-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
     @keyframes pulseSoft {
       0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.22); opacity: 0.72; }
+      50% { transform: scale(1.25); opacity: 0.7; }
     }
 
-    /* Current weather */
+    /* Current Weather Card (Left Hero - Lighter Sky Blue Gradient) */
     .current-card {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 1.25rem;
-      align-items: center;
-      opacity: 0;
-      transform: translateY(12px);
-      animation: fadeUp 0.5s ease-out 0.1s forwards;
-    }
-
-    .current-main {
       display: flex;
       flex-direction: column;
-      gap: 0.25rem;
+      justify-content: space-between;
+      background: linear-gradient(145deg, #3898D4 0%, #58B4E3 58%, #77C9EE 100%);
+      color: var(--white);
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 12px 32px rgba(56, 152, 212, 0.22);
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.5s ease-out 0.05s forwards;
+    }
+
+    .current-card::before {
+      content: "";
+      position: absolute;
+      bottom: -55px;
+      left: -45px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .current-card::after {
+      content: "";
+      position: absolute;
+      top: -45px;
+      right: -45px;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(244, 210, 31, 0.32) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .current-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .current-temp-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .current-label {
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      opacity: 0.9;
+      margin-bottom: 0.2rem;
     }
 
     .current-temp {
-      font-size: 3.4rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
+      font-size: 4rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
       line-height: 1;
-      color: var(--blue);
+      text-shadow: 0 2px 10px rgba(26, 63, 151, 0.12);
     }
 
     .current-desc {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--text-muted);
-    }
-
-    .current-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem 1.15rem;
-      margin-top: 0.7rem;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-    }
-
-    .current-meta span {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.28rem;
-    }
-
-    .current-meta strong {
-      color: var(--blue);
-      font-weight: 600;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-top: 0.35rem;
+      color: var(--white);
     }
 
     .current-icon {
-      font-size: 4.2rem;
+      font-size: 4.5rem;
       line-height: 1;
-      text-align: center;
+      filter: drop-shadow(0 6px 16px rgba(26, 63, 151, 0.16));
     }
 
-    /* Advice */
-    .advice-list {
+    /* 2x2 Metrics Grid inside Hero Card */
+    .current-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.65rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .metric-box {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 14px;
+      padding: 0.65rem 0.85rem;
       display: flex;
       flex-direction: column;
-      gap: 0.55rem;
+    }
+
+    .metric-label {
+      font-size: 0.76rem;
+      font-weight: 500;
+      opacity: 0.92;
+    }
+
+    .metric-val {
+      font-size: 1.06rem;
+      font-weight: 700;
+      margin-top: 0.1rem;
+    }
+
+    /* Advice Card (Right) */
+    .advice-card {
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.5s ease-out 0.15s forwards;
+    }
+
+    .advice-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      flex: 1;
+      align-content: start;
     }
 
     .advice-item {
-      background: rgba(26, 63, 151, 0.04);
-      border: 1.5px solid rgba(26, 63, 151, 0.08);
-      border-radius: 14px;
-      padding: 0.8rem 1rem;
+      background: #F8FAFD;
+      border: 1px solid rgba(26, 63, 151, 0.08);
+      border-radius: 16px;
+      padding: 0.85rem 0.95rem;
       display: flex;
       align-items: flex-start;
-      gap: 0.7rem;
-      font-size: 0.92rem;
+      gap: 0.75rem;
+      font-size: 0.88rem;
+      line-height: 1.55;
       color: var(--text);
-      transition: background 0.2s, border-color 0.2s;
+      transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
     }
 
     .advice-item:hover {
-      background: rgba(26, 63, 151, 0.07);
-      border-color: rgba(26, 63, 151, 0.14);
+      background: #F2F6FD;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(26, 63, 151, 0.05);
     }
 
-    .advice-item .icon {
-      font-size: 1.2rem;
+    /* Unified SVG Icon Badge */
+    .advice-icon-wrap {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
       margin-top: 0.05rem;
     }
 
-    .advice-item.good { border-left: 3px solid #34d399; }
-    .advice-item.warn { border-left: 3px solid #fbbf24; }
-    .advice-item.rain { border-left: 3px solid #38bdf8; }
-    .advice-item.info { border-left: 3px solid var(--cyan); }
+    .advice-icon-wrap svg {
+      width: 18px;
+      height: 18px;
+      stroke-width: 2.1;
+    }
 
-    /* Forecast grid */
+    .advice-item.good { border-left: 3.5px solid #10b981; }
+    .advice-item.good .advice-icon-wrap {
+      background: rgba(16, 185, 129, 0.12);
+      color: #059669;
+    }
+
+    .advice-item.warn { border-left: 3.5px solid #f59e0b; }
+    .advice-item.warn .advice-icon-wrap {
+      background: rgba(245, 158, 11, 0.14);
+      color: #d97706;
+    }
+
+    .advice-item.rain { border-left: 3.5px solid #0ea5e9; }
+    .advice-item.rain .advice-icon-wrap {
+      background: rgba(14, 165, 233, 0.13);
+      color: #0284c7;
+    }
+
+    .advice-item.info { border-left: 3.5px solid #6366f1; }
+    .advice-item.info .advice-icon-wrap {
+      background: rgba(99, 102, 241, 0.12);
+      color: #4f46e5;
+    }
+
+    /* Forecast Section */
+    .forecast-card {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeUp 0.5s ease-out 0.25s forwards;
+    }
+
     .forecast-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
-      gap: 0.7rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.85rem;
     }
 
     .day-card {
-      background: rgba(26, 63, 151, 0.03);
-      border: 1.5px solid rgba(26, 63, 151, 0.08);
-      border-radius: 16px;
-      padding: 0.95rem 0.75rem;
+      background: #F8FAFD;
+      border: 1.5px solid rgba(26, 63, 151, 0.07);
+      border-radius: 18px;
+      padding: 1.1rem 0.9rem;
       text-align: center;
-      transition: background 0.25s, border-color 0.25s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.22s ease;
     }
 
     .day-card:hover {
-      background: rgba(26, 63, 151, 0.06);
-      border-color: rgba(26, 63, 151, 0.16);
-      transform: translateY(-2px);
+      background: var(--white);
+      border-color: rgba(26, 63, 151, 0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(26, 63, 151, 0.07);
     }
 
     .day-card.today {
-      border-color: rgba(97, 185, 221, 0.5);
-      background: rgba(97, 185, 221, 0.08);
-      box-shadow: 0 0 0 1px rgba(97, 185, 221, 0.15);
+      background: linear-gradient(180deg, rgba(97, 185, 221, 0.15) 0%, rgba(97, 185, 221, 0.04) 100%);
+      border-color: rgba(97, 185, 221, 0.65);
+    }
+
+    .day-header {
+      display: flex;
+      align-items: baseline;
+      gap: 0.35rem;
+      margin-bottom: 0.45rem;
     }
 
     .day-name {
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       font-weight: 700;
       color: var(--blue);
-      margin-bottom: 0.15rem;
     }
 
     .day-date {
-      font-size: 0.72rem;
+      font-size: 0.78rem;
       color: var(--text-muted);
-      margin-bottom: 0.4rem;
+      font-weight: 500;
     }
 
     .day-icon {
-      font-size: 1.7rem;
-      margin: 0.2rem 0;
+      font-size: 2.1rem;
+      margin: 0.25rem 0;
+      line-height: 1.2;
+    }
+
+    .day-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.45rem;
     }
 
     .day-temps {
-      font-size: 0.92rem;
-      font-weight: 600;
-      margin: 0.3rem 0;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
     }
 
     .day-temps .high { color: #e11d48; }
+    .day-temps .sep { color: #cbd5e1; margin: 0 0.2rem; font-weight: 400; }
     .day-temps .low { color: #2563eb; }
 
     .day-rain {
-      font-size: 0.78rem;
-      color: #0ea5e9;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.76rem;
+      color: #0284c7;
+      background: rgba(14, 165, 233, 0.1);
+      padding: 0.18rem 0.65rem;
+      border-radius: 999px;
       font-weight: 600;
-      margin-top: 0.2rem;
     }
 
-    .day-precip {
-      font-size: 0.72rem;
+    .day-rain.dry {
       color: var(--text-muted);
+      background: rgba(90, 107, 138, 0.08);
     }
 
     /* Loading */
     .loading {
       text-align: center;
-      padding: 3.5rem 1rem;
+      padding: 5rem 1rem;
       color: var(--text-muted);
+      font-weight: 500;
     }
 
     .spinner {
-      width: 34px;
-      height: 34px;
-      border: 3px solid rgba(26, 63, 151, 0.12);
+      width: 38px;
+      height: 38px;
+      border: 3.5px solid rgba(26, 63, 151, 0.12);
       border-top-color: var(--blue);
       border-radius: 50%;
       animation: spin 0.75s linear infinite;
@@ -417,8 +582,8 @@
 
     footer {
       text-align: center;
-      padding: 1.2rem 0 0.5rem;
-      font-size: 0.8rem;
+      padding: 1.8rem 0 0.5rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
     }
 
@@ -436,35 +601,57 @@
     .back-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.3rem;
-      margin-top: 0.6rem;
+      gap: 0.35rem;
+      margin-top: 0.65rem;
       font-size: 0.85rem;
       color: var(--text-muted);
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       transition: color 0.2s;
     }
 
     .back-link:hover { color: var(--blue); }
 
-    /* Mobile */
-    @media (max-width: 600px) {
-      .current-card {
+    /* Tablet */
+    @media (max-width: 920px) {
+      .dashboard-top {
         grid-template-columns: 1fr;
-        text-align: center;
       }
-      .current-icon {
-        order: -1;
-        font-size: 3.4rem;
+      .current-card {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
       }
-      .current-temp { font-size: 2.9rem; }
-      .current-meta { justify-content: center; }
+      .current-top {
+        margin-bottom: 0;
+        flex: 1;
+      }
+      .current-metrics {
+        flex: 1;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      .container { padding: 0 1rem 2.5rem; }
+      .card { padding: 1.3rem 1.2rem; }
+      .current-card {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .current-top {
+        margin-bottom: 1.2rem;
+      }
+      .current-temp { font-size: 3.4rem; }
+      .current-icon { font-size: 3.8rem; }
+      .advice-list {
+        grid-template-columns: 1fr;
+      }
       .forecast-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 0.65rem;
       }
-      .brand h1 { font-size: 1.1rem; }
-      .top-bar { gap: 0.7rem; }
-      .card { padding: 1.25rem 1.2rem; }
+      .brand h1 { font-size: 1.15rem; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -473,13 +660,16 @@
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
       }
-      .current-card { opacity: 1 !important; transform: none !important; }
+      .current-card, .advice-card, .forecast-card {
+        opacity: 1 !important;
+        transform: none !important;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="top-bar">
+    <header class="top-bar">
       <a href="index.html" class="brand" aria-label="回到首頁">
         <span class="brand-logo" aria-hidden="true"></span>
         <div>
@@ -488,12 +678,21 @@
         </div>
       </a>
       <div class="location-actions">
-        <span id="location-name">台北</span>
+        <span class="location-badge" id="location-name">台北</span>
+        <button id="btn-taipei" type="button" style="display: none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/>
+          </svg>
+          台北
+        </button>
         <button id="btn-geo" class="primary" type="button">
-          📍 使用我的位置
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+          </svg>
+          使用我的位置
         </button>
       </div>
-    </div>
+    </header>
 
     <div id="error" class="error"></div>
     <div id="status" class="status"></div>
@@ -503,34 +702,58 @@
       正在載入天氣資料…
     </div>
 
-    <div id="content" style="display: none;">
-      <!-- Current -->
-      <section class="card current-card" id="current-card">
-        <div class="current-main">
-          <div class="current-temp"><span id="temp">--</span>°</div>
-          <div class="current-desc" id="weather-desc">--</div>
-          <div class="current-meta">
-            <span>體感 <strong id="feels-like">--</strong>°</span>
-            <span>濕度 <strong id="humidity">--</strong>%</span>
-            <span>風速 <strong id="wind">--</strong> km/h</span>
-            <span>降雨 <strong id="precip-now">--</strong> mm</span>
+    <main id="content" style="display: none;">
+      <div class="dashboard-top">
+        <!-- Current Weather Hero -->
+        <section class="card current-card" id="current-card">
+          <div class="current-top">
+            <div class="current-temp-wrap">
+              <span class="current-label">現在天氣</span>
+              <div class="current-temp"><span id="temp">--</span>°</div>
+              <div class="current-desc" id="weather-desc">--</div>
+            </div>
+            <div class="current-icon" id="weather-icon">🌤️</div>
           </div>
-        </div>
-        <div class="current-icon" id="weather-icon">🌤️</div>
-      </section>
 
-      <!-- Advice -->
-      <section class="card">
-        <h2 class="section-title">生活建議</h2>
-        <div class="advice-list" id="advice-list"></div>
-      </section>
+          <div class="current-metrics">
+            <div class="metric-box">
+              <span class="metric-label">體感溫度</span>
+              <span class="metric-val"><span id="feels-like">--</span>°C</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-label">相對濕度</span>
+              <span class="metric-val"><span id="humidity">--</span>%</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-label">目前風速</span>
+              <span class="metric-val"><span id="wind">--</span> km/h</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-label">時雨量</span>
+              <span class="metric-val"><span id="precip-now">--</span> mm</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Advice -->
+        <section class="card advice-card">
+          <div class="section-header">
+            <h2 class="section-title">今日生活建議</h2>
+            <span class="section-sub">依即時氣象自動生成</span>
+          </div>
+          <div class="advice-list" id="advice-list"></div>
+        </section>
+      </div>
 
       <!-- Forecast -->
-      <section class="card">
-        <h2 class="section-title">今日與未來 7 天預報</h2>
+      <section class="card forecast-card">
+        <div class="section-header">
+          <h2 class="section-title">今日與未來 7 天預報</h2>
+          <span class="section-sub">最高溫 / 最低溫</span>
+        </div>
         <div class="forecast-grid" id="forecast-grid"></div>
       </section>
-    </div>
+    </main>
 
     <footer>
       天氣資料由 <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> 提供 · 僅供參考
@@ -543,6 +766,22 @@
     // ========== Config ==========
     const TAIPEI = { lat: 25.0330, lon: 121.5654, name: '台北' };
     const API_BASE = 'https://api.open-meteo.com/v1/forecast';
+
+    // ========== Clean SVG Icons for Advice ==========
+    const ADVICE_ICONS = {
+      umbrella: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12a10.06 10.06 1 0 0-20 0Z"/><path d="M12 12v8a2 2 0 0 0 4 0"/><path d="M12 2v1"/></svg>`,
+      raincoat: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M16 14v6"/><path d="M8 14v6"/><path d="M12 16v6"/></svg>`,
+      sun: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>`,
+      layers: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>`,
+      cold: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/><path d="M12 11v6"/></svg>`,
+      hot: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/><path d="M12 7v10"/></svg>`,
+      shirt: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>`,
+      wind: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg>`,
+      activity: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+      indoor: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+      moon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>`,
+      droplet: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>`
+    };
 
     // ========== Weather code map (WMO) ==========
     const WEATHER_CODES = {
@@ -587,6 +826,7 @@
     const errorEl = $('error');
     const statusEl = $('status');
     const btnGeo = $('btn-geo');
+    const btnTaipei = $('btn-taipei');
 
     // ========== Helpers ==========
     function showError(msg) {
@@ -641,6 +881,8 @@
       const info = getWeatherInfo(cur.weather_code);
 
       $('location-name').textContent = name;
+      btnTaipei.style.display = name === TAIPEI.name ? 'none' : 'inline-flex';
+
       $('temp').textContent = Math.round(cur.temperature_2m);
       $('weather-desc').textContent = info.desc;
       $('weather-icon').textContent = info.icon;
@@ -680,26 +922,26 @@
       if (todayProb >= 50 || todayPrecip >= 1 || precip > 0.2) {
         items.push({
           type: 'rain',
-          icon: '☂️',
-          text: `今日降雨機率約 ${todayProb}%${todayPrecip > 0 ? `，預計降雨量 ${todayPrecip.toFixed(1)} mm` : ''}，建議隨身攜帶雨傘。`
+          icon: ADVICE_ICONS.umbrella,
+          text: `今日降雨機率約 ${todayProb}%${todayPrecip > 0 ? `（預計 ${todayPrecip.toFixed(1)} mm）` : ''}，建議隨身攜帶雨傘。`
         });
         if (todayProb >= 70 || todayPrecip >= 5 || [61,63,65,80,81,82,95,96,99].includes(code)) {
           items.push({
             type: 'rain',
-            icon: '🧥',
+            icon: ADVICE_ICONS.raincoat,
             text: '雨勢可能較大，建議穿防水外套或雨衣，並考慮防水鞋。'
           });
         }
       } else if (todayProb >= 30) {
         items.push({
           type: 'info',
-          icon: '🌂',
+          icon: ADVICE_ICONS.umbrella,
           text: `今日有小雨機會（約 ${todayProb}%），出門可帶把摺疊傘以防萬一。`
         });
       } else {
         items.push({
           type: 'good',
-          icon: '☀️',
+          icon: ADVICE_ICONS.sun,
           text: '今日降雨機率低，天氣相對穩定，外出較舒適。'
         });
       }
@@ -708,27 +950,27 @@
       if (tempDiff >= 8) {
         items.push({
           type: 'warn',
-          icon: '🧅',
-          text: `今日早晚溫差約 ${Math.round(tempDiff)}°C（最高 ${Math.round(todayMax)}° / 最低 ${Math.round(todayMin)}°），建議洋蔥式穿法，方便隨時增減衣物。`
+          icon: ADVICE_ICONS.layers,
+          text: `早晚溫差約 ${Math.round(tempDiff)}°C（${Math.round(todayMin)}°～${Math.round(todayMax)}°），建議洋蔥式穿法方便增減。`
         });
       }
 
       if (feels <= 15) {
         items.push({
           type: 'info',
-          icon: '🧣',
+          icon: ADVICE_ICONS.cold,
           text: `體感溫度約 ${Math.round(feels)}°C，感覺偏涼，建議多加一件外套或長袖。`
         });
       } else if (feels >= 30) {
         items.push({
           type: 'warn',
-          icon: '🥵',
-          text: `體感溫度約 ${Math.round(feels)}°C，感覺悶熱，建議穿輕薄透氣衣物，並注意補充水分。`
+          icon: ADVICE_ICONS.hot,
+          text: `體感溫度約 ${Math.round(feels)}°C，感覺悶熱，建議穿輕薄透氣衣物並多補水。`
         });
       } else if (temp >= 22 && temp <= 28) {
         items.push({
           type: 'good',
-          icon: '👕',
+          icon: ADVICE_ICONS.shirt,
           text: `目前氣溫舒適（約 ${Math.round(temp)}°C），短袖或薄長袖都適合。`
         });
       }
@@ -737,14 +979,14 @@
       if (maxWind >= 30 || wind >= 25) {
         items.push({
           type: 'warn',
-          icon: '💨',
-          text: `風速較大（目前約 ${Math.round(wind)} km/h，今日最大可達 ${Math.round(maxWind)} km/h），外出時注意固定物品，騎車請減速。`
+          icon: ADVICE_ICONS.wind,
+          text: `風速較大（最大可達 ${Math.round(maxWind)} km/h），注意固定物品，騎車請減速。`
         });
       } else if (wind >= 15) {
         items.push({
           type: 'info',
-          icon: '🌬️',
-          text: `有輕微風（約 ${Math.round(wind)} km/h），感覺較涼爽。`
+          icon: ADVICE_ICONS.wind,
+          text: `微風吹拂（約 ${Math.round(wind)} km/h），體感較為涼爽。`
         });
       }
 
@@ -753,20 +995,20 @@
       if (goodForRun) {
         items.push({
           type: 'good',
-          icon: '🏃',
-          text: '目前天氣適合戶外跑步或運動，記得做好熱身與補充水分。'
+          icon: ADVICE_ICONS.activity,
+          text: '適合戶外跑步或運動，記得做好熱身與補充水分。'
         });
       } else if (todayProb >= 60 || precip > 1 || [65,82,95,96,99].includes(code)) {
         items.push({
           type: 'warn',
-          icon: '🏠',
-          text: '今日有較高降雨或天氣不佳，建議改為室內運動，或等雨停再出門。'
+          icon: ADVICE_ICONS.indoor,
+          text: '降雨機率高或天候不佳，建議改為室內運動或等雨停再出門。'
         });
       } else {
         items.push({
           type: 'info',
-          icon: '🏃',
-          text: '若要跑步，建議選擇天氣較穩定的時段，並留意路面狀況。'
+          icon: ADVICE_ICONS.activity,
+          text: '若要跑步建議選擇較穩定時段，並留意路面濕滑。'
         });
       }
 
@@ -775,14 +1017,14 @@
       if (todayProb < 40 && nightMin >= 16) {
         items.push({
           type: 'good',
-          icon: '🌙',
-          text: `今晚天氣尚可（最低約 ${Math.round(nightMin)}°C），適合夜遊或戶外活動。`
+          icon: ADVICE_ICONS.moon,
+          text: `今晚天氣尚可（最低約 ${Math.round(nightMin)}°C），適合夜間散步或戶外活動。`
         });
       } else if (todayProb >= 50 || nightMin < 14) {
         items.push({
           type: 'info',
-          icon: '🌃',
-          text: `今晚可能有雨或氣溫偏低（最低約 ${Math.round(nightMin)}°C），夜遊建議帶外套或雨具。`
+          icon: ADVICE_ICONS.moon,
+          text: `今晚可能有雨或氣溫偏低（最低約 ${Math.round(nightMin)}°C），外出建議帶外套或雨具。`
         });
       }
 
@@ -790,15 +1032,15 @@
       if (humidity >= 85 && temp >= 24) {
         items.push({
           type: 'info',
-          icon: '💧',
-          text: `濕度偏高（${humidity}%），感覺較悶，外出可選擇透氣材質衣物。`
+          icon: ADVICE_ICONS.droplet,
+          text: `濕度偏高（${humidity}%），感覺較悶，建議穿著排汗透氣材質。`
         });
       }
 
       items.forEach(item => {
         const div = document.createElement('div');
         div.className = `advice-item ${item.type}`;
-        div.innerHTML = `<span class="icon">${item.icon}</span><span>${item.text}</span>`;
+        div.innerHTML = `<span class="advice-icon-wrap" aria-hidden="true">${item.icon}</span><span>${item.text}</span>`;
         list.appendChild(div);
       });
     }
@@ -815,23 +1057,33 @@
         const prob = daily.precipitation_probability_max[i] || 0;
         const sum = daily.precipitation_sum[i] || 0;
 
+        const rainText = prob > 0
+          ? `降雨 ${prob}%${sum > 0 ? ` · ${sum.toFixed(1)}mm` : ''}`
+          : '幾乎無雨';
+
         const card = document.createElement('div');
         card.className = 'day-card' + (i === 0 ? ' today' : '');
         card.innerHTML = `
-          <div class="day-name">${i === 0 ? '今天' : weekday}</div>
-          <div class="day-date">${date}</div>
-          <div class="day-icon">${info.icon}</div>
-          <div class="day-temps">
-            <span class="high">${high}°</span> / <span class="low">${low}°</span>
+          <div class="day-header">
+            <span class="day-name">${i === 0 ? '今天' : weekday}</span>
+            <span class="day-date">${date}</span>
           </div>
-          <div class="day-rain">${prob > 0 ? `降雨 ${prob}%` : '幾乎無雨'}</div>
-          ${sum > 0 ? `<div class="day-precip">${sum.toFixed(1)} mm</div>` : ''}
+          <div class="day-icon">${info.icon}</div>
+          <div class="day-desc">${info.desc}</div>
+          <div class="day-temps">
+            <span class="high">${high}°</span><span class="sep">/</span><span class="low">${low}°</span>
+          </div>
+          <div class="day-rain ${prob === 0 ? 'dry' : ''}">${rainText}</div>
         `;
         grid.appendChild(card);
       }
     }
 
-    // ========== Geolocation ==========
+    // ========== Events ==========
+    btnTaipei.addEventListener('click', () => {
+      fetchWeather(TAIPEI.lat, TAIPEI.lon, TAIPEI.name);
+    });
+
     btnGeo.addEventListener('click', () => {
       if (!navigator.geolocation) {
         showError('您的瀏覽器不支援定位功能。');
