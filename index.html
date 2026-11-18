@@ -662,6 +662,100 @@
       color: var(--text-muted);
       opacity: 0.8;
     }
+    /* ── 今日天氣小卡 ── */
+    .weather-mini {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      margin-bottom: 1.8rem;
+      opacity: 0;
+      transform: translateY(14px);
+      animation: fadeUp var(--anim-enter) ease-out 0.48s forwards;
+    }
+    .weather-mini .card {
+      padding: 1.15rem 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      animation: none;
+      opacity: 1;
+      transform: none;
+      transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.25s;
+      border: 1.5px solid rgba(26, 63, 151, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    .weather-mini .card:hover {
+      box-shadow: 0 12px 36px rgba(26, 63, 151, 0.12);
+      transform: translateY(-3px);
+      border-color: rgba(97, 185, 221, 0.45);
+    }
+    .weather-mini .card::after {
+      content: "查看完整預報 →";
+      position: absolute;
+      right: 1.2rem;
+      bottom: 0.85rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--cyan);
+      opacity: 0.85;
+      transition: opacity 0.25s, transform 0.25s;
+    }
+    .weather-mini .card:hover::after {
+      opacity: 1;
+      transform: translateX(2px);
+    }
+    .wx-icon {
+      font-size: 2.4rem;
+      line-height: 1;
+      flex-shrink: 0;
+      width: 3rem;
+      text-align: center;
+    }
+    .wx-body {
+      flex: 1;
+      min-width: 0;
+    }
+    .wx-top {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .wx-temp {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+    .wx-desc {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .wx-meta {
+      margin-top: 0.25rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 1rem;
+    }
+    .wx-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .wx-rain {
+      color: #0ea5e9;
+      font-weight: 600;
+    }
+    .wx-loading, .wx-error {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding: 0.2rem 0;
+    }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(14px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -688,7 +782,8 @@
         transition-duration: 0.01ms !important;
       }
       .decor span, .hero, .card, nav, .hero-photo-wrap,
-      .hero-text h1, .hero-text .brand-tag, .hero-text .identity, .hero-actions {
+      .hero-text h1, .hero-text .brand-tag, .hero-text .identity, .hero-actions,
+      .weather-mini {
         opacity: 1 !important; transform: none !important;
       }
       .photo-arcs circle { stroke-dashoffset: 0 !important; opacity: 1 !important; }
@@ -751,6 +846,15 @@
       .hero-text .brand-tag { justify-content: center; }
       .hero-actions { justify-content: center; }
       .card { padding: 1.3rem 1.4rem; }
+      .weather-mini .card {
+        padding: 1rem 1.15rem;
+        gap: 0.85rem;
+      }
+      .weather-mini .card::after {
+        display: none;
+      }
+      .wx-icon { font-size: 2.1rem; width: 2.6rem; }
+      .wx-temp { font-size: 1.65rem; }
       .decor .arc-1 { width: 180px; height: 180px; border-width: 30px; }
       .decor .arc-2 { width: 150px; height: 150px; border-width: 24px; }
       .decor .arc-3, .decor .arc-4 { display: none; }
@@ -829,6 +933,23 @@
         </div>
       </div>
     </section>
+
+    <!-- 今日天氣小卡（點擊開啟完整天氣預報） -->
+    <a href="weather.html" class="weather-mini" id="weatherMini" aria-label="查看完整天氣預報">
+      <div class="card">
+        <div class="wx-icon" id="wxIcon">🌤️</div>
+        <div class="wx-body">
+          <div class="wx-top">
+            <span class="wx-temp" id="wxTemp">--°</span>
+            <span class="wx-desc" id="wxDesc">載入中…</span>
+          </div>
+          <div class="wx-meta" id="wxMeta">
+            <span class="wx-loading">正在取得台北天氣…</span>
+          </div>
+        </div>
+      </div>
+    </a>
+
     <section id="about">
       <div class="card about-card">
         <h2 class="section-title">關於我</h2>
@@ -1068,6 +1189,86 @@
           }
         });
       }
+    })();
+
+    // ── 首頁今日天氣小卡（Open-Meteo）──
+    (function loadWeatherMini() {
+      const iconEl = document.getElementById('wxIcon');
+      const tempEl = document.getElementById('wxTemp');
+      const descEl = document.getElementById('wxDesc');
+      const metaEl = document.getElementById('wxMeta');
+      if (!iconEl || !tempEl || !descEl || !metaEl) return;
+
+      const WEATHER_CODES = {
+        0:  { desc: '晴朗', icon: '☀️' },
+        1:  { desc: '大致晴朗', icon: '🌤️' },
+        2:  { desc: '局部多雲', icon: '⛅' },
+        3:  { desc: '陰天', icon: '☁️' },
+        45: { desc: '有霧', icon: '🌫️' },
+        48: { desc: '霧凇', icon: '🌫️' },
+        51: { desc: '微毛毛雨', icon: '🌦️' },
+        53: { desc: '毛毛雨', icon: '🌦️' },
+        55: { desc: '濃毛毛雨', icon: '🌧️' },
+        56: { desc: '凍毛毛雨', icon: '🌧️' },
+        57: { desc: '濃凍毛毛雨', icon: '🌧️' },
+        61: { desc: '小雨', icon: '🌧️' },
+        63: { desc: '中雨', icon: '🌧️' },
+        65: { desc: '大雨', icon: '🌧️' },
+        66: { desc: '凍雨', icon: '🌧️' },
+        67: { desc: '強凍雨', icon: '🌧️' },
+        71: { desc: '小雪', icon: '🌨️' },
+        73: { desc: '中雪', icon: '🌨️' },
+        75: { desc: '大雪', icon: '❄️' },
+        77: { desc: '雪粒', icon: '🌨️' },
+        80: { desc: '小陣雨', icon: '🌦️' },
+        81: { desc: '中陣雨', icon: '🌧️' },
+        82: { desc: '強陣雨', icon: '🌧️' },
+        85: { desc: '小陣雪', icon: '🌨️' },
+        86: { desc: '強陣雪', icon: '❄️' },
+        95: { desc: '雷雨', icon: '⛈️' },
+        96: { desc: '雷雨夾冰雹', icon: '⛈️' },
+        99: { desc: '強雷雨夾冰雹', icon: '⛈️' }
+      };
+
+      const url = 'https://api.open-meteo.com/v1/forecast?latitude=25.033&longitude=121.565&current=temperature_2m,weather_code,apparent_temperature&daily=precipitation_probability_max,precipitation_sum,temperature_2m_max,temperature_2m_min&timezone=Asia%2FTaipei&forecast_days=1';
+
+      fetch(url)
+        .then(function (res) {
+          if (!res.ok) throw new Error('weather api error');
+          return res.json();
+        })
+        .then(function (data) {
+          const cur = data.current;
+          const daily = data.daily;
+          const info = WEATHER_CODES[cur.weather_code] || { desc: '天氣', icon: '🌡️' };
+          const temp = Math.round(cur.temperature_2m);
+          const feels = Math.round(cur.apparent_temperature);
+          const prob = (daily.precipitation_probability_max && daily.precipitation_probability_max[0]) || 0;
+          const high = Math.round(daily.temperature_2m_max[0]);
+          const low = Math.round(daily.temperature_2m_min[0]);
+
+          iconEl.textContent = info.icon;
+          tempEl.textContent = temp + '°';
+          descEl.textContent = info.desc;
+
+          let rainText = '幾乎無雨';
+          if (prob >= 50) {
+            rainText = '降雨機率 ' + prob + '%';
+          } else if (prob >= 20) {
+            rainText = '小雨機會 ' + prob + '%';
+          }
+
+          metaEl.innerHTML =
+            '<span>台北 · 體感 ' + feels + '°</span>' +
+            '<span>' + low + '° / ' + high + '°</span>' +
+            '<span class="wx-rain">' + rainText + '</span>';
+        })
+        .catch(function () {
+          iconEl.textContent = '🌤️';
+          tempEl.textContent = '--°';
+          descEl.textContent = '天氣暫時無法載入';
+          metaEl.innerHTML = '<span class="wx-error">點擊可查看完整預報</span>';
+        });
     })();
   </script>
 </body>
