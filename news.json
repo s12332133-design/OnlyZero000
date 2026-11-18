@@ -1,126 +1,78 @@
 {
-  "updated": "2026-11-17T07:03:51Z",
+  "updated": "2026-11-18T06:28:43Z",
   "source": "Google Alerts",
   "sources": [
     {
       "id": "virtual-character",
       "name": "虛擬角色",
-      "count": 9,
+      "count": 5,
       "items": [
         {
-          "title": "HYBE Teams Up With North American Virtual Creators...'The Wildcard Club' - The financial news",
-          "link": "https://en.fnnews.com/news/202611161800205959",
-          "published": "2026-11-16T17:09:13Z",
-          "summary": "One notable example is “New Outfit,” which reveals new outfits and character visuals. Because virtual creators have difficulty frequently changing ..."
+          "title": "AI Influencers: Can Virtual Characters Earn Customer Trust? - Darden Report",
+          "link": "https://news.darden.virginia.edu/articles/should-your-brand-hire-an-ai-influencer",
+          "published": "2026-11-17T15:24:22Z",
+          "summary": "UVA Darden professors Raj Venkatesan and Serena Hagerty explore what marketers should consider before giving a virtual character a voice."
         },
         {
-          "title": "The Wildcard Club: HYBE Collaborates with Virtual Creators",
-          "link": "https://www.chosun.com/english/kpop-culture-en/2026/11/16/M73ERLLGWNHKVDZJA45AT4TBQU/",
-          "published": "2026-11-16T16:30:01Z",
-          "summary": "A notable example is *New Outfit*, where new costumes and character visuals are revealed. In virtual creator fandoms, new outfit releases are a ..."
+          "title": "AI Memory Recharge Service – Ensure Your AI Never Forgets You - 36氪",
+          "link": "https://eu.36kr.com/en/p/4073526981153671",
+          "published": "2026-11-17T11:21:34Z",
+          "summary": "... virtual gifts and other items into separate paid programs. If users want the virtual character to remember more chat content, maintain a ..."
         },
         {
-          "title": "Chinese AI virtual influencer Fang Taozi's operator fined $10,000 over illegal contact lens ad",
-          "link": "https://news.mydramalist.com/article/chinese-ai-virtual-influencer-fang-taozi-s-operator-fined-10-000-over-illegal-contact-lens-ad",
-          "published": "2026-11-16T15:21:30Z",
-          "summary": "In the ads, the virtual character \"Fang Taozi\" made claims based on subjective user experiences, such as, \"I've worn my colored contact lenses for an ..."
+          "title": "Chinese AI Influencer Claims Contact Lenses Are Ultra-Comfortable - YouTube",
+          "link": "https://www.youtube.com/watch?v=LqJmDKD41Uw",
+          "published": "2026-11-17T10:55:31Z",
+          "summary": "The AI ​​virtual character, speaking in the first person, claimed that she had worn colored contact lenses all day and her eyes felt very ..."
         },
         {
-          "title": "AI Actor Fang Taozi's First Commercial Deal Triggers a 68200 Yuan Fine - AI NEWS",
-          "link": "https://news.aibase.com/news/32339",
-          "published": "2026-11-16T14:16:41Z",
-          "summary": "AI virtual actor 'Fang Taozi' and operator Guangzhou Wode Film & TV ... \" Regulators determined that a virtual character does not have real ..."
+          "title": "Fang Taozi's First Public Image Collapse: How Brazen Lying Completely Ruined Her Debut Deal",
+          "link": "https://eu.36kr.com/en/p/4073330962879361",
+          "published": "2026-11-17T10:52:24Z",
+          "summary": "A virtual human with no eyeballs, no corneas, and whose \"blinking ... What makes a virtual character that has debuted for only 30 days and ..."
         },
         {
-          "title": "AI actor fined for false advertising - Lao Dong",
-          "link": "https://news.laodong.vn/van-hoa-giai-tri/dien-vien-ai-bi-phat-vi-quang-cao-sai-su-that-1801528.ldo",
-          "published": "2026-11-16T14:16:06Z",
-          "summary": "Phuong Dao Tu is a virtual character, unable to directly wear glasses and experience the advertised characteristics. Therefore, this content is ..."
-        },
-        {
-          "title": "Your AI Influencer is ready. What should it post next? - Cyprus Mail",
-          "link": "https://cyprus-mail.com/2026/11/16/your-ai-influencer-is-ready-what-should-it-post-next",
-          "published": "2026-11-16T14:02:29Z",
-          "summary": "... virtual creator share next? Dreamina can help you develop a character from a description or ... The profile picture is ready, the character has a ..."
-        },
-        {
-          "title": "Canon and iPairs conduct demonstration experiment of multi-camera shooting that ... - Mogura VR",
-          "link": "https://www.moguravr.com/canon-ipairs-multi-camera-virtual-character-en/",
-          "published": "2026-11-16T11:31:14Z",
-          "summary": "... virtual camera and the real camera. This eliminates the need for external tracking devices and complex alignment. For character movement, we used ..."
-        },
-        {
-          "title": "AI virtual influencer's operator fined nearly $10000 for false advertising in Guangdong, South China",
-          "link": "https://www.globaltimes.cn/page/202611/1374390.shtml",
-          "published": "2026-11-16T10:15:28Z",
-          "summary": "... virtual character claimed to have personally worn contact lenses. Photo: Screenshot from media report. The operator of a Chinese artificial ..."
-        },
-        {
-          "title": "Virtual creators team with HYBE unit NEWEPICBASE to release single and YouTube series",
-          "link": "https://biz.chosun.com/en/en-entertainment/2026/11/16/ZPKNNDRWYVEPLI4IL57GVWE7KQ/?outputType=amp",
-          "published": "2026-11-16T09:00:59Z",
-          "summary": "A prime example is \"New Outfit,\" where creators reveal new costumes and character visuals. In virtual creator fandoms, revealing a new outfit is ..."
+          "title": "Company behind AI actress Fang Taozi fined over false advertising for coloured contact lenses",
+          "link": "https://www.zaobao.com.sg/en/news/china/company-behind-ai-actress-fang-taozi-fined-over-false-advertising-coloured-contact-lenses",
+          "published": "2026-11-17T05:57:24Z",
+          "summary": "However, Fang Taozi is an AI-generated virtual character with no actual experience of wearing coloured contact lenses. Regulators therefore found ..."
         }
       ]
     },
     {
       "id": "83tian",
       "name": "八三夭",
-      "count": 9,
+      "count": 5,
       "items": [
         {
-          "title": "「貝瑪」劉致妤忙跑選舉回家看照片驚覺：拍到了四哥曹西平？ - 娛樂- 中時新聞網",
-          "link": "https://www.chinatimes.com/realtimenews/20261117001769-260404",
-          "published": "2026-11-17T03:25:02Z",
-          "summary": "... 八三夭迎生日吳建恆曝阿信惜才力薦. 04:102026/09/02. 娛樂 · 劉致妤投入選戰勤跑基層！劉至翰力挺現身街頭拜票. 08:332026/10/18. 娛樂 · 藍琪告別式《楚留香》 ..."
+          "title": "黃旼炫澳門騷性感翻跳男團舞〈BAD〉 獻唱中文金曲引全場尖叫 - Hk01",
+          "link": "https://www.hk01.com/%E7%9C%BE%E6%A8%82%E8%BF%B7/60411906/%E9%BB%83%E6%97%BC%E7%82%AB%E6%BE%B3%E9%96%80%E9%A8%B7%E6%80%A7%E6%84%9F%E7%BF%BB%E8%B7%B3%E7%94%B7%E5%9C%98%E8%88%9E-bad-%E7%8D%BB%E5%94%B1%E4%B8%AD%E6%96%87%E9%87%91%E6%9B%B2%E5%BC%95%E5%85%A8%E5%A0%B4%E5%B0%96%E5%8F%AB",
+          "published": "2026-11-17T14:21:22Z",
+          "summary": "驚喜獻唱八三夭金曲《想見你》. 除了舞台上的帥氣演出，黃旼炫的歌唱實力同樣令人印象深刻。他特別準備了自己非常喜愛的中文歌曲，並為這次澳門見面會練習用 ..."
         },
         {
-          "title": "台南好Young耶誕跨年第二波卡司公布玉澤演、周湯豪、彭佳慧接力登台 - PCHOME NEWS",
-          "link": "https://news.pchome.com.tw/living/m00363/20261117/index-79490792035151363009.html",
-          "published": "2026-11-17T02:04:58Z",
-          "summary": "... 八三夭、許富凱等演出。跨年晚會地點同為永華市政中心西側廣場。 黃偉哲也預告第3波神秘卡司即將公布，呼籲民眾可提前訂房。來台南追星同時，還可搭配「台南 ..."
+          "title": "《流氓讀書會》黃旼炫澳門騷唱《想見你想見你想見你》 (20:51) - 20261117 - SHOWBIZ - OL",
+          "link": "https://ol.mingpao.com/ldy/showbiz/latest/20261117/1794919254916/%E3%80%8A%E6%B5%81%E6%B0%93%E8%AE%80%E6%9B%B8%E6%9C%83%E3%80%8B%E9%BB%83%E6%97%BC%E7%82%AB%E6%BE%B3%E9%96%80%E9%A8%B7%E5%94%B1%E3%80%8A%E6%83%B3%E8%A6%8B%E4%BD%A0%E6%83%B3%E8%A6%8B%E4%BD%A0%E6%83%B3%E8%A6%8B%E4%BD%A0%E3%80%8B",
+          "published": "2026-11-17T13:21:04Z",
+          "summary": "又翻唱台灣樂隊八三夭的《想見你想見你想見你》，為粉絲帶來驚喜。 在遊戲環節上，為配合澳門格蘭披治大賽車，黃旼炫挑戰揮動格仔旗任務，又玩吹熄蠟燭遊戲 ..."
         },
         {
-          "title": "玉澤演驚喜登台！臺南好Young耶誕演唱會12/24登場 - LIFE 生活網",
-          "link": "https://life.tw/article/%E7%8E%89%E6%BE%A4%E6%BC%94%E9%A9%9A%E5%96%9C%E7%99%BB%E5%8F%B0-%E8%87%BA%E5%8D%97%E5%A5%BDyoung%E8%80%B6%E8%AA%95%E6%BC%94%E5%94%B1%E6%9C%831224%E7%99%BB%E5%A0%B4-3221408",
-          "published": "2026-11-16T15:50:25Z",
-          "summary": "台南好Young耶誕跨年系列活動已公布哪些首波卡司？ 首波公布的卡司為12月19日新營南瀛草地音樂會，將由八三夭、許富凱等藝人演出。"
+          "title": "台南好Young第二波卡司再升級12/24耶誕開唱 - 蕃新聞",
+          "link": "https://n.yam.com/Article/20261117510554",
+          "published": "2026-11-17T10:15:05Z",
+          "summary": "台南市政府新聞及國際關係處表示，系列活動首波已公布12月19日新營南瀛草地音樂會由八三夭、許富凱等演出，16日再宣布全亞洲樂迷為之瘋狂的2PM野獸派韓流 ..."
         },
         {
-          "title": "玉澤演確定來台！台南好Young耶誕演唱會第二波卡司曝光 - LIFE 生活網",
-          "link": "https://life.tw/article/%E7%8E%89%E6%BE%A4%E6%BC%94%E7%A2%BA%E5%AE%9A%E4%BE%86%E5%8F%B0-%E5%8F%B0%E5%8D%97%E5%A5%BDyoung%E8%80%B6%E8%AA%95%E6%BC%94%E5%94%B1%E6%9C%83%E7%AC%AC%E4%BA%8C%E6%B3%A2%E5%8D%A1%E5%8F%B8%E6%9B%9D%E5%85%89-3221399",
-          "published": "2026-11-16T15:48:34Z",
-          "summary": "Martin Hurkens也將提前於12月18日晚間在南紡購物中心舉辦專場音樂會，並邀請右武衛兒童合唱團擔任開場演出。至於12月19日的新營南瀛草地音樂會，則由八三夭、 ..."
+          "title": "永慶加盟四品牌高雄經管會邀民眾響應12/5「創世40好市集」 - 蕃新聞",
+          "link": "https://n.yam.com/Article/20261117650297",
+          "published": "2026-11-17T09:56:25Z",
+          "summary": "蕭敬騰、八三夭、戴愛玲炸翻港都！永慶加盟四品牌萬人演唱會寫下房仲新紀錄. 上報. 8 天前 · 力挺高雄全家海神新賽季永慶加盟四品牌高雄經管會贊助100萬. 匯流 ..."
         },
         {
-          "title": "台南好Young第二波卡司再升級玉澤演、彭佳慧、周湯豪12/24台南耶誕開唱 - 台南市政府",
-          "link": "https://www.tainan.gov.tw/News_Content.aspx?n=13370&s=8847189",
-          "published": "2026-11-16T11:22:07Z",
-          "summary": "台南市政府新聞及國際關係處表示，系列活動首波已公布12月19日新營南瀛草地音樂會由八三夭、許富凱等演出，今（16）日再宣布全亞洲樂迷為之瘋狂的2PM野獸派 ..."
-        },
-        {
-          "title": "韓流巨星玉澤演降臨台南！台南好Young耶誕跨年卡司再升級ARKis搶先曝光 - LIFE 生活網",
-          "link": "https://life.tw/article/%E9%9F%93%E6%B5%81%E5%B7%A8%E6%98%9F%E7%8E%89%E6%BE%A4%E6%BC%94%E9%99%8D%E8%87%A8%E5%8F%B0%E5%8D%97-%E5%8F%B0%E5%8D%97%E5%A5%BDyoung%E8%80%B6%E8%AA%95%E8%B7%A8%E5%B9%B4%E5%8D%A1%E5%8F%B8%E5%86%8D%E5%8D%87%E7%B4%9A-3221026",
-          "published": "2026-11-16T11:01:55Z",
-          "summary": "... 八三夭、許富凱等。 台南好Young活動如何吸引觀光人潮？ 透過國際藝人、金曲歌手、在地樂團及親子活動的多元組合，建立城市年度節慶品牌，吸引外縣市遊客前 ..."
-        },
-        {
-          "title": "「馬子狗」朱軒洋驚喜合體宇宙人飆唱嚴藝文也自曝：有導演特權 - 中時新聞網",
-          "link": "https://www.chinatimes.com/realtimenews/20261116002386-260404",
-          "published": "2026-11-16T10:46:12Z",
-          "summary": "... 宇宙人慶功簽唱會大驚喜！馬子狗三帥朱軒洋、姚淳耀 ... 八三夭生日趴唱超時被罰5萬韋禮安自嘲「我是那根蔥」嗨跳舞 · 吳卓源首致歉 ..."
-        },
-        {
-          "title": "台南耶誕演唱會卡司公布，玉澤演、彭佳慧等將登台 - 蕃新聞",
-          "link": "https://n.yam.com/Article/20261116991252",
-          "published": "2026-11-16T08:48:56Z",
-          "summary": "... 八三夭、許富凱登台. 報新聞. 10 天前 · 金曲卡司齊聚！ 韋禮安、蔡健雅、彭佳慧、徐佳瑩將參與2027台東跨年. 互傳媒. 11 天前 · 金曲卡司齊聚！韋禮安、蔡健雅 ..."
-        },
-        {
-          "title": "永慶加盟四品牌送竹苗區經管會舉行家庭日送iPhone 18 Pro與600張電影票 - 蕃新聞",
-          "link": "https://n.yam.com/Article/20261116165717",
-          "published": "2026-11-16T08:20:32Z",
-          "summary": "蕭敬騰、八三夭、戴愛玲炸翻港都！永慶加盟四品牌萬人演唱會寫下房仲新紀錄. 上報. 7 天前 · 永慶加盟四品牌「超派演唱會」引爆高雄12,500人齊聚巨蛋. 中央社. 9 ..."
+          "title": "玉澤演、周湯豪、彭佳慧重磅登台！台南好Young耶誕卡司升級12/24國際巨星齊聚開唱",
+          "link": "https://www.storm.mg/article/11182348",
+          "published": "2026-11-17T08:47:54Z",
+          "summary": "八三夭、KEIKO、黃瑋昕12月接力開唱 ｜ 更多文章 ）. 主持陣容同樣星光熠熠，由全方位主持人徐凱希、綜藝小天后籃籃，以及啦啦隊女神李多慧三人合體，聯手 ..."
         }
       ]
     },
@@ -130,124 +82,124 @@
       "count": 20,
       "items": [
         {
-          "title": "被Toyz認證「鄰居」 柯文哲感性談心境：承受更大壓力的是家人| ETtoday新聞雲 - Facebook",
-          "link": "https://www.facebook.com/ETtoday/videos/%E6%AD%BB%E5%8E%BB%E7%9A%84%E5%9B%9E%E6%86%B6%E5%9C%A8%E6%94%BB%E6%93%8A%E6%88%91%E6%9F%AF%E6%96%87%E5%93%B2%E8%AB%87%E8%A2%AB%E5%95%8Ftoyz%E9%84%B0%E5%B1%85%E6%99%82%E8%90%BD%E6%B7%9A/1795391365459589/",
-          "published": "2026-11-17T06:07:34Z",
-          "summary": "#玩具貴賓：老闆不要看系列   ... Sep 23, 2026 · 1.8K views. 2016年登報決裂、2018年 ..."
+          "title": "Labubu退燒了？泡泡瑪特營收近乎腰斬，曾經一娃難求的玩具為何不再搶手？ | LINE TODAY",
+          "link": "https://today.line.me/tw/v3/posts/list/article/0MWzJ82",
+          "published": "2026-11-17T23:47:36Z",
+          "summary": "網友貼文AI摘要 · 部分人認為這類玩具缺乏實用性. 評論中提到Labubu及類似產品的卡通風格缺乏實用性，讓人質疑其長期的市場價值，並認為這些產品只是昙花一現。"
         },
         {
-          "title": "兒童文具玩具暗藏5類成長殺手醫生：毒素對幼兒傷害遠超成人3招毒素遠離超標玩具",
-          "link": "https://www.ohpama.com/1045409/%E7%94%9F%E6%B4%BB%E5%81%A5%E5%BA%B7/%E5%81%A5%E5%BA%B7%E7%99%BE%E7%A7%91/%E7%8E%A9%E5%85%B7-%E6%96%87%E5%85%B7-%E9%86%AB%E7%94%9F%E8%94%A1%E6%85%B6%E6%98%AD-%E6%AF%92%E7%B4%A0/",
-          "published": "2026-11-17T05:22:21Z",
-          "summary": "為人父母，總希望把最好的留給孩子。選購文具、玩具時，眼看色彩繽紛、造型討喜，價格又實惠，不少人便順手放入購物籃。然而，這些孩子每日握在手中、甚至放 ..."
+          "title": "一番賞《數碼寶貝－Matrix Evolution－》2027年3月登場，三款「魂豪示像」模型搶先公開",
+          "link": "https://news.gamme.com.tw/1775329",
+          "published": "2026-11-17T18:31:34Z",
+          "summary": "玩具 · 設計 · 潮流 · 汽車 · 精華. 暗部. 宅宅海賊團特選 ... 玩具 · 設計 · 潮流 · 汽車 · 精華. 2026年11月17日發表:凌凌漆. 一番賞《數碼寶貝 ..."
+        },
+        {
+          "title": "何文田商場12歲童疑被偷陀螺警查天眼無果母料遭同伴拿走 - Hk01",
+          "link": "https://www.hk01.com/%E7%AA%81%E7%99%BC/60411241/%E4%BD%95%E6%96%87%E7%94%B0%E5%95%86%E5%A0%B412%E6%AD%B2%E7%AB%A5%E7%96%91%E8%A2%AB%E5%81%B7%E9%99%80%E8%9E%BA-%E8%AD%A6%E6%9F%A5%E5%A4%A9%E7%9C%BC%E7%84%A1%E6%9E%9C-%E6%AF%8D%E6%96%99%E9%81%AD%E5%90%8C%E4%BC%B4%E6%8B%BF%E8%B5%B0",
+          "published": "2026-11-17T14:59:56Z",
+          "summary": "讚好. 我鍾意. 13. 影片. 00:20. 影片. 00:20. 突發. 2026-07-25. 精選☆. 深水埗玩具店售陀螺爆衝突阿叔起飛腳猛踢青年疑還擊｜有片 播放影片. 讚好. 笑死我."
+        },
+        {
+          "title": "網路爆紅「脆皮捏捏樂」好紓壓？經檢測半數含禁用防腐劑、塑化劑超6倍！ - 媽媽寶寶",
+          "link": "https://www.mombaby.com.tw/articles/9938423",
+          "published": "2026-11-17T14:03:28Z",
+          "summary": "現代人壓力大，減壓小物成為生活不可或缺的調劑品，像是近來很紅的鍵盤按鍵、脆皮捏捏樂，就連家中孩子都搶著玩。 文章目錄. 減壓神器還是毒玩具？"
+        },
+        {
+          "title": "經典益智玩具回家了！魔術方塊產線重返發源地匈牙利 - 蕃新聞",
+          "link": "https://n.yam.com/Article/20261117600301",
+          "published": "2026-11-17T12:59:20Z",
+          "summary": "魔術方塊上一次在匈牙利製造，要追溯到1980年代初期。 讓這次「回家之旅」成真的，是加拿大玩具巨頭Spin Master。這項策略性決定來自Spin Master—— ..."
+        },
+        {
+          "title": "迪士尼靠《玩具總動員5》與串流題材帶動獲利飆升同時啟動大規模節省約30億美元裁員計畫",
+          "link": "https://cmnews.com.tw/article/cmoneyairesearcher-ce9682cd-e283-11f1-abaf-662436d19eca",
+          "published": "2026-11-17T12:41:36Z",
+          "summary": "迪士尼在財報中指出，全球串流訂閱成長、重量級電影《玩具總動員5》及熱播節目（如American Horror Story: 13、Dancing with the Stars）為其娛樂部門注入 ..."
+        },
+        {
+          "title": "真多呂人形   寶可夢『江戶木目込人形咩利羊』用軟綿綿的可愛睡姿迎接羊年到來！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=116647",
+          "published": "2026-11-17T12:25:24Z",
+          "summary": "隨著年末的到來～專門製作木目込人形的「真多呂人形」將推出以《寶可夢》為主題的最新商品「江戶木目込人形咩利羊」來迎接羊年！參考售價為24200日圓， ..."
+        },
+        {
+          "title": "玩具藏5類隱形成長殺手醫生提醒：長期積聚或會影響大腦發育3招避開超標玩具 - 星島頭條",
+          "link": "https://www.stheadline.com/ohpama/3637991/%E7%8E%A9%E5%85%B7%E8%97%8F5%E9%A1%9E%E9%9A%B1%E5%BD%A2%E6%88%90%E9%95%B7%E6%AE%BA%E6%89%8B-%E9%86%AB%E7%94%9F%E6%8F%90%E9%86%92%E9%95%B7%E6%9C%9F%E7%A9%8D%E8%81%9A%E6%88%96%E6%9C%83%E5%BD%B1%E9%9F%BF%E5%A4%A7%E8%85%A6%E7%99%BC%E8%82%B2-3%E6%8B%9B%E9%81%BF%E9%96%8B%E8%B6%85%E6%A8%99%E7%8E%A9%E5%85%B7",
+          "published": "2026-11-17T11:41:16Z",
+          "summary": "玩具、文具暗藏毒素！ 台灣兒科醫生蔡慶昭（兒童 ..."
+        },
+        {
+          "title": "黃翠如獨帶蕭哈哈3日2夜大馬遊混亂但充滿愛附BB坐飛機安撫玩具 - Hk01",
+          "link": "https://www.hk01.com/%E8%A6%AA%E5%AD%90/60411637/%E9%BB%83%E7%BF%A0%E5%A6%82%E7%8D%A8%E5%B8%B6%E8%95%AD%E5%93%88%E5%93%883%E6%97%A52%E5%A4%9C%E5%A4%A7%E9%A6%AC%E9%81%8A-%E6%B7%B7%E4%BA%82%E4%BD%86%E5%85%85%E6%BB%BF%E6%84%9B-%E9%99%84bb%E5%9D%90%E9%A3%9B%E6%A9%9F%E5%AE%89%E6%92%AB%E7%8E%A9%E5%85%B7",
+          "published": "2026-11-17T11:25:50Z",
+          "summary": "實測4款不佔空間安靜玩具物理緩解起降耳壓痛. 相信為人父母，為小朋友「人生第一飛」緊張得幾乎失眠，紛紛準備奶、玩具、果汁及故事書等無限裝備，希望小朋友 ..."
+        },
+        {
+          "title": "萬代組裝模型30MF 系列預告多款新作多款奇幻生物、全新職業「元素精靈使」發表！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=116659",
+          "published": "2026-11-17T11:07:06Z",
+          "summary": "由日本BANDAI SPIRITS 公司旗下組裝模型品牌BANDAI HOBBY 發行的奇幻主題組裝模型『30 MINUTES FANTASY』系列，於今晚舉行的「第16回30 MINUTES LABEL新商品 ..."
+        },
+        {
+          "title": "《Persona》歷代主角迷你公仔!膠囊玩具12月起發售! – Collabo Cafe",
+          "link": "https://collabo-cafe.com/zh-hant/events/collabo/persona-defo-raba-keychain-capsule-toy-2026/",
+          "published": "2026-11-17T10:03:02Z",
+          "summary": "《Persona》歷代主角迷你公仔!膠囊玩具12月起發售! ... 從《女神異聞錄》到《女神異聞錄5》的歷代主角,首度登陸Takara Tomy Arts的Q版橡膠系列「DefoRaba!」!"
+        },
+        {
+          "title": "《U GO》X JPS Gallery X Signholic 送Marvel 角色親筆簽名相！ | 會員活動 - U Lifestyle",
+          "link": "https://www.ulifestyle.com.hk/member/campaign/51566/uhk/u-go-x-jps-gallery-x-signholic-%E9%80%81marvel-%E8%A7%92%E8%89%B2%E8%A6%AA%E7%AD%86%E7%B0%BD%E5%90%8D%E7%9B%B8",
+          "published": "2026-11-17T09:46:12Z",
+          "summary": "... 玩具. 🏛️ 藏家殿堂：展示極稀有絕版老玩具、漫畫原稿、認證簽名劇照及電影道具，部分珍品更開放購藏，等大家可以親手將傳奇帶返屋企！ 展覽更特別呈獻兩大 ..."
+        },
+        {
+          "title": "水豚先生標記飾品膠囊玩具因廣受好評,現正重新販售中! – Collabo Cafe",
+          "link": "https://collabo-cafe.com/zh-hant/events/collabo/kapibarasan-mejirushi-accessory-capsule-toy-resale-2026/",
+          "published": "2026-11-17T09:14:56Z",
+          "summary": "可作為雨傘手柄、寶特瓶及文具等標記使用的「卡皮巴拉先生」扭蛋「卡皮巴拉先生標記飾品」再度發售! 2024年5月發售的全6種款式,自2026年11月第2週起, ..."
+        },
+        {
+          "title": "《星際大戰》西斯光劍膠囊玩具12月起發售! – Collabo Cafe",
+          "link": "https://collabo-cafe.com/zh-hant/events/collabo/starwars-lightsaber-sith-diecast-capsule-toy-2026/?amp=1",
+          "published": "2026-11-17T08:55:40Z",
+          "summary": "以全彩塗裝及全鑄造工藝,精準重現擁有黑暗面紅色劍身的「西斯」光劍——《星際大戰》膠囊玩具「光劍-鑄造精選/西斯-」正式登場! 達斯·莫爾、杜庫伯爵、達斯·維 ..."
+        },
+        {
+          "title": "親子健康  全港學生瘋搶！韓星大熱「脆皮捏捏」驗出禁用防腐劑及超標塑化劑叮熱恐爆炸",
+          "link": "https://www.ohpama.com/1045420/%E7%94%9F%E6%B4%BB%E5%81%A5%E5%BA%B7/%E5%81%A5%E5%BA%B7%E7%99%BE%E7%A7%91/%E8%84%86%E7%9A%AE%E6%8D%8F%E6%8D%8F/",
+          "published": "2026-11-17T07:48:18Z",
+          "summary": "如果大家最近有留意小朋友、中學生甚至辦公室的最新潮流，一定聽過甚至見過一款主打「敲碎蠟殼、聲音療癒」的指尖解壓玩具——「脆皮捏捏」（又稱破蠟 ..."
+        },
+        {
+          "title": "紙箱迷宮、陀螺對戰搬進公園！花蓮親子嘉年華開箱共遊樂趣 - 是新聞YesMedia",
+          "link": "https://www.yesmedia.com.tw/%E7%B4%99%E7%AE%B1%E8%BF%B7%E5%AE%AE%E3%80%81%E9%99%80%E8%9E%BA%E5%B0%8D%E6%88%B0%E6%90%AC%E9%80%B2%E5%85%AC%E5%9C%92%EF%BC%81%E8%8A%B1%E8%93%AE%E8%A6%AA%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF%E9%96%8B/",
+          "published": "2026-11-17T07:42:41Z",
+          "summary": "花蓮「童玩上街・幸福開箱」親子後車廂市集，家庭利用車廂與攤位展示衣物、玩具等物品，在交流分享中增添親子共學樂趣。（圖／花蓮縣政府提供）."
+        },
+        {
+          "title": "寶可夢玩轉麥當勞 - 澳門日報",
+          "link": "https://www.macaodaily.com/wap/content/202611/17/c517395.html",
+          "published": "2026-11-17T07:02:09Z",
+          "summary": "而開心樂園餐本身的餐盒同樣暗藏玄機，掃描印包裝上的QR Code，即可開啟一款互動數碼遊戲，玩家需在虛擬教室與遊樂場中尋找隱藏的十五款Pokemon玩具。 這次寶可 ..."
+        },
+        {
+          "title": "高盛：雙十一GMV同比降2%，折扣加深、盈利承壓 - TradingView",
+          "link": "https://tw.tradingview.com/news/gelonghui:5df288d8bacdf:0/",
+          "published": "2026-11-17T06:50:55Z",
+          "summary": "品類與品牌温差明顯。星圖口徑下主要平台成交額同比增長4%，其中食品飲料增13%，美粧與運動户外各增4%，服飾、手機數碼、母嬰玩具、鞋包增0%至2%，家電持平、弱 ..."
         },
         {
           "title": "韓星也愛玩？爆紅減壓玩具「脆皮捏捏」暗藏劇毒！韓國消費者院揭半數含禁用防腐劑",
-          "link": "https://www.stheadline.com/food-safety/3637785/%E9%9F%93%E6%98%9F%E4%B9%9F%E6%84%9B%E7%8E%A9%E7%88%86%E7%B4%85%E6%B8%9B%E5%A3%93%E7%8E%A9%E5%85%B7%E8%84%86%E7%9A%AE%E6%8D%8F%E6%8D%8F%E6%9A%97%E8%97%8F%E5%8A%87%E6%AF%92%E9%9F%93%E5%9C%8B%E6%B6%88%E8%B2%BB%E8%80%85%E9%99%A2%E6%8F%AD%E5%8D%8A%E6%95%B8%E5%90%AB%E7%A6%81%E7%94%A8%E9%98%B2%E8%85%90%E5%8A%91%E5%A1%91%E5%8C%96%E5%8A%91%E8%B6%856%E5%80%8D",
-          "published": "2026-11-17T05:16:15Z",
-          "summary": "主打敲碎蠟殼清脆聲響（ASMR）的減壓玩具「脆皮捏捏」，近期獲IVE張員瑛及金秋天、ITZY Yuna等韓星拍片試玩加持，熱潮迅速席捲香港！然而，韓國消費者院在9 ..."
+          "link": "https://www.singtao.ca/7686564/2026-11-16/news-%E9%9F%93%E6%98%9F%E4%B9%9F%E6%84%9B%E7%8E%A9%EF%BC%9F%E7%88%86%E7%B4%85%E6%B8%9B%E5%A3%93%E7%8E%A9%E5%85%B7%E3%80%8C%E8%84%86%E7%9A%AE%E6%8D%8F%E6%8D%8F%E3%80%8D%E6%9A%97%E8%97%8F%E5%8A%87%E6%AF%92%EF%BC%81%E9%9F%93%E5%9C%8B%E6%B6%88%E8%B2%BB%E8%80%85%E9%99%A2%E6%8F%AD%E5%8D%8A%E6%95%B8%E5%90%AB%E7%A6%81%E7%94%A8%E9%98%B2%E8%85%90%E5%8A%91%E3%80%81%E5%A1%91%E5%8C%96%E5%8A%91%E8%B6%856%E5%80%8D/",
+          "published": "2026-11-17T05:47:02Z",
+          "summary": "主打敲碎蠟殼清脆聲響（ASMR）的減壓玩具「脆皮捏捏」，近期獲IVE張員瑛及金秋天、ITZY Yuna等韓星拍片試玩加持，熱潮迅速席捲香港！然而，韓國消費者院在."
         },
         {
-          "title": "哆啦A夢麵包店吊飾膠囊玩具將於11月第2週起發售! - コラボカフェ",
-          "link": "https://collabo-cafe.com/zh-hant/events/collabo/doraemon-bakery-charm-capsule-toy-2026/",
-          "published": "2026-11-17T05:07:12Z",
-          "summary": "改編自藤子・F・不二雄老師原作《哆啦A夢》的膠囊玩具「哆啦A夢烘焙魅力」,將哆啦A夢一行人製成可擠壓款麵包造型登場! 哆啦A夢、大雄、哆啦美、絆倒屋、安基 ..."
-        },
-        {
-          "title": "玩具恐成隱形成長殺手！醫揭5類型危害兒童發育傷智力、神經 - 聯合新聞網",
-          "link": "https://udn.com/news/story/7266/9883298",
-          "published": "2026-11-17T04:57:25Z",
-          "summary": "... 玩具，可能有重金屬、塑化劑或甲醛超標問題，恐成「隱形成長殺手」，並提醒五類該小心的玩具潛藏毒素，以及三種家長把關的方式。"
-        },
-        {
-          "title": "深圳APEC｜廣東IP進駐新聞中心文創盲盒「人手一袋」日日派罄外國記者：中國玩具有文化深度",
-          "link": "https://www.bastillepost.com/hongkong/article/17197448-%E6%B7%B1%E5%9C%B3apec%EF%BD%9C%E5%BB%A3%E6%9D%B1ip%E9%80%B2%E9%A7%90%E6%96%B0%E8%81%9E%E4%B8%AD%E5%BF%83-%E6%96%87%E5%89%B5%E7%9B%B2%E7%9B%92%E3%80%8C%E4%BA%BA%E6%89%8B%E4%B8%80%E8%A2%8B%E3%80%8D",
-          "published": "2026-11-17T04:00:35Z",
-          "summary": "談及盲盒內的文創玩具，Adil對融合傳統文化的龍舟造型最為印象深刻，亦喜愛電結他等創意設計。他直言，中國玩具與西方玩具截然不同，「例如芭比娃娃（Barbie） ..."
-        },
-        {
-          "title": "拉拉熊房間的毛絨睡晚會| San-x網",
-          "link": "https://www.san-x.co.jp/zh-TW/blog/2026-11-post-0533350/",
-          "published": "2026-11-17T01:19:06Z",
-          "summary": "這次，一個特別活動「拉拉熊室內的毛絨玩具睡眠派對」將在受歡迎的「拉拉熊房間」舉行，難以預訂！ 在夜晚會上，將於當天抽獎選擇的10 隻毛絨動物聚集在拉拉 ..."
-        },
-        {
-          "title": "美國玩具80%靠中國！川普關稅難撼動供應鏈，成本上升反讓進口商陷困境| 優分析",
-          "link": "https://today.line.me/tw/v3/article/eLpyYKg?view=topic&referral=TOPIC-2025worldtopic",
-          "published": "2026-11-17T00:18:37Z",
-          "summary": "美國玩具產業正面臨關稅與原物料成本上升的雙重壓力，但中國製造的供應鏈地位仍難以撼動。儘管川普政府透過提高關稅試圖調整進口結構，美國市場約80..."
-        },
-        {
-          "title": "狗狗疑誤吞發光玩具！屁屁「閃閃發亮」秒變螢火蟲 - 中時新聞網",
-          "link": "https://www.chinatimes.com/realtimenews/20261117000019-260402",
-          "published": "2026-11-16T22:23:12Z",
-          "summary": "... 玩具，導致夜晚遛狗屁股發光。（翻攝The Kiwi）. Facebook; Line; Threads; 複製 ... 影片中，飼主帶著博美狗外出遛狗，沒想到狗狗的屁股附近竟出現明顯的彩色燈光 ..."
-        },
-        {
-          "title": "寶可夢中心台北「聖誕節系列」開賣資訊一次看！土王雪橇皮卡丘玩偶萌翻！",
-          "link": "https://www.juksy.com/article/154837",
-          "published": "2026-11-16T21:30:50Z",
-          "summary": "... 玩具以及吉祥物，像是化身成聖誕樹的皮卡丘，還有皮卡丘與土王假裝是聖誕老人操控麋鹿拉雪橇的模樣，甚至還有皮卡丘「偷吃」、「沾滿雪」或與多邊獸II 玩具 ..."
-        },
-        {
-          "title": "手掌大小的電視機吉祥物重現《時空母艦》系列經典場景，預計11 月中旬發售",
-          "link": "https://www.haveagood-holiday.com/zh-TW/articles/tatsunoko-pro-tv-broadcast-mascot-vol2-time-bokan-series",
-          "published": "2026-11-16T19:12:41Z",
-          "summary": "由龍之子製作公司（Tatsunoko Production Co., Ltd.）出品與授權的《時空母艦》系列動畫，即將推出全新的轉蛋玩具。這款來自Toys Spirits 株式会社的「龍 ..."
-        },
-        {
-          "title": "「刃牙」系列推出首款「驚奇蛋」沐浴球，外型化身為圓球狀的比斯克·奧利巴 - Holiday Travel",
-          "link": "https://www.haveagood-holiday.com/zh-TW/articles/bikkura-tamago-baki-bath-bomb",
-          "published": "2026-11-16T19:12:40Z",
-          "summary": "這是Bandai 為紀念該系列於2026 年9 月達成連載35 週年而推出的吉祥物沐浴球。產品將在日本各地的藥妝店、量販店、玩具店及電器行的家用品與玩具區販售，開賣 ..."
-        },
-        {
-          "title": "美國玩具80%靠中國！川普關稅難撼動供應鏈，成本上升反讓進口商陷困境",
-          "link": "https://today.line.me/tw/v3/article/eLpyYKg",
-          "published": "2026-11-16T18:41:11Z",
-          "summary": "玩具業者Spin Master指出，布蘭特原油自2025年4月以來維持每桶約100美元，推升塑膠原料成本，公司已著手調整2027年產品設計與供應鏈流程。 相較大型品牌仍能透過 ..."
-        },
-        {
-          "title": "蒂羅爾巧克力標記飾品2 將於11月第二週起發售! – Collabo Cafe",
-          "link": "https://collabo-cafe.com/zh-hant/events/collabo/tirol-choco-capsule-toy-mejirushi-accessory-2-2026/",
-          "published": "2026-11-16T17:46:57Z",
-          "summary": "人氣巧克力「蒂羅爾巧克力」那可愛的包裝,已化身為萬代的膠囊玩具「標記飾品」第二彈,現已登場。 自2026年11月第2週起,已於全國各扭蛋販售點陸續發售,本次的 ..."
-        },
-        {
-          "title": "《燕雲十六聲》V2.4「滹沱」今（11/13）帶來週年重磅版本史詩大戰開打歡慶 ... - Paradaily｜遊戲",
-          "link": "https://news.para-daily.com/2026/11/16/where-winds-meet-new-patch-2-4-1116/",
-          "published": "2026-11-16T16:25:57Z",
-          "summary": "動漫玩具. ▽. 動漫影劇 · 模型玩具 · 動漫周邊 · 吉伊卡哇 · 廣播劇 · 偶像網紅. ▽. 日韓偶像 · Vtuber · Coser特報 · KIRABASE. ▽. KIRA專欄 · 星辰成員."
-        },
-        {
-          "title": "潮流玩家必收組合！Medicom Toy x Nike Air Force 1「BE@RBRICK」全新聯名系列發布",
-          "link": "https://www.cool-style.com.tw/wd2/archives/1364906-%E6%BD%AE%E6%B5%81%E7%8E%A9%E5%AE%B6%E5%BF%85%E6%94%B6%E7%B5%84%E5%90%88%EF%BC%81medicom-toy-x-nike-air-force-1%E3%80%8Cberbrick%E3%80%8D%E5%85%A8%E6%96%B0%E8%81%AF%E5%90%8D%E7%B3%BB%E5%88%97",
-          "published": "2026-11-16T15:57:58Z",
-          "summary": "在今年7 月份於網路上流出Medicom Toy x Nike Air Force 1「BE@RBRICK」消息後，稍早這個日本經典潮流玩具品牌MEDICOM TOY 終於親自坐實喜訊，表示為慶祝走 ..."
-        },
-        {
-          "title": "泰勒絲公布葛萊美兩大獎都入圍《玩具總動員5》主題曲將爭年度歌曲 - 自由娛樂",
-          "link": "https://ent.ltn.com.tw/news/breakingnews/5643026",
-          "published": "2026-11-16T15:42:27Z",
-          "summary": "... ，其中為電影《玩具總動員5》演唱的主題曲《I Knew It，I K."
-        },
-        {
-          "title": "Claynel「《鬼滅之刃》獪岳」無比例塗裝完成品，上弦之陸的狂傲坐姿立體化！ - 玩具人",
-          "link": "https://www.toy-people.com/?p=116520",
-          "published": "2026-11-16T14:47:31Z",
-          "summary": "日本模型製造商Claynel（クレーネル，原REVOLVE）推出人氣動漫《鬼滅之刃》主題的新商品——「獪岳」無比例塗裝完成品，參考售價為6800日圓，預計於2027年08月 ..."
-        },
-        {
-          "title": "台灣光罩前3季淨利達12.5億元，每股盈餘3.98元 - 優分析",
-          "link": "https://uanalyze.com.tw/articles/1135359639",
-          "published": "2026-11-16T14:38:51Z",
-          "summary": "美國玩具80%靠中國！川普關稅難撼動供應鏈，成本上升反讓進口商陷困境."
-        },
-        {
-          "title": "《三國志・戰略版》年度劇本「漢焰長明」攜年度武將「SP曹操」震撼登場全新「跨區遠征3.0 ...",
-          "link": "https://news.para-daily.com/2026/11/16/three-kingdoms-tactics-new-character-1116/",
-          "published": "2026-11-16T14:30:33Z",
-          "summary": "動漫玩具. ▽. 動漫影劇 · 模型玩具 · 動漫周邊 · 吉伊卡哇 · 廣播劇 · 偶像網紅 ... 動漫玩具 · 偶像網紅 · KIRABASE. close. Paradaily - 遊戲｜動漫｜3C科技."
+          "title": "首度移師海外！日本「TOMICA & PLARAIL 交通慶典」台北登場5大闖關體驗區一次玩",
+          "link": "https://www.mnews.tw/story/amp/20261117nm014",
+          "published": "2026-11-17T01:17:04Z",
+          "summary": "陪伴無數大小朋友成長的日本No.1玩具TOMICA 與PLARAIL，首度將日本獨家的交通主題盛事「TOMICA & PLARAIL 交通慶典」帶出海外！活動將於2026年12月17日 ..."
         }
       ]
     }
