@@ -1,49 +1,43 @@
 {
-  "updated": "2026-11-22T05:41:09Z",
+  "updated": "2026-11-23T06:25:54Z",
   "source": "Google Alerts",
   "sources": [
     {
       "id": "virtual-character",
       "name": "虛擬角色",
-      "count": 5,
-      "items": [
-        {
-          "title": "“Florida Joker” says he landed a GTA 6 voice role after years of public appeals",
-          "link": "https://mixed-news.com/en/gta-6-florida-joker-lawrence-sullivan-voice-credits/",
-          "published": "2026-11-21T19:50:11Z",
-          "summary": "Lawrence Sullivan, known as the Florida Joker, says he has a GTA 6 voice role. Rockstar's credits list a person with his name."
-        },
-        {
-          "title": "5 Best MMORPG Anime Like Sword Art Online to Binge in a Weekend, Ranked",
-          "link": "https://fandomwire.com/best-mmorpg-anime-like-sword-art-online-binge-in-weekend-ranked/",
-          "published": "2026-11-21T19:07:10Z",
-          "summary": "5 BOFURI Turns Virtual Reality Gaming Into a Fun Adventure. × Remove Ads. main character as seen in the anime Kaede Honjo as seen in the ..."
-        },
-        {
-          "title": "INNOVATECH Launching AI-Powered Motion Tracking System at CES, Bringing Intelligent ...",
-          "link": "https://markets.businessinsider.com/news/stocks/innovatech-launching-ai-powered-motion-tracking-system-at-ces-bringing-intelligent-vision-technology-to-interactive-experiences-1036789860",
-          "published": "2026-11-21T17:44:39Z",
-          "summary": "Virtual Avatars: Enables the integration of human pose data with virtual character animation, connecting physical movements with digital content."
-        },
-        {
-          "title": "Mesh2Motion Adds Props, Weight Painting and More | GameDev.net",
-          "link": "https://gamedev.net/news/mesh2motion-adds-props-weight-painting-and-more-r7270/",
-          "published": "2026-11-21T17:42:47Z",
-          "summary": "Virtual Character Design for Games and Interactive Media. Amazon · Book. View on Amazon. As an Amazon Associate I earn from qualifying purchases ..."
-        },
-        {
-          "title": "Journalist Plays GTA 6, Can't Find a Church, Calls Game 'Electronic Poison' - Men's Journal",
-          "link": "https://www.mensjournal.com/entertainment/journalist-plays-gta-6-cant-find-a-church-calls-game-electronic-poison",
-          "published": "2026-11-21T15:31:43Z",
-          "summary": "... character confess and repent, but Vice City had none ... After participating in a string of virtual misdeeds, he wanted his character to repent."
-        }
-      ]
+      "count": 0,
+      "items": []
     },
     {
       "id": "83tian",
       "name": "八三夭",
-      "count": 0,
-      "items": []
+      "count": 4,
+      "items": [
+        {
+          "title": "iPhone Duo 可以取代iPad 嗎？從追劇、閱讀到工作，五種情境怎麼選 - 蘋果仁",
+          "link": "https://applealmond.com/posts/333198",
+          "published": "2026-11-22T08:44:57Z",
+          "summary": "... 八三夭12/19，耶誕跨年活動一次看. Related Articles. PROLED MacBook Pro 開 ... 2027 台南好Young 卡司公布！玉澤演12/24、八三夭12/19，耶誕跨年 ..."
+        },
+        {
+          "title": "2027 台南好Young 卡司公布！玉澤演12/24、八三夭12/19，耶誕跨年活動一次看 - 蘋果仁",
+          "link": "https://applealmond.com/posts/332749",
+          "published": "2026-11-22T08:14:59Z",
+          "summary": "2027 台南好Young 卡司公布！玉澤演12/24、八三夭12/19，耶誕跨年活動一次看- 蘋果仁- 果仁iPhone/iOS/好物推薦科技媒體."
+        },
+        {
+          "title": "Google Gemini 黑五優惠登場！既有用戶選年繳方案，最高可享5 折優惠 - 蘋果仁",
+          "link": "https://applealmond.com/posts/333199",
+          "published": "2026-11-22T08:01:09Z",
+          "summary": "... 2027 台南好Young 卡司公布！玉澤演12/24、八三夭12/19，耶誕跨年活動一次看. 2026 年11 月22 日. iOS 27.3 iPhone Duo · iOS 27.3 讓iPhone Duo 更好用 ..."
+        },
+        {
+          "title": "2026 金馬獎表演嘉賓、卡司名單：9m88、李佳薇獻唱，完整表演卡司陣容一次看 - 蘋果仁",
+          "link": "https://applealmond.com/posts/333309",
+          "published": "2026-11-22T07:22:55Z",
+          "summary": "... 2027 台南好Young 卡司公布！玉澤演12/24、八三夭12/19，耶誕跨年活動一次看. 2026 年11 月22 日. NBA NBA 轉播NBA 直播NBA 線上看NBA LIVE NBA 賽事鵜鶘 ..."
+        }
+      ]
     },
     {
       "id": "toys",
@@ -51,124 +45,124 @@
       "count": 20,
       "items": [
         {
-          "title": "市政新聞-第11屆「金趣咪獎」展現跨世代創意國小生手作庫巴龜殼木玩超吸睛! - 新北市政府",
-          "link": "https://www.ntpc.gov.tw/ch/home.jsp?id=e8ca970cde5c00e1&dataserno=3417178144296b21b700b540a03f4182",
-          "published": "2026-11-21T23:16:17Z",
-          "summary": "涵蓋益智遊戲、復古童玩，甚至還有模擬中世紀戰爭等有趣玩具，新北市社會局長李美珍說，本屆競賽共吸引全國95件優秀作品投件，經第一階段書面初審後，共有80組跨 ..."
+          "title": "數碼寶貝與塔麻可吉交換身分！BANDAI「祝30 週年紀念套組！！DIGIMON ...",
+          "link": "https://www.toy-people.com/?p=116857",
+          "published": "2026-11-23T04:12:40Z",
+          "summary": "日本玩具大廠BANDAI 為慶祝旗下兩大電子寵物品牌迎接誕生30 週年，推出「祝30 週年紀念套組！！DIGIMON TAMAGOTCHI＆TAMAGOTCHI DIGIMON」，讓數碼寶貝與塔 ..."
         },
         {
-          "title": "變身麵條師！玩轉三連罐超療癒   #史萊姆#兒童玩具#親子互動 - YouTube",
-          "link": "https://www.youtube.com/shorts/JvVTts8h1xo",
-          "published": "2026-11-21T22:59:44Z",
-          "summary": "變身麵條師！玩轉三連罐超療癒   #史萊姆 #兒童玩具 #親子互動. Like. 0. Share. Please sign in. This helps protect our community."
+          "title": "GTA 6預期與AI發展夾擊亞洲遊戲股財報表現兩樣情 - 商傳媒",
+          "link": "https://sunmedia.tw/news/finance/1795387200-GTA%206%E9%A0%90%E6%9C%9F%E8%88%87AI%E7%99%BC%E5%B1%95%E5%A4%BE%E6%93%8A%E3%80%80%E4%BA%9E%E6%B4%B2%E9%81%8A%E6%88%B2%E8%82%A1%E8%B2%A1%E5%A0%B1%E8%A1%A8%E7%8F%BE%E5%85%A9%E6%A8%A3%E6%83%85",
+          "published": "2026-11-23T02:25:18Z",
+          "summary": "寵物玩具1 天前. 小寵物益智木製玩具熱銷缺貨零食變尋寶遊戲激發覓食天性. 小寵物益智木製玩具熱銷缺貨零食變尋寶遊戲激發覓 · 肺癌1 天前. 英國團隊攻克罕見 ..."
         },
         {
-          "title": "Amazon 黑色星期五2026｜SSD、硬碟、耳機、Kindle 等6 類攻略 - KONGGOK",
-          "link": "https://konggokhk.com/amazon_black_friday_2026_hong_kong_ssd_deals/",
-          "published": "2026-11-21T21:24:31Z",
-          "summary": "... 玩具按套裝編號送禮預留運送時間兩日各追加兩輪香港時間四個開賣時段先設定香港地址對比實付總額Amazon 黑色星期五常見問題Amazon 黑五活動詳情. Amazon 美國 ..."
+          "title": "【異動股】綜合板塊低開,群興玩具(002575.CN)跌10.04% 原創 - 財華網",
+          "link": "https://www.finet.hk/newscenter/news_content/6b03976050d4295631647449",
+          "published": "2026-11-23T01:40:55Z",
+          "summary": "【財華社訊】今日早盤，截至發稿，綜合板塊低開。群興玩具(002575.CN)跌10.04%報4.03元，毅昌科技(002420.CN)跌10.02%報5.21元，綜藝股份(600770."
         },
         {
-          "title": "「金趣咪獎」木育玩具創作賽國小生手作庫巴龜殼木玩超吸睛| 台灣好新聞 - LINE TODAY",
-          "link": "https://today.line.me/tw/v3/article/LXexyma",
-          "published": "2026-11-21T19:53:50Z",
-          "summary": "「金趣咪獎」木育玩具創作競賽今（21）日於新北市政府行政大樓6樓大禮堂登場！涵蓋益智遊戲、復古童玩，甚至還有模擬中世紀戰爭等有趣玩具，新北社..."
+          "title": "水槍行搶是哪招！花頭套怪客闖郵局噴不明液體不敵行員抵抗隔天落網 - 知新聞",
+          "link": "https://www.knews.com.tw/news/8642EA17FBDC2B9E7179A2A76594E89E",
+          "published": "2026-11-23T01:19:24Z",
+          "summary": "... 玩具水槍，闖入郵局後朝行員噴灑並企圖翻越櫃檯劫掠；所幸行員機警奮力反抗，犯嫌未能得逞隨即倉皇逃逸。警方獲報後跨區追查，在犯嫌逃往雲林偏僻村落棄車斷 ..."
         },
         {
-          "title": "美國進口玩具包裹揭藏4隻瀕危活龜 - 東方日報",
-          "link": "https://orientaldaily.on.cc/content/%E8%A6%81%E8%81%9E%E6%B8%AF%E8%81%9E/odn-20261122-1122_00176_225/%E7%BE%8E%E5%9C%8B%E9%80%B2%E5%8F%A3%E7%8E%A9%E5%85%B7%E5%8C%85%E8%A3%B9--%E6%8F%AD%E8%97%8F4%E9%9A%BB%E7%80%95%E5%8D%B1%E6%B4%BB%E9%BE%9C",
-          "published": "2026-11-21T19:40:22Z",
-          "summary": "【本報訊】海關透過風險評估，昨日在香港國際機場檢查一件由美國進口至香港、報稱玩具禮盒的包裹。經檢查後，人員於包裹中發現4隻懷疑受管制屬瀕危物種的活 ..."
+          "title": "投資者劉軍蝕34%沽西貢舖玩具製造商接貨曾1.2億買荃灣麥當勞 - Hk01",
+          "link": "https://www.hk01.com/%E5%9C%B0%E7%94%A2%E6%A8%93%E5%B8%82/60413254/%E6%8A%95%E8%B3%87%E8%80%85%E5%8A%89%E8%BB%8D%E8%9D%9534-%E6%B2%BD%E8%A5%BF%E8%B2%A2%E8%88%96-%E7%8E%A9%E5%85%B7%E8%A3%BD%E9%80%A0%E5%95%86%E6%8E%A5%E8%B2%A8-%E6%9B%BE1-2%E5%84%84%E8%B2%B7%E8%8D%83%E7%81%A3%E9%BA%A5%E7%95%B6%E5%8B%9E",
+          "published": "2026-11-23T00:07:47Z",
+          "summary": "而接手的新買家，原來是近期不乏大手掃貨玩具製造商顏乙清！ 上述成交個案為西貢花園地下9、10號舖，總面積約3,380平方呎。該舖經確認以約6,300 ..."
         },
         {
-          "title": "「金趣咪獎」木育玩具創作賽國小生手作庫巴龜殼木玩超吸睛 - 蕃新聞",
-          "link": "https://n.yam.com/Article/20261121302660",
-          "published": "2026-11-21T19:29:48Z",
-          "summary": "記者黃村杉／新北報導「金趣咪獎」木育玩具創作競賽今（21）日於新北市政府行政大樓6樓大禮堂登場！涵."
+          "title": "貓半夜暴衝跑酷是怎樣？天性使然但老貓突然變這樣要留意 - 報新聞",
+          "link": "https://www.contentplatform.info/articles/571228/%E8%B2%93%E5%8D%8A%E5%A4%9C%E6%9A%B4%E8%A1%9D%E8%B7%91%E9%85%B7%E6%98%AF%E6%80%8E%E6%A8%A3%EF%BC%9F%E5%A4%A9%E6%80%A7%E4%BD%BF%E7%84%B6-%E4%BD%86%E8%80%81%E8%B2%93%E7%AA%81%E7%84%B6%E8%AE%8A%E9%80%99/",
+          "published": "2026-11-22T23:12:27Z",
+          "summary": "A：暴衝模式突然改變、看起來在疼痛或害怕，或老貓突然開始暴衝，都建議請獸醫檢查。 Q：怎麼讓貓晚上不要一直暴衝？ A：白天多陪玩、更換玩具、使用益智餵食 ..."
         },
         {
-          "title": "「金趣咪獎」木育玩具創作競賽新北登場 - Yahoo新聞",
-          "link": "https://tw.news.yahoo.com/%E9%87%91%E8%B6%A3%E5%92%AA%E7%8D%8E-%E6%9C%A8%E8%82%B2%E7%8E%A9%E5%85%B7%E5%89%B5%E4%BD%9C%E7%AB%B6%E8%B3%BD%E6%96%B0%E5%8C%97%E7%99%BB%E5%A0%B4-064800670.html",
-          "published": "2026-11-21T19:08:31Z",
-          "summary": "「希望實踐環保之餘，也能做出創新、共造美好回憶」。 廣告. 廣告. 李美珍表示，感謝臺灣玩具圖書館協會每年持續辦理競賽，成為全國木質玩具創作 ..."
+          "title": "加拿大勒令召回多款含石棉玩具家長須慎防兒童接觸",
+          "link": "https://www.singtao.ca/7692029/2026-11-22/news-%E5%8A%A0%E6%8B%BF%E5%A4%A7%E5%8B%92%E4%BB%A4%E5%8F%AC%E5%9B%9E%E5%A4%9A%E6%AC%BE%E5%90%AB%E7%9F%B3%E6%A3%89%E7%8E%A9%E5%85%B7%E3%80%80%E5%AE%B6%E9%95%B7%E9%A0%88%E6%85%8E%E9%98%B2%E5%85%92%E7%AB%A5%E6%8E%A5%E8%A7%B8/",
+          "published": "2026-11-22T22:35:01Z",
+          "summary": "【星島綜合報道】加拿大聯邦政府下令召回多款內含沙粒的擠壓玩具，原因是檢測發現產品含有超出微量水平的石棉。當局警告，玩具一旦破損，石棉纖維可能散播至 ..."
         },
         {
-          "title": "金趣咪獎木育玩具賽新北登場國小生手作庫巴龜殼吸睛| 中華日報 - LINE TODAY",
-          "link": "https://today.line.me/tw/v3/article/9m3xjMg",
-          "published": "2026-11-21T18:49:13Z",
-          "summary": "記者蔡琇惠／新北報導「金趣咪獎」木育玩具創作競賽於今（21）日在新北市政府行政大樓6樓大禮堂登場！涵蓋益智遊戲、復古童玩，甚至還有模擬中世..."
+          "title": "知多啲：調低音樂光線「感官寧靜」購物- 20261123 - BEAUTY & STYLE - 明報Our Lifestyle",
+          "link": "https://ol.mingpao.com/ldy/beautystyle/fitness/20261123/1795371120185/%E7%9F%A5%E5%A4%9A%E5%95%B2-%E8%AA%BF%E4%BD%8E%E9%9F%B3%E6%A8%82%E5%85%89%E7%B7%9A-%E3%80%8C%E6%84%9F%E5%AE%98%E5%AF%A7%E9%9D%9C%E3%80%8D%E8%B3%BC%E7%89%A9",
+          "published": "2026-11-22T21:22:24Z",
+          "summary": "另外，有些博物館、展覽館可借用感官工具包，包括降噪耳機、太陽眼鏡、感官玩具等，「大英博物館設計了一份感官地圖，標示館內哪些地方音量較大、人流較多 ..."
         },
         {
-          "title": "「金趣咪獎」木育競賽跨代共創玩出巧思| 青年日報 - LINE TODAY",
-          "link": "https://today.line.me/tw/v3/article/MLBWXrM",
-          "published": "2026-11-21T18:23:28Z",
-          "summary": "涵蓋益智遊戲、復古童玩，甚至還有模擬中世紀戰爭等有趣玩具。新北市社會局長李美珍表示，本屆競賽共吸引全國95件優秀作品投件，經第一階段書面初審後，共有80 ..."
+          "title": "玩具水槍裝辣椒水搶郵局！58歲男假車牌躲查緝21小時內遭逮捕羈押 - Yahoo新聞",
+          "link": "https://tw.news.yahoo.com/%E7%8E%A9%E5%85%B7%E6%B0%B4%E6%A7%8D%E8%A3%9D%E8%BE%A3%E6%A4%92%E6%B0%B4%E6%90%B6%E9%83%B5%E5%B1%80-58%E6%AD%B2%E7%94%B7%E5%81%87%E8%BB%8A%E7%89%8C%E8%BA%B2%E6%9F%A5%E7%B7%9D-21%E5%B0%8F%E6%99%82%E5%85%A7%E9%81%AD%E9%80%AE%E6%8D%95%E7%BE%88%E6%8A%BC-090916920.html",
+          "published": "2026-11-22T21:18:03Z",
+          "summary": "嘉義縣警察局水上分局接獲報案後，調閱沿線監視器追查，發現沈男騎乘的機車沒有懸掛車牌，逃逸途中還利用廂型車載運機車，而廂型車掛的是假車牌， ..."
         },
         {
-          "title": "「體育女神」黃捷穎威到上海設計公仔「MMPA姆帕」殺入玩具界 - 東周刊",
-          "link": "https://eastweek.stheadline.com/hottopic/22856/%E9%AB%94%E8%82%B2%E5%A5%B3%E7%A5%9E%E9%BB%83%E6%8D%B7%E7%A9%8E%E5%A8%81%E5%88%B0%E4%B8%8A%E6%B5%B7-%E8%A8%AD%E8%A8%88%E5%85%AC%E4%BB%94MMPA%E5%A7%86%E5%B8%95%E6%AE%BA%E5%85%A5%E7%8E%A9%E5%85%B7%E7%95%8C",
-          "published": "2026-11-21T17:34:52Z",
-          "summary": "雖然她上身穿着外套，但下身卻大曬白滑長腿，非常吸睛！期間，她走進一間精品店，並且對一些具有香港特色的產品愛不釋手，最後她購買了一架玩具「富豪雪糕車 ..."
+          "title": "機場港鐵感官友善措施「減敏」安撫躁動不安- 20261123 - BEAUTY & STYLE - OL - 明報",
+          "link": "https://ol.mingpao.com/ldy/beautystyle/fitness/20261123/1795371119822/%E6%A9%9F%E5%A0%B4%E6%B8%AF%E9%90%B5%E6%84%9F%E5%AE%98%E5%8F%8B%E5%96%84%E6%8E%AA%E6%96%BD-%E3%80%8C%E6%B8%9B%E6%95%8F%E3%80%8D%E5%AE%89%E6%92%AB%E8%BA%81%E5%8B%95%E4%B8%8D%E5%AE%89",
+          "published": "2026-11-22T20:33:58Z",
+          "summary": "另外在出遊時，準備孩子喜歡的食物及玩具，若他們對聲音、影像較敏感，可預先準備降噪耳機和眼罩；亦可預先聯絡航空公司，盡量安排相對安靜的座位或提早上機。"
         },
         {
-          "title": "新北市舉辦第11屆金趣咪獎木育玩具創作競賽 - LIFE 生活網",
-          "link": "https://life.tw/article/%E6%96%B0%E5%8C%97%E5%B8%82%E8%88%89%E8%BE%A6%E7%AC%AC11%E5%B1%86%E9%87%91%E8%B6%A3%E5%92%AA%E7%8D%8E-%E6%9C%A8%E8%82%B2%E7%8E%A9%E5%85%B7%E5%89%B5%E4%BD%9C%E7%AB%B6%E8%B3%BD-3229163",
-          "published": "2026-11-21T16:02:54Z",
-          "summary": "來自桃園八德的大忠及大勇國小的學生，發想出以瑪莉歐為主題的遊戲，讓玩家在運動中享受玩具的樂趣。至善社會福利基金會的作品則透過在地材料製作出挑戰堆疊的 ..."
-        },
-        {
-          "title": "第11屆「金趣咪獎」展現跨世代創意國小生手作庫巴龜殼木玩超吸睛 - 民眾新聞網",
-          "link": "https://mypeoplevol.com/2026/local/121305/",
-          "published": "2026-11-21T16:01:26Z",
-          "summary": "「金趣咪獎」木育玩具創作競賽21日在新北市府6樓大禮堂登場，今年參賽作品涵蓋益智遊戲、復古童玩，還有模擬中世紀戰爭等有趣玩具，其中頗受矚目的作品包括 ..."
-        },
-        {
-          "title": "BANDAI轉蛋《假面騎士》「DUAL FACE KAMEN RIDER vol.2」ORGA - 玩具人",
-          "link": "https://www.toy-people.com/?p=116812",
-          "published": "2026-11-21T15:58:55Z",
-          "summary": "日本BANDAI玩具公司轉蛋事業部GASHAPON繼先前推出的「DUALFACEKAMENRIDER」後，推出系列第二彈「DUALFACEKAMENRIDERvol.2」！全套共三款，參考售價為一 ..."
-        },
-        {
-          "title": "感謝發明這個粘粘球的人，終於不再追著薅我頭髮了  每天睡醒就自己在那薅 - YouTube",
-          "link": "https://www.youtube.com/shorts/-6lwkjnUyPg",
-          "published": "2026-11-21T15:44:42Z",
-          "summary": "感謝發明這個粘粘球的人，終於不再追著薅我頭髮了  每天睡醒就自己在那薅，太省媽了，順便還鍛鍊了小手精細動作跟專注力#策略粘粘球 #粘粘球玩具 #益智早教 ..."
-        },
-        {
-          "title": "老牌玩具家族6300萬購西貢鐵約舖原業主損手逾3200萬離場 - 星島頭條",
-          "link": "https://www.stheadline.com/realtime-property/3639630/%E8%80%81%E7%89%8C%E7%8E%A9%E5%85%B7%E5%AE%B6%E6%97%8F6300%E8%90%AC%E8%B3%BC%E8%A5%BF%E8%B2%A2%E9%90%B5%E7%B4%84%E8%88%96-%E5%8E%9F%E6%A5%AD%E4%B8%BB%E6%90%8D%E6%89%8B%E9%80%BE3200%E8%90%AC%E9%9B%A2%E5%A0%B4",
-          "published": "2026-11-21T15:44:29Z",
-          "summary": "玩具製造商美昌集團創辦人顏氏家族再度入市，最新以6300萬元購入西貢花園一個由滙豐銀行租用多年的相連舖位，原業主為資深投資者劉軍，持貨3年虧損逾3000萬 ..."
-        },
-        {
-          "title": "小寵物益智木製玩具熱銷缺貨零食變尋寶遊戲激發覓食天性 - LIFE 生活網",
-          "link": "https://life.tw/article/%E5%B0%8F%E5%AF%B5%E7%89%A9%E7%9B%8A%E6%99%BA%E6%9C%A8%E8%A3%BD%E7%8E%A9%E5%85%B7%E7%86%B1%E9%8A%B7%E7%BC%BA%E8%B2%A8-%E9%9B%B6%E9%A3%9F%E8%AE%8A%E5%B0%8B%E5%AF%B6%E9%81%8A%E6%88%B2%E6%BF%80%E7%99%BC%E8%A6%93%E9%A3%9F%E5%A4%A9%E6%80%A7-3229139",
-          "published": "2026-11-21T15:40:41Z",
-          "summary": "針對兔子、天竺鼠及倉鼠等小型寵物設計的益智玩具近期掀起飼主關注。寵物用品品牌Small Pet Select 推出一款名為「Wooden Lid Puzzle」的木製益智玩具，主打 ..."
-        },
-        {
-          "title": "機場檢查美國進口玩具禮盒發現4隻受管制瀕危活龜 - 即時新聞",
-          "link": "https://hk.on.cc/hk/bkn/cnt/news/20261121/bkn-20261121155015800-1121_00822_001.html",
-          "published": "2026-11-21T15:34:12Z",
-          "summary": "人員今日透過風險評估，檢查一件由美國進口至香港、報稱玩具禮盒的包裹。經檢查後，人員於包裹中發現該批懷疑受管制屬瀕危物種的活龜。案件已轉交漁護署跟進 ..."
-        },
-        {
-          "title": "史迪奇化身漫威最強反派！Hot Toys 推出「末日博士史迪奇」收藏模型全球限量首發400 組| 上報",
-          "link": "https://today.line.me/tw/v3/article/MLBx8g0",
-          "published": "2026-11-21T15:19:46Z",
-          "summary": "迪士尼人氣角色史迪奇（Stitch）竟然化身漫威反派「末日博士」！Hot Toys 公開全新收藏級角色模型「Stitch as Doctor..."
-        },
-        {
-          "title": "母親車禍！ 家中經濟陷困境美12歲童賣玩具付帳單 - 民視新聞",
-          "link": "https://www.ftvnews.com.tw/news/detail/2026B21I10M1",
-          "published": "2026-11-21T15:07:52Z",
-          "summary": "... 玩具，幫忙支付帳單。短短一場拍賣，募 ..."
+          "title": "知多啲：感官玩具戒咬指甲? 尋焦慮源頭治本- 20261123 - BEAUTY & STYLE - OL",
+          "link": "https://ol.mingpao.com/ldy/beautystyle/fitness/20261123/1795371120318/%E7%9F%A5%E5%A4%9A%E5%95%B2-%E6%84%9F%E5%AE%98%E7%8E%A9%E5%85%B7%E6%88%92%E5%92%AC%E6%8C%87%E7%94%B2-%E5%B0%8B%E7%84%A6%E6%85%AE%E6%BA%90%E9%A0%AD%E6%B2%BB%E6%9C%AC",
+          "published": "2026-11-22T20:32:23Z",
+          "summary": "【明報專訊】感官玩具有助自閉症人士安撫情緒，提升ADHD人士專注力。近期在社交媒體更流行起感官玩具「Tangle扭扭樂」，有網民稱有助戒咬指甲、撕手皮、拔 ..."
         },
         {
           "title": "史迪奇化身漫威最強反派！Hot Toys 推出「末日博士史迪奇」收藏模型全球限量首發400 組",
-          "link": "https://www.upmedia.mg/tw/game/toy/274970",
-          "published": "2026-11-21T15:04:07Z",
-          "summary": "迪士尼人氣角色史迪奇（Stitch）竟然化身漫威反派「末日博士」！Hot Toys 公開全新收藏級角色模型「Stitch as Doctor D..."
+          "link": "https://today.line.me/tw/v3/posts/list/article/MLBx8g0",
+          "published": "2026-11-22T18:32:02Z",
+          "summary": "0則貼文| 快來參與LINE TODAY討論牆上的討論| 史迪奇化身漫威最強反派！Hot Toys 推出「末日博士史迪奇」收藏模型全球..."
+        },
+        {
+          "title": "ORIS 《哆啦A夢》全球限量1000支聯名機械錶經典元素打造精緻之作！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=116851",
+          "published": "2026-11-22T17:59:57Z",
+          "summary": "瑞士鐘錶品牌ORIS（豪利時），近日宣布與日本長青國民作品《哆啦A夢》合作，推出以其為靈感設計的「哆啦A夢限定版」聯名機械錶，打造出兼具正式穿搭氣息又 ..."
+        },
+        {
+          "title": "#每天必玩的玩具#趣味糖果玩具#解压玩具的玩法#欢乐糖果时刻- YouTube",
+          "link": "https://www.youtube.com/watch?v=o1Cs_l3_2EM",
+          "published": "2026-11-22T17:31:42Z",
+          "summary": "Share your videos with friends, family, and the world."
+        },
+        {
+          "title": "英国“童心大人”暴增圣诞玩具每5件就有1件卖给成人 - 星洲日报",
+          "link": "https://www.sinchew.com.my/news/20261122/international/8104434?variant=zh-hant",
+          "published": "2026-11-22T16:20:49Z",
+          "summary": "英国玩具市场今年也迎来10年来最快的成长速度，2026年前9个月整体销售成长13%，这波成长主要由成人需求带动。Circana数据显示，目前约20%的玩具是买给18岁以上 ..."
+        },
+        {
+          "title": "寶寶爬行、搬搬樂歡樂開賽萌娃逗樂全場 - 馬祖日報",
+          "link": "https://www.matsu-news.gov.tw/news/article/246327",
+          "published": "2026-11-22T16:02:29Z",
+          "summary": "最可愛的比賽登場！連江縣兒童發展篩檢暨寶寶爬行、搬搬樂活動22日在縣民樂活館舉行，吸引大批親子家庭參與。賽場上家長各出奇招，拿著玩具、奶瓶甚至手機 ..."
+        },
+        {
+          "title": "李彤「外交短評」馬斯克小兒子｢玩具天堂｣道出中國製造的實力。課堂到工廠 - YouTube",
+          "link": "https://www.youtube.com/watch?v=thcvNJqKPWg",
+          "published": "2026-11-22T15:49:19Z",
+          "summary": "李彤「外交短評」馬斯克小兒子｢玩具天堂｣道出中國製造的實力。課堂到工廠，馬來西亞看好中國經驗，APEC機械人：「我想像中2100年的樣子。」 11月23日."
+        },
+        {
+          "title": "香港Gundam Base一周年活動開跑！！教你免費換限定禮物！！#travel #vlog #旅行 ...",
+          "link": "https://youtu.be/9hBWRswmfkU?si=GAz6hv3s105ExoNi",
+          "published": "2026-11-22T15:26:11Z",
+          "summary": "... 玩具、模型、旅遊相關資訊！！！！ 我的夢想是寓工作於娛樂，透過影片分享改變世界一點點。 你 ... 玩具是Bandai的高達/鋼彈（Gundam Gunpla)"
+        },
+        {
+          "title": "美國成年人越來越愛買玩具無孩家庭購買量更高 - 大紀元",
+          "link": "https://www.epochtimes.com/b5/26/11/22/n14893249.htm",
+          "published": "2026-11-22T14:39:25Z",
+          "summary": "美國成年人購買玩具的風潮日益顯著，截至今年夏季，沒有孩子的家庭在玩具和遊戲上的購買量已超過了有孩子的家庭。這股「Kidult」（由英文kid「小孩」 ..."
+        },
+        {
+          "title": "美國成年人越來越愛買玩具無孩家庭購買量更高 - 大紀元",
+          "link": "https://www.epochtimes.com/b5/26/11/22/n14893249.htm/amp",
+          "published": "2026-11-22T14:27:23Z",
+          "summary": "【大紀元2026年11月22日訊】（大紀元記者王蘭報導）美國成年人購買玩具的風潮日益顯著，截至今年夏季，沒有孩子的家庭在玩具和遊戲上的購買量已超過了有孩子 ..."
         }
       ]
     }
