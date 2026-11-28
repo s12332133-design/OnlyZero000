@@ -1,140 +1,103 @@
 {
-  "updated": "2026-11-27T07:20:15Z",
+  "updated": "2026-11-28T06:52:11Z",
   "source": "Google Alerts",
   "sources": [
     {
       "id": "virtual-character",
       "name": "虛擬角色",
-      "count": 17,
+      "count": 14,
       "items": [
         {
-          "title": "After virtual idols, could fully AI-generated stars be K-pop's next frontier? - The Kathmandu Post",
-          "link": "https://kathmandupost.com/art-culture/2026/11/27/after-virtual-idols-could-fully-ai-generated-stars-be-k-pop-s-next-frontier",
-          "published": "2026-11-27T04:19:58Z",
-          "summary": "Synthetic acts such as Seoria, H3arus test whether K-pop fandom can form around idols with no human performer behind the character."
+          "title": "Two Players Control One Body In Split Brain Samsara - Bleeding Cool News",
+          "link": "https://bleedingcool.com/games/two-players-control-one-body-in-split-brain-samsara/",
+          "published": "2026-11-27T23:55:10Z",
+          "summary": "Two players control the same character online, with one handling the physical world and the other navigating the spiritual realm. Split Brain ..."
         },
         {
-          "title": "Mnet, Bandai Namco Launch Virtual Idol Survival - Wisevoter",
-          "link": "https://wisevoter.com/world/2026/11/27/mnet-bandai-namco-virtual-idol-survival",
-          "published": "2026-11-27T03:56:47Z",
-          "summary": "... character intellectual property and virtual content capabilities. It reflects growing interest in virtual performers within the K-pop industry."
+          "title": "Millions of private conversations with AI risk being put up for sale. - Vietnam.vn",
+          "link": "https://www.vietnam.vn/en/nguy-co-hang-trieu-cuoc-tro-chuyen-rieng-tu-voi-ai-bi-rao-ban",
+          "published": "2026-11-27T19:38:39Z",
+          "summary": "... Character AI platform and its trove of personal data belonging to ... Launched in 2022, Character.AI attracts users with its ability to create virtual ..."
         },
         {
-          "title": "Bryan Stenler Studios Opens Its Award-Winning Virtual Talent Portfolio for Global Brand Licensing",
-          "link": "https://www.prlog.org/13185963-bryan-stenler-studios-opens-its-award-winning-virtual-talent-portfolio-for-global-brand-licensing.html",
-          "published": "2026-11-27T03:21:07Z",
-          "summary": "... virtual performers represent a character-driven approach to digital talent and commercial storytelling. International editorial recognition ..."
+          "title": "World Anvil Launches Redesigned RPG Campaign Manager with New Virtual Tabletop",
+          "link": "https://www.prlog.org/13186168-world-anvil-launches-redesigned-rpg-campaign-manager-with-new-virtual-tabletop.html",
+          "published": "2026-11-27T19:36:55Z",
+          "summary": "Streamlined session prep, real-time Virtual Gaming Table, and automatic session reports support online and in-person play; players can participate ..."
         },
         {
-          "title": "Mnet teams up with Japan's Bandai Namco to produce virtual idol survival show - K-VIBE",
-          "link": "https://korean-vibe.com/article/1065573317428428",
-          "published": "2026-11-27T02:52:44Z",
-          "summary": "... character IP and virtual content capabilities, we aim to offer viewers a new level of entertainment and immersion.\" [Copyright c K-VIBE. All ..."
+          "title": "GTA 6 Fans are Paying to Chat with AI Versions of Lucia, Creators are Cashing In",
+          "link": "https://www.analyticsinsight.net/news/gta-6-fans-are-paying-to-chat-with-ai-versions-of-lucia-creators-are-cashing-in",
+          "published": "2026-11-27T18:15:33Z",
+          "summary": "Some creators are making thousands of dollars by offering paid chats, virtual dates and personal content. ... character called Vicky Torres. She ..."
         },
         {
-          "title": "Mnet and Bandai Namco to launch virtual K-pop boy group survival show in 2028 | allkpop",
-          "link": "https://www.allkpop.com/article/2026/11/mnet-and-bandai-namco-to-launch-virtual-k-pop-boy-group-survival-show-in-2028",
-          "published": "2026-11-27T02:50:02Z",
-          "summary": "... character IP and virtual content, we will show the distinct charm of virtual idols and bring viewers a new kind of fun and immersion.\" The ..."
+          "title": "Apple removes Talkie AI chat app over sexual content with children - TechTimes Vietnam",
+          "link": "https://www.techtimes.vn/en/talkie-app-apple-removes-talkie-ai-chat-app-over-sexual-content-with-children/",
+          "published": "2026-11-27T17:09:31Z",
+          "summary": "... virtual character refused to accept a “no” from a girl, effectively conditioning the child for sexual interaction. A character profile even warned ..."
         },
         {
-          "title": "Mnet, Bandai Namco Collaborate on 2028 Virtual Idol Survival",
-          "link": "https://www.chosun.com/english/kpop-culture-en/2026/11/27/3ZFHUTEO7BAMPEMWHQXTHH3NYE/",
-          "published": "2026-11-27T02:49:03Z",
-          "summary": "Bandai Namco Entertainment has also built expertise through character IPs such as the 'Idolmaster' series, Gundam series, Dragon Ball series, and ..."
+          "title": "What is Talkie? Chinese-developed AI chatbot removed from Apple App store - Mint",
+          "link": "https://www.livemint.com/companies/news/what-is-talkie-chinese-developed-ai-chatbot-removed-from-apple-app-store-why-has-tech-giant-taken-this-decision-11795792987366.html",
+          "published": "2026-11-27T15:58:39Z",
+          "summary": "One case involved a 12-year-old girl whose mother discovered inappropriate conversations between her daughter and a virtual character on the platform."
         },
         {
-          "title": "Mnet, Bandai Namco to launch survival show for virtual K-pop boy band",
-          "link": "https://www.koreajoongangdaily.com/entertainment/mnet-bandai-namco-to-launch-survival-show-for-virtual-kpop-boy-band/12994185",
-          "published": "2026-11-27T02:11:46Z",
-          "summary": "The partners aim to combine K-pop survival-show expertise with character IP and virtual content to offer viewers a more immersive idol experience."
+          "title": "Bankrupt Character.AI eyes selling off millions of private chats - Kursiv Uzbekistan",
+          "link": "https://uz.kursiv.media/en/2026-11-27/character-ai-private-chats/amp/",
+          "published": "2026-11-27T15:34:09Z",
+          "summary": "Private conversations with virtual companions, fictional characters and AI therapists could be sold to the highest bidder as the bankrupt chatbot ..."
         },
         {
-          "title": "Virtual Idols Get a Survival Show, Too... Mnet: “Aiming for 2028 Airing, Developing Characters” - MK",
-          "link": "https://www.mk.co.kr/en/broadcasting-service/12219928",
-          "published": "2026-11-27T00:52:20Z",
-          "summary": "Bandai Namco Entertainment has also developed expertise in character IP and virtual content, including the “THE IDOLM@STER” series. The two ..."
+          "title": "State attorneys general challenge Character.AI's proposed sale of users' personal data",
+          "link": "https://dig.watch/updates/state-attorneys-general-challenge-character-ai",
+          "published": "2026-11-27T14:33:58Z",
+          "summary": "Metaverse and virtual reality · Quantum technologies · 5G and 6G · Internet of Things · Cloud computing · Blockchain technology · Biotechnology ..."
         },
         {
-          "title": "Mnet Takes on 'Virtual Idol' Survival This Time, Teams Up With the Company Behind ...",
-          "link": "https://www.sportschosun.com/en/k-pop/2026-11-27/202611270100170330015733",
-          "published": "2026-11-27T00:10:22Z",
-          "summary": "Bandai Namco Entertainment has also developed expertise through various character IP and in the field of virtual content, including the 'Idolmaster' ..."
+          "title": "GTA 6 gamers are paying thousands to date AI girlfriend modelled on Lucia - LADbible",
+          "link": "https://www.ladbible.com/entertainment/gaming/gta-vi-lucia-ai-girlfriend-creators-earn-thousands-535431-20261127",
+          "published": "2026-11-27T14:26:23Z",
+          "summary": "He launched his virtual character on the subscription platform Fanvue and has given her a social media presence, too - and her Instagram account ..."
         },
         {
-          "title": "AI Companions Are Changing Online Entertainment, but Live Cam Models Offer Something Different",
-          "link": "https://theflaremagazine.co.uk/ai-companions-are-changing-online-entertainment-but-live-cam-models-offer-something-different/",
-          "published": "2026-11-26T19:28:50Z",
-          "summary": "Live performers offer something different: another person taking part in the exchange as it happens. The two experiences can share a screen layout ..."
+          "title": "GTA in Istanbul? Meet the game developers bringing virtual crime chaos to their home cities",
+          "link": "https://www.theguardian.com/games/2026/nov/27/gta-grand-theft-auto-clones",
+          "published": "2026-11-27T10:31:00Z",
+          "summary": "“I'm a technical person, so if I try to push cinematic cutscenes, I cannot do them well,” he says. “But that chaotic gameplay is much more immediately ..."
         },
         {
-          "title": "GTA 6 fans make Spearmint Rhino demand after game's 'attention to detail' - YorkshireLive",
-          "link": "https://www.examinerlive.co.uk/news/tv/gta-6-fans-make-spearmint-34972236.amp",
-          "published": "2026-11-26T17:58:02Z",
-          "summary": "... virtual character amounts to \"cheating\". Kathy Vercher, President of Spearmint Rhino, said: \"While gamers across the world immerse themselves in ..."
+          "title": "Do Real People Appear \"Less Attractive\" After Prolonged Exposure to AI-Generated Characters?",
+          "link": "https://eu.36kr.com/en/p/4087586916268680",
+          "published": "2026-11-27T08:31:29Z",
+          "summary": "Different from traditional virtual idols, this type of character not only pursues a hyper-realistic appearance that is almost indistinguishable ..."
         },
         {
-          "title": "Character.AI wants to sell user data. 42 US attorneys general are trying to stop it",
-          "link": "https://lnt.ma/character-ai-wants-to-sell-user-data-42-us-attorneys-general-are-trying-to-stop-it/",
-          "published": "2026-11-26T16:13:31Z",
-          "summary": "... virtual companions. Unlike traditional search engines or productivity tools, the platform encourages users to build ongoing relationships with its ..."
+          "title": "Character.AI Bankruptcy Auctions 21M Users' Private Conversations",
+          "link": "https://www.chosun.com/english/industry-en/2026/11/27/C4UJBF7FORHGNAJTE4G27BS7JQ/",
+          "published": "2026-11-27T08:18:32Z",
+          "summary": "In South Korea, similar AI chatbot services that allow conversations with virtual characters have gained popularity among teenagers, raising ..."
         },
         {
-          "title": "Virtual Reality Differential Leveling Training Improves Engineering Student - Bioengineer.org",
-          "link": "https://bioengineer.org/virtual-reality-differential-leveling-training-improves-engineering-student-accuracy-and-calculation-skills/",
-          "published": "2026-11-26T14:30:10Z",
-          "summary": "To isolate core instrument skills and prevent working memory overload, a virtual assistant character was programmed to handle and transport the ..."
+          "title": "Is His Virtual Girlfriend Affecting Your Real Life? - Rediff.com",
+          "link": "https://m.rediff.com/getahead/report/gta-vis-virtual-girlfriend-micro-cheating-or-relationship-red-flag/20261127.htm",
+          "published": "2026-11-27T07:50:38Z",
+          "summary": "It's not about the medium or that there's a fictional character in a game or a different human that this person is going with. The moment your ..."
         },
         {
-          "title": "Arena and Avatar Style: Comparing Physical and Virtual Game Collaborations - Pley.gg",
-          "link": "https://pley.gg/arena-and-avatar-style-comparing-physical-and-virtual-game-collaborations/",
-          "published": "2026-11-26T14:10:45Z",
-          "summary": "Game fashion changes character when it moves from a wardrobe to an avatar. A physical collaboration lets someone wear a design beyond the screen, ..."
-        },
-        {
-          "title": "Meet Lucia: The 'GTA 6' Character the Internet Is Falling in Love With (and Some Partners ...",
-          "link": "https://screenrealm.com/gta-6-lucia-internet-obsession-relationship-memes-grand-theft-auto/",
-          "published": "2026-11-26T13:19:07Z",
-          "summary": "And yet, one of the game's biggest talking points is gamers buying flowers for their virtual girlfriend. Meet Lucia Caminos, the Internet's New ..."
-        },
-        {
-          "title": "MiniMax's Talkie Removed over Pornographic Content as AI Companion Sector Faces ... - AI NEWS",
-          "link": "https://news.aibase.com/news/32554",
-          "published": "2026-11-26T10:18:22Z",
-          "summary": "AI virtual companionship and role-playing apps are rapidly capturing user ... As an app focused on immersive virtual character conversations ..."
-        },
-        {
-          "title": "Naver Webtoon and Krafton enter Korea's growing AI character chat market - Chosunbiz",
-          "link": "https://biz.chosun.com/en/en-it/2026/11/26/VRGXMNOQRZBLDIYJVDTGRUGMD4/",
-          "published": "2026-11-26T07:30:37Z",
-          "summary": "AI character chat services let users create stories through conversations with virtual characters powered by AI. The story changes according to ..."
+          "title": "Jisoo's character has just 3.5 free hours a day in Boyfriend on Demand",
+          "link": "https://papodedorama.com.br/en/jisoo-s-character-has-just-3-5-free-hours-a-day-in-boyfriend-on-demand/",
+          "published": "2026-11-26T15:50:07Z",
+          "summary": "Before the show introduces virtual boyfriends, it shows exactly why dating may feel like another demand on her life. Seo Mi-rae is a webtoon producer ..."
         }
       ]
     },
     {
       "id": "83tian",
       "name": "八三夭",
-      "count": 3,
-      "items": [
-        {
-          "title": "台下是GTA 里的机场与沙发|八三夭|没有翅膀的人_新浪新闻",
-          "link": "https://www.sina.cn/news/detail/5369601410205303.html",
-          "published": "2026-11-26T19:36:05Z",
-          "summary": "八三夭乐团发布2026 年“没有翅膀的人”世界巡回演唱会厦门与澳门站演出信息，并分享了一段对比巡演现实与游戏模拟的视频。视频前半部分展示乐队成员在演唱会 ..."
-        },
-        {
-          "title": "『台北直击』圭贤误点1KG牛排含泪吃2小时旅行语言不通闹笑话",
-          "link": "https://www.sinchew.com.my/news/20261126/entertainment/8122114?variant=zh-hant",
-          "published": "2026-11-26T16:43:37Z",
-          "summary": "... 八三夭成員阿璞見面，兩人靠著手機翻譯軟件竟能暢聊長達3小時！開始享受慢旅圭賢自認過去是個喜歡把行程排得滿滿的人，年輕時總會鉅細靡遺地規劃每趟旅程 ..."
-        },
-        {
-          "title": "蔡黃汝穩交阿璞11 年鬆口婚事！坦言：「一定會結，只是不知道什麼時候！」",
-          "link": "https://www.juksy.com/article/155801",
-          "published": "2026-11-26T08:55:28Z",
-          "summary": "與八三夭主唱阿璞交往11 年的蔡黃汝，婚事始終是外界關注焦點。她日前出席《飢餓遊戲》10 週年記者會，再度被問到何時有好消息，大方回應：「會啦！"
-        }
-      ]
+      "count": 0,
+      "items": []
     },
     {
       "id": "toys",
@@ -142,124 +105,124 @@
       "count": 20,
       "items": [
         {
-          "title": "仁濟醫院全港賣旗日2026 競逐玩具「反」斗城60秒任取禮物機會| am730",
-          "link": "https://www.am730.com.hk/%E5%95%86%E7%A4%BE%E7%86%B1%E8%A9%B1/1066109/%E4%BB%81%E6%BF%9F%E9%86%AB%E9%99%A2%E5%85%A8%E6%B8%AF%E8%B3%A3%E6%97%97%E6%97%A52026-%E7%AB%B6%E9%80%90%E7%8E%A9%E5%85%B7-%E5%8F%8D-%E6%96%97%E5%9F%8E60%E7%A7%92%E4%BB%BB%E5%8F%96%E7%A6%AE%E7%89%A9%E6%A9%9F%E6%9C%83",
-          "published": "2026-11-27T06:08:57Z",
-          "summary": "最高排名的首2名將獲得由玩具「反」斗城贊助的「60秒GO!」挑戰名額，可於指定門市內有60秒時間免費挑選禮物；而第3至10名則可獲得由KENZO Kids或Petit ..."
+          "title": "臺北幼兒STEAM創思中心聯展紙箱變迷宮、紙玩具動起來 - LIFE 生活網",
+          "link": "https://life.tw/article/%E8%87%BA%E5%8C%97%E5%B9%BC%E5%85%92steam%E5%89%B5%E6%80%9D%E4%B8%AD%E5%BF%83%E8%81%AF%E5%B1%95-%E7%B4%99%E7%AE%B1%E8%AE%8A%E8%BF%B7%E5%AE%AE-%E7%B4%99%E7%8E%A9%E5%85%B7%E5%8B%95%E8%B5%B7%E4%BE%86-3238932",
+          "published": "2026-11-28T02:01:43Z",
+          "summary": "例如，孩子在紙建築活動中，主動為紙塔設計可掀式屋頂，透過紙卡扣連接與調整結構，讓作品更加穩固；在連動紙玩具創作中，則將平面的臭鼬變成立體造形，甚至 ..."
         },
         {
-          "title": "媽媽平時買東西愛比價！孩子在玩具店突然大喊1句話女星尷尬不已 - 鏡報",
-          "link": "https://www.mirrordaily.news/story/100392",
-          "published": "2026-11-27T06:03:05Z",
-          "summary": "不少家長從小就會教育孩子正確的金錢觀，女星布丁（陳櫻文）近日分享育兒趣事，透露曾帶孩子逛玩具店，卻因童言童語陷入尷尬。 安歆澐與女兒拿舞。圖／台視_2026 ..."
+          "title": "六角機牙中的我妻善逸... 壽屋x 模壽1/24《六角機牙》雷神- 陣地突擊型「疾雷」 - 玩具人",
+          "link": "https://www.toy-people.com/?p=117077",
+          "published": "2026-11-28T01:23:31Z",
+          "summary": "日本壽屋(KOTOBUKIYA) 與中國模型品牌模壽(MOSHOW TOYS) 攜手推出的「匠心級」合金可動完成品／模型聯名力作。本體高度約226 mm 至255 mm 左右，主要材質為PVC、 ..."
         },
         {
-          "title": "宇宙家族：橫坂竜也個展- 高雄展覽 - Harper's BAZAAR",
-          "link": "https://www.harpersbazaar.com/tw/life/trips/g74515590/tatsuya-yokosak-solo-exhibition-soka-art-exhibition/",
-          "published": "2026-11-27T05:05:03Z",
-          "summary": "展覽自2026 年11 月29 日至2027 年2 月22 日於「堅山仰岄」登場，開幕當天藝術家也將親自到場，並推出玩具募集與玻璃杯手作等限定活動。 廣告- 內文未完請往下捲 ..."
+          "title": "PET PARADISE推2027新春寵物福袋羊年限定玩具、12月2日網路預購",
+          "link": "https://www.contentplatform.info/articles/594447/pet-paradise%E6%8E%A82027%E6%96%B0%E6%98%A5%E5%AF%B5%E7%89%A9%E7%A6%8F%E8%A2%8B%E3%80%80%E7%BE%8A%E5%B9%B4%E9%99%90%E5%AE%9A%E7%8E%A9%E5%85%B7%E3%80%8112%E6%9C%882%E6%97%A5%E7%B6%B2%E8%B7%AF%E9%A0%90/",
+          "published": "2026-11-28T01:14:19Z",
+          "summary": "寵物用福袋每個6,600日圓（約新台幣1,370元）（含稅），包裝是戴著羊年配件、手繪風格的狗狗圖案，內容以冬季衣物等實用商品為主，另有以羊為主題的限定玩具。在 ..."
         },
         {
-          "title": "美國黑色星期五消費者兼囤日用品玩具價格今年以來漲13.2% - VOCO News",
-          "link": "https://news.vocofm.com/%E7%BE%8E%E5%9C%8B%E6%96%B0%E8%81%9E/212974/",
-          "published": "2026-11-27T04:09:05Z",
-          "summary": "玩具是漲幅明顯的品項。《路透社》報導指出，玩具價格今年以來上漲13.2%，普遍用上塑料等石油衍生原料的成本漲勢是原因之一，生產芭比娃娃（Barbie）的美泰 ..."
+          "title": "脆皮捏捏爆紅！花錢買玩具只為捏碎它聲量飆38倍揭紓壓新風潮 - 網路溫度計DailyView",
+          "link": "https://dailyview.tw/popular/detail/34240",
+          "published": "2026-11-28T01:12:29Z",
+          "summary": "花錢買一個造型可愛的玩具，卻在拿到手後迫不及待將它捏碎？近期在中國、韓國及台灣掀起熱潮的紓壓玩具「脆皮捏捏」，憑藉外殼碎裂的清脆聲響與柔軟觸感，在 ..."
         },
         {
-          "title": "咒術迴戰『POP UP PARADE 乙骨憂太L size』蓄勢待發的持刀之姿再現！ - 玩具人",
-          "link": "https://www.toy-people.com/?p=117056",
-          "published": "2026-11-27T03:47:10Z",
-          "summary": "日本模型商GoodSmileCompany旗下價格親民、主打高CP值的「POPUPPARADE」模型系列，將推出以《咒術迴戰》為主題的最新商品：「POPUPPARADE乙骨憂太Lsize」無 ..."
+          "title": "絨毛貓玩具市場展望2035：高階化與擬人化推動成長 - IndexBox",
+          "link": "https://www.indexbox.io/zh-hant/blog/plush-cat-toys-market-forecast-to-2035-premiumization-and-humanization-drive-growth/",
+          "published": "2026-11-28T00:54:14Z",
+          "summary": "代表性業者： KONG Company、Outward Hound、Petstages、Jackson Galaxy與Catit。 電子商務（線上零售）（估計占比：28%）. 電子商務是絨毛貓玩具成長最快的通路 ..."
         },
         {
-          "title": "皮克敏五週年社群週倒數！限定金色棒球外套攻略，巨大花朵時間表 - Cosmopolitan",
-          "link": "https://www.cosmopolitan.com/tw/entertainment/celebrity-gossip/a74538670/pikmin-bloom-5th-anniversary-community-week/",
-          "published": "2026-11-27T03:37:52Z",
-          "summary": "皮克敏11月「5週年」慶典活動:玩具珠寶飾品皮克敏登場,蘑菇日期懶人包,早鳥獎勵只到這天."
+          "title": "紙箱變迷宮、紙玩具動起來！北市幼兒STEAM創思中心親子聯展大人小孩玩創意 - 台北市政府",
+          "link": "https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&sms=72544237BBE4C5F6&s=F6B1F83ED186D033",
+          "published": "2026-11-28T00:22:10Z",
+          "summary": "【臺北報導】誰說一張紙只能拿來畫畫或摺紙？紙箱可以變成迷宮，紙張可以打造建築物，連動紙玩具還能讓鱷魚張嘴、臭鼬站起來！臺北市政府教育局 ..."
         },
         {
-          "title": "台灣寶可夢中心開賣32款新品！「淺淺丘」再開賣還有超Q隆隆石鑰匙圈 - udn科技玩家",
-          "link": "https://tech.udn.com/tech/amp/story/123154/9905310",
-          "published": "2026-11-27T03:22:52Z",
-          "summary": "... 玩具（玩偶）再度開賣，被網友大讚可愛，「隆隆石（鑰匙圈）耶」、「又有淺 ... 第1類為《Pokémon Pokopia》的新商品系列，包含卡比獸等寶可夢造型的方形收納包、 ..."
+          "title": "mofusand 太空貓將於11月第4週起陸續發售! – Collabo Cafe",
+          "link": "https://collabo-cafe.com/zh-hant/events/collabo/mofusand-astronaut-nyan-gashapon-2026/",
+          "published": "2026-11-27T23:01:39Z",
+          "summary": "由插畫家ぢゅ老師繪製、能化身成各種模樣的人氣角色「mofusand(莫夫桑德)」,推出化身太空人的貓咪膠囊玩具「mofusand 太空人喵」! 共有6種不同顏色太空服的 ..."
         },
         {
-          "title": "北台灣首座Pokémon Play Lab 正式進駐！玩具”反”斗城全台首家IP+ 旗艦店11 月25 日林口店登場",
-          "link": "https://www.chilling.tw/article/90479",
-          "published": "2026-11-27T02:38:46Z",
-          "summary": "看準全齡玩樂商機，玩具”反”斗城於11 月25 日在MITSUI OUTLET PARK 林口打造全台首家「IP+ 旗艦店」，集結人氣IP、跨界合作商品與沉浸式互動體驗。"
+          "title": "三麗鷗芭蕾舞者標誌飾品將於11月第4週起陸續發售! – Collabo Cafe",
+          "link": "https://collabo-cafe.com/zh-hant/events/collabo/sanrio-ballerina-mejirushi-accessory-gashapon-2026/?amp=1",
+          "published": "2026-11-27T22:55:25Z",
+          "summary": "三麗鷗角色化身芭蕾舞者裝扮的扭蛋玩具「三麗鷗角色芭蕾舞者標誌飾品」登場! 服裝部分採用極光塗裝的共6種款式,將自2026年11月第4週起於全國的膠囊自動販賣 ..."
         },
         {
-          "title": "AI玩具禁令是什麼？紐約禁賣「聊天機器人玩具」5年- 股市爆料同學會",
-          "link": "https://www.cmoney.tw/forum/article/190060372",
-          "published": "2026-11-27T01:06:57Z",
-          "summary": "美國紐約州州長霍楚（Kathy Hochul）在美東時間11月24日簽署法案，禁止在紐約製造、批發和販售「內建AI聊天機器人的兒童玩具」，為期5年。會講話的絨毛."
+          "title": "小汽車動物模型變建材印度夫婦花近7年收集6,200個廢棄玩具打造獨特環保住宅 - 巴士的報",
+          "link": "https://www.bastillepost.com/hongkong/article/17256334-%E5%B0%8F%E6%B1%BD%E8%BB%8A%E5%8B%95%E7%89%A9%E6%A8%A1%E5%9E%8B%E8%AE%8A%E5%BB%BA%E6%9D%90-%E5%8D%B0%E5%BA%A6%E5%A4%AB%E5%A9%A6%E8%8A%B1%E8%BF%917%E5%B9%B4%E6%94%B6%E9%9B%866200%E5%80%8B%E5%BB%A2",
+          "published": "2026-11-27T22:29:32Z",
+          "summary": "屋主表示，希望透過這種特別的建築方式，減少浪費之餘，也將珍貴的童年回憶永久保存。 Kerala's own 'Toy Storey' Goes Viral - Family takes unwanted ..."
         },
         {
-          "title": "AI玩具禁令是什麼？紐約禁賣「聊天機器人玩具」5年 - TEEPR 亮新聞",
-          "link": "https://www.teepr.com/1958858/teepr/new-york-ai-toy-ban/",
-          "published": "2026-11-27T00:53:20Z",
-          "summary": "紐約州長霍楚簽署法案，禁止製造、販售內建AI聊天機器人的兒童玩具5年，違者每天最高罰1萬5000美元；台灣家長送禮前可先看這3點。"
+          "title": "母親車禍家庭陷財困美12歲男童拍賣心愛玩具籌6,200元助清還帳單 - 巴士的報",
+          "link": "https://www.bastillepost.com/hongkong/article/17239033-%E6%AF%8D%E8%A6%AA%E8%BB%8A%E7%A6%8D%E5%AE%B6%E5%BA%AD%E7%B6%93%E6%BF%9F%E9%99%B7%E5%9B%B0%E5%A2%83-%E7%BE%8E%E5%9C%8B12%E6%AD%B2%E7%94%B7%E7%AB%A5%E6%8B%8D%E8%B3%A3%E5%BF%83%E6%84%9B%E7%8E%A9",
+          "published": "2026-11-27T22:05:24Z",
+          "summary": "... 玩具，籌近800美元（約6200港元）清還帳單。這名12歲男童在母親因車禍受傷，家中面臨經濟困難後，竟主動拍賣自己珍藏的玩具。他不但拿出心愛的樂高積木、模型車."
         },
         {
-          "title": "媽媽平時買東西愛比價！孩子在玩具店突然大喊1句話女星尷尬不已 - Yahoo新聞",
-          "link": "https://tw.news.yahoo.com/%E5%AA%BD%E5%AA%BD%E5%B9%B3%E6%99%82%E8%B2%B7%E6%9D%B1%E8%A5%BF%E6%84%9B%E6%AF%94%E5%83%B9-%E5%AD%A9%E5%AD%90%E5%9C%A8%E7%8E%A9%E5%85%B7%E5%BA%97%E7%AA%81%E7%84%B6%E5%A4%A7%E5%96%8A1%E5%8F%A5%E8%A9%B1-%E5%A5%B3%E6%98%9F%E5%B0%B7%E5%B0%AC%E4%B8%8D%E5%B7%B2-000000621.html",
-          "published": "2026-11-27T00:43:50Z",
-          "summary": "不少家長從小就會教育孩子正確的金錢觀，女星布丁（陳櫻文）近日分享育兒趣事，透露曾帶孩子逛玩具店，卻因童言童語陷入尷尬。"
+          "title": "多聞君現在在哪邊!?快看這個!學生服風Y2K風格扭蛋登場! – Collabo Cafe",
+          "link": "https://collabo-cafe.com/zh-hant/events/collabo/tamonkun-ima-docchi-mitecolle-capsule-2026/",
+          "published": "2026-11-27T21:00:08Z",
+          "summary": "之姿,以膠囊玩具形式登場! 此消息已於2026年11月24日在福屋膠囊玩具官方X帳號上公布,將推出以「學生服風Y2K風格 ..."
         },
         {
-          "title": "紐約州暫停AI聊天玩具製售五年違者每天罰1.5萬 - 大紀元",
-          "link": "https://www.epochtimes.com/b5/26/11/27/n14895850.htm",
-          "published": "2026-11-27T00:40:12Z",
-          "summary": "隨著感恩節購物季展開，紐約州州長霍楚週二（11月24日）簽署一項新法，未來五年禁止在紐約州製造、分銷及銷售內置人工智能（AI）聊天機器人的兒童玩具， ..."
+          "title": "復仇者5神級玩具開箱！   | U Community 社群平台",
+          "link": "https://www.ulifestyle.com.hk/community/detailpost/bb93d665-5a65-4c7d-821b-3595e884bb23/%E5%A8%9B%E6%A8%82/Happylife_el/654253",
+          "published": "2026-11-27T19:23:19Z",
+          "summary": "《復仇者聯盟5:末日降臨》未上映,神級玩具率先突襲!  今次真係忍唔住要同大家開箱Hasbro 呢批Marvel 最新角色扮演裝備!由末日博士嘅發光面具､石頭人重擊拳套 ..."
         },
         {
-          "title": "發聲狗玩具市場展望2035：高階與潔牙產品帶動擴張- 新聞與統計 - IndexBox",
-          "link": "https://www.indexbox.io/zh-hant/blog/squeaky-dog-toys-market-forecast-to-2035-premiumization-and-dental-health-demand-drive-growth/",
-          "published": "2026-11-27T00:33:36Z",
-          "summary": "全球發聲狗玩具市場預計將成長至2035年，在自有品牌壓力下，仍由寵物擬人化及耐用、護齒玩具的需求帶動。"
+          "title": "小學生也有金錢糾紛 - 金門日報",
+          "link": "https://www.kmdn.gov.tw/1117/1271/1274/592033/",
+          "published": "2026-11-27T16:15:57Z",
+          "summary": "前幾天在檢查孩子的書包時，赫然發現了一張字條，「11月1日要給某某某XXX元」，再詢問小孩後才知道，事情發生於暑假期間，補習班同學將自己的玩具帶到補習班 ..."
         },
         {
-          "title": "BANDAI「S.H.Figuarts 假面騎士VRAM 聖代模式」如同豪華聖代的銀色騎士登場！ - 玩具人",
-          "link": "https://www.toy-people.com/?p=117004",
-          "published": "2026-11-26T20:40:59Z",
-          "summary": "由日本BANDAI SPIRITS 收藏玩具事業部TAMASHII NATIONS 發行的可動人偶系列「S.H.Figuarts」，推出來自特攝劇集《假面騎士GAVV》的新最商品「假面騎士VRAM ..."
+          "title": "討論牆| 玩具反斗城IP+旗艦店登場！Pokémon Play Lab進駐，全台首家FUFUSOUL",
+          "link": "https://today.line.me/tw/v3/posts/list/article/x262wLw",
+          "published": "2026-11-27T15:05:56Z",
+          "summary": "0則貼文| 快來參與LINE TODAY討論牆上的討論| 玩具反斗城IP+旗艦店登場！Pokémon Play Lab進駐，全台首家FU..."
         },
         {
-          "title": "調查兵團集合！壽司郎重磅聯名《進擊的巨人》12/1 正式開戰超大型巨人突破瑪利亞之牆！10 款 ...",
-          "link": "https://news.para-daily.com/2026/11/26/sushiro-x-attack-on-titan-collab-1126/",
-          "published": "2026-11-26T19:08:32Z",
-          "summary": "動漫玩具 > 動漫周邊 > 調查兵團集合！壽司郎重磅聯名《進擊的巨人》12/1 正式開戰超大型巨人突破瑪利亞之牆！10 款特色餐點、38 款聯名周邊波段登場限時全 ..."
+          "title": "惡魔靈魂重製版『figma Fluted Armor (PS5)』暌違三年再次販售重現華麗鎧甲紋路 - 玩具人",
+          "link": "https://www.toy-people.com/?p=117080",
+          "published": "2026-11-27T14:45:05Z",
+          "summary": "由日本模型商MaxFactory所發行的人氣可動模型系列『figma』，宣布出自完全重製經典動作RPG《惡魔靈魂》（PS5）的人氣商品「FlutedArmor(PS5)」將於2027年07 ..."
         },
         {
-          "title": "南台南家扶鯤喜灣基地媽媽們巧手打造孩子專屬精靈斗篷 - PCHOME NEWS",
-          "link": "https://news.pchome.com.tw/public/taiwanhot/20261126/index-79567315296036221016.html",
-          "published": "2026-11-26T18:18:33Z",
-          "summary": "此外，基地平時收到許多善心人士捐贈的娃娃與玩具，但孩子在遊戲過程中難免造成物品損壞，因此也希望藉由縫紉技能的學習，讓基地夥伴有能力修補孩子們心愛的玩具 ..."
+          "title": "超次元英雄譚『S.H.Figuarts 絕滅卡邦』再現紫黑色邪惡姿態、基板外露的戰損造型！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=117083",
+          "published": "2026-11-27T14:10:34Z",
+          "summary": "由日本BANDAI SPIRITS 公司收藏玩具事業部TAMASHII NATIONS 發行的人氣可動模型『S.H.Figuarts』系列，發表了出自東映特攝《超次元英雄譚》的最新商品「絕滅 ..."
         },
         {
-          "title": "玩具服裝折扣最大預測黑五消費強勁 - 星島日報",
-          "link": "https://www.singtaousa.com/2026/11/26/news/usa/black-friday-toy-discounts/",
-          "published": "2026-11-26T17:54:45Z",
-          "summary": "假日購物季即將進入促銷高峰，Adobe預測今年黑色星期五玩具折扣最高可達29。整體網上購物支出增長顯著，消費者利用AI及社交媒體尋找更優惠價格。"
+          "title": "1:1複刻沙漠之鷹。木質DIY. 玩具- YouTube",
+          "link": "https://www.youtube.com/shorts/DK5UqdXV_EA",
+          "published": "2026-11-27T14:08:54Z",
+          "summary": "1:1複刻沙漠之鷹。木質DIY. 玩具. Like. 0. Share. Please sign in. This helps protect our community. Sign in. Skip video."
         },
         {
-          "title": "《學園偶像大師》快閃店2026～Gearbeat Concerto～蒸汽龐克系列周邊商品開放預購",
-          "link": "https://news.para-daily.com/2026/11/26/gearbeat-concerto/",
-          "published": "2026-11-26T17:28:15Z",
-          "summary": "動漫玩具 > 動漫周邊 > 《學園偶像大師》快閃店2026～Gearbeat Concerto～蒸汽龐克系列周邊商品開放預購. 分享: 動漫周邊. 《學園偶像大師》快閃店2026 ..."
+          "title": "一番賞《幽遊白書》「魔界統一大會篇」魔界三巨頭黃泉、軀、雷禪震撼集結！ - 玩具人",
+          "link": "https://www.toy-people.com/?p=117084",
+          "published": "2026-11-27T13:32:29Z",
+          "summary": "日本玩具模型廠商BANDAI SPIRITS 旗下抽抽都有獎的「一番賞」系列，推出《幽遊白書》最新商品「幽遊白書魔界統一大會篇」，這次將焦點放在原作後期的魔界 ..."
         },
         {
-          "title": "《戀與製作人》八週年「相愛萬歲」限定SSR 羈絆登場全新陪伴系統與多重週年福利同步推出",
-          "link": "https://news.para-daily.com/2026/11/26/lovenproducer-8th/",
-          "published": "2026-11-26T17:28:13Z",
-          "summary": "動漫玩具 · 偶像網紅 · KIRABASE. close ... 全新「泡澡陪伴」系統內玩家可與泡澡中的角色互動、為他塗抹泡沫，還能自由調整浴室氛圍、搭配各式髮飾及玩具。"
+          "title": "討論牆| 《玩具總動員5》還沒演泰勒絲主題曲空降冠軍 - LINE TODAY",
+          "link": "https://today.line.me/tw/v3/posts/list/article/Ggr6GXQ",
+          "published": "2026-11-27T13:13:48Z",
+          "summary": "0則貼文| 快來參與LINE TODAY討論牆上的討論| 《玩具總動員5》還沒演泰勒絲主題曲空降冠軍."
         },
         {
-          "title": "紐約州立法禁售AI玩具違者可日罰1.5萬美元 - 報章",
-          "link": "https://paper.hket.com/article/4231805/%E7%B4%90%E7%B4%84%E5%B7%9E%E7%AB%8B%E6%B3%95%E7%A6%81%E5%94%AEAI%E7%8E%A9%E5%85%B7%20%E9%81%95%E8%80%85%E5%8F%AF%E6%97%A5%E7%BD%B01.5%E8%90%AC%E7%BE%8E%E5%85%83",
-          "published": "2026-11-26T17:16:45Z",
-          "summary": "AI玩具對兒童的風險惹來爭議，紐約本周簽署一項法案，禁止在該州製造、分銷及銷售內建AI聊天機械人的玩具，禁令為期5年，違規最高可處每日1.5萬美元（約11.7 ..."
+          "title": "GD聯乘TOY STORY   | U Community 社群平台",
+          "link": "https://www.ulifestyle.com.hk/community/detailpost/6120883d-f38e-4f48-b5bf-f683c8a48360/%E8%A6%AA%E5%AD%90/gd%E8%81%AF%E4%B9%98toy-st/LctyFamily/473161",
+          "published": "2026-11-27T13:04:15Z",
+          "summary": "GD聯乘TOY STORY✨. 估唔到有一日   劉媽    嘅青春會同細細    嘅童年撞埋一齊   一邊係G-DRAGON主理嘅PEACEMINUSONE 一邊係我哋細細個睇到大嘅《反斗奇兵》 ..."
         }
       ]
     }
